@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="539b9ac6-5cf5-4ded-8ee9-f98bdba80d9c" name="escom.xyz" url="http://104.236.142.120">
+        <fileTransfer host="104.236.142.120" port="21" rootFolder="/html/chesspizza" password="dfcfdfd9dfc9dfc5dfc7" username="escom">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
