@@ -1,6 +1,7 @@
 <?php
 
 include_once('../BD/Conexion.php');
+include_once ('../Model/Sucursal.php');
 
 class SucursalesDAO{
     public static function getAll()
