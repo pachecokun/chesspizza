@@ -1,4 +1,7 @@
 <?php
+
+echo 'hola';
+
 include_once('../DAO/SucursalesDAO.php');
 
 $sucs = SucursalesDAO::getAll();
