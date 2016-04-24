@@ -4,7 +4,21 @@ class Sucursal{
     private $direccion;
     private $lat;
     private $lon;
-    public function __construct(){
-        
+
+    /**
+     * Sucursal constructor.
+     * @param $id
+     * @param $direccion
+     * @param $lon
+     * @param $lat
+     */
+    public function __construct($id, $direccion, $lon, $lat)
+    {
+        $this->id = $id;
+        $this->direccion = $direccion;
+        $this->lon = $lon;
+        $this->lat = $lat;
     }
+
+
 }
