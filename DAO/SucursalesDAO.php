@@ -8,7 +8,7 @@ class SucursalesDAO{
         try {
             $sucs = array();
             $stm = Conexion::execute("select*from Sucursal");
-            
+
             while($suc = $stm->fetch()){
                 $sucs[]=new Sucursal($suc['id'],$suc['Direccion'],$suc['Lat'],$suc['Lon']);
             }
@@ -16,6 +16,10 @@ class SucursalesDAO{
             return $sucs;
 
         }catch (Exception $e){
+            echo $e->getMessage();
+            return null;
+        }
+        catch (Error $e){
             echo $e->getMessage();
             return null;
         }
