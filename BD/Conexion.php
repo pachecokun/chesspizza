@@ -23,7 +23,9 @@ class Conexion{
     private static function getConexion(){
         try{
             if(is_null(self::$conexion)){
-                self::$conexion = new PDO("mysql:host=".self::HOST." port=3306  dbname=".self::DB."",self::usr,self::pass);
+                $str = "mysql:host=".self::HOST." port=3306  dbname=".self::DB;
+                echo $str;
+                self::$conexion = new PDO($str,self::usr,self::pass);
                 self::$conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             }
             return self::$conexion;
