@@ -5,18 +5,19 @@ class Conexion{
     const HOST = 'localhost';
 
 
-    public function execute($query,$args=array()){
-        $con = $this->getConexion();
+    public static function execute($query,$args=array()){
+        $con = self::getConexion();
         $stm = $con->prepare($query);
         if(sizeof($args)==0){
-            return $stm->execute();
+            $stm->execute();
         }
         else{
-            return $stm->execute($args);
+            $stm->execute($args);
         }
+        return $stm;
     }
 
-    private function getConexion(){
+    private static function getConexion(){
         if(is_null(self::$conexion)){
             self::$conexion = new PDO("mysql:host=localhost","root","root");
             self::$conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);

@@ -1,8 +1,10 @@
 <?php
 
+include_once('../BD/Conexion.php');
+
 class SucursalesDAO{
-    public function __construct()
+    public static function getAll()
     {
-        
+        return Conexion::execute("select*from sucursal");
     }
 }
