@@ -17,9 +17,9 @@ class Conexion{
     }
 
     private function getConexion(){
-        if(is_null(self::conexion)){
+        if(is_null(self::$conexion)){
             self::$conexion = new PDO("mysql:host=localhost","root","root");
-            self::$conexion = setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            self::$conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         }
         return self::$conexion;
     }
