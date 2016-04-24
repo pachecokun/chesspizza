@@ -23,7 +23,7 @@ class Conexion{
     private static function getConexion(){
         try{
             if(is_null(self::$conexion)){
-                $str = "mysql:host=".self::HOST." port=3306  dbname=".self::DB;
+                $str = "mysql:host=".self::HOST."\nport=3306\ndbname=".self::DB;
                 echo $str;
                 self::$conexion = new PDO($str,self::usr,self::pass);
                 self::$conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
