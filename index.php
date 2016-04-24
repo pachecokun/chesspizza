@@ -1,5 +1,5 @@
 <html>
-    <head>Chess pizzas</head>
+    <head>Chess pizzas </head>
     <body>
         <h1>Chess pizza :D</h1>
         <h2>Prueba :D</h2>
