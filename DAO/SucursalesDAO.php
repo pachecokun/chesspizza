@@ -17,7 +17,7 @@ class SucursalesDAO{
 
         }catch (Exception $e){
             echo $e->getMessage();
-            return null;
+            return null;    
         }
         catch (Error $e){
             echo $e->getMessage();
