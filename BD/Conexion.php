@@ -21,11 +21,16 @@ class Conexion{
     }
 
     private static function getConexion(){
-        if(is_null(self::$conexion)){
-            self::$conexion = new PDO("mysql:host=".self::HOST." name=".self::DB."",self::usr,self::pass);
-            self::$conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        try{
+            if(is_null(self::$conexion)){
+                self::$conexion = new PDO("mysql:host=".self::HOST." name=".self::DB."",self::usr,self::pass);
+                self::$conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            }
+            return self::$conexion;
+        }catch (Exception $e){
+            echo $e->getMessage();
+            return null;
         }
-        return self::$conexion;
     }
 }
 ?>
