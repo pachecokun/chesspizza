@@ -8,3 +8,4 @@ class SucursalesDAO{
         return Conexion::execute("select*from sucursal");
     }
 }
+?>

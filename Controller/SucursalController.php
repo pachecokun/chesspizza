@@ -10,3 +10,5 @@ while($suc = $sucs->fetch()){
     print_r($suc);
 }
 echo '</pre>';
+
+?>
