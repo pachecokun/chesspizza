@@ -7,7 +7,11 @@ include_once('Model/Sucursal.php');
     <title>Chess pizzas</title>
     <script>
         function getLocation() {
-            navigator.geolocation.getCurrentPosition(locate);
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(locate);
+            }else{
+                document.write("Este navegador no soporta la geolocalización...");
+            }
         }
 
         function locate(position) {
