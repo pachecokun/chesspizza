@@ -9,7 +9,7 @@ class SucursalesDAO
     {
         try {
             $sucs = array();
-            $stm = Conexion::execute("SELECT * FROM SUCURSAL");
+            $stm = Conexion::execute("SELECT * FROM sucursal");
 
             while ($suc = $stm->fetch()) {
                 $sucs[] = new Sucursal($suc['idSucursal'], $suc['Nombre'], $suc['Direccion'], $suc['Lat'], $suc['Lon']);
