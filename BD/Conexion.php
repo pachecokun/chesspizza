@@ -3,9 +3,9 @@ class Conexion{
     private static $conexion = null;
 
     const HOST = 'localhost';
-    const DB = 'pizza';
-    const usr = 'root';
-    const pass = 'escomlaweafome';
+    const DB = 'Pizzeria';
+    const USER = 'root';
+    const PASS = 'root';
 
 
     public static function execute($query,$args=array()){
@@ -24,7 +24,7 @@ class Conexion{
         try{
             if(is_null(self::$conexion)){
                 $str = "mysql:host=".self::HOST.";port=3306;dbname=".self::DB;
-                self::$conexion = new PDO($str,self::usr,self::pass);
+                self::$conexion = new PDO($str,self::USER,self::PASS);
                 self::$conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             }
             return self::$conexion;
