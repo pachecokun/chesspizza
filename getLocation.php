@@ -15,7 +15,7 @@ if (!is_null($nearestSucursal)) {
     echo "La sucursal más cercana es: <br>";
     echo $nearestSucursal->toString();
 } else {
-    echo "No se pudo obtener la sucursal más cercana... <br> pudo tratarse de un error de la base de datos o a Google Maps le dio hueva buscar...";
+    echo "No se encuentran sucursales cercanas...";
 }
 
 
