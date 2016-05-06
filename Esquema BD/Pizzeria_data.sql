@@ -21,7 +21,7 @@
 
 LOCK TABLES `sucursal` WRITE;
 /*!40000 ALTER TABLE `sucursal` DISABLE KEYS */;
-INSERT INTO `sucursal` VALUES (1,'Sucursal 1','Gobernador Licenciado Joaquín García Luna 68B, Granjas Valle de Guadalupe, Ecatepec de Morelos, Méx.','19.512942','-99.061206'),(2,'Sucursal 2','Norte 70-A 10026, Villa Hermosa, Ciudad de México, D.F.','19.502062','-99.093302'),(3,'Sucursal 3','Calle 317 401, Nueva Atzacoalco, Ciudad de México, D.F.','19.494410','-99.086748');
+INSERT INTO `sucursal` VALUES (1,'Impulsora','Av Hda. de Pastejé 5, Impulsora Popular Avicola, Nezahualcóyotl, Méx.','19.485359','-99.048559'),(2,'Coapa','Calz del Hueso 690, Los Sauces, Ciudad de México, D.F.','19.301628','-99.117590'),(3,'Mariquita Linda','La Espiga 299, 57001 Benito Juárez, Méx.','19.410180','-99.003365'),(4,'Mixiuhca','Mixiuhca, Jardín Balbuena, Ciudad de México','19.410239','-99.113387'),(5,'Pantitlán','Calle Miguel Lebrija 171, Aviación Civil, Ciudad de México, D.F.','19.416098','-99.076237');
 /*!40000 ALTER TABLE `sucursal` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -34,4 +34,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-05 17:32:05
+-- Dump completed on 2016-05-05 21:16:25
