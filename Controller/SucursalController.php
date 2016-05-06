@@ -1,16 +1,29 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+include_once('DAO/SucursalesDAO.php');
+include_once('RouteInfo.php');
 
-echo 'hola';
-
-include_once('../DAO/SucursalesDAO.php');
-
-$sucs = SucursalesDAO::getAll();
-echo 'equisde';
-echo '<pre>';
-print_r($sucs);
-echo '</pre>';
-
+class SucursalController
+{
+    public static function getNearestSucursal($lat, $lon)
+    {
+        $nearestSucursal = null;
+        foreach (SucursalesDAO::getAll() as $sucursal) {
+            $route = new RouteInfo($lat, $lon, $sucursal->getLat(), $sucursal->getLon());
+            if($route->getResponseStatus() == "OK" && $route->getResultStatus() == "OK"){
+                if(is_null($nearestSucursal)){
+                    $nearestSucursal = $sucursal;
+                    $minDuration = $route->getDurationValue();
+                }else{
+                    if($route->getDurationValue() < $minDuration){
+                        $minDuration = $route->getDurationValue();
+                        $nearestSucursal = $sucursal;
+                    }
+                }
+            }else{
+                return null;
+            }
+        }
+        return $nearestSucursal;
+    }
+}
 ?>
