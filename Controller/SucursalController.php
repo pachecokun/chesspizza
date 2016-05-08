@@ -9,7 +9,7 @@ class SucursalController
         $nearestSucursal = null;
         foreach (SucursalDAO::getAll() as $sucursal) {
             $route = new RouteInfo();
-            $route->getRouteInfo($lat, $lon, $sucursal->getLat(), $sucursal->getLon());
+            $route->getRouteInfo($lat.",".$lon, $sucursal->getLat().",". $sucursal->getLon());
             if ($route->getResponseStatus() == "OK" && $route->getResultStatus() == "OK") {
                 if ($route->getDurationValue() < $maxTime) {
                     if (is_null($nearestSucursal)) {
