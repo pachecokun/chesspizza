@@ -1,61 +1,45 @@
 <?php
 
-class Sucursal
-{
-
-    private $idSucursal;
-    private $nombre;
+class Sucursal{
+    private $id;
     private $direccion;
     private $lat;
     private $lon;
+    private $nombre;
 
     /**
      * Sucursal constructor.
-     * @param $idSucursal
-     * @param $nombre
+     * @param $id
      * @param $direccion
-     * @param $lon
      * @param $lat
+     * @param $lon
+     * @param $nombre
      */
-    public function __construct($idSucursal, $nombre, $direccion, $lat, $lon)
+    public function __construct($id, $direccion, $lat, $lon, $nombre)
     {
-        $this->idSucursal = $idSucursal;
-        $this->nombre = $nombre;
+        $this->id = $id;
         $this->direccion = $direccion;
-        $this->lon = $lon;
         $this->lat = $lat;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getIdSucursal()
-    {
-        return $this->idSucursal;
-    }
-
-    /**
-     * @param mixed $idSucursal
-     */
-    public function setIdSucursal($idSucursal)
-    {
-        $this->idSucursal = $idSucursal;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNombre()
-    {
-        return $this->nombre;
-    }
-
-    /**
-     * @param mixed $nombre
-     */
-    public function setNombre($nombre)
-    {
+        $this->lon = $lon;
         $this->nombre = $nombre;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     * @return Sucursal
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
     }
 
     /**
@@ -68,10 +52,12 @@ class Sucursal
 
     /**
      * @param mixed $direccion
+     * @return Sucursal
      */
     public function setDireccion($direccion)
     {
         $this->direccion = $direccion;
+        return $this;
     }
 
     /**
@@ -84,10 +70,12 @@ class Sucursal
 
     /**
      * @param mixed $lat
+     * @return Sucursal
      */
     public function setLat($lat)
     {
         $this->lat = $lat;
+        return $this;
     }
 
     /**
@@ -100,26 +88,31 @@ class Sucursal
 
     /**
      * @param mixed $lon
+     * @return Sucursal
      */
     public function setLon($lon)
     {
         $this->lon = $lon;
+        return $this;
     }
 
-
-
-
-    public function toString()
+    /**
+     * @return mixed
+     */
+    public function getNombre()
     {
-        $infoSucursal = "ID Sucursal: " . $this->idSucursal . "<br>";
-        $infoSucursal .= "Nombre: " . $this->nombre . "<br>";
-        $infoSucursal .= "Direccion: " . $this->direccion . "<br>";
-        $infoSucursal .= "Lat: " . $this->lat . "<br>";
-        $infoSucursal .= "Lon: " . $this->lon . "<br>";
-        return $infoSucursal;
+        return $this->nombre;
+    }
+
+    /**
+     * @param mixed $nombre
+     * @return Sucursal
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+        return $this;
     }
 
 
 }
-
-?>
