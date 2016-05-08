@@ -15,8 +15,14 @@ class RouteInfo
     private $distance = ["text" => "", "value" => ""];
     private $duration = ["text" => "", "value" => ""];
 
-    public function getRouteInfo($latIni, $lonIni, $latFin, $lonFin){
-        $url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" . $latIni . "," . $lonIni . "&destinations=" . $latFin . "," . $lonFin;
+/*
+*   Origin y Dest pueden ser coordenadadas de la forma 19.998,-199.999 o una dirección
+*/
+    public function getRouteInfo($origin, $dest){
+        /*En caso de que origin y dest sean direcciones, reemplazamos los espacios con +*/
+        str_replace(" ","+",$origin);
+        str_replace(" ","+",$dest);
+        $url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" . $origin . "&destinations=" . $dest;
         $content = file_get_contents($url);
         $json = json_decode($content, true);
         $this->responseStatus = $json["status"];
@@ -36,7 +42,7 @@ class RouteInfo
 
     public static function getFullAddress($lat, $lon){
         $routeInfo = new RouteInfo();
-        $routeInfo->getRouteInfo($lat,$lon,$lat,$lon);
+        $routeInfo->getRouteInfo($lat.",".$lon,$lat.",".$lon);
         return $routeInfo->getOriginAddress();
     }
 
