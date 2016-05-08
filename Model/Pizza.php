@@ -9,7 +9,7 @@ class Pizza{
      * @param $producto_id
      * @param $tamano
      */
-    public function __construct($producto_id, $tamano)
+    public function __construct($producto_id = null, $tamano = null)
     {
         $this->producto_id = $producto_id;
         $this->tamano = $tamano;

@@ -24,6 +24,7 @@ class Sucursal{
         $this->nombre = $nombre;
     }
 
+
     /**
      * @return mixed
      */

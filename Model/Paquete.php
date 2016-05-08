@@ -4,18 +4,21 @@ class Paquete{
     private $producto_id;
     private $refresco_producto_id;
     private $especial_id;
+    private $nombre;
 
     /**
      * Paquete constructor.
-     * @param $especial_id
      * @param $producto_id
      * @param $refresco_producto_id
+     * @param $especial_id
+     * @param $nombre
      */
-    public function __construct($especial_id, $producto_id, $refresco_producto_id)
+    public function __construct($producto_id=null, $refresco_producto_id=null, $especial_id=null, $nombre=null)
     {
-        $this->especial_id = $especial_id;
         $this->producto_id = $producto_id;
         $this->refresco_producto_id = $refresco_producto_id;
+        $this->especial_id = $especial_id;
+        $this->nombre = $nombre;
     }
 
     /**
@@ -69,6 +72,24 @@ class Paquete{
     public function setEspecialId($especial_id)
     {
         $this->especial_id = $especial_id;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * @param mixed $nombre
+     * @return Paquete
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
         return $this;
     }
 

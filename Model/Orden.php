@@ -21,7 +21,7 @@ class Orden{
      * @param $lon
      * @param $nombre_cliente
      */
-    public function __construct($id, $fecha_hora, $direccion, $sucursal_id, $repartidor_id, $lat, $lon, $nombre_cliente)
+    public function __construct($id = null, $fecha_hora = null, $direccion = null, $sucursal_id = null, $repartidor_id = null, $lat = null, $lon = null, $nombre_cliente = null)
     {
         $this->id = $id;
         $this->fecha_hora = $fecha_hora;

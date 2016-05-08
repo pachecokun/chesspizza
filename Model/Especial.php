@@ -1,8 +1,9 @@
 <?php
 class Especial{
     private $id;
-    private $precio_pizza;
+    private $precio;
     private $pizza_id;
+    private $nombre;
 
     /**
      * Especial constructor.
@@ -10,11 +11,12 @@ class Especial{
      * @param $precio_pizza
      * @param $pizza_id
      */
-    public function __construct($id, $precio_pizza, $pizza_id)
+    public function __construct($id = null, $precio_pizza = null, $pizza_id = null,$nombre=null)
     {
         $this->id = $id;
-        $this->precio_pizza = $precio_pizza;
+        $this->precio = $precio_pizza;
         $this->pizza_id = $pizza_id;
+        $this->nombre = null;
     }
 
     /**
@@ -38,18 +40,18 @@ class Especial{
     /**
      * @return mixed
      */
-    public function getPrecioPizza()
+    public function getPrecio()
     {
-        return $this->precio_pizza;
+        return $this->precio;
     }
 
     /**
-     * @param mixed $precio_pizza
+     * @param mixed $precio
      * @return Especial
      */
-    public function setPrecioPizza($precio_pizza)
+    public function setPrecio($precio)
     {
-        $this->precio_pizza = $precio_pizza;
+        $this->precio = $precio;
         return $this;
     }
 
@@ -68,6 +70,24 @@ class Especial{
     public function setPizzaId($pizza_id)
     {
         $this->pizza_id = $pizza_id;
+        return $this;
+    }
+
+    /**
+     * @return null
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * @param null $nombre
+     * @return Especial
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
         return $this;
     }
 

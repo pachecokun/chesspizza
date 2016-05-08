@@ -15,7 +15,7 @@ class Operacion{
      * @param $lat
      * @param $lon
      */
-    public function __construct($id, $orden_id, $fecha_hora, $lat, $lon)
+    public function __construct($id = null, $orden_id = null, $fecha_hora = null, $lat = null, $lon = null)
     {
         $this->id = $id;
         $this->orden_id = $orden_id;
@@ -114,6 +114,6 @@ class Operacion{
         return $this;
     }
 
-    
+
 
 }

@@ -11,7 +11,7 @@ class Ingrediente{
      * @param $nombre
      * @param $precio
      */
-    public function __construct($id, $nombre, $precio)
+    public function __construct($id = null, $nombre = null, $precio = null)
     {
         $this->id = $id;
         $this->nombre = $nombre;
