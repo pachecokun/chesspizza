@@ -12,7 +12,7 @@ echo "Lat: " . $lat . "<br>";
 echo "Long: " . $lon . "<br><br><br>";
 $nearestSucursal = SucursalController::getNearestSucursal($lat, $lon);
 if (!is_null($nearestSucursal)) {
-    echo "Su dirección es: " . (new RouteInfo($lat,$lon,$lat,$lon))->getOriginAddress();
+    echo "Su dirección es: " . (new RouteInfo($lat,$lon,$lat,$lon))->getOriginAddress() . "\n";
     echo "La sucursal más cercana es: <br>";
     echo $nearestSucursal->getNombre() . "\n";
     echo $nearestSucursal->getDireccion();
