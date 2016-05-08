@@ -3,7 +3,7 @@ class Conexion{
     private static $conexion = null;
 
     const HOST = 'localhost';
-    const DB = 'Pizzeria';
+    const DB = 'pizza2';
     const USER = 'root';
     const PASS = 'root';
 
