@@ -14,7 +14,8 @@ $nearestSucursal = SucursalController::getNearestSucursal($lat, $lon);
 if (!is_null($nearestSucursal)) {
     echo "Su dirección es: " . (new RouteInfo($lat,$lon,$lat,$lon))->getOriginAddress();
     echo "La sucursal más cercana es: <br>";
-    echo $nearestSucursal->toString();
+    echo $nearestSucursal->getNombre() . "\n";
+    echo $nearestSucursal->getDireccion();
 } else {
     echo "No se encuentran sucursales cercanas...";
 }
