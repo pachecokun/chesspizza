@@ -2,6 +2,7 @@
 
 include_once('BD/Conexion.php');
 include_once('Model/Sucursal.php');
+include_once('DAO.php');
 
 class SucursalDAO implements DAO
 {
