@@ -1,7 +1,7 @@
 <?php
 
 include_once('../BD/Conexion.php');
-include_once('../Model/Sucursal.php');
+include_once('../Model/Operacion.php');
 
 class OperacionDAO implements DAO
 {

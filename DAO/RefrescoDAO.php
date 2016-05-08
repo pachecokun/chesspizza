@@ -1,7 +1,7 @@
 <?php
 
 include_once('../BD/Conexion.php');
-include_once('../Model/Sucursal.php');
+include_once('../Model/Refresco.php');
 
 class RefrescoDAO implements DAO
 {
