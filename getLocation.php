@@ -1,5 +1,5 @@
 <?php
-include_once "DAO/SucursalesDAO.php";
+include_once "DAO/SucursalDAO.php";
 include_once "Controller/SucursalController.php";
 if (isset($_POST["Lat"]) && isset($_POST["Lon"])) {
     $lat = $_POST["Lat"];
