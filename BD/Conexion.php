@@ -24,7 +24,7 @@ class Conexion{
         try{
             if(is_null(self::$conexion)){
                 $str = "mysql:host=".self::HOST.";port=3306;dbname=".self::DB;
-                self::$conexion = new PDO($str,self::USER,self::PASS);
+                self::$conexion = new PDO($str,self::USER,self::PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
                 self::$conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             }
             return self::$conexion;
