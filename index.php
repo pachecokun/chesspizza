@@ -1,5 +1,5 @@
 <?php
-include_once('DAO/SucursalesDAO.php');
+include_once('DAO/SucursalDAO.php');
 include_once('Model/Sucursal.php');
 ?>
 <html>
