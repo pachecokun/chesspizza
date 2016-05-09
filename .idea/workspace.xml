@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b36fc594-d570-418e-9762-8e0e22335732" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controller/EspecialController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controller/IngredienteController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controller/PizzaController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View/Especial/Registrar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/SucursalController.php" afterPath="$PROJECT_DIR$/Controller/SucursalController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="chesspizza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,20 +29,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RepartidorDAO.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DAO/RepartidorDAO.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Registrar.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/View/Especial/Registrar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EspecialController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/EspecialController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PizzaController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/PizzaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IngredienteDAO.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DAO/IngredienteDAO.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+              <caret line="28" column="80" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
               <folding>
-                <marker date="1462764872775" expanded="true" signature="280:304" placeholder="SELECT * FRO... Repartidor" />
-                <marker date="1462764872775" expanded="true" signature="280:311" placeholder="SELECT * FRO... Repartidor" />
-                <marker date="1462764872775" expanded="true" signature="280:325" placeholder="SELECT * FRO... Repartidor" />
-                <marker date="1462764872775" expanded="true" signature="780:826" placeholder="insert into Repartidor... " />
-                <marker date="1462764872775" expanded="true" signature="1187:1238" placeholder="update Repar... " />
-                <marker date="1462764872775" expanded="true" signature="1612:1645" placeholder="delete from " />
-                <marker date="1462764872775" expanded="true" signature="1981:2016" placeholder="SELECT * FRO... t_name" />
+                <marker date="1462764898819" expanded="true" signature="281:306" placeholder="SELECT * FRO... Ingrediente" />
+                <marker date="1462764898819" expanded="true" signature="281:312" placeholder="SELECT * FRO... Ingrediente" />
+                <marker date="1462764898819" expanded="true" signature="281:313" placeholder="SELECT * FRO... Ingrediente" />
+                <marker date="1462764898819" expanded="true" signature="786:836" placeholder="insert into Ingrediente... " />
+                <marker date="1462764898819" expanded="true" signature="1201:1255" placeholder="update Ingre... " />
+                <marker date="1462764898819" expanded="true" signature="1633:1667" placeholder="delete from " />
+                <marker date="1462764898819" expanded="true" signature="2004:2040" placeholder="SELECT * FRO... Ingrediente" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IngredienteController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/IngredienteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,11 +119,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SucursalController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SucursalController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/SucursalController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
-              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+              <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListaSucursales.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Sucursal/ListaSucursales.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -103,7 +169,6 @@
         <option value="$PROJECT_DIR$/View/Sucursal/ListaSucursales.php" />
         <option value="$PROJECT_DIR$/Esquema BD/Pizzeria2_create.sql" />
         <option value="$PROJECT_DIR$/Model/Repartidor.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/View/Repartidor/Registrar.php" />
         <option value="$PROJECT_DIR$/DAO/RepartidorDAO.php" />
         <option value="$PROJECT_DIR$/DAO/EspecialDAO.php" />
@@ -119,6 +184,11 @@
         <option value="$PROJECT_DIR$/BD/Conexion.php" />
         <option value="$PROJECT_DIR$/Controller/RepartidorController.php" />
         <option value="$PROJECT_DIR$/Controller/SucursalController.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Controller/IngredienteController.php" />
+        <option value="$PROJECT_DIR$/Controller/PizzaController.php" />
+        <option value="$PROJECT_DIR$/Controller/EspecialController.php" />
+        <option value="$PROJECT_DIR$/View/Especial/Registrar.php" />
       </list>
     </option>
   </component>
@@ -214,6 +284,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Repartidor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chesspizza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chesspizza" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Especial" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,7 +439,7 @@
       <workItem from="1462725363306" duration="13284000" />
       <workItem from="1462753250531" duration="68000" />
       <workItem from="1462753467321" duration="808000" />
-      <workItem from="1462747539482" duration="11797000" />
+      <workItem from="1462747539482" duration="13220000" />
     </task>
     <task id="LOCAL-00001" summary="DAO's">
       <created>1462732322297</created>
@@ -598,11 +686,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462765307578</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="agregadas funciones de dao">
+      <created>1462765569383</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1462765569383</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39745000" />
+    <option name="totallyTimeSpent" value="41168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -653,34 +748,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DAO/PaqueteDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/OperacionDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/IngredienteDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/Sucursal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -865,14 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Sucursal/ListaSucursales.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DAO/DAO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -893,14 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="65" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
           <folding />
         </state>
       </provider>
@@ -926,22 +977,6 @@
             <marker date="1462764899022" expanded="true" signature="1682:1704" placeholder="delete from " />
             <marker date="1462764899022" expanded="true" signature="2039:2067" placeholder="SELECT * FRO... Especial" />
             <marker date="1462764899022" expanded="true" signature="2039:2072" placeholder="SELECT * FRO... Especial" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/IngredienteDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="80" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
-          <folding>
-            <marker date="1462764898819" expanded="true" signature="281:306" placeholder="SELECT * FRO... Ingrediente" />
-            <marker date="1462764898819" expanded="true" signature="281:312" placeholder="SELECT * FRO... Ingrediente" />
-            <marker date="1462764898819" expanded="true" signature="281:313" placeholder="SELECT * FRO... Ingrediente" />
-            <marker date="1462764898819" expanded="true" signature="786:836" placeholder="insert into Ingrediente... " />
-            <marker date="1462764898819" expanded="true" signature="1201:1255" placeholder="update Ingre... " />
-            <marker date="1462764898819" expanded="true" signature="1633:1667" placeholder="delete from " />
-            <marker date="1462764898819" expanded="true" signature="2004:2040" placeholder="SELECT * FRO... Ingrediente" />
           </folding>
         </state>
       </provider>
@@ -1110,7 +1145,73 @@
     <entry file="file://$PROJECT_DIR$/Controller/SucursalController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Sucursal/ListaSucursales.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/IngredienteDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="80" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
+          <folding>
+            <marker date="1462764898819" expanded="true" signature="281:306" placeholder="SELECT * FRO... Ingrediente" />
+            <marker date="1462764898819" expanded="true" signature="281:312" placeholder="SELECT * FRO... Ingrediente" />
+            <marker date="1462764898819" expanded="true" signature="281:313" placeholder="SELECT * FRO... Ingrediente" />
+            <marker date="1462764898819" expanded="true" signature="786:836" placeholder="insert into Ingrediente... " />
+            <marker date="1462764898819" expanded="true" signature="1201:1255" placeholder="update Ingre... " />
+            <marker date="1462764898819" expanded="true" signature="1633:1667" placeholder="delete from " />
+            <marker date="1462764898819" expanded="true" signature="2004:2040" placeholder="SELECT * FRO... Ingrediente" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/PizzaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/IngredienteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/EspecialController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Especial/Registrar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
