@@ -27,7 +27,7 @@ class RefrescoDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Refresco values($,$)",array($obj->getProductoId(),$obj->getNombre(),));
+            Conexion::execute("insert into Refresco values(?,?)",array($obj->getProductoId(),$obj->getNombre(),));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

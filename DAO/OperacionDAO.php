@@ -27,7 +27,7 @@ class OperacionDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Operacion(Orden_id,fecha_hora,lat,lon) values($,$,$,$)",array($obj->getOrdenId(),$obj->getFechaHora(),$obj->getLat(),$obj->getLon()));
+            Conexion::execute("insert into Operacion(Orden_id,fecha_hora,lat,lon) values(?,?,?,?)",array($obj->getOrdenId(),$obj->getFechaHora(),$obj->getLat(),$obj->getLon()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

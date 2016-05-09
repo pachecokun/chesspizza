@@ -27,7 +27,7 @@ class PaqueteDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Paquete values($,$,$,$)",array($obj->getProductoId(),$obj->getRefreascoProductoId(),$obj->getEspecialId(),$obj->getNombre()));
+            Conexion::execute("insert into Paquete values(?,?,?,?)",array($obj->getProductoId(),$obj->getRefreascoProductoId(),$obj->getEspecialId(),$obj->getNombre()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

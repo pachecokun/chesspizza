@@ -27,7 +27,7 @@ class RepartidorDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Repartidor(nombre,tel) values($,$)",array($obj->getNombre(),$obj->getTel()));
+            Conexion::execute("insert into Repartidor(nombre,tel) values(?,?)",array($obj->getNombre(),$obj->getTel()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

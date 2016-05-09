@@ -27,7 +27,7 @@ class PizzaDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Pizza values($,$)",array($obj->getProductoId(),$obj->getTamano()));
+            Conexion::execute("insert into Pizza values(?,?)",array($obj->getProductoId(),$obj->getTamano()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

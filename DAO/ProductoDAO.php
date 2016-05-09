@@ -27,7 +27,7 @@ class ProductoDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Producto(tipo,precio) values($,$)",array($obj->getTipo(),$obj->getPrecio()));
+            Conexion::execute("insert into Producto(tipo,precio) values(?,?)",array($obj->getTipo(),$obj->getPrecio()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
