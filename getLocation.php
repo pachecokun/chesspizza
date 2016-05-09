@@ -9,7 +9,7 @@ if (isset($_POST["Lat"]) && isset($_POST["Lon"])) {
 }
 $nearestSucursal = SucursalController::getNearestSucursal($lat, $lon);
 if (!is_null($nearestSucursal)) {
-    echo "Su dirección es: " . (new RouteInfo($lat,$lon,$lat,$lon))->getOriginAddress() . "<br>";
+    echo "Su dirección es: " . RouteInfo::getFullAddress($lat,$lon) . "<br>";
     echo "La sucursal más cercana es: <br>";
     echo $nearestSucursal->getNombre() . "<br>";
     echo $nearestSucursal->getDireccion();

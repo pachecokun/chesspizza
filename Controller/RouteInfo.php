@@ -15,8 +15,7 @@ class RouteInfo
     private $distance = ["text" => "", "value" => ""];
     private $duration = ["text" => "", "value" => ""];
 
-    public function __construct($latIni, $lonIni, $latFin, $lonFin)
-    {
+    public function getRouteInfo($latIni, $lonIni, $latFin, $lonFin){
         $url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" . $latIni . "," . $lonIni . "&destinations=" . $latFin . "," . $lonFin;
         $content = file_get_contents($url);
         $json = json_decode($content, true);
@@ -33,6 +32,12 @@ class RouteInfo
                 $this->duration["value"] = $elements["duration"]["value"];
             }
         }
+    }
+
+    public static function getFullAddress($lat, $lon){
+        $routeInfo = new RouteInfo();
+        $routeInfo->getRouteInfo($lat,$lon,$lat,$lon);
+        return $routeInfo->getOriginAddress();
     }
 
     /**
