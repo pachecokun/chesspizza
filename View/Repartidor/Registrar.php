@@ -9,8 +9,9 @@ if(isset($_POST['nombre'])){
 else{
 ?>
 <form method="post">
-    Nombre: <input type="text">
-    Teléfono: <input type="text">
+    Nombre: <input type="text"><br>
+    Teléfono: <input type="text"><br>
+    <input type="submit">
 </form>
 
 <?php } ?>
