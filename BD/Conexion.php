@@ -10,8 +10,6 @@ class Conexion{
 
     public static function execute($query,$args=array()){
         $con = self::getConexion();
-        echo "<br><br>$query<br><br>";
-        print_r($args);
         $stm = $con->prepare($query);
         if(sizeof($args)==0){
             $stm->execute();
