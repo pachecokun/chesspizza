@@ -30,7 +30,7 @@ class SucursalController
     }
 
     public static function getAllSucursales(){
-        return SucursalDAO::getAll();
+        return SucursalDAO::getAll("id = 2");
     }
 }
 
