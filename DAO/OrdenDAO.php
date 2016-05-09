@@ -70,7 +70,7 @@ class OrdenDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Orden where id=?",$id);
+            $stm = Conexion::execute("SELECT * FROM Orden where id=?",array($id));
 
             if ($obj = $stm->fetch()) {
                 return new Orden($obj['id'],$obj['fecha_hora'],$obj['direccion'],$obj['Sucursal_id'],$obj['Repartidor_id'],$obj['lat'],$obj['lon'],$obj['nombre_cliente']);

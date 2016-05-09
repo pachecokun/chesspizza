@@ -70,7 +70,7 @@ class StatusDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Status where id=?",$id);
+            $stm = Conexion::execute("SELECT * FROM Status where id=?",array($id));
 
             if ($obj = $stm->fetch()) {
                 return new Status($obj['id'],$obj['descripcion']);

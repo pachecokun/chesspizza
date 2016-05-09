@@ -70,7 +70,7 @@ class IngredienteDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Ingrediente where id=?",$id);
+            $stm = Conexion::execute("SELECT * FROM Ingrediente where id=?",array($id));
 
             if ($obj = $stm->fetch()) {
                 return new Ingrediente($obj['id'],$obj['nombre'],$obj['precio']);

@@ -70,7 +70,7 @@ class ProductoDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Producto where id=?",$id);
+            $stm = Conexion::execute("SELECT * FROM Producto where id=?",array($id));
 
             if ($obj = $stm->fetch()) {
                 return new Producto($obj['id'],$obj['tipo'],$obj['precio']);

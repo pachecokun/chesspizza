@@ -70,7 +70,7 @@ class RefrescoDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Refresco where Producto_id=?",$id);
+            $stm = Conexion::execute("SELECT * FROM Refresco where Producto_id=?",array($id));
 
             if ($obj = $stm->fetch()) {
                 return new Refresco($obj['Producto_id'],$obj['nombre']);

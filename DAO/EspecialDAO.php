@@ -69,7 +69,7 @@ class EspecialDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Especial where id=?",$id);
+            $stm = Conexion::execute("SELECT * FROM Especial where id=?",array($id));
 
             if ($obj = $stm->fetch()) {
                 return new Especial($obj['id'],$obj['precio'],$obj['Pizza_id'],$obj['nombre']);

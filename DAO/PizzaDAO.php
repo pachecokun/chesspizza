@@ -70,7 +70,7 @@ class PizzaDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Pizza where Producto_id=?",$id);
+            $stm = Conexion::execute("SELECT * FROM Pizza where Producto_id=?",array($id));
 
             if ($obj = $stm->fetch()) {
                 return new Pizza($obj['producto_id'],$obj['tamano']);

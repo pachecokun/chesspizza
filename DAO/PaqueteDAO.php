@@ -70,7 +70,7 @@ class PaqueteDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Paquete where Producto_id=?",$id);
+            $stm = Conexion::execute("SELECT * FROM Paquete where Producto_id=?",array($id));
 
             if ($obj = $stm->fetch()) {
                 return new Paquete($obj['Producto_id'],$obj['Refresco_Producto_id'],$obj['Especial_id'],$obj['nombre']);

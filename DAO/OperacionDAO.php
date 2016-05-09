@@ -70,7 +70,7 @@ class OperacionDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Operacion where id=?",$id);
+            $stm = Conexion::execute("SELECT * FROM Operacion where id=?",array($id));
 
             if ($obj = $stm->fetch()) {
                 return new Operacion($obj['id'],$obj['Orden_id'],$obj['fecha_hora'],$obj['lat'],$obj['lon']);

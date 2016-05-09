@@ -70,7 +70,7 @@ class SucursalDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Sucursal where id=?",$id);
+            $stm = Conexion::execute("SELECT * FROM Sucursal where id=?",array($id));
 
             if ($obj = $stm->fetch()) {
                 return new Sucursal($obj['id'],$obj['direccion'],$obj['lat'],$obj['lon'],$obj['nombre']);

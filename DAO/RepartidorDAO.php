@@ -70,7 +70,7 @@ class RepartidorDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Repartidor where id=?",$id);
+            $stm = Conexion::execute("SELECT * FROM Repartidor where id=?",array($id));
 
             if ($obj = $stm->fetch()) {
                 return new Repartidor($obj['id'],$obj['nombre'],$obj['tel']);
