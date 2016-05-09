@@ -1,5 +1,5 @@
 <?php
-include_once('DAO/SucursalDAO.php');
+include_once('../DAO/SucursalDAO.php');
 include_once('RouteInfo.php');
 
 class SucursalController
@@ -27,6 +27,10 @@ class SucursalController
             }
         }
         return $nearestSucursal;
+    }
+
+    public static function getAllSucursales(){
+        return SucursalDAO::getAll();
     }
 }
 
