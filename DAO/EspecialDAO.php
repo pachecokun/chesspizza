@@ -5,11 +5,11 @@ include_once(__DIR__.'/DAO.php');
 
 class EspecialDAO implements DAO
 {
-    public static function getAll()
+    public static function getAll($cond= "1=1",$args = array())
     {
         try {
             $sucs = array();
-            $stm = Conexion::execute("SELECT * FROM Especial");
+            $stm = Conexion::execute("SELECT * FROM Especial where ".$cond,$args);
 
             while ($obj = $stm->fetch()) {
                 $sucs[] = new Especial($obj['id'],$obj['precio'],$obj['Pizza_id'],$obj['nombre']);
@@ -65,6 +65,27 @@ class EspecialDAO implements DAO
             return false;
         }
     }
+
+    public static function get($id)
+    {
+        try {
+            $stm = Conexion::execute("SELECT * FROM Especial where id=?",$id);
+
+            if ($obj = $stm->fetch()) {
+                return new Especial($obj['id'],$obj['precio'],$obj['Pizza_id'],$obj['nombre']);
+            }
+            else {
+                return null;
+            }
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return null;
+        } catch (Error $e) {
+            echo $e->getMessage();
+            return null;
+        }
+    }
+
 
 }
 ?>

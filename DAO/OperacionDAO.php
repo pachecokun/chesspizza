@@ -5,11 +5,11 @@ include_once(__DIR__.'/DAO.php');
 
 class OperacionDAO implements DAO
 {
-    public static function getAll()
+    public static function getAll($cond= "1=1",$args = array())
     {
         try {
             $sucs = array();
-            $stm = Conexion::execute("SELECT * FROM Operacion");
+            $stm = Conexion::execute("SELECT * FROM Operacion where ".$cond,$args);
 
             while ($obj = $stm->fetch()) {
                 $sucs[] = new Operacion($obj['id'],$obj['Orden_id'],$obj['fecha_hora'],$obj['lat'],$obj['lon']);
@@ -63,6 +63,27 @@ class OperacionDAO implements DAO
         } catch (Error $e) {
             echo $e->getMessage();
             return false;
+        }
+    }
+
+
+    public static function get($id)
+    {
+        try {
+            $stm = Conexion::execute("SELECT * FROM Operacion where id=?",$id);
+
+            if ($obj = $stm->fetch()) {
+                return new Operacion($obj['id'],$obj['Orden_id'],$obj['fecha_hora'],$obj['lat'],$obj['lon']);
+            }
+            else {
+                return null;
+            }
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return null;
+        } catch (Error $e) {
+            echo $e->getMessage();
+            return null;
         }
     }
 

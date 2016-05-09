@@ -4,11 +4,11 @@ include_once(__DIR__.'/DAO.php');
 
 class IngredienteDAO implements DAO
 {
-    public static function getAll()
+    public static function getAll($cond= "1=1",$args = array())
     {
         try {
             $sucs = array();
-            $stm = Conexion::execute("SELECT * FROM Ingrediente");
+            $stm = Conexion::execute("SELECT * FROM Ingrediente where ".$cond,$args);
 
             while ($obj = $stm->fetch()) {
                 $sucs[] = new Ingrediente($obj['id'],$obj['nombre'],$obj['precio']);
@@ -65,5 +65,26 @@ class IngredienteDAO implements DAO
         }
     }
 
+
+
+    public static function get($id)
+    {
+        try {
+            $stm = Conexion::execute("SELECT * FROM Ingrediente where id=?",$id);
+
+            if ($obj = $stm->fetch()) {
+                return new Ingrediente($obj['id'],$obj['nombre'],$obj['precio']);
+            }
+            else {
+                return null;
+            }
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return null;
+        } catch (Error $e) {
+            echo $e->getMessage();
+            return null;
+        }
+    }
 }
 ?>

@@ -5,11 +5,11 @@ include_once(__DIR__.'/DAO.php');
 
 class StatusDAO implements DAO
 {
-    public static function getAll()
+    public static function getAll($cond= "1=1",$args = array())
     {
         try {
             $sucs = array();
-            $stm = Conexion::execute("SELECT * FROM Status");
+            $stm = Conexion::execute("SELECT * FROM Status where ".$cond,$args);
 
             while ($obj = $stm->fetch()) {
                 $sucs[] = new Status($obj['id'],$obj['descripcion']);
@@ -63,6 +63,27 @@ class StatusDAO implements DAO
         } catch (Error $e) {
             echo $e->getMessage();
             return false;
+        }
+    }
+
+
+    public static function get($id)
+    {
+        try {
+            $stm = Conexion::execute("SELECT * FROM Status where id=?",$id);
+
+            if ($obj = $stm->fetch()) {
+                return new Status($obj['id'],$obj['descripcion']);
+            }
+            else {
+                return null;
+            }
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return null;
+        } catch (Error $e) {
+            echo $e->getMessage();
+            return null;
         }
     }
 

@@ -5,11 +5,11 @@ include_once(__DIR__.'/DAO.php');
 
 class PaqueteDAO implements DAO
 {
-    public static function getAll()
+    public static function getAll($cond= "1=1",$args = array())
     {
         try {
             $sucs = array();
-            $stm = Conexion::execute("SELECT * FROM Paquete");
+            $stm = Conexion::execute("SELECT * FROM Paquete where ".$cond,$args);
 
             while ($obj = $stm->fetch()) {
                 $sucs[] = new Paquete($obj['Producto_id'],$obj['Refresco_Producto_id'],$obj['Especial_id'],$obj['nombre']);
@@ -63,6 +63,27 @@ class PaqueteDAO implements DAO
         } catch (Error $e) {
             echo $e->getMessage();
             return false;
+        }
+    }
+
+
+    public static function get($id)
+    {
+        try {
+            $stm = Conexion::execute("SELECT * FROM Paquete where Producto_id=?",$id);
+
+            if ($obj = $stm->fetch()) {
+                return new Paquete($obj['Producto_id'],$obj['Refresco_Producto_id'],$obj['Especial_id'],$obj['nombre']);
+            }
+            else {
+                return null;
+            }
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return null;
+        } catch (Error $e) {
+            echo $e->getMessage();
+            return null;
         }
     }
 
