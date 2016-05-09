@@ -1,5 +1,5 @@
 <?php
-include_once(__FILE__.'/../DAO/SucursalDAO.php');
+include_once(__DIR__.'/../DAO/SucursalDAO.php');
 include_once('RouteInfo.php');
 
 class SucursalController

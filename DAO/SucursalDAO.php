@@ -1,8 +1,8 @@
 <?php
 
-include_once(__FILE__.'/BD/Conexion.php');
-include_once(__FILE__.'/Model/Sucursal.php');
-include_once(__FILE__.'/DAO.php');
+include_once(__DIR__.'/BD/Conexion.php');
+include_once(__DIR__.'/Model/Sucursal.php');
+include_once(__DIR__.'/DAO.php');
 
 class SucursalDAO implements DAO
 {
