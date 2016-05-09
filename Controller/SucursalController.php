@@ -4,7 +4,7 @@ include_once('RouteInfo.php');
 
 class SucursalController
 {
-    public static function getNearestSucursal($lat, $lon, $maxTime = (30*60)) // maxTime = 30 minutos * 60 segundos
+    public static function getNearestSucursal($lat, $lon, $maxTime = (20*60)) // maxTime = 30 minutos * 60 segundos
     {
         $nearestSucursal = null;
         foreach (SucursalDAO::getAll() as $sucursal) {
