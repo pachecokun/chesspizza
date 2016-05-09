@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b36fc594-d570-418e-9762-8e0e22335732" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controller/RepartidorController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View/Repartidor/Registrar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/EspecialDAO.php" afterPath="$PROJECT_DIR$/DAO/EspecialDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/IngredienteDAO.php" afterPath="$PROJECT_DIR$/DAO/IngredienteDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/OperacionDAO.php" afterPath="$PROJECT_DIR$/DAO/OperacionDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/OrdenDAO.php" afterPath="$PROJECT_DIR$/DAO/OrdenDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/ProductoDAO.php" afterPath="$PROJECT_DIR$/DAO/ProductoDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/RepartidorDAO.php" afterPath="$PROJECT_DIR$/DAO/RepartidorDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/StatusDAO.php" afterPath="$PROJECT_DIR$/DAO/StatusDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/SucursalDAO.php" afterPath="$PROJECT_DIR$/DAO/SucursalDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Esquema BD/Pizzeria2_create.sql" afterPath="$PROJECT_DIR$/Esquema BD/Pizzeria2_create.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Repartidor.php" afterPath="$PROJECT_DIR$/Model/Repartidor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/RepartidorController.php" afterPath="$PROJECT_DIR$/Controller/RepartidorController.php" />
     </list>
     <ignored path="chesspizza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+            <state relative-caret-position="306">
+              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -158,11 +146,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepartidorController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RepartidorController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controller/RepartidorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+            <state relative-caret-position="17">
+              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -221,9 +209,9 @@
         <option value="$PROJECT_DIR$/DAO/SucursalDAO.php" />
         <option value="$PROJECT_DIR$/Esquema BD/Pizzeria2_create.sql" />
         <option value="$PROJECT_DIR$/Model/Repartidor.php" />
-        <option value="$PROJECT_DIR$/Controller/RepartidorController.php" />
         <option value="$PROJECT_DIR$/View/Repartidor/Registrar.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Controller/RepartidorController.php" />
       </list>
     </option>
   </component>
@@ -456,7 +444,7 @@
       <workItem from="1462725363306" duration="13284000" />
       <workItem from="1462753250531" duration="68000" />
       <workItem from="1462753467321" duration="808000" />
-      <workItem from="1462747539482" duration="10485000" />
+      <workItem from="1462747539482" duration="10722000" />
     </task>
     <task id="LOCAL-00001" summary="DAO's">
       <created>1462732322297</created>
@@ -626,11 +614,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462760730265</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="agregadas funciones de dao">
+      <created>1462764255050</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1462764255050</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38433000" />
+    <option name="totallyTimeSpent" value="38670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1119,14 +1114,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/RepartidorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/Repartidor/Registrar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1137,8 +1124,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        <state relative-caret-position="306">
+          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/RepartidorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
           <folding />
         </state>
       </provider>

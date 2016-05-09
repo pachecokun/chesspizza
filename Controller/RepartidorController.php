@@ -1,6 +1,5 @@
 <?php
-
-include_once(__DIR__.'../DAO/RepartidorDAO.php');
+include_once(__DIR__.'/../DAO/RepartidorDAO.php');
 
 class RepartidorController{
     public static function registrar($nombre,$tel){
