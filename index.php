@@ -23,7 +23,6 @@ include_once('Model/Sucursal.php');
 </head>
 <body style="background-color: deeppink;color: aqua">
 <h1>Chess pizza :D</h1>
-<h2>Prueba :D</h2>
 <form id="formPedir" action="getLocation.php" method="POST">
     <input type="hidden" id="txtLat" name="Lat"/>
     <input type="hidden" id="txtLon" name="Lon"/>

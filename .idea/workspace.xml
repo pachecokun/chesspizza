@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b36fc594-d570-418e-9762-8e0e22335732" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/EspecialController.php" afterPath="$PROJECT_DIR$/Controller/EspecialController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/IngredienteController.php" afterPath="$PROJECT_DIR$/Controller/IngredienteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/PizzaController.php" afterPath="$PROJECT_DIR$/Controller/PizzaController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="chesspizza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="323">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -97,7 +95,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IngredienteController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IngredienteController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/IngredienteController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -182,11 +180,11 @@
         <option value="$PROJECT_DIR$/BD/Conexion.php" />
         <option value="$PROJECT_DIR$/Controller/RepartidorController.php" />
         <option value="$PROJECT_DIR$/Controller/SucursalController.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/View/Especial/Registrar.php" />
         <option value="$PROJECT_DIR$/Controller/EspecialController.php" />
-        <option value="$PROJECT_DIR$/Controller/IngredienteController.php" />
         <option value="$PROJECT_DIR$/Controller/PizzaController.php" />
+        <option value="$PROJECT_DIR$/Controller/IngredienteController.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -437,7 +435,7 @@
       <workItem from="1462725363306" duration="13284000" />
       <workItem from="1462753250531" duration="68000" />
       <workItem from="1462753467321" duration="808000" />
-      <workItem from="1462747539482" duration="13462000" />
+      <workItem from="1462747539482" duration="13574000" />
     </task>
     <task id="LOCAL-00001" summary="DAO's">
       <created>1462732322297</created>
@@ -712,11 +710,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462767190213</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="agregadas funciones de dao">
+      <created>1462767233853</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1462767233853</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41410000" />
+    <option name="totallyTimeSpent" value="41522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1153,16 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DAO/IngredienteDAO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1232,6 +1227,16 @@
         <state relative-caret-position="136">
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
