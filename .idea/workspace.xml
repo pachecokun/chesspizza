@@ -184,7 +184,7 @@
         <entry file="file://$PROJECT_DIR$/Controller/SucursalController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -447,7 +447,7 @@
       <workItem from="1462725363306" duration="13284000" />
       <workItem from="1462753250531" duration="68000" />
       <workItem from="1462753467321" duration="808000" />
-      <workItem from="1462747539482" duration="7594000" />
+      <workItem from="1462747539482" duration="7610000" />
     </task>
     <task id="LOCAL-00001" summary="DAO's">
       <created>1462732322297</created>
@@ -596,11 +596,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462760564617</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="agregadas funciones de dao">
+      <created>1462760657540</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1462760657540</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35542000" />
+    <option name="totallyTimeSpent" value="35558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1104,7 +1111,7 @@
     <entry file="file://$PROJECT_DIR$/Controller/SucursalController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
           <folding />
         </state>
       </provider>
