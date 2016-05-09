@@ -9,13 +9,9 @@ $ingredientes = IngredienteController::getAll();
 
 <form>
     <?php
-    foreach ($ingredientes as $ingrediente){
+    foreach ($ingredientes as $ingrediente):
     ?>
         <?=$ingrediente->getNombre() ?><input type="checkbox" name="<?=$ingrediente->getId() ?>"><br>
-    <?php}
-
-    ?>
+    <?php endforeach;?>
     <input type="submit">
 </form>
-
-
