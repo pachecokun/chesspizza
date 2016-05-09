@@ -1,7 +1,7 @@
 <?php
 
-include_once('../BD/Conexion.php');
-include_once('../Model/Paquete.php');
+include_once(__DIR__.'/../Model/Paquete.php');
+include_once(__DIR__.'/DAO.php');
 
 class PaqueteDAO implements DAO
 {

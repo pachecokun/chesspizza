@@ -1,7 +1,7 @@
 <?php
 
-include_once('../BD/Conexion.php');
-include_once('../Model/Orden.php');
+include_once(__DIR__.'/../Model/Orden.php');
+include_once(__DIR__.'/DAO.php');
 
 class OrdenDAO implements DAO
 {

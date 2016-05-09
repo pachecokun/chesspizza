@@ -1,7 +1,7 @@
 <?php
 
-include_once('../BD/Conexion.php');
-include_once('../Model/Producto.php');
+include_once(__DIR__.'/../Model/Producto.php');
+include_once(__DIR__.'/DAO.php');
 
 class ProductoDAO implements DAO
 {

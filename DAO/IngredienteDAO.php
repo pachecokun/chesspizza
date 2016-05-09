@@ -1,7 +1,6 @@
 <?php
-
-include_once('../BD/Conexion.php');
-include_once('../Model/Ingrediente.php');
+include_once(__DIR__.'/../Model/Ingrediente.php');
+include_once(__DIR__.'/DAO.php');
 
 class IngredienteDAO implements DAO
 {

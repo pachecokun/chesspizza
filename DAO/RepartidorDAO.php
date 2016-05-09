@@ -1,7 +1,7 @@
 <?php
 
-include_once('../BD/Conexion.php');
-include_once('../Model/Repartidor.php');
+include_once(__DIR__.'/../Model/Repartidor.php');
+include_once(__DIR__.'/DAO.php');
 
 class RepartidorDAO implements DAO
 {

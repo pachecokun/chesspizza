@@ -1,7 +1,7 @@
 <?php
 
-include_once('../BD/Conexion.php');
-include_once('../Model/Status.php');
+include_once(__DIR__.'/../Model/Status.php');
+include_once(__DIR__.'/DAO.php');
 
 class StatusDAO implements DAO
 {
