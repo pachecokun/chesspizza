@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__.'/../DAO/IngredienteDAO.php';
+include_once __DIR__.'/../DAO/IngredienteDAO.php';
 
 class IngredienteController{
     public static function getAll(){

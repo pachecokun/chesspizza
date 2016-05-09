@@ -1,3 +1,3 @@
 <?php
 
-include __DIR__.'/../DAO/PizzaDAO.php';
+include_once __DIR__.'/../DAO/PizzaDAO.php';
