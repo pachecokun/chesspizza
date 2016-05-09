@@ -4,7 +4,6 @@
     <list default="true" id="b36fc594-d570-418e-9762-8e0e22335732" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/SucursalController.php" afterPath="$PROJECT_DIR$/Controller/SucursalController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/SucursalDAO.php" afterPath="$PROJECT_DIR$/DAO/SucursalDAO.php" />
     </list>
     <ignored path="chesspizza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/Controller/SucursalController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -344,7 +343,7 @@
       <workItem from="1462725363306" duration="13284000" />
       <workItem from="1462753250531" duration="68000" />
       <workItem from="1462753467321" duration="808000" />
-      <workItem from="1462747539482" duration="3726000" />
+      <workItem from="1462747539482" duration="3757000" />
     </task>
     <task id="LOCAL-00001" summary="DAO's">
       <created>1462732322297</created>
@@ -444,11 +443,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462753180395</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="test sucursales">
+      <created>1462753356504</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1462753356504</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31674000" />
+    <option name="totallyTimeSpent" value="31705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -853,7 +859,7 @@
     <entry file="file://$PROJECT_DIR$/Controller/SucursalController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
           <folding />
         </state>
       </provider>
