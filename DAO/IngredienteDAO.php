@@ -26,7 +26,7 @@ class IngredienteDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Ingrediente values($,$,$)",array($obj->getId(),$obj->getNombre(),$obj->getPrecio(),));
+            Conexion::execute("insert into Ingrediente(nombre,precio) values($,$)",array($obj->getNombre(),$obj->getPrecio(),));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

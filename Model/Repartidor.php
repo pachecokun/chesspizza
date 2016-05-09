@@ -11,7 +11,7 @@ class Repartidor{
      * @param $nombre
      * @param $tel
      */
-    public function __construct($id, $nombre, $tel)
+    public function __construct($id=null, $nombre=null, $tel=null)
     {
         $this->id = $id;
         $this->nombre = $nombre;

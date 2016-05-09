@@ -30,6 +30,6 @@ include_once('Model/Sucursal.php');
     <input type="button" value="Pedir Pizza" onclick="getLocation()"/>
 </form>
 <a href="/View/Sucursal/ListaSucursales.php">Ver sucursales</a>
-<a href="/View/Sucursal/Registrar.php">Registrar sucursales</a>
+<a href="/View/Repartidor/Registrar.php">Registrar sucursales</a>
 </body>
 </html>

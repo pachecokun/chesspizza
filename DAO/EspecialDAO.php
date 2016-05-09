@@ -27,7 +27,7 @@ class EspecialDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Especial values($,$,$)",array($obj->getId(),$obj->getPrecio(),$obj->getPizzaId(),$obj->getNombre()));
+            Conexion::execute("insert into Especial(precio,Pizza_id,nombre) values($,$,$)",array($obj->getPrecio(),$obj->getPizzaId(),$obj->getNombre()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

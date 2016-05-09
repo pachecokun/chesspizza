@@ -27,7 +27,7 @@ class SucursalDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Sucursal values($,$,$,$,$)",array($obj->getId(),$obj->getDireccion(),$obj->getLat(),$obj->getLon(),$obj->getNombre()));
+            Conexion::execute("insert into Sucursal(direccion,lat,lon,nombre) values($,$,$,$)",array($obj->getDireccion(),$obj->getLat(),$obj->getLon(),$obj->getNombre()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

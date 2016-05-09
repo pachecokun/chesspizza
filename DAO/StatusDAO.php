@@ -27,7 +27,7 @@ class StatusDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Status values($,$)",array($obj->getId(),$obj->getDescripcion()));
+            Conexion::execute("insert into Status(descripcion) values($)",array($obj->getDescripcion()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

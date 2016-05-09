@@ -27,7 +27,7 @@ class OrdenDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Orden values($,$,$,$,$,$,$,$)",array($obj->getId(),$obj->getFechaHora(),$obj->getDireccion(),$obj->getSucursalId(),$obj->getRepartidorId(),$obj->getLat(),$obj->getLon(),$obj->getNombreCliente()));
+            Conexion::execute("insert into Orden(fecha_hora,direccion,Sucursal_id,Repartidor_id,lat,lon,nombre_cliente) values($,$,$,$,$,$,$)",array($obj->getFechaHora(),$obj->getDireccion(),$obj->getSucursalId(),$obj->getRepartidorId(),$obj->getLat(),$obj->getLon(),$obj->getNombreCliente()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
