@@ -1,7 +1,6 @@
 <?php
 include_once('../../Controller/RepartidorController.php');
 
-
 if(isset($_POST['nombre'])){
     if(RepartidorController::registrar($_POST['nombre'],$_POST['tel'])){
         header('Location: /');

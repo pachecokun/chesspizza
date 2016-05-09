@@ -435,7 +435,7 @@
       <workItem from="1462725363306" duration="13284000" />
       <workItem from="1462753250531" duration="68000" />
       <workItem from="1462753467321" duration="808000" />
-      <workItem from="1462747539482" duration="13594000" />
+      <workItem from="1462747539482" duration="13615000" />
     </task>
     <task id="LOCAL-00001" summary="DAO's">
       <created>1462732322297</created>
@@ -724,11 +724,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462767345957</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="agregadas funciones de dao">
+      <created>1462767368820</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1462767368820</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41542000" />
+    <option name="totallyTimeSpent" value="41563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
