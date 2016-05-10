@@ -8,7 +8,6 @@
 	require_once($pos."../bodyCliente.php");
 ?>
 	<!-- Contenido va aquí-->
-	<a href="#pedido" id="ordenar">Ordena aquí</a>
 	<h1>Título 1</h1>
 	<h2>Título 2</h2>
 	<h3>Título 3</h2>
