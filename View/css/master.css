@@ -1,0 +1,224 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body{
+	font-family: 'Roboto', 'Open Sans Condensed', sans-serif;
+	background-color: #FFF;
+	background-image: url("../img/background.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left bottom;
+}
+
+h1{
+	font-size: 48px;
+}
+h2{
+	font-size: 36px;
+}
+h3{
+	font-size: 28px;
+}
+p{
+	font-size: 24px;
+}
+strong, b{
+	font-weight: 900;
+	color: #000;
+}
+
+div#navbar{
+	font-family: 'Open Sans Condensed', sans-serif;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #000;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#logo{
+	background-image: url("../img/logo-nav.png");
+	background-size: 103px 70px;
+	width: 103px;
+	height: 70px;
+	display: block;
+	text-indent: -9999px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+#logo-lineal{
+	display: block;
+	width: 286px;
+	height: 50px;
+	background-image: url("../img/logo-nav-lineal.png");
+	background-size: 100% 100%;
+	text-indent: -9999px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+#navbar > ul{
+	list-style-type: none;
+	margin: 0;
+	margin-right: 10px;
+	padding: 0;
+	float: right;
+}
+
+#navbar > .inline > li{
+	float: left;
+}
+
+#navbar > .vertical > li{
+	display: inline;
+}
+
+#navbar > ul > li > a{
+	transition: color 0.5s, border-color 0.5s;
+	-webkit-transition: color 0.5s, border-color 0.5s;
+	-moz-transition: color 0.5s, border-color 0.5s;
+	-o-transition: color 0.5s, border-color 0.5s;
+	font-size: 20px;
+}
+
+#navbar > .inline > li > a{
+	text-decoration: none;
+	display: block;
+	padding: 15px 10px;
+	color: #fff;
+	border-bottom: 5px solid #000;
+}
+
+#navbar > .vertical > li > a{
+	text-decoration: none;
+	display: block;
+	padding: 10px 15px;
+	color: #fff;
+	border-left: 5px solid #fff;
+}
+#navbar > ul > li > a:hover{
+	color: #ff0000;
+	border-color: #ff0000;
+}
+
+#navbar > ul > li > a#menu:hover{
+	color: #CC0000;
+	border-color: #CC0000;
+}
+
+#navbar > ul > li > a#sucursales:hover{
+	color: #0000CC;
+	border-color: #0000CC;
+}
+
+#navbar > ul > li > a.active,
+#navbar > ul > li > a#menu.active,
+#navbar > ul > li > a#sucursales.active{
+	color: #FFFF66;
+	border-color: #FFFF66;
+}
+
+#ordenar{
+	background-image: url("../img/ordena-default.png");
+	background-size: 172px 128px;
+	width: 172px;
+	height: 128px;
+	display: block;
+	text-indent: -9999px;
+	position: fixed;
+	right: 20px;
+	top: 120px;
+	margin-right: -12px;
+	transition: background-image 0.5s;
+	-webkit-transition: background-image 0.5s;
+	-moz-transition: background-image 0.5s;
+	-o-transition: background-image 0.5s;
+}
+
+#ordenar:hover{
+	background-image: url("../img/ordena-hover.png");
+}
+
+.container{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 100px;
+	padding: 25px 50px;
+	background-color: #DDD;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 10px;
+	color: #333;
+	font-size: 24px;
+}
+
+input, textarea, select, button{
+	display: block;
+	padding: 15px;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	outline: none;
+	border-radius: 2px;
+	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;	
+}
+
+input, textarea, select{
+	width: 100%;
+	border: 1px solid #999;
+	color: #444;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+}
+
+button{
+	min-width: 200px;
+	border: none;
+	margin: 20px 10px;
+	background-color: #006699;
+	color: #fff;
+}
+
+button:hover{
+	background-color: #990000;
+	cursor: pointer;
+}
+
+textarea{
+	resize: vertical;
+}
+input:hover, textarea:hover, select:hover,
+input:active, textarea:active, select:active,
+input:focus, textarea:focus, select:focus{
+	background-color: #ffffcc;
+	border-color: #900;
+	}
+
+input[type="radio"]{
+	display: inline;
+	width: 25px;
+}
+
+.footer{
+	width: 50%;
+	margin: 0 auto;
+	color: #999;
+}
+
+.footer strong{
+	color: #999;
+}
+
+.footer p, li{
+	font-size: 16px;
+}
