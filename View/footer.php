@@ -4,7 +4,7 @@
 			<p><strong>Integrantes</strong></p>
 			<ul>
 				<li>Gómez Moncada Demis</li>
-				<li>??? Diego Pascual</li>
+				<li>Pascual Hernández Diego Efrén</li>
 				<li>Montaño Europa Sergio</li>
 				<li>Pacheco Soto David Alberto</li>
 				<li>Trujillo García Saúl Uriel</li>
