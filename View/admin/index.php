@@ -1,6 +1,7 @@
 <?php
+session_start();
+$active ="inicio";
 $pos = ""; //fix para la ubicación relativa en las rutas.
-$active = "inventario";
 require_once($pos . "../headerAdmin.php");
 ?>
 	<!-- <head> content aquí -->

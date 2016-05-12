@@ -1,4 +1,9 @@
 <?php
+	session_start();
+	unset($_SESSION['idSuc']);
+	if(isset($_SESSION['idSuc'])){
+		header("location: ../../admin/");
+	}
 	$pos ="../"; //fix para la ubicación relativa en las rutas.
 	$active = "login";
 	require_once($pos."../headerCliente.php");
@@ -11,16 +16,17 @@
 	<!-- Contenido va aquí-->
 	<h1>Iniciar sesión</h1>
 	<?php
-		if(isset($_SESSION['ERROR'])){
-			echo "<span id='message' style='color: #cc0000'>Usuario o contraseña incorrectos</span>";
+		if(isset($_SESSION['AUTH_ERR'])){
+			echo "<span id='message' style='color: #cc0000;'>Usuario o contraseña incorrectos</span>";
 			unset($_SESSION['AUTH_ERR']);
 		}
 		else{
 			echo "<span id='message'></span>";
 		}
+		
 	?>
 	
-	<form action="response.php" method="post" id="form">
+	<form action="../../../Controller/UsuarioController.php" method="post" id="form">
 		<input type="text" name="user" placeholder="Nombre de usuario" id="user"/>
 		<input type="password" name="pass" placeholder="Contraseña" id="pass" />
 		<button type="Button" onClick="valida()">Acceder</button>
@@ -34,12 +40,15 @@
 				user.focus();
 				msg.innerHTML = "Ingrese el usuario";
 				msg.style.color= "#006699";
+				return false;
 			}
 			else if(pass.value.length==0){
 				pass.focus();
 				msg.innerHTML = "Ingrese la contraseña";
 				msg.style.color = "#006699";
+				return false;
 			}
+			document.getElementById("form").submit();
 		}
 	</script>
 <?php

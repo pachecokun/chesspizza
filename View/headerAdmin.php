@@ -2,10 +2,10 @@
 	/****************
 	****NO TOCAR*****
 	*****************/
-	$navElements = array("menu"=>array("MENÚ", "menu", ""),
-						"sucursales"=>array("SUCURSALES", "sucursales",""),
-						"inventario"=>array("INVENTARIO", "inventario", ""),
-						"ordenes"=>array("ÓRDENES", "ordenes", "")
+	$navElements = array("inicio"=>array("Inicio", "../admin/", ""),
+						"menu"=>array("Consutar ordenes", "menu", ""),
+						"inventario"=>array("Inventario", "inventario", ""),
+						"ordenes"=>array("Repartidores", "ordenes", "")
 						);
 	require_once("htmlhead.php");
 ?>

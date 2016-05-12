@@ -21,7 +21,7 @@
 
 LOCK TABLES `sucursal` WRITE;
 /*!40000 ALTER TABLE `sucursal` DISABLE KEYS */;
-INSERT INTO `sucursal` VALUES (1,'Impulsora','Av Hda. de Pastejé 5, Impulsora Popular Avicola, Nezahualcóyotl, Méx.','19.485359','-99.048559'),(2,'Coapa','Calz del Hueso 690, Los Sauces, Ciudad de México, D.F.','19.301628','-99.117590'),(3,'Mariquita Linda','La Espiga 299, 57001 Benito Juárez, Méx.','19.410180','-99.003365'),(4,'Mixiuhca','Mixiuhca, Jardín Balbuena, Ciudad de México','19.410239','-99.113387'),(5,'Pantitlán','Calle Miguel Lebrija 171, Aviación Civil, Ciudad de México, D.F.','19.416098','-99.076237');
+INSERT INTO `sucursal` VALUES (1,'Impulsora','Av Hda. de Pastejé 5, Impulsora Popular Avicola, Nezahualcóyotl, Méx.','19.485359','-99.048559', 'root'),(2,'Coapa','Calz del Hueso 690, Los Sauces, Ciudad de México, D.F.','19.301628','-99.117590', 'root'),(3,'Mariquita Linda','La Espiga 299, 57001 Benito Juárez, Méx.','19.410180','-99.003365', 'root'),(4,'Mixiuhca','Mixiuhca, Jardín Balbuena, Ciudad de México','19.410239','-99.113387', 'root'),(5,'Pantitlán','Calle Miguel Lebrija 171, Aviación Civil, Ciudad de México, D.F.','19.416098','-99.076237', 'root');
 /*!40000 ALTER TABLE `sucursal` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -1,3 +1,9 @@
+/*****************
+****NO TOCAR*****
+*****************
+
+Si necesitas agregarle diseño a tu bullshit individual, crea un css aparte
+*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
@@ -234,6 +240,7 @@ input[type="radio"]{
 }
 
 .footer{
+	font-family: "Roboto", "Open Sans", sans-serif;
 	width: 50%;
 	margin: 0 auto;
 	color: #999;
@@ -247,12 +254,6 @@ input[type="radio"]{
 	font-size: 16px;
 }
 
-/*****************
-****NO TOCAR*****
-*****************
-
-Si necesitas agregarle diseño a tu bullshit individual, crea un css aparte
-*/
 .table{
 	max-width: 100%;
 	overflow-x: auto;
@@ -324,7 +325,6 @@ table tr:nth-child(odd):focus{
 
 p{
 	font-family: "Text";
-	color: rgb(255, 255, 255);
 	font-size: 18px;
 	margin-left: 20px;
 	margin-top: -20px;

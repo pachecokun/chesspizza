@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include_once("../DAO/SucursalDAO.php");
 	$user = $_POST['user'];
 	$pass = $_POST['pass'];
@@ -18,5 +19,6 @@
 	}
 	else{
 		$_SESSION['idSuc'] = $reg->getId();
+		header("location:../View/principal/login/");
 	}
 ?>

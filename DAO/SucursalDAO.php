@@ -12,7 +12,7 @@ class SucursalDAO implements DAO
             $stm = Conexion::execute("SELECT * FROM Sucursal where ".$cond,$args);
 
             while ($obj = $stm->fetch()) {
-                $sucs[] = new Sucursal($obj['id'],$obj['direccion'],$obj['lat'],$obj['lon'],$obj['nombre']);
+                $sucs[] = new Sucursal($obj['id'],$obj['direccion'],$obj['lat'],$obj['lon'],$obj['nombre'], $obj['password']);
             }
             return $sucs;
         } catch (Exception $e) {
@@ -27,7 +27,7 @@ class SucursalDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Sucursal(direccion,lat,lon,nombre) values(?,?,?,?)",array($obj->getDireccion(),$obj->getLat(),$obj->getLon(),$obj->getNombre()));
+            Conexion::execute("insert into Sucursal(direccion,lat,lon,nombre, password) values(?,?,?,?,?)",array($obj->getDireccion(),$obj->getLat(),$obj->getLon(),$obj->getNombre(),$obj->getPassword()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -41,7 +41,7 @@ class SucursalDAO implements DAO
     public static function update($obj)
     {
         try {
-            Conexion::execute("update Sucursal set direccion=?, lat=?, lon=?, nombre=? where id = ?",array($obj->getDireccion(),$obj->getLat(),$obj->getLon(),$obj->getNombre(),$obj->getId()));
+            Conexion::execute("update Sucursal set direccion=?, lat=?, lon=?, nombre=?, password=? where id = ?",array($obj->getDireccion(),$obj->getLat(),$obj->getLon(),$obj->getNombre(),$obj->getPassword(), $obj->getId()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -73,7 +73,7 @@ class SucursalDAO implements DAO
             $stm = Conexion::execute("SELECT * FROM Sucursal where id=?",array($id));
 
             if ($obj = $stm->fetch()) {
-                return new Sucursal($obj['id'],$obj['direccion'],$obj['lat'],$obj['lon'],$obj['nombre']);
+                return new Sucursal($obj['id'],$obj['direccion'],$obj['lat'],$obj['lon'],$obj['nombre'],$obj['password']);
             }
             else {
                 return null;

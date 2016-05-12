@@ -104,6 +104,7 @@ CREATE TABLE Sucursal (
     lat double(11,5) NOT NULL,
     lon double(11,5) NOT NULL,
     nombre varchar(30) NOT NULL,
+	password varchar(30) NOT NULL,
     CONSTRAINT Sucursal_pk PRIMARY KEY (id)
 );
 
