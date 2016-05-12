@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b36fc594-d570-418e-9762-8e0e22335732" name="Default" comment="pagina principal">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/img/1.jpg" afterPath="$PROJECT_DIR$/View/img/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Documents/Primera entrega/Pasheco/img/chef.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Documents/Primera entrega/Pasheco/img/principal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Documents/Primera entrega/Pasheco/pach.tex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/chef/index.php" afterPath="$PROJECT_DIR$/View/chef/index.php" />
     </list>
     <ignored path="chesspizza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +40,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/View/chef/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -302,6 +303,76 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chesspizza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chesspizza" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Documents" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Primera entrega" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pasheco" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chesspizza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chesspizza" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Documents" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Primera entrega" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pasheco" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chesspizza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chesspizza" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Documents" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Primera entrega" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Demis" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -312,6 +383,11 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\David Pacheco\phpstorm\chesspizza\Documents\Primera entrega\Pasheco" />
+    </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -327,11 +403,15 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/body.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Controller/UsuarioController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/DAO/SucursalDAO.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Esquema BD/Pizzeria2_create.sql</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Esquema BD/Pizzeria_data.sql</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Model/Sucursal.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/admin/index.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/View/css/master.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/headerCliente.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/principal/index.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/headerAdmin.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/principal/login/index.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -339,15 +419,15 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Controller/UsuarioController.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/css/login.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/font/Bolina.otf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/font/Caviar.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/font/Letters.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/pizza/ConsultarOrden.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/principal/login/index.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/principal/ordenar.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Documents/Primera entrega/Demis/document.aux</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Documents/Primera entrega/Demis/document.log</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Documents/Primera entrega/Demis/document.pdf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Documents/Primera entrega/Demis/document.synctex.gz</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Documents/Primera entrega/Demis/document.tex</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Documents/Primera entrega/Demis/iniciar_sesion.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Documents/Primera entrega/Demis/iniciar_sesion2a.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Documents/Primera entrega/Demis/iniciar_sesion2b.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Documents/Primera entrega/Demis/iniciar_sesion2c.png</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -355,7 +435,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/pizza/CancelarOrden.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -492,14 +571,7 @@
       <workItem from="1462753467321" duration="808000" />
       <workItem from="1462747539482" duration="14409000" />
       <workItem from="1463012160298" duration="2705000" />
-      <workItem from="1463017496282" duration="4337000" />
-    </task>
-    <task id="LOCAL-00007" summary="conexion nueva bd">
-      <created>1462752034144</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1462752034144</updated>
+      <workItem from="1463017496282" duration="5061000" />
     </task>
     <task id="LOCAL-00008" summary="test sucursales">
       <created>1462752790187</created>
@@ -837,11 +909,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463020901530</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="pagina principal">
+      <created>1463022564807</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1463022564807</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49818000" />
+    <option name="totallyTimeSpent" value="50542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1242,8 +1321,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/View/chef/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
           <folding />
         </state>
       </provider>
