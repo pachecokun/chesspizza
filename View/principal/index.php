@@ -18,6 +18,7 @@ require_once($pos."../body.php");
 
     <!-- Contenido va aquí-->
     <img src="../img/1.jpg" style="width: 100%;">
+    <img src="../img/ordena.png" style="width: 100%;">
 <?php
 include_once($pos."../footer.php");
 ?>
