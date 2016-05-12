@@ -1,6 +1,6 @@
 <?php
 $navElements = array("menu" => array("PEDIR A DOMICILIO", "menu", ""),
-	"consorden" => array("CONSULTR MI ORDEN", "ordenes", ""),
+	"consorden" => array("CONSULTAR MI ORDEN", "ordenes", ""),
 	"sucursales"=>array("SUCURSALES", "sucursales",""),
 	"inventario" => array("INICIAR SESIÓN", "inventario", ""),
 	"ordenes"=>array("ÓRDENES", "ordenes", "")
