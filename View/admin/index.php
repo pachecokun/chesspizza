@@ -1,14 +1,8 @@
 <?php
-$navElements = array("menu" => array("PEDIR A DOMICILIO", "menu", ""),
-	"consorden" => array("CONSULTAR MI ORDEN", "ordenes", ""),
-	"sucursales"=>array("SUCURSALES", "sucursales",""),
-	"inventario" => array("INICIAR SESIÓN", "inventario", ""),
-	"ordenes"=>array("ÓRDENES", "ordenes", "")
-);
-$active= "inventario";
-require_once("../htmlhead.php");
+$pos = ""; //fix para la ubicación relativa en las rutas.
+$active = "inventario";
+require_once($pos . "../headerAdmin.php");
 ?>
-	<title><?php	echo $title;	?>Administrador</title>
 	<!-- <head> content aquí -->
 <?php
 	require_once($pos."../body.php");
