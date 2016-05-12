@@ -1,3 +1,6 @@
+<!----------------------
+--------NO TOCAR--------
+----------------------->
 		</div>
 		<div class='footer'>
 			<h3>Chess Pizzas 2015</h3><small>Tecnologías para la Web</small>

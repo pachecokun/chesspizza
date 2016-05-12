@@ -1,4 +1,8 @@
 <?php
+	/**********************************************************
+	** Para que vean que pedo con el diseño y las plantillas **
+	***********************************************************/
+	
 	$pos =""; //fix para la ubicación relativa en las rutas.
 	$active = "menu";
 	require_once($pos."../headerCliente.php");

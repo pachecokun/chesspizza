@@ -1,4 +1,7 @@
 <?php
+	/****************
+	****NO TOCAR*****
+	*****************/
 	$navElements = array("menu"=>array("MENÚ", "menu", ""),
 						"sucursales"=>array("SUCURSALES", "sucursales","")
 						);

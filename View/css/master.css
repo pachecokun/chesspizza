@@ -223,6 +223,12 @@ input[type="radio"]{
 	font-size: 16px;
 }
 
+/*****************
+****NO TOCAR*****
+*****************
+
+Si necesitas agregarle diseño a tu bullshit individual, crea un css aparte
+*/
 .table{
 	max-width: 100%;
 	overflow-x: auto;
