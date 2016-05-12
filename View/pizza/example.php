@@ -28,6 +28,76 @@
 		<input type="radio" name = "sexo" value="M"/> Mujer
 		<button type="button">Aceptar</button>
 	</form>
+	<div class="table">
+	<table>
+		<tr>
+			<th>Nombre</th>
+			<th>Cantidad</th>
+			<th>Precio</th>
+			<th>Nombre</th>
+			<th>Cantidad</th>
+			<th>Precio</th>
+			<th>Nombre</th>
+			<th>Cantidad</th>
+			<th>Precio</th>
+		</tr>
+		<tr>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+		</tr>
+		<tr>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+		</tr>
+		<tr>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+		</tr>
+		<tr>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+		</tr>
+		<tr>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+			<td>Pizza Grande</td>
+			<td>5</td>
+			<td>$560.00</td>
+		</tr>
+	</table>
+	</div>
 <?php
 	include_once($pos."../footer.php");
 ?>
