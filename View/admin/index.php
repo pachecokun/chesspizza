@@ -1,8 +1,13 @@
 <?php
-	$pos = ""; //fix para la ubicación relativa en las rutas.
-	$active= "inventario";
-	require_once($pos."../headerAdmin.php");
+$navElements = array("menu"=>array("MENÚ", "menu", ""),
+	"sucursales"=>array("SUCURSALES", "sucursales",""),
+	"inventario"=>array("INVENTARIO", "inventario", ""),
+	"ordenes"=>array("ÓRDENES", "ordenes", "")
+);
+$active= "inventario";
+require_once("../htmlhead.php");
 ?>
+	<title><?php	echo $title;	?>Administrador</title>
 	<!-- <head> content aquí -->
 <?php
 	require_once($pos."../body.php");
