@@ -1,7 +1,8 @@
 <?php
-$navElements = array("menu"=>array("MENÚ", "menu", ""),
+$navElements = array("menu" => array("PEDIR A DOMICILIO", "menu", ""),
+	"consorden" => array("CONSULTR MI ORDEN", "ordenes", ""),
 	"sucursales"=>array("SUCURSALES", "sucursales",""),
-	"inventario"=>array("INVENTARIO", "inventario", ""),
+	"inventario" => array("INICIAR SESIÓN", "inventario", ""),
 	"ordenes"=>array("ÓRDENES", "ordenes", "")
 );
 $active= "inventario";
