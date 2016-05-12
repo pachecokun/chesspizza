@@ -1,15 +1,23 @@
 <?php
 $pos = ""; //fix para la ubicación relativa en las rutas.
-$active= "inventario";
-require_once($pos."../headerAdmin.php");
+$active = "inicio";
+$navElements = array(
+    "inicio" => array("INICIO", "menu", ""),
+    "ordenar" => array("ORDENAR", "menu", ""),
+    "consulta_orden" => array("CONSULTAR ORDEN", "sucursales", ""),
+    "sucursales" => array("SUCURSALES", "sucursales", ""),
+    "inicio_sesion" => array("INICIAR SESIÓN", "iniciar_sesion", "")
+);
+require_once("../htmlhead.php");
 ?>
+    <title><?php echo $title; ?>Administrador</title>
     <!-- <head> content aquí -->
 <?php
 require_once($pos."../body.php");
 ?>
+
     <!-- Contenido va aquí-->
-    <h1>Bienvenido</h1>
-    <p>Seleccione una opción en el menú de arriba.</p>
+    <img src="../img/1.jpg" style="width: 100%;">
 <?php
 include_once($pos."../footer.php");
 ?>
