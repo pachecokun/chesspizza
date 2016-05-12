@@ -1,0 +1,21 @@
+.container{
+	width: 500px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.container button{
+	width: 100%;
+}
+#message{
+	display: block;
+	margin-bottom: 5px;
+}
+@media only screen and (max-width: 500px){
+	.container{
+		background-color: red;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+}

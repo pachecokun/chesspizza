@@ -1,23 +1,14 @@
 <?php
-$pos = ""; //fix para la ubicación relativa en las rutas.
-$active = "inicio";
-$navElements = array(
-    "inicio" => array("INICIO", "menu", ""),
-    "ordenar" => array("ORDENAR", "menu", ""),
-    "consulta_orden" => array("CONSULTAR ORDEN", "sucursales", ""),
-    "sucursales" => array("SUCURSALES", "sucursales", ""),
-    "inicio_sesion" => array("INICIAR SESIÓN", "iniciar_sesion", "")
-);
-require_once("../htmlhead.php");
+	$pos =""; //fix para la ubicación relativa en las rutas.
+	$active = "inicio";
+	require_once($pos."../headerCliente.php");
 ?>
-    <title><?php echo $title; ?>Administrador</title>
-    <!-- <head> content aquí -->
+	<!-- Head content aquí -->
 <?php
-require_once($pos."../body.php");
+	require_once($pos."../bodyCliente.php");
 ?>
-
-    <!-- Contenido va aquí-->
-    <img src="../img/1.jpg" style="width: 100%;">
+	<!-- Contenido va aquí-->
+	<img src="../img/1.jpg" style="width: 100%;">
 <?php
-include_once($pos."../footer.php");
+	include_once($pos."../footer.php");
 ?>
