@@ -4,7 +4,6 @@
     <list default="true" id="b36fc594-d570-418e-9762-8e0e22335732" name="Default" comment="pagina principal">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/chef/index.php" afterPath="$PROJECT_DIR$/View/chef/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/principal/index.php" afterPath="$PROJECT_DIR$/View/principal/index.php" />
     </list>
     <ignored path="chesspizza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/View/chef/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="446">
-              <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+              <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -336,14 +335,7 @@
       <workItem from="1462753467321" duration="808000" />
       <workItem from="1462747539482" duration="14409000" />
       <workItem from="1463012160298" duration="2705000" />
-      <workItem from="1463017496282" duration="1790000" />
-    </task>
-    <task id="LOCAL-00005" summary="conexion nueva bd">
-      <created>1462747767447</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1462747767447</updated>
+      <workItem from="1463017496282" duration="2819000" />
     </task>
     <task id="LOCAL-00006" summary="conexion nueva bd">
       <created>1462748820086</created>
@@ -681,11 +673,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463018465101</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="pagina principal">
+      <created>1463019289021</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1463019289021</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47271000" />
+    <option name="totallyTimeSpent" value="48300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1087,7 +1086,7 @@
     <entry file="file://$PROJECT_DIR$/View/chef/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
-          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
           <folding />
         </state>
       </provider>

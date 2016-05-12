@@ -25,6 +25,17 @@ require_once("../htmlhead.php");
         .lista {
             text-align: right;
         }
+
+        .opizza {
+            margin-bottom: 50px;
+            width: 80%;
+            border: 4px solid black;
+        }
+
+        .opizza td {
+            border-left: 4px solid black;
+            border-right: 4px solid black;
+        }
     </style>
 <?php
 require_once($pos . "../body.php");
@@ -32,39 +43,51 @@ require_once($pos . "../body.php");
     <h1>Lista de órdenes</h1>
     <div class="orden">
         <h2>Orden 1024 - 15:37</h2>
-        <ul>
-            <li>
-                <h3>1 Pizza personalizada (Grande)</h3>
-                <ul>
-                    <li>Orilla rellena de queso</li>
-                    <li>Champiñones</li>
-                    <li>Pepperoni</li>
-                </ul>
-            </li>
-            <li>
-                <h3>1 Hawaiiana (Grande)</h3>
-                <ul>
-                    <li>Jamón</li>
-                    <li>Piña</li>
-                </ul>
-            </li>
-        </ul>
+        <table class="opizza">
+            <tr>
+                <th colspan="3">1 Pizza personalizada (Grande)</th>
+            </tr>
+            <tr>
+                <td>Orilla rellena de queso</td>
+            </tr>
+            <tr>
+                <td>Champiñones</td>
+            </tr>
+            <tr>
+                <td>Pepperoni</td>
+            </tr>
+        </table>
+        <table class="opizza">
+            <tr>
+                <th colspan="3">1 Pizza hawaiiana (Grande)</th>
+            </tr>
+            <tr>
+                <td>Jamón</td>
+            </tr>
+            <tr>
+                <td>Piña</td>
+            </tr>
+        </table>
         <div class="lista">
             <button>Orden lista</button>
         </div>
     </div>
     <div class="orden">
         <h2>Orden 1032 - 16:02</h2>
-        <ul>
-            <li>
-                <h3>2 Mexicana (Mediana)</h3>
-                <ul>
-                    <li>Jalapeño</li>
-                    <li>Chorizo</li>
-                    <li>Cebolla</li>
-                </ul>
-            </li>
-        </ul>
+        <table class="opizza">
+            <tr>
+                <th colspan="3">2 Pizzas mexicanas (Jumbo)</th>
+            </tr>
+            <tr>
+                <td>Cebolla</td>
+            </tr>
+            <tr>
+                <td>Chorizo</td>
+            </tr>
+            <tr>
+                <td>Jalapeño</td>
+            </tr>
+        </table>
         <div class="lista">
             <button>Orden lista</button>
         </div>
