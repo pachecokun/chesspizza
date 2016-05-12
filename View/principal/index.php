@@ -10,7 +10,7 @@ $navElements = array(
 );
 require_once("../htmlhead.php");
 ?>
-    <title><?php echo $title; ?>Administrador</title>
+    <title><?php echo $title; ?>Chess Pizza</title>
     <!-- <head> content aquí -->
 <?php
 require_once($pos."../body.php");
