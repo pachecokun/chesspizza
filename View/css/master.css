@@ -54,14 +54,14 @@ div#navbar{
 
 #logo-lineal{
 	display: block;
-	width: 286px;
-	height: 50px;
 	background-image: url("../img/logo-nav-lineal.png");
 	background-size: 100% 100%;
 	text-indent: -9999px;
+	width: 344px;
+	height: 46px;
 	float: left;
 	margin-left: 20px;
-	margin-top: 5px;
+	margin-top: 8px;
 }
 
 #navbar > ul{
@@ -125,6 +125,20 @@ div#navbar{
 	border-color: #FFFF66;
 }
 
+@media (min-width: 360px) and (max-width: 991px) {
+	#navbar > ul > li > a{
+		font-size: 10px;
+		padding: 0px 0px;
+	}
+	#navbar > ul{
+		margin-right: 10px;
+		float: left;
+	}
+	#logo-lineal{
+		width: 50%;
+	}
+}
+
 #ordenar{
 	background-image: url("../img/ordena-default.png");
 	background-size: 172px 128px;
@@ -168,7 +182,7 @@ input, textarea, select, button{
 	transition: background-color 0.5s;
 	-webkit-transition: background-color 0.5s;
 	-moz-transition: background-color 0.5s;
-	-o-transition: background-color 0.5s;	
+	-o-transition: background-color 0.5s;
 }
 
 input, textarea, select{
@@ -221,4 +235,48 @@ input[type="radio"]{
 
 .footer p, li{
 	font-size: 16px;
+}
+
+/*****************
+****NO TOCAR*****
+*****************
+
+Si necesitas agregarle diseño a tu bullshit individual, crea un css aparte
+*/
+.table{
+	max-width: 100%;
+	overflow-x: auto;
+}
+table{
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+tr{
+	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.3s;
+}
+
+tr:nth-child(odd){
+	background-color: #f5f5f5;
+}
+
+th{
+	background-color: #006699;
+	color: #fff;
+	padding: 15px;
+}
+
+td{
+	padding: 15px;
+	border-bottom: 1px solid #DDD;
+}
+
+tr:hover,
+tr:active,
+tr:focus,
+tr:nth-child(odd):hover,
+table tr:nth-child(odd):active,
+table tr:nth-child(odd):focus{
+	background-color: #ACF;
 }

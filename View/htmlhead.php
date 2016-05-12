@@ -1,4 +1,7 @@
 <?php
+	/****************
+	****NO TOCAR*****
+	*****************/
 	$title = "";
 	if(!isset($pos)){
 		$pos = "";
@@ -14,3 +17,4 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="<?php echo $pos; ?>../css/master.css"/>
+		<link rel="shortcut icon" type="image/png" href="<?php echo $pos; ?>../img/favicon.png"/>
