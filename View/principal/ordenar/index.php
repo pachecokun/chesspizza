@@ -1,19 +1,12 @@
 <?php
-$pos = ""; //fix para la ubicación relativa en las rutas.
+$pos = "../";
 $active = "ordenar";
-$navElements = array(
-    "inicio" => array("INICIO", "menu", ""),
-    "ordenar" => array("ORDENAR", "menu", ""),
-    "consulta_orden" => array("CONSULTAR ORDEN", "sucursales", ""),
-    "sucursales" => array("SUCURSALES", "sucursales", ""),
-    "inicio_sesion" => array("INICIAR SESIÓN", "iniciar_sesion", "")
-);
-require_once("../htmlhead.php");
+require_once($pos."../headerCliente.php");
 ?>
-    <title><?php echo $title; ?>Ordenar</title>
     <!-- <head> content aquí -->
+	<link rel="stylesheet" type="text/css" href="../../css/ordenar.css" />
 <?php
-require_once($pos."../body.php");
+require_once($pos."../bodyCliente.php");
 ?>
 </div>
 <div class="container-fluid">
@@ -27,7 +20,7 @@ require_once($pos."../body.php");
     <center>
       <input class="btn" type="submit" value="Seleccionar un paquete">
       <input class="btn" type="submit" value="Armar tu paquete">
-      <img src="../img/ordena-default.png" style="margin-top: 20px; width: 40%;" alt="" />
+      <img src="../../img/ordena-default.png" style="margin-top: 20px; width: 40%;" alt="" />
     </center>
   </div>
 </div>

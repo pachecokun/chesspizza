@@ -4,10 +4,11 @@
 	*****************/
 	$navElements = array(
 				"inicio" => array("Inicio", "../principal", ""),
+				"carta" => array("Carta", "carta", ""),
 				"ordenar" => array("Ordernar", "ordenar", ""),
-				"consulta_orden" => array("Consultar orden", "consultaOrden", ""),
-				"sucursales" => array("Sucursales", "sucursales", ""),
-				"login" => array("Iniciar sesion", "login", "")
+				"miOrden" => array("Mi Orden", "miOrden", ""),
+				"sucursales" => array("Sucursales", "sucursales", "")
+				//"login" => array("Iniciar sesion", "login", "")
 	);
 	require_once("htmlhead.php")
 ?>

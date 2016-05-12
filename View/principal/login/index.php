@@ -1,11 +1,10 @@
 <?php
 	session_start();
-	unset($_SESSION['idSuc']);
 	if(isset($_SESSION['idSuc'])){
 		header("location: ../../admin/");
 	}
 	$pos ="../"; //fix para la ubicación relativa en las rutas.
-	$active = "login";
+	//$active = "login";
 	require_once($pos."../headerCliente.php");
 ?>
 	<!-- Head content aquí -->
