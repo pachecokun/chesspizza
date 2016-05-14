@@ -5,7 +5,7 @@
 	$navElements = array(
 				"inicio" => array("Inicio", "../principal", ""),
 				"carta" => array("Carta", "carta", ""),
-				"ordenar" => array("Ordernar", "ordenar", ""),
+				"ordenar" => array("Ordenar", "ordenar", ""),
 				"miOrden" => array("Mi Orden", "miOrden", ""),
 				"sucursales" => array("Sucursales", "sucursales", "")
 				//"login" => array("Iniciar sesion", "login", "")

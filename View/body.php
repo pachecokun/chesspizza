@@ -3,6 +3,7 @@
 ----------------------->
 </head>
 	<body>
+		<div class="wrapper">
 		<div id='navbar'>
 			<a href="<?php echo $pos; ?>../principal/" id="logo">Chess Pizzas</a>
 			<span id="toggle">Navigation</span>
