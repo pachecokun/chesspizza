@@ -3,6 +3,7 @@
 ----------------------->
 		</div>
 		</div><!--wrapper-->
+		<div class='footer-cover'></div>
 		<div class='footer'>
 			<div class="text">
 				<h3>Chess Pizzas 2016</h3><small>Tecnologías para la Web</small>
@@ -16,5 +17,6 @@
 				</ul>
 			</div>
 		</div>
+		<script src="<?php echo $pos; ?>../js/master.js"></script>
 	</body>
 </html>

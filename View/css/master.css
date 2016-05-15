@@ -9,6 +9,7 @@ Si necesitas agregarle diseño a tu bullshit individual, crea un css aparte
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 body, html{
+	width: 100%;
 	height: 100%;
 }
 body{
@@ -20,13 +21,13 @@ body{
 .wrapper{
 	width: 100%;
 	min-height: 100%;
+	padding: 0;
 	padding-top: 1px;
 	padding-bottom: 20px;
 	margin: 0;
-	margin-bottom: 295px;
 	background-color: #FFF;
-	background-image: url("../img/background.jpg");
-	background-size: 100%;
+	background-image: url("../img/pizza-corner.png");
+	background-size: auto 50%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: left bottom;
@@ -57,38 +58,111 @@ div#navbar{
 	left: 0;
 	width: 100%;
 	background-color: #000;
-	overflow: hidden;
 	z-index: 1;
+}
+
+#nav-icon{
+	display: none;
+	width: 27px;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 13px;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	/*-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;*/
+	cursor: pointer;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 4px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s;
+  -moz-transition: .25s;
+  -o-transition: .25s;
+  transition: .25s;/*
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;*/
+}
+
+#nav-icon span#first {
+  top: 0px;
+}
+
+#nav-icon span#second,#nav-icon span#third {
+  top: 8px;
+}
+
+#nav-icon span#fourth {
+  top: 16px;
+}
+
+#nav-icon.open span{
+	background-color: #900;
+}
+#nav-icon.open span#first {
+  top: 8px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon.open span#second {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon.open span#third {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon.open span#fourth {
+  top: 16px;
+  width: 0%;
+  left: 50%;
 }
 
 #logo{
 	display: block;
-	background-image: url("../img/logo-nav-lineal.png");
-	background-size: 100% 100%;
-	text-indent: -9999px;
-	width: 344px;
-	height: 46px;
 	float: left;
 	margin-left: 20px;
 	margin-top: 8px;
 }
 
-#toggle{
-	color: #FFF;
-	display: none;
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 100px;
-	height: 56px;
-}
-#toggle:hover{
-	cursor: pointer;
-	background-color: #600;
-	color: #fff;
+#logo img{
+	max-width: 100%;
+	max-height: 100%;
 }
 
+
 #navbar > ul{
+	display: block;
 	list-style-type: none;
 	margin: 0;
 	margin-right: 10px;
@@ -114,29 +188,14 @@ div#navbar{
 }
 
 #navbar > ul > li > a:hover{
-	color: #ff0000;
-	border-color: #ff0000;
+	color: #F33;
+	border-color: #F33;
 }
 
 #navbar > ul > li > a.active{
 	color: #FFFF66;
 	border-color: #FFFF66;
 }
-/*
-@media (min-width: 360px) and (max-width: 991px) {
-	#navbar > ul > li > a{
-		font-size: 10px;
-		padding: 0px 0px;
-	}
-	#navbar > ul{
-		margin-right: 10px;
-		float: left;
-	}
-	#logo-lineal{
-		width: 50%;
-	}
-}*/
-
 #ordenar{
 	background-image: url("../img/ordena-default.png");
 	background-size: 100% 100%;
@@ -165,7 +224,7 @@ div#navbar{
 	padding: 25px 50px;
 	background-color: #DDD;
 	background-color: rgba(255, 255, 255, 0.9);
-	border-radius: 10px;
+	border-radius: 5px;
 	color: #333;
 	font-size: 24px;
 }
@@ -221,10 +280,14 @@ input[type="radio"]{
 	width: 25px;
 }
 
+.footer-cover{
+	width: 100%;
+	height: 295px;
+}
+
 .footer{
 	width: 100%;
 	height: 295px;
-	padding-top: 50px;
 	color: #999;
 	position: fixed;
 	left: 0;
@@ -290,10 +353,21 @@ table tr:nth-child(odd):focus{
 	background-color: #ACF;
 }
 
+@media screen and (min-width:800px) and (min-height: 840px){
+	.wrapper{
+		background-size: auto;
+	}
+}
+
 @media screen and (max-width: 1000px){
+	.wrapper{
+		background-size: auto 50%;
+	}
 	#logo{
 		float: none;
 		display: block;
+		max-width: 50%;
+		margin: 8px auto;
 	}
 	#navbar > ul{
 		overflow: hidden;
@@ -302,9 +376,27 @@ table tr:nth-child(odd):focus{
 		margin-left: 20px;		
 	}
 	#navbar > ul > li > a{
-		padding-top: 20px;
+		padding-top: 15px;
 		font-size: 16px;
 	}
+	.container{
+		width: 90%;
+		padding: 10px;
+		margin-top: 140px;
+	}
+	#ordenar{
+		display: none;
+	}
+
+	input, textarea, select, button{
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	button{
+		margin: 20px auto;
+	}
+
 	.footer{
 		background-size: 155px 210px;
 	}
@@ -314,18 +406,32 @@ table tr:nth-child(odd):focus{
 }
 
 @media screen and (max-width: 528px){
-	#toggle{
+	.wrapper{
+		background-size: 50%;
+	}
+	div#navbar{
+		height: 50px;
+		overflow: visible;
+	}
+
+	#nav-icon{
 		display: block;
 	}
+
 	#logo{
-		margin: 10px;
-	}
-	#navbar:hover ul{
-		display: block;
+		max-width: 75%;
+		height: 40px;
+		margin: 5px 0;
+		margin-left: 5px;
 	}
 	#navbar > ul{
+		height: 0;
+		background-color: #000;
 		margin: 0;
-		display: none;
+		-webkit-transition: height 1s;
+		-moz-transition: height 1s;
+		-o-transition: height 1s;
+		transition: height 1s;
 	}
 	#navbar > ul > li{
 		float: none;
@@ -344,5 +450,39 @@ table tr:nth-child(odd):focus{
 	#navbar > ul > li > a.active:hover{
 		background: none;
 		color: #FF6;
+	}
+	.container{
+		width: 100%;
+		padding: 0;
+		margin-top: 70px;
+		padding-bottom: 20px;
+		border-radius: 0;		
+	}
+	
+	input, textarea, select{
+		width: 80%;
+	}
+	
+	.footer-cover{
+		height: 340px;
+		opacity:  0;
+	}
+	
+	.footer{
+		position: fixed;
+		height: 290px;
+		background-position: left top;
+		margin: 0;
+		padding: 25px 0;
+	}
+	.footer .text{
+		float: left;
+		width: 90%;
+		height: 100%;
+		background-color: #000;
+		background-color: rgba(0,0,0,0.93);
+		margin: 0;
+		margin-left: 5%;
+		padding: 0;
 	}
 }
