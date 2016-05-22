@@ -28,7 +28,7 @@ include_once('Model/Sucursal.php');
     <input type="hidden" id="txtLon" name="Lon"/>
     <input type="button" value="Pedir Pizza" onclick="getLocation()"/>
 </form>
-<a href="/View/Sucursal/ListaSucursales.php">Ver sucursales</a><br>
+<a href="/View/Sucursal/index.php">Ver sucursales</a><br>
 <a href="/View/Repartidor/Registrar.php">Registrar repartidor</a><br>
 <a href="/View/Especial/Registrar.php">Registrar especial</a><br>
 </body>

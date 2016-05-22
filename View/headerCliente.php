@@ -22,7 +22,7 @@
 				"carta" => array("Carta", "carta", ""),
 				"ordenar" => array("Ordenar", "ordenar", ""),
 				"miOrden" => array("Mi Orden", "miOrden", ""),
-				"sucursales" => array("Sucursales", "sucursales", "")
+		"sucursales" => array("Sucursales", "Sucursal", "")
 				//"login" => array("Iniciar sesion", "login", "")
 	);
 	require_once("htmlhead.php"); //Genera el inicio de documento (<html> <head>).
