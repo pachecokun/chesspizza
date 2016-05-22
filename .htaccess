@@ -4,5 +4,7 @@ DirectoryIndex View/principal/index.php
 RewriteRule ^([^\./]+)$ View/$1/index.php [NC,L]
 RewriteRule ^([^\./]+)/([^\./]+)$ View/$1/$2.php [NC,L]
 RewriteRule ^(.*)img/(.*)$ View/img/$2 [NC,L]
+RewriteRule ^(.*)js/(.*)$ View/js/$2 [NC,L]
+RewriteRule ^(.*)css/(.*)$ View/css/$2 [NC,L]
 
 #RewriteRule ^([^\.]+)\.js$ View/$1.js [NC,L]
