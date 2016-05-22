@@ -1,2 +1,2 @@
 RewriteEngine on
-DirectoryIndex View/Principal/index.php
+DirectoryIndex View/principal/index.php
