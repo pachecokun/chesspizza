@@ -146,7 +146,7 @@ class RouteInfo
 
     public function getStreet()
     {
-        return $this->duration["value"];
+        return $this->street;
     }
     
 }
