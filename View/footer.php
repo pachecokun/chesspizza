@@ -1,7 +1,17 @@
 <!----------------------
 --------NO TOCAR--------
 ----------------------->
-		</div>
+
+<!--
+			footer.php
+          
+Cierra .container, .wrapper y abre el footer del sitio,
+incluye el script general del sitio.
+cierra las etiquetas <body> y <html>.
+
+-->
+
+			</div><!--container-->
 		</div><!--wrapper-->
 		<div class='footer-cover'></div>
 		<div class='footer'>

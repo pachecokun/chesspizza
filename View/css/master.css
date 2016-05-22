@@ -162,7 +162,6 @@ div#navbar{
 
 
 #navbar > ul{
-	display: block;
 	list-style-type: none;
 	margin: 0;
 	margin-right: 10px;
@@ -174,6 +173,13 @@ div#navbar{
 	float: left;
 }
 
+#navbar a{
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+
 #navbar > ul > li > a{
 	font-size: 20px;
 	text-decoration: none;
@@ -181,13 +187,11 @@ div#navbar{
 	padding: 15px 10px;
 	color: #fff;
 	border-bottom: 5px solid #000;
-	transition: color 0.5s, border-color 0.5s;
-	-webkit-transition: color 0.5s, border-color 0.5s;
-	-moz-transition: color 0.5s, border-color 0.5s;
-	-o-transition: color 0.5s, border-color 0.5s;
 }
 
-#navbar > ul > li > a:hover{
+#navbar > ul > li:hover > a,
+#navbar > ul > li:active > a,
+#navbar > ul > li:focus > a{
 	color: #F33;
 	border-color: #F33;
 }
@@ -196,25 +200,62 @@ div#navbar{
 	color: #FFFF66;
 	border-color: #FFFF66;
 }
-#ordenar{
-	background-image: url("../img/ordena-default.png");
-	background-size: 100% 100%;
-	width: 172px;
-	height: 128px;
-	display: block;
-	text-indent: -9999px;
-	position: fixed;
-	right: 20px;
-	top: 120px;
-	margin-right: -12px;
-	transition: background-image 0.5s;
-	-webkit-transition: background-image 0.5s;
-	-moz-transition: background-image 0.5s;
-	-o-transition: background-image 0.5s;
+
+#navbar > ul > li.dropdown > a{
+	cursor: pointer;
 }
 
-#ordenar:hover{
-	background-image: url("../img/ordena-hover.png");
+#navbar > ul > li > ul{
+	display: none;
+	position: absolute;
+	list-style-type: none;
+	background-color: #000;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	-webkit- transition: 0.5s;
+}
+
+#navbar > ul > li > ul > li{
+	display: block;
+}
+
+#navbar > ul > li > ul > li > a{
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	color: #FFF;
+	text-decoration: none;
+	padding: 10px;
+}
+
+#navbar > ul > li > ul > li:hover > a,
+#navbar > ul > li > ul > li:active > a,
+#navbar > ul > li > ul > li:focus > a{
+	background-color: #f33;
+}
+
+#navbar > ul > li.dropdown:hover > ul,
+#navbar > ul > li.dropdown:active > ul,
+#navbar > ul > li.dropdown:focus > ul{
+	display: block;
+}
+
+#navbar > ul > li.user > a{
+	color: #CCC;
+}
+
+#navbar > ul > li.user:hover > a,
+#navbar > ul > li.user:active > a,
+#navbar > ul > li.user:focus > a{
+	color: #09C;
+	border-color: #000;
+}
+
+#navbar > ul > li.user > ul > li:hover > a,
+#navbar > ul > li.user > ul > li:active > a,
+#navbar > ul > li.user > ul > li:focus > a{
+	background-color: #333;
 }
 
 .container{
@@ -229,6 +270,34 @@ div#navbar{
 	font-size: 24px;
 }
 
+.container *{
+	box-sizing: border-box;
+}
+
+.row{
+	width: 100%;
+	padding: 10px;
+	overflow:hidden;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+
 input, textarea, select, button{
 	display: block;
 	padding: 15px;
@@ -236,24 +305,20 @@ input, textarea, select, button{
 	font-family: 'Roboto', sans-serif;
 	outline: none;
 	border-radius: 2px;
-	transition: background-color 0.5s;
-	-webkit-transition: background-color 0.5s;
-	-moz-transition: background-color 0.5s;
-	-o-transition: background-color 0.5s;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
 }
 
 input, textarea, select{
 	width: 100%;
 	border: 1px solid #999;
 	color: #444;
-	transition: border 0.5s;
-	-webkit-transition: border 0.5s;
-	-moz-transition: border 0.5s;
-	-o-transition: border 0.5s;
 }
 
 button{
-	min-width: 200px;
+	min-width: 240px;
 	border: none;
 	margin: 20px 10px;
 	background-color: #006699;
@@ -353,6 +418,23 @@ table tr:nth-child(odd):focus{
 	background-color: #ACF;
 }
 
+.form-group{
+			margin: 20px 0;
+			color: #777;
+		}
+.sample{
+	width: 100%;
+	padding: 100px 0;
+	margin: 0 auto;
+	color: #fff;
+	background-color: #666;
+	font-size: 20px;
+	text-align: center;
+}
+		.text-info{
+			color: #069;
+		}
+
 @media screen and (min-width:800px) and (min-height: 840px){
 	.wrapper{
 		background-size: auto;
@@ -379,20 +461,35 @@ table tr:nth-child(odd):focus{
 		padding-top: 15px;
 		font-size: 16px;
 	}
+	
+	#navbar > ul > li > ul > li > a{
+		font-size: 15px;
+		padding: 10px;
+	}
+	
+	#navbar > ul > li.user{
+		float: right;
+	}
+	
 	.container{
 		width: 90%;
 		padding: 10px;
 		margin-top: 140px;
 	}
-	#ordenar{
-		display: none;
-	}
-
-	input, textarea, select, button{
-		margin: 0 auto;
-		width: 90%;
-	}
-
+	
+	.col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+	
 	button{
 		margin: 20px auto;
 	}
@@ -405,13 +502,13 @@ table tr:nth-child(odd):focus{
 	}
 }
 
-@media screen and (max-width: 528px){
+@media screen and (max-width: 768px){
 	.wrapper{
 		background-size: 50%;
 	}
 	div#navbar{
-		height: 50px;
-		overflow: visible;
+		max-height: 100%;
+		overflow-y: auto;
 	}
 
 	#nav-icon{
@@ -425,7 +522,7 @@ table tr:nth-child(odd):focus{
 		margin-left: 5px;
 	}
 	#navbar > ul{
-		height: 0;
+		display: none;
 		background-color: #000;
 		margin: 0;
 		-webkit-transition: height 1s;
@@ -442,25 +539,60 @@ table tr:nth-child(odd):focus{
 		border: none;
 		transition: background-color 0.5s;
 	}
-	#navbar > ul > li > a:hover{
+	#navbar > ul > li:hover > a,
+	#navbar > ul > li:active > a,
+	#navbar > ul > li:focus > a{
 		background-color: #006699;
 		color: #FFF;
 	}
 	
-	#navbar > ul > li > a.active:hover{
+	#navbar > ul > li:hover > a.active,
+	#navbar > ul > li:active > a.active,
+	#navbar > ul > li:focus > a.active{
 		background: none;
 		color: #FF6;
 	}
-	.container{
+
+	#navbar > ul > li > ul{
+		position: relative;
+		background-color: #333;
+	}	
+
+	#navbar > ul > li > ul > li{
 		width: 100%;
-		padding: 0;
+	}
+
+	#navbar > ul > li > ul > li:hover > a,
+	#navbar > ul > li.user > ul > li:hover > a,
+	#navbar > ul > li > ul > li:active > a,
+	#navbar > ul > li.user > ul > li:active > a,
+	#navbar > ul > li > ul > li:focus > a,
+	#navbar > ul > li.user > ul > li:focus a{
+		background-color: #066;
+	}
+	
+	#navbar > ul > li.user:hover > a,
+	#navbar > ul > li.user:active > a,
+	#navbar > ul > li.user:focus > a{
+		background-color: #069;
+		color: #DDD;
+	}
+	
+	.container{
+		box-sizing: border-box;
+		width: 100%;
+		padding: 20px;
 		margin-top: 70px;
 		padding-bottom: 20px;
 		border-radius: 0;		
 	}
 	
-	input, textarea, select{
-		width: 80%;
+	[class*="col-"]{
+		width: 100%;
+	}
+	
+	button{
+		width: 100%;
 	}
 	
 	.footer-cover{
