@@ -23,6 +23,9 @@ if (!is_null($nearestSucursal)) {
     echo "La sucursal más cercana es: <br>";
     echo $nearestSucursal->getNombre() . "<br>";
     echo $nearestSucursal->getDireccion();
+    $route = new RouteInfo();
+    $route->getAddress($lat,$lon);
+    echo "Su calle es: " . $route->getStreet() . "<br>";
 } else {
   /*$_SESSION["message"] = "No se encuentran sucursales cercanas a su ubicación...";
     header("location:/");*/
@@ -60,5 +63,5 @@ if (!is_null($nearestSucursal)) {
 	</form>
 	
 <?php
-	include_once($pos."../footer.php");
+	include_once($pos."footer.php");
 ?>

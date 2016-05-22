@@ -14,6 +14,7 @@ class RouteInfo
     private $origin_address;
     private $distance = ["text" => "", "value" => ""];
     private $duration = ["text" => "", "value" => ""];
+    private $street;
 
 /*
 *   Origin y Dest pueden ser coordenadadas de la forma 19.998,-199.999 o una dirección
@@ -37,6 +38,18 @@ class RouteInfo
                 $this->duration["text"] = $elements["duration"]["text"];
                 $this->duration["value"] = $elements["duration"]["value"];
             }
+        }
+    }
+    
+    /*$origin y $dest deben ser las coordenadas las coordenadas*/
+    public function getAddress($lat, $lon){
+        $url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".$lat.",".$lon;
+        $content = file_get_contents($url);
+        $json = json_decode($content, true);
+        $this->responseStatus = $json["status"];
+        if ($this->responseStatus == "OK") {
+            $elements = $json["results"][0]["address_components"];                        
+            $this->street = $elements[1]["long_name"];           
         }
     }
 
@@ -80,6 +93,7 @@ class RouteInfo
     {
         return $this->destination_address;
     }
+    
 
     /**
      * @return String la dirección completa de origen en caso de que ResultStatus y ResponseStatus sean OK
@@ -125,4 +139,14 @@ class RouteInfo
     {
         return $this->duration["value"];
     }
+    
+    /**
+     * @return String la calle en caso de que ResultStatus y ResponseStatus sean OK
+     */
+
+    public function getStreet()
+    {
+        return $this->duration["value"];
+    }
+    
 }

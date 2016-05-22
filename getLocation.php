@@ -16,7 +16,5 @@ if (!is_null($nearestSucursal)) {
 } else {
     echo "No se encuentran sucursales cercanas...";
 }
-
-
 ?>
 
