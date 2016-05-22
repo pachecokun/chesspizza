@@ -35,3 +35,10 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2016-05-05 21:16:25
+
+update sucursal set direccion = "Av Hda. de Pastejé 5, Impulsora Popular Avicola, Nezahualcóyotl, Méx." where id = 1;
+update sucursal set direccion = "Calz del Hueso 690, Los Sauces, Ciudad de México, D.F. " where id = 2;
+update sucursal set direccion = "La Espiga 299, 57001 Benito Juárez, Méx." where id = 3;
+update sucursal set direccion = "Mixiuhca, Jardín Balbuena, Ciudad de México" where id = 4;
+update sucursal set direccion = "Calle Miguel Lebrija 171, Aviación Civil, Ciudad de México, D.F." where id = 5;
+update sucursal set direccion = "Av. Juan de Dios Bátiz s/n, Gustavo A. Madero, CIDETEC, Nueva Industrial Vallejo, 07700 Ciudad de México, D.F." where id = 6;
