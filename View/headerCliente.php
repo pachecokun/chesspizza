@@ -28,4 +28,10 @@
 	require_once("htmlhead.php"); //Genera el inicio de documento (<html> <head>).
 ?>
 	<!-- $title es definida en htmlhead.php -->
+  <?php
+    if(isset($_SESSION["message"])){
+      echo $_SESSION["message"];
+      unset $_SESSION["message"];
+    }
+  ?>
 	<title><?php	echo $title;	?>Chess Pizzas</title>

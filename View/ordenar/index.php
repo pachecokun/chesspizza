@@ -2,6 +2,8 @@
 	$pos ="../"; //fix para la ubicación relativa en las rutas.
 	$active = "ordenar";
 	require_once($pos."headerCliente.php");
+  include_once ($pos. "../DAO/SucursalDAO.php");
+  include_once ($pos. "../Controller/SucursalController.php");
 ?>
     <!-- <head> content aquí -->
 <?php
@@ -9,8 +11,6 @@
 ?>
 
 <?php
-include_once ($pos. "../DAO/SucursalDAO.php");
-include_once ($pos. "../Controller/SucursalController.php");
 if (isset($_POST["Lat"]) && isset($_POST["Lon"])) {
     $lat = $_POST["Lat"];
     $lon = $_POST["Lon"];
@@ -24,7 +24,8 @@ if (!is_null($nearestSucursal)) {
     echo $nearestSucursal->getNombre() . "<br>";
     echo $nearestSucursal->getDireccion();
 } else {
-    echo "No se encuentran sucursales cercanas...";
+  $SESSION["message"] = "No se encuentran sucursales cercanas a su ubicación...";
+    header("location:/");
 }
 ?>
     <!-- Contenido va aquí-->
