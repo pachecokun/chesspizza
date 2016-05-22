@@ -18,7 +18,7 @@
   </head>
   <body onLoad="getLocation()">
     Obteniendo su ubicación...    
-    <form id="formPedir" action="index.php" method="POST">
+    <form id="formPedir" action="../ordenar/index.php" method="POST">
       <input type="hidden" id="txtLat" name="Lat"/>
       <input type="hidden" id="txtLon" name="Lon"/>    
     </form>
