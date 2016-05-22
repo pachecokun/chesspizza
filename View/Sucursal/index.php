@@ -10,15 +10,14 @@ require_once($pos . "../headerCliente.php");
     #mapa {
         width: 40%;
         height: 500px;
-        position: relative !important;
         display: inline-block;
     }
 
     #sucs {
         display: inline-block;
         vertical-align: top;
-        margin-left: 40px;
-        width: 40%;
+        margin-left: 5%;
+        width: 50%;
     }
 </style>
 <?php
@@ -35,8 +34,8 @@ require_once($pos . "../body.php");
 
     foreach ($sucursales as $sucursal):
         ?>
-        <h3><?= $sucursal->getNombre() ?></h3>
-        <p style="font-size: 1em;"><?= $sucursal->getDireccion() ?></p>
+        <h5><?= $sucursal->getNombre() ?></h5>
+        <p style="font-size: 0.81em;"><?= $sucursal->getDireccion() ?></p>
     <?php endforeach; ?>
 </div>
 <script>
