@@ -1,2 +1,5 @@
+Options +FollowSymLinks
 RewriteEngine on
 DirectoryIndex View/principal/index.php
+RewriteRule ^([^\.]+)$ View/$1.php [NC,L]
+RewriteRule ^([^\.]+)\.js$ View/$1.js [NC,L]
