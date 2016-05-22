@@ -34,7 +34,7 @@
 			<input type='email' placeholder='Correo Electrónico' />
 		</div>
 		<a href='myOrderList.php'>
-		<button type='submit'>Aceptar</button>
+			<button type='button'>Aceptar</button>
 		</a>
 	</form>
 	

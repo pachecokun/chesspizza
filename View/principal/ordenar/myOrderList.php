@@ -2,48 +2,74 @@
 	$pos ="../"; //fix para la ubicación relativa en las rutas.
 	$active = "ordenar";
 	require_once($pos."../headerCliente.php");
+	$total = 0.00;
 ?>
     <!-- <head> content aquí -->
 	<style>
-		.button-group{
-			overflow: hidden;
-		}
-		.button-group button{
-			float: left;
+		button{
 			margin: 0;
-			border-radius: 0;
-			border-left: 1px solid #FFF;
+			width: 100%;
 		}
-		.button-group button:first-child{
-			border: 0;
-		}
-		
-		.button-group button:first-child{
-			border-radius: 5px 0 0 5px;
-		}
-		.button-group button:last-child{
-			border-radius: 0 5px 5px 0;
-		}
-		.btn-default{
-			background-color: #096;
-			color: #FFF;
-		}
-		.btn-default:hover{
-			background-color: #096;
-			opacity: 0.5;
+		.total{
+			width: 100%;
+			text-align: right;
 		}
 	</style>
 <?php
-	require_once($pos."../bodyCliente.php");
+	require_once($pos."../body.php");
 ?>
     <!-- Contenido va aquí-->
-    <h1>Ordenar Pizza</h1>
-	<p class='text-info'>Agregue elementos a su orden utilzando los botones de abajo</p>
-	<div class='button-group'>
-		<button type='button' class='btn-default'>Especialidades</button>
-		<button type='button' class='btn-default'>Pizza Personalizada</button>
-		<button type='button' class='btn-default'>Paquetes</button>
-		<button type='button' class='btn-default'>Complementos</button>		
+    <h1>Orden</h1>
+	<?php
+		if(isset($_GET['added'])){
+			echo "<div class='table'><table>"
+				."<tr>"
+					."<td>x3</td>"
+					."<td>Pizza hawaiana</td>"
+					."<td>Grande, orilla rellena de queso, masa crujiente.</td>"
+					."<td>$150</td>"
+					."<td>$450</td>"
+				."</tr>"
+				."<tr>"
+					."<td>x1</td>"
+					."<td>Pizza Suprema</td>"
+					."<td>Mediana, orilla normal, masa receta secreta.</td>"
+					."<td>$199</td>"
+					."<td>$199</td>"
+				."</tr>"
+				."<tr>"
+					."<td>x1</td>"
+					."<td>Pa Q T Chingues</td>"
+					."<td>Pizza de peperoni grande, Manzanita sol de 2 Lt.</td>"
+					."<td>$210</td>"
+					."<td>$210</td>"
+				."</tr>"
+				."<tr>"
+					."<td>x2</td>"
+					."<td>Pepsi</td>"
+					."<td>1.5 Lt.</td>"
+					."<td>$30</td>"
+					."<td>$60</td>"
+				."</tr>"
+				."</table></table>";
+			$total = 919.00;
+		}
+	?>
+	<h3 class='total text-info'>Total: <span class='text-success'>$<?php		echo $total;	?>.00</span></h3>
+	<p>Agregar a mi orden:</p>
+	<div class='row'>
+		<div class='col-3 col-m-6'>
+			<a href="choosePizza.php"><button type='button' class="btn-success">Especialidades</button></a>
+		</div>
+		<div class='col-3 col-m-6'>
+			<button type='button' class="btn-success">Pizza Personalizada</button>
+		</div>
+		<div class='col-3 col-m-6'>
+			<button type='button' class="btn-success">Paquetes</button>
+		</div>
+		<div class='col-3 col-m-6'>
+			<button type='button' class="btn-success">Complementos</button>
+		</div>
 	</div>
 <?php
 	include_once($pos."../footer.php");

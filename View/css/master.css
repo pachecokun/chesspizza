@@ -50,6 +50,9 @@ strong, b{
 	font-weight: bold;
 	color: #000;
 }
+a{
+	text-decoration: none;
+}
 
 div#navbar{
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -295,7 +298,7 @@ div#navbar{
 
 [class*="col-"] {
     float: left;
-    padding: 10px;
+    padding: 5px;
 }
 
 input, textarea, select, button{
@@ -330,6 +333,20 @@ button:hover{
 	cursor: pointer;
 }
 
+.btn-default{ color: #333; background-color: #CCC; }
+.btn-default:hover{ color: #FFF; background-color: #333; }
+
+.btn-info{ background-color: #069; }
+.btn-info:hover{ background-color: #036; }
+
+.btn-success{ background-color: #094; }
+.btn-success:hover{ background-color: #062; }
+
+.btn-warning{ background-color: #FA3; }
+.btn-warning:hover{ background-color: #C60; }
+.btn-danger{ background-color: #f33; }
+.btn-danger:hover{ background-color: #900; }
+
 textarea{
 	resize: vertical;
 }
@@ -343,6 +360,12 @@ input:focus, textarea:focus, select:focus{
 input[type="radio"]{
 	display: inline;
 	width: 25px;
+}
+
+input:disabled, select:disabled{
+	background-color: #CCC;
+	color: #444;
+	border-color: #444;
 }
 
 .footer-cover{
@@ -419,9 +442,10 @@ table tr:nth-child(odd):focus{
 }
 
 .form-group{
-			margin: 20px 0;
-			color: #777;
-		}
+	margin: 20px 0;
+	color: #777;
+}
+
 .sample{
 	width: 100%;
 	padding: 100px 0;
@@ -431,9 +455,11 @@ table tr:nth-child(odd):focus{
 	font-size: 20px;
 	text-align: center;
 }
-		.text-info{
-			color: #069;
-		}
+
+.text-success{ color: #094; }
+.text-info{ color: #069; }
+.text-warning{ color: #FA3; }
+.text-danger{ color: #f33; }
 
 @media screen and (min-width:800px) and (min-height: 840px){
 	.wrapper{

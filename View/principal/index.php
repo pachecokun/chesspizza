@@ -9,11 +9,12 @@
 			text-align: center;
 		}
 		[class*="col-"] img{
-			width: 100%;
+			max-width: 90%;
 		}
 		
 		[class*="col-"] p{
 			color: #900;
+			font-family: 'Open Sans Condensed', 'Roboto', 'Open Sans', sans-serif;
 		}
 	</style>
 <?php
