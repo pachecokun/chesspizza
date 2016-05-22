@@ -1,11 +1,11 @@
 <?php
 	$pos ="../"; //fix para la ubicación relativa en las rutas.
 	$active = "ordenar";
-	require_once($pos."../headerCliente.php");
+	require_once($pos."headerCliente.php");
 ?>
     <!-- <head> content aquí -->
 <?php
-	require_once($pos."../body.php");
+	require_once($pos."body.php");
 ?>
     <!-- Contenido va aquí-->
     <h1>Ordenar Pizza</h1>
