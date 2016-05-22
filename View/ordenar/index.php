@@ -24,8 +24,8 @@ if (!is_null($nearestSucursal)) {
     echo $nearestSucursal->getNombre() . "<br>";
     echo $nearestSucursal->getDireccion();
 } else {
-  $SESSION["message"] = "No se encuentran sucursales cercanas a su ubicación...";
-    header("location:/");
+  /*$_SESSION["message"] = "No se encuentran sucursales cercanas a su ubicación...";
+    header("location:/");*/
 }
 ?>
     <!-- Contenido va aquí-->
