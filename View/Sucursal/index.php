@@ -1,6 +1,6 @@
 <?php
 $pos = ""; //fix para la ubicación relativa en las rutas.
-$active = "ordenar";
+$active = "sucursales";
 require_once($pos . "../headerCliente.php");
 ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTNw24eYAdlQdFZOQeTZEdDCJmUoClqG4&language=es"
