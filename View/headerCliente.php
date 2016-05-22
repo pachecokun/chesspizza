@@ -20,7 +20,7 @@
 	$navElements = array(
 				"inicio" => array("Inicio", "../principal", ""),
 				"carta" => array("Carta", "carta", ""),
-				"ordenar" => array("Ordenar", "/ordenar/getLocation.php", ""),
+				"ordenar" => array("Ordenar", "../ordenar/getLocation.php", ""),
 				"miOrden" => array("Mi Orden", "miOrden", ""),
 		"sucursales" => array("Sucursales", "../Sucursal", "")
 				//"login" => array("Iniciar sesion", "login", "")
