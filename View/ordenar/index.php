@@ -7,6 +7,26 @@
 <?php
 	require_once($pos."body.php");
 ?>
+
+<?php
+include_once ($pos. "../DAO/SucursalDAO.php");
+include_once ($pos. "../Controller/SucursalController.php");
+if (isset($_POST["Lat"]) && isset($_POST["Lon"])) {
+    $lat = $_POST["Lat"];
+    $lon = $_POST["Lon"];
+} else {
+    header("location:/");
+}
+$nearestSucursal = SucursalController::getNearestSucursal($lat, $lon);
+if (!is_null($nearestSucursal)) {
+    echo "Su dirección es: " . RouteInfo::getFullAddress($lat,$lon) . "<br>";
+    echo "La sucursal más cercana es: <br>";
+    echo $nearestSucursal->getNombre() . "<br>";
+    echo $nearestSucursal->getDireccion();
+} else {
+    echo "No se encuentran sucursales cercanas...";
+}
+?>
     <!-- Contenido va aquí-->
     <h1>Ordenar Pizza</h1>
 	<h3>Dínos a dónde mandarla</h2>
