@@ -30,7 +30,7 @@ class Address
             $this->street = $elements[1]["long_name"];
             $this->neighborhood = $elements[2]["long_name"];
             $this->mun = $elements[3]["long_name"];
-            $this->zipCode = $elements[7]["long_name"];
+            $this->zipCode = $elements[6]["long_name"];
         }
     }
 
