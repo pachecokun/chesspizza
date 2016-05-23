@@ -34,11 +34,11 @@ if (!is_null($nearestSucursal)) {
 ?>
     <!-- Contenido va aquí-->
     <h1>Ordenar Pizza</h1>
-	<h3>Dínos a dónde mandarla</h3>
+	<h3>Hemos detectado tu ubicación. Verifica tu dirección más abajo</h3>
 	<!--p class='text-info'>Permite acceder a tu ubicación desde el navegador.</p-->
 	<div class='sample'>
         <!--
-        Aquí debe de ir un mapa con las coordenadas de $lat y $lon
+        Aquí debe de ir un mapa con las coordenadas que tienen las variables $lat y $lon, de latitud y longitud respectivamente
         -->
         DIV Ubicación</div>
 	<h3>Modifica tu dirección</h3>
