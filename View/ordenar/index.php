@@ -20,16 +20,17 @@ if (isset($_POST["Lat"]) && isset($_POST["Lon"])) {
 }
 $nearestSucursal = SucursalController::getNearestSucursal($lat, $lon);
 if (!is_null($nearestSucursal)) {
-    echo "La sucursal más cercana es: <br>";
     echo $nearestSucursal->getNombre() . "<br>";
     echo $nearestSucursal->getDireccion();
     $address = new Address($lat,$lon);
     $street = $address->getStreet();
-
-    echo "<br>Su calle es: " . $address->getStreet() . "<br>";
+    $number = $address->getNumber();
+    $neighborhood = $address->getNeighborhood();
+    $mun = $address->getMun();
+    $zipCode = $address->getZipCode();
 } else {
-  /*$_SESSION["message"] = "No se encuentran sucursales cercanas a su ubicación...";
-    header("location:/");*/
+  /*$_SESSION["message"] = "No se encuentran sucursales cercanas a su ubicación...";*/
+    header("location:/");
 }
 ?>
     <!-- Contenido va aquí-->
@@ -47,10 +48,11 @@ if (!is_null($nearestSucursal)) {
 		</div>
 		<div class='form-group'>
 			<input type='text' placeholder='Calle' value="<?php echo $street?>"/>
-			<input type='text' placeholder='Número exterior' />
+			<input type='text' placeholder='Número exterior' value="<?php echo $number?>" />
 			<input type='text' placeholder='Número interior (Opcional)' />
-			<input type='text' placeholder='Colonia' />
-			<input type='number' placeholder='Código postal' />
+			<input type='text' placeholder='Colonia' value="<?php echo $neighborhood?>" />
+            <input type='text' placeholder='Municipio/Delegación' value="<?php echo $mun?>" />
+			<input type='number' placeholder='Código postal' value="<?php echo $zipCode?>" />
 		</div>
 		<div class='form-group'>
 			Datos de contacto
