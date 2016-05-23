@@ -6,6 +6,9 @@
   include_once ($pos. "../Controller/SucursalController.php");
 include_once ($pos. "../Controller/Address.php");
 ?>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTNw24eYAdlQdFZOQeTZEdDCJmUoClqG4&language=es"
+		type="text/javascript"></script>
+<script src="/js/ordenar/ordenar.js" type="text/javascript"></script>
     <!-- <head> content aquí -->
 <?php
 	require_once($pos."body.php");
@@ -36,11 +39,19 @@ if (!is_null($nearestSucursal)) {
     <h1>Ordenar Pizza</h1>
 	<h3>Hemos detectado tu ubicación. Verifica tu dirección más abajo</h3>
 	<!--p class='text-info'>Permite acceder a tu ubicación desde el navegador.</p-->
-	<div class='sample'>
+<div id="mapa" class="sample">
 	Las coordenadas del cliente están en $lat,$lon
 	Las coordenadas de la sucursal más cercana están en $nearestSucursal->getLat() y $nearestSucursal->getLon()
 
-        </div>
+</div>
+<script>
+	initMap();
+	suc(<?=$nearestSucursal->getLat()?>,<?=$nearestSucursal->getLon()?>, "<?=$nearestSucursal->getNombre()?>");
+	home(<?=$lat?>,<?=$lon?>);
+	<?php
+
+	?>
+</script>
 	<h3>Modifica tu dirección</h3>
 	<form method='post'>
 		<div class='form-group'>

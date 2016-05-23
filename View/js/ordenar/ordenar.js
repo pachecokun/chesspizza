@@ -9,7 +9,7 @@ var l2;
 var bounds = new google.maps.LatLngBounds();
 function initMap() {
     map = new google.maps.Map(document.getElementById('mapa'), {
-        zoom: 10,
+        zoom: 15,
         center: {lat: 19.504735, lng: -99.146980},
         mapTypeId: google.maps.MapTypeId.HYBRID,
         tilt: 0
@@ -63,7 +63,19 @@ function info(txt) {
     document.getElementById('info').innerHTML = txt;
 }
 
-function suc(lat, lon, nom, dir) {
+function home(lat, lon) {
+    var marker = new google.maps.Marker({
+        position: {lat: lat, lng: lon},
+        map: map,
+        title: "Tu ubicación"
+    });
+    map.zoom = 15;
+    bounds.extend(new google.maps.LatLng(lat, lon));
+    map.fitBounds(bounds);
+    map.panToBounds(bounds);
+}
+
+function suc(lat, lon, nom) {
     var icon = {
         url: "/img/favicon.png",
         scaledSize: new google.maps.Size(20, 20)
@@ -71,16 +83,8 @@ function suc(lat, lon, nom, dir) {
     var marker = new google.maps.Marker({
         position: {lat: lat, lng: lon},
         map: map,
-        title: nom,
+        title: "Sucursal " + nom,
         icon: icon
-    });
-    google.maps.event.addListener(marker, 'click', function () {
-        var info = new google.maps.InfoWindow({
-            content: "<b>" + nom + ": </b>" + dir,
-            position: {lat: lat, lng: lon}
-        });
-        info.open(map);
-        map.setCenter(marker.getPosition());
     });
     bounds.extend(new google.maps.LatLng(lat, lon));
     map.fitBounds(bounds);
