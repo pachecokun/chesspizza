@@ -1,7 +1,7 @@
 <?php
 	$pos ="../"; //fix para la ubicación relativa en las rutas.
 	$active = "ordenar";
-	require_once($pos."../headerCliente.php");
+	require_once($pos."headerCliente.php");
 	$total = 0.00;
 ?>
     <!-- <head> content aquí -->
@@ -16,7 +16,7 @@
 		}
 	</style>
 <?php
-	require_once($pos."../body.php");
+	require_once($pos."body.php");
 ?>
     <!-- Contenido va aquí-->
     <h1>Orden</h1>
@@ -72,5 +72,5 @@
 		</div>
 	</div>
 <?php
-	include_once($pos."../footer.php");
+	include_once($pos."footer.php");
 ?>
