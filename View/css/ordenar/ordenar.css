@@ -1,0 +1,15 @@
+#mapa {
+    vertical-align: middle;
+    height: 100%;
+    width: 50%;
+    min-width: 500px;
+    min-height: 500px;
+    display: inline-block;
+}
+
+#form-pedido {
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 5%;
+    width: 40%;
+}

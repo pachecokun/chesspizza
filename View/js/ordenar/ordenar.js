@@ -86,6 +86,11 @@ function suc(lat, lon, nom) {
         title: "Sucursal " + nom,
         icon: icon
     });
+    var info = new google.maps.InfoWindow({
+        content: "<b>Sucursal " + nom + "</b>",
+        position: {lat: lat, lng: lon}
+    });
+    info.open(map);
     bounds.extend(new google.maps.LatLng(lat, lon));
     map.fitBounds(bounds);
     map.panToBounds(bounds);
