@@ -1,7 +1,7 @@
 <?php
 	$pos ="../"; //fix para la ubicación relativa en las rutas.
 	$active = "ordenar";
-	require_once($pos."../headerCliente.php");
+	require_once($pos."headerCliente.php");
 ?>
     <!-- <head> content aquí -->
 	<style>
@@ -30,7 +30,7 @@
 		}
 	</style>
 <?php
-	require_once($pos."../body.php");
+	require_once($pos."body.php");
 ?>
     <!-- Contenido va aquí-->
     <h1>Escoge tu pizza</h1>
@@ -45,7 +45,7 @@
 						<li>Extra Queso</li>
 					</ul>
 				</div>
-				<a href='myOrderList.php?added=true'><button class='btn-success'>Elegir</button></a>
+				<a href='myOrderList?added=true'><button class='btn-success'>Elegir</button></a>
 			</div>
 		</div>
 		<div class='col-3 col-m-6'>
@@ -70,7 +70,7 @@
 						<li>Extra queso</li>
 					</ul>
 				</div>
-				<a href='myOrderList.php?added=true'><button class='btn-success'>Elegir</button></a>
+				<a href='myOrderList?added=true'><button class='btn-success'>Elegir</button></a>
 			</div>
 		</div>
 		<div class='col-3 col-m-6'>
@@ -87,7 +87,7 @@
 						<li>Cebolla</li>
 					</ul>
 				</div>
-				<a href='myOrderList.php?added=true'><button class='btn-success'>Elegir</button></a>
+				<a href='myOrderList?added=true'><button class='btn-success'>Elegir</button></a>
 			</div>
 		</div>
 	</div>
@@ -107,10 +107,10 @@
 						<li>Frijoles</li>
 					</ul>
 				</div>
-				<a href='myOrderList.php?added=true'><button class='btn-success'>Elegir</button></a>
+				<a href='myOrderList?added=true'><button class='btn-success'>Elegir</button></a>
 			</div>
 		</div>
 	</div>
 <?php
-	include_once($pos."../footer.php");
+	include_once($pos."footer.php");
 ?>
