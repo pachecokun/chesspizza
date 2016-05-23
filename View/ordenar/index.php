@@ -64,7 +64,7 @@ if (!is_null($nearestSucursal)) {
 			<input type='email' placeholder='Correo Electrónico' />
 		</div>
 		<a href='myOrderList.php'>
-			<button type='button'>Aceptar</button>
+			<button type='button'>Siguiente paso</button>
 		</a>
 	</form>
 	
