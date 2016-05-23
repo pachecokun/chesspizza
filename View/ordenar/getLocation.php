@@ -17,16 +17,11 @@
     </script>
   </head>
   <body onLoad="getLocation()">
-<<<<<<< HEAD
   <div style="margin:0 auto; text-align:center">
     Obteniendo su ubicación...  <br>
 <img style="align:center" width="100" src="../img/CookieLoader.gif"> 
 <div>   
-    <form id="formPedir" action="../" method="POST">
-=======
-    Obteniendo su ubicación...    
-    <form id="formPedir" action="../" method="GET">
->>>>>>> origin/master
+    <form id="formPedir" action="../" method="POST"> 
       <input type="hidden" id="txtLat" name="Lat"/>
       <input type="hidden" id="txtLon" name="Lon"/>    
     </form>
