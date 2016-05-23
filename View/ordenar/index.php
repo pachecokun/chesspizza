@@ -63,7 +63,7 @@ if (!is_null($nearestSucursal)) {
 			<input type='number' placeholder='Teléfono' />
 			<input type='email' placeholder='Correo Electrónico' />
 		</div>
-		<a href='../myOrderList'>
+		<a href='myOrderList'>
 			<button type='button'>Siguiente paso</button>
 		</a>
 	</form>
