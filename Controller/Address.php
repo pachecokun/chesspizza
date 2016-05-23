@@ -27,7 +27,7 @@ class Address
         if ($this->status == "OK") {
             $elements = $json["results"][0]["address_components"];
             foreach($elements as $element){
-              switch($elements["type"][0]){
+              switch($elements["type"]){
                 case "street_number":
                   $this->number = $element["long_name"];
                 break;
