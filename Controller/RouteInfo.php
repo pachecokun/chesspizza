@@ -40,24 +40,6 @@ class RouteInfo
             }
         }
     }
-    
-    /*$origin y $dest deben ser las coordenadas las coordenadas*/
-    public function getAddress($lat, $lon){
-        $url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=".$lat.",".$lon;
-        $content = file_get_contents($url);
-        $json = json_decode($content, true);
-        $this->responseStatus = $json["status"];
-        if ($this->responseStatus == "OK") {
-            $elements = $json["results"][0]["address_components"];                        
-            $this->street = $elements[1]["long_name"];           
-        }
-    }
-
-    public static function getFullAddress($lat, $lon){
-        $routeInfo = new RouteInfo();
-        $routeInfo->getRouteInfo($lat.",".$lon,$lat.",".$lon);
-        return $routeInfo->getOriginAddress();
-    }
 
     /**
      *
