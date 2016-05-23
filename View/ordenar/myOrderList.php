@@ -59,7 +59,7 @@
 	<p>Agregar a mi orden:</p>
 	<div class='row'>
 		<div class='col-3 col-m-6'>
-			<a href="choosePizza.php"><button type='button' class="btn-success">Especialidades</button></a>
+			<a href="choosePizza"><button type='button' class="btn-success">Especialidades</button></a>
 		</div>
 		<div class='col-3 col-m-6'>
 			<button type='button' class="btn-success">Pizza Personalizada</button>
