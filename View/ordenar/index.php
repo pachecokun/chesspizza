@@ -37,8 +37,8 @@ if (!is_null($nearestSucursal)) {
 	<h3>Hemos detectado tu ubicación. Verifica tu dirección más abajo</h3>
 	<!--p class='text-info'>Permite acceder a tu ubicación desde el navegador.</p-->
 	<div class='sample'>
-
-        Aquí debe de ir un mapa con las coordenadas que tienen las variables $lat y $lon, de latitud y longitud respectivamente
+	Las coordenadas del cliente están en $lat,$lon
+	Las coordenadas de la sucursal más cercana están en $nearestSucursal->getLat() y $nearestSucursal->getLon()
 
         </div>
 	<h3>Modifica tu dirección</h3>
