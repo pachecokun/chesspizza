@@ -26,11 +26,26 @@ class Address
         $this->status = $json["status"];
         if ($this->status == "OK") {
             $elements = $json["results"][0]["address_components"];
-            $this->number = $elements[0]["long_name"];
-            $this->street = $elements[1]["long_name"];
-            $this->neighborhood = $elements[2]["long_name"];
-            $this->mun = $elements[3]["long_name"];
-            $this->zipCode = $elements[6]["long_name"];
+            foreach($elements as $element){
+              switch($elements["type"][0]){
+                case "street_number":
+                  $this->number = $element["long_name"];
+                break;
+                case "route":
+                  $this->street = $element["long_name"];
+                break;
+                case "sublocality_level_1":
+                  $this->neighborhood = $element["long_name"];
+                break;
+                case "locality":
+                case "administrative_area_level_2":
+                  $this->mun = $element["long_name"];
+                break;
+                case "postal_code":
+                  $this->zipCode = $element["long_name"];
+                break;                
+              }                           
+            } 
         }
     }
 
