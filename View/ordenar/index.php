@@ -20,8 +20,7 @@ if (isset($_POST["Lat"]) && isset($_POST["Lon"])) {
 }
 $nearestSucursal = SucursalController::getNearestSucursal($lat, $lon);
 if (!is_null($nearestSucursal)) {
-    echo $nearestSucursal->getNombre() . "<br>";
-    echo $nearestSucursal->getDireccion();
+    $nameSuc = $nearestSucursal->getNombre();
     $address = new Address($lat,$lon);
     $street = $address->getStreet();
     $number = $address->getNumber();
@@ -43,7 +42,7 @@ if (!is_null($nearestSucursal)) {
 		<div class='form-group'>
 			Sucursal
 			<select disabled='disabled'>
-				<option>Torres Lindavista</option>
+				<option><?php echo $zipCode?></option>
 			</select>
 		</div>
 		<div class='form-group'>
