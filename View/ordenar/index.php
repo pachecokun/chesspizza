@@ -15,9 +15,9 @@ include_once ($pos. "../Controller/Address.php");
 ?>
 
 <?php
-if (isset($_POST["Lat"]) && isset($_POST["Lon"])) {
-    $lat = $_POST["Lat"];
-    $lon = $_POST["Lon"];
+if (isset($_GET["Lat"]) && isset($_GET["Lon"])) {
+    $lat = $_GET["Lat"];
+    $lon = $_GET["Lon"];
 } else {
     header("location:/");
 }
