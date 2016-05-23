@@ -4,6 +4,7 @@
 	require_once($pos."headerCliente.php");
   include_once ($pos. "../DAO/SucursalDAO.php");
   include_once ($pos. "../Controller/SucursalController.php");
+include_once ($pos. "../Controller/Address.php");
 ?>
     <!-- <head> content aquí -->
 <?php
@@ -19,13 +20,13 @@ if (isset($_POST["Lat"]) && isset($_POST["Lon"])) {
 }
 $nearestSucursal = SucursalController::getNearestSucursal($lat, $lon);
 if (!is_null($nearestSucursal)) {
-    echo "Su dirección es: " . RouteInfo::getFullAddress($lat,$lon) . "<br>";
     echo "La sucursal más cercana es: <br>";
     echo $nearestSucursal->getNombre() . "<br>";
     echo $nearestSucursal->getDireccion();
-    $route = new RouteInfo();
-    $route->getAddress($lat,$lon);
-    echo "Su calle es: " . $route->getStreet() . "<br>";
+    $address = new Address($lat,$lon);
+    $street = $address->getStreet();
+
+    echo "<br>Su calle es: " . $address->getStreet() . "<br>";
 } else {
   /*$_SESSION["message"] = "No se encuentran sucursales cercanas a su ubicación...";
     header("location:/");*/
@@ -33,7 +34,7 @@ if (!is_null($nearestSucursal)) {
 ?>
     <!-- Contenido va aquí-->
     <h1>Ordenar Pizza</h1>
-	<h3>Dínos a dónde mandarla</h2>
+	<h3>Dínos a dónde mandarla</h3>
 	<p class='text-info'>Permite acceder a tu ubicación desde el navegador.</p>
 	<div class='sample'>DIV Ubicación</div>
 	<h3>Modifica tu dirección</h3>
@@ -45,7 +46,7 @@ if (!is_null($nearestSucursal)) {
 			</select>
 		</div>
 		<div class='form-group'>
-			<input type='text' placeholder='Calle' />
+			<input type='text' placeholder='Calle' value="<?php echo $street?>"/>
 			<input type='text' placeholder='Número exterior' />
 			<input type='text' placeholder='Número interior (Opcional)' />
 			<input type='text' placeholder='Colonia' />
