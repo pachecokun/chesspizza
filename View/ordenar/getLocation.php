@@ -21,7 +21,7 @@
     Obteniendo su ubicación...  <br>
 <img style="align:center" width="100" src="../img/CookieLoader.gif"> 
 <div>   
-    <form id="formPedir" action="../" method="POST"> 
+    <form id="formPedir" action="../" method="GET"> 
       <input type="hidden" id="txtLat" name="Lat"/>
       <input type="hidden" id="txtLon" name="Lon"/>    
     </form>
