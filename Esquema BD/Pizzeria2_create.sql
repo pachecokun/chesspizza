@@ -31,14 +31,16 @@ CREATE TABLE Operacion (
 
 -- Table: Orden
 CREATE TABLE Orden (
-    id int NOT NULL,
-    fecha_hora datetime NOT NULL,
-    direccion varchar(200) NOT NULL,
-    Sucursal_id int NOT NULL,
-    Repartidor_id int NOT NULL,
-    lat double(11,5) NOT NULL,
-    lon double(11,5) NOT NULL,
+    id             int NOT NULL,
+    fecha_hora     datetime NOT NULL,
+    direccion      varchar(200) NOT NULL,
+    Sucursal_id    int NOT NULL,
+    Repartidor_id  int NOT NULL,
+    lat            double(11,5) NOT NULL,
+    lon            double(11,5) NOT NULL,
     nombre_cliente varchar(50) NOT NULL,
+    tel_cliente    VARCHAR(20),
+    email_cliente  VARCHAR(200),
     CONSTRAINT Orden_pk PRIMARY KEY (id)
 );
 
