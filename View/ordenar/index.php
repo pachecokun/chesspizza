@@ -35,14 +35,18 @@ if (!is_null($nearestSucursal)) {
     <!-- Contenido va aquí-->
     <h1>Ordenar Pizza</h1>
 	<h3>Dínos a dónde mandarla</h3>
-	<p class='text-info'>Permite acceder a tu ubicación desde el navegador.</p>
-	<div class='sample'>DIV Ubicación</div>
+	<!--p class='text-info'>Permite acceder a tu ubicación desde el navegador.</p-->
+	<div class='sample'>
+        <!--
+        Aquí debe de ir un mapa con las coordenadas de $lat y $lon
+        -->
+        DIV Ubicación</div>
 	<h3>Modifica tu dirección</h3>
 	<form method='post'>
 		<div class='form-group'>
 			Sucursal
 			<select disabled='disabled'>
-				<option><?php echo $zipCode?></option>
+				<option><?php echo $nameSuc?></option>
 			</select>
 		</div>
 		<div class='form-group'>
