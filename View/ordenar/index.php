@@ -2,9 +2,9 @@
 	$pos ="../"; //fix para la ubicación relativa en las rutas.
 	$active = "ordenar";
 	require_once($pos."headerCliente.php");
-  include_once ($pos. "../DAO/SucursalDAO.php");
-  include_once ($pos. "../Controller/SucursalController.php");
-include_once ($pos. "../Controller/Address.php");
+include_once($pos . "../DAO/SucursalDAO.php");
+include_once($pos . "../Controller/SucursalController.php");
+include_once($pos . "../Controller/Address.php");
 ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTNw24eYAdlQdFZOQeTZEdDCJmUoClqG4&language=es"
 		type="text/javascript"></script>
@@ -43,14 +43,18 @@ if (!is_null($nearestSucursal)) {
 </div>
 <script>
 	initMap();
-	suc(<?=$nearestSucursal->getLat()?>,<?=$nearestSucursal->getLon()?>, "<?=$nearestSucursal->getNombre()?>");
+	if ($err = suc(<?=$nearestSucursal->getLat()?>,<?=$nearestSucursal->getLon()?>, "<?=$nearestSucursal->getNombre()?>")) {
+
+	}
 	home(<?=$lat?>,<?=$lon?>);
 	<?php
 
 	?>
 </script>
 	<h3>Modifica tu dirección</h3>
-	<form method='post'>
+<form method='post' action="/ordenar/myOrderList">
+	<input type="hidden" name="lat" value="<?= $lat ?>"/>
+	<input type="hidden" name="lon" value="<?= $lon ?>"/>
 		<div class='form-group'>
 			Sucursal
 			<select disabled='disabled'>
@@ -58,22 +62,20 @@ if (!is_null($nearestSucursal)) {
 			</select>
 		</div>
 		<div class='form-group'>
-			<input type='text' placeholder='Calle' value="<?php echo $street?>"/>
-			<input type='text' placeholder='Número exterior' value="<?php echo $number?>" />
-			<input type='text' placeholder='Número interior (Opcional)' />
-			<input type='text' placeholder='Colonia' value="<?php echo $neighborhood?>" />
-            <input type='text' placeholder='Municipio/Delegación' value="<?php echo $mun?>" />
-			<input type='number' placeholder='Código postal' value="<?php echo $zipCode?>" />
+			<input type='text' required placeholder='Calle' name="calle" value="<?php echo $street ?>"/>
+			<input type='text' required placeholder='Número exterior' name="ne" value="<?php echo $number ?>"/>
+			<input type='text' placeholder='Número interior (Opcional)' name="ni"/>
+			<input type='text' required placeholder='Colonia' name="col" value="<?php echo $neighborhood ?>"/>
+			<input type='text' required placeholder='Municipio/Delegación' name="mun" value="<?php echo $mun ?>"/>
+			<input type='number' required placeholder='Código postal' name="cp" value="<?php echo $zipCode ?>"/>
 		</div>
 		<div class='form-group'>
 			Datos de contacto
-			<input type='text' placeholder='Nombre' />
-			<input type='number' placeholder='Teléfono' />
-			<input type='email' placeholder='Correo Electrónico' />
+			<input type='text' required placeholder='Nombre' name="nom"/>
+			<input type='number' required placeholder='Teléfono' name="tel"/>
+			<input type='email' required placeholder='Correo Electrónico' name="email"/>
 		</div>
-		<a href='myOrderList'>
-			<button type='button'>Siguiente paso</button>
-		</a>
+	<input type='submit' value="Siguiente paso"/>
 	</form>
 	
 <?php

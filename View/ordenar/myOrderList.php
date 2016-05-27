@@ -1,7 +1,16 @@
 <?php
+require_once "../../Controller/OrdenController.php";
+
+
 	$pos ="../"; //fix para la ubicación relativa en las rutas.
 	$active = "ordenar";
+
 	require_once($pos."headerCliente.php");
+
+if (isset($_POST['nom'])) {
+	OrdenController::setDatosOrden($_POST['nom'], $_POST['tel'], "", $_POST['lat'], $_POST['lon']);
+}
+$orden = OrdenController::getDatosOrden();
 	$total = 0.00;
 ?>
     <!-- <head> content aquí -->
@@ -17,6 +26,7 @@
 	</style>
 <?php
 	require_once($pos."body.php");
+//print_r($_POST);
 ?>
     <!-- Contenido va aquí-->
     <h1>Orden</h1>
