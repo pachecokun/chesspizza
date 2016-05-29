@@ -29,6 +29,7 @@ Todo el contenido de la página va después de incluir body.php.
 						foreach($navElements as $elem){
 							echo "<li><a href='".$pos.$elem[1]."/' ".$elem[2].">".strtoupper($elem[0])."</a></li>";//strtoupper convierte la cadena a mayúsculas
 						}
+						/*
 						if(isset($_GET['session'])){
 							echo "<li class='dropdown user'><a href='ordenar'>DEMIS GÓMEZ</a>"
 									."	<ul>"
@@ -39,7 +40,7 @@ Todo el contenido de la página va después de incluir body.php.
 						}
 						else{
 							echo  "<li><a href='".$pos."login/'>INICIAR SESION</a></li>";
-						}
+						}*/
 					?>
 				</ul>
 			</div>

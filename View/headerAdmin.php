@@ -17,12 +17,14 @@
 		1 - Ubicación
 		2 - Permite definir qué sección estará activa.
 	*/
-	$navElements = array("inicio"=>array("Inicio", "../admin/", ""),
-						"menu"=>array("Consutar ordenes", "menu", ""),
-						"inventario"=>array("Inventario", "inventario", ""),
-						"ordenes"=>array("Repartidores", "ordenes", "")
+	$navElements = array("inicio"=>array("Inicio", "../gerente", ""),
+						"ordenes"=>array("Consutar ordenes", "../ordenes", ""),
+						"inventario"=>array("Inventario", "../inventario", ""),
+						"carta"=>array("Carta", "../carta", ""),
+						"repartidores"=>array("Repartidores", "../repartidores", ""),
+						"logout"=>array("Cerrar sesion", "../Controller/UsuarioController.php", "")
 						);
 	require_once("htmlhead.php"); //Genera el inicio de documento (<html> <head>).
 ?>
 	<!-- $title es definida en htmlhead.php -->
-	<title><?php	echo $title;	?>Administrador</title>
+	<title><?php	echo $title;	?>Gerencia</title>
