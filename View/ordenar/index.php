@@ -1,9 +1,9 @@
 <?php
 	$active = "ordenar";
-	require_once($pos."headerCliente.php");
-	include_once($pos . "../DAO/SucursalDAO.php");
-	include_once($pos . "../Controller/SucursalController.php");
-	include_once($pos . "../Controller/Address.php");
+	require_once("../headerCliente.php");
+	include_once("../../DAO/SucursalDAO.php");
+	include_once("../../Controller/SucursalController.php");
+	include_once("../../Controller/Address.php");
 ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTNw24eYAdlQdFZOQeTZEdDCJmUoClqG4&language=es"
 		type="text/javascript"></script>
