@@ -3,6 +3,7 @@ $pos = ""; //fix para la ubicación relativa en las rutas.
 $active = "sucursales";
 require_once($pos . "../headerCliente.php");
 include_once '../../Controller/ProductoController.php';
+include_once '../../Controller/SucursalController.php';
 ?>
 <?php
 require_once($pos . "../body.php");
