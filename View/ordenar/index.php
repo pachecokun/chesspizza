@@ -1,17 +1,16 @@
 <?php
-	$pos ="../"; //fix para la ubicación relativa en las rutas.
 	$active = "ordenar";
 	require_once($pos."headerCliente.php");
-include_once($pos . "../DAO/SucursalDAO.php");
-include_once($pos . "../Controller/SucursalController.php");
-include_once($pos . "../Controller/Address.php");
+	include_once($pos . "../DAO/SucursalDAO.php");
+	include_once($pos . "../Controller/SucursalController.php");
+	include_once($pos . "../Controller/Address.php");
 ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTNw24eYAdlQdFZOQeTZEdDCJmUoClqG4&language=es"
 		type="text/javascript"></script>
 <script src="/js/ordenar/ordenar.js" type="text/javascript"></script>
     <!-- <head> content aquí -->
 <?php
-	require_once($pos."body.php");
+	require_once("../body.php");
 ?>
 
 <?php
@@ -38,7 +37,6 @@ if (!is_null($nearestSucursal)) {
     <!-- Contenido va aquí-->
     <h1>Ordenar Pizza</h1>
 	<h3>Hemos detectado tu ubicación. Verifica tu dirección más abajo</h3>
-	<!--p class='text-info'>Permite acceder a tu ubicación desde el navegador.</p-->
 <div id="mapa" class="sample">
 </div>
 <script>
@@ -79,5 +77,5 @@ if (!is_null($nearestSucursal)) {
 	</form>
 	
 <?php
-	include_once($pos."footer.php");
+	include_once("../footer.php");
 ?>

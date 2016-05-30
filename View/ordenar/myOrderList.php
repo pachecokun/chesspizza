@@ -1,16 +1,15 @@
 <?php
-require_once "../../Controller/OrdenController.php";
+	session_start();
+	require_once "../../Controller/OrdenController.php";
 
-
-	$pos ="../"; //fix para la ubicación relativa en las rutas.
 	$active = "ordenar";
 
-	require_once($pos."headerCliente.php");
+	require_once("../headerCliente.php");
 
-if (isset($_POST['nom'])) {
-	OrdenController::setDatosOrden($_POST['nom'], $_POST['tel'], "", $_POST['lat'], $_POST['lon']);
-}
-$orden = OrdenController::getDatosOrden();
+	if (isset($_POST['nom'])) {
+		OrdenController::setDatosOrden($_POST['nom'], $_POST['tel'], "", $_POST['lat'], $_POST['lon']);
+	}
+	$orden = OrdenController::getDatosOrden();
 	$total = 0.00;
 ?>
     <!-- <head> content aquí -->
@@ -25,14 +24,14 @@ $orden = OrdenController::getDatosOrden();
 		}
 	</style>
 <?php
-	require_once($pos."body.php");
-//print_r($_POST);
+	require_once("../body.php");
+	//print_r($_POST);
 ?>
     <!-- Contenido va aquí-->
     <h1>Orden</h1>
 	<?php
-		if(isset($_GET['added'])){
-			echo "<div class='table'><table>"
+		if(isset($_SESSION['orden'])){
+			/*echo "<div class='table'><table>"
 				."<tr>"
 					."<td>x3</td>"
 					."<td>Pizza hawaiana</td>"
@@ -61,7 +60,18 @@ $orden = OrdenController::getDatosOrden();
 					."<td>$30</td>"
 					."<td>$60</td>"
 				."</tr>"
-				."</table></table>";
+				."</table></table>";*/
+			echo "<div class='table'><table>";
+			foreach($_SESSION['orden'] as $elem){
+				echo "<tr>"
+						."<td>x".$elem['cantidad']."</td>"
+						."<td>Nombre</td>"
+						."<td>".$elem['size'].", orilla ".$elem['orilla'].", masa ".$elem['masa']."</td>"
+						."<td>".$elem['precio']."</td>"
+						."<td>".($elem['precio']*$elem['cantidad'])."</td>"
+						."</tr>";
+						
+			}
 			$total = 919.00;
 		}
 	?>
@@ -82,5 +92,5 @@ $orden = OrdenController::getDatosOrden();
 		</div>
 	</div>
 <?php
-	include_once($pos."footer.php");
+	include_once("../footer.php");
 ?>
