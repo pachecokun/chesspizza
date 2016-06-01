@@ -30,8 +30,8 @@
     <!-- Contenido va aquí-->
     <h1>Orden</h1>
 	<?php
-		if(isset($_SESSION['orden'])){
-			/*echo "<div class='table'><table>"
+		if(isset($_GET['orden'])){
+			echo "<div class='table'><table>"
 				."<tr>"
 					."<td>x3</td>"
 					."<td>Pizza hawaiana</td>"
@@ -60,35 +60,31 @@
 					."<td>$30</td>"
 					."<td>$60</td>"
 				."</tr>"
-				."</table></table>";*/
-			echo "<div class='table'><table>";
-			foreach($_SESSION['orden'] as $elem){
-				echo "<tr>"
-						."<td>x".$elem['cantidad']."</td>"
-						."<td>Nombre</td>"
-						."<td>".$elem['size'].", orilla ".$elem['orilla'].", masa ".$elem['masa']."</td>"
-						."<td>".$elem['precio']."</td>"
-						."<td>".($elem['precio']*$elem['cantidad'])."</td>"
-						."</tr>";
-						
-			}
+				."</table></div>";
 			$total = 919.00;
+			echo "<h3 class='total text-info'>Total: <span class='text-success'>$".$total.".00</span></h3>";
+			echo "<div class='row'>"
+						."<div class='col-6 col-m-6'>"
+							."<button type='button' class='btn-danger'>Cancelar</button>"
+						."</div><div class='col-6 col-m-6'>"
+							."<button type='button' class='btn-success'>Listo!</button>"
+						."</div>"
+					."</div>";
 		}
 	?>
-	<h3 class='total text-info'>Total: <span class='text-success'>$<?php		echo $total;	?>.00</span></h3>
 	<p>Agregar a mi orden:</p>
 	<div class='row'>
 		<div class='col-3 col-m-6'>
 			<a href="choosePizza"><button type='button' class="btn-success">Especialidades</button></a>
 		</div>
 		<div class='col-3 col-m-6'>
-			<button type='button' class="btn-success">Pizza Personalizada</button>
+			<a href="makePizza"><button type='button' class="btn-success">Pizza Personalizada</button></a>
 		</div>
 		<div class='col-3 col-m-6'>
 			<button type='button' class="btn-success">Paquetes</button>
 		</div>
 		<div class='col-3 col-m-6'>
-			<button type='button' class="btn-success">Complementos</button>
+			<a href="addComplement"><button type='button' class="btn-success">Complementos</button></a>
 		</div>
 	</div>
 <?php

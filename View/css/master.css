@@ -357,7 +357,7 @@ input:focus, textarea:focus, select:focus{
 	border-color: #900;
 	}
 
-input[type="radio"]{
+input[type="radio"], input[type="checkbox"]{
 	display: inline;
 	width: 25px;
 }
