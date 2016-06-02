@@ -1,6 +1,7 @@
 <?php
 	$active = "ordenar";
-	require_once("../headerCliente.php");
+	require_once("../layout/navs/cliente.php");
+	require_once("../layout/header.php");
 	include_once("../../DAO/SucursalDAO.php");
 	include_once("../../Controller/SucursalController.php");
 	include_once("../../Controller/Address.php");
@@ -10,7 +11,7 @@
 <script src="/js/ordenar/ordenar.js" type="text/javascript"></script>
     <!-- <head> content aquí -->
 <?php
-	require_once("../body.php");
+	require_once("../layout/body.php");
 ?>
 
 <?php
@@ -77,5 +78,5 @@ if (!is_null($nearestSucursal)) {
 	</form>
 	
 <?php
-	include_once("../footer.php");
+	include_once("../layout/footer.php");
 ?>

@@ -1,10 +1,9 @@
 <?php
-	session_start();
 	require_once "../../Controller/OrdenController.php";
 
 	$active = "ordenar";
-
-	require_once("../headerCliente.php");
+	require_once("../layout/navs/cliente.php");
+	require_once("../layout/header.php");
 
 	if (isset($_POST['nom'])) {
 		OrdenController::setDatosOrden($_POST['nom'], $_POST['tel'], "", $_POST['lat'], $_POST['lon']);
@@ -24,7 +23,7 @@
 		}
 	</style>
 <?php
-	require_once("../body.php");
+	require_once("../layout/body.php");
 	//print_r($_POST);
 ?>
     <!-- Contenido va aquí-->
@@ -88,5 +87,5 @@
 		</div>
 	</div>
 <?php
-	include_once("../footer.php");
+	include_once("../layoutfooter.php");
 ?>

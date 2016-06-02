@@ -17,7 +17,7 @@ Todo el contenido de la página va después de incluir body.php.
 			<div id='navbar'>
 				<a href="../principal/" id="logo"><img src="../img/logo-nav.png" alt="Chess Pizza" title="Ir al inicio" /></a>
             
-            <!-- incono del menú de hamburguesa -->
+				<!-- icono del menú de hamburguesa -->
 				<div id="nav-icon">
 					<span id="first"></span>
 					<span id="second"></span>
@@ -31,19 +31,26 @@ Todo el contenido de la página va después de incluir body.php.
 								echo "<li><a href='".$elem[1]."/' ".$elem[2].">".strtoupper($elem[0])."</a></li>";//strtoupper convierte la cadena a mayúsculas
 							}
 						}
-						/*
-						if(isset($_GET['session'])){
-							echo "<li class='dropdown user'><a href='ordenar'>DEMIS GÓMEZ</a>"
-									."	<ul>"
-									."		<li><a>Mi Cuenta</a></li>"
-									."		<li><a>Cerrar sesión</a></li>"
-									."	</ul>"
-									."</li>";
+						if(isset($userSession)){
+							if(isset($_SESSION['empleado'])){
+								echo "<li class='dropdown user'><a href='ordenar'>".$_SESSION['Empleado']->getNombre()." ".$_SESSION['Empleado']->getApPaterno()."</a>"
+										."	<ul>"
+										."		<li><a>Mi Cuenta</a></li>"
+										."		<li><a>Cerrar sesión</a></li>"
+										."	</ul>"
+										."</li>";
+							}
+							else{
+								echo  "<li><a href='../login/'>INICIAR SESION</a></li>";
+							}
 						}
-						else{
-							echo  "<li><a href='".$pos."login/'>INICIAR SESION</a></li>";
-						}*/
 					?>
 				</ul>
 			</div>
 			<div class="container">
+			<?php
+				if(isset($_SESSION['message'])){
+					echo("<span class='text-warning>".$_SESSION['message']."</span>'");
+					unset($_SESSION['message']);
+				}
+			?>
