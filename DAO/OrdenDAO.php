@@ -12,7 +12,7 @@ class OrdenDAO implements DAO
             $stm = Conexion::execute("SELECT * FROM Orden where ".$cond,$args);
 
             while ($obj = $stm->fetch()) {
-                $sucs[] = new Orden($obj['id'],$obj['fecha_hora'],$obj['direccion'],$obj['Sucursal_id'],$obj['Repartidor_id'],$obj['lat'],$obj['lon'],$obj['nombre_cliente']);
+                $sucs[] = new Orden($obj['id'],$obj['fecha_hora'],$obj['direccion'],$obj['Sucursal_id'],$obj['Repartidor_id'],$obj['lat'],$obj['lon'],$obj['nombre_cliente'],$obj['tel_cliente'],$obj['email_cliente']);
             }
             return $sucs;
         } catch (Exception $e) {
@@ -27,7 +27,7 @@ class OrdenDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Orden(fecha_hora,direccion,Sucursal_id,Repartidor_id,lat,lon,nombre_cliente) values(?,?,?,?,?,?,?)",array($obj->getFechaHora(),$obj->getDireccion(),$obj->getSucursalId(),$obj->getRepartidorId(),$obj->getLat(),$obj->getLon(),$obj->getNombreCliente()));
+            Conexion::execute("insert into Orden(fecha_hora,direccion,Sucursal_id,Repartidor_id,lat,lon,nombre_cliente) values(?,?,?,?,?,?,?,?,?)",array($obj->getFechaHora(),$obj->getDireccion(),$obj->getSucursalId(),$obj->getRepartidorId(),$obj->getLat(),$obj->getLon(),$obj->getNombreCliente(),$obj->getTelCliente(),$obj->getEmailCliente()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -41,7 +41,7 @@ class OrdenDAO implements DAO
     public static function update($obj)
     {
         try {
-            Conexion::execute("update Orden set id=?, fecha_hora=?, direccion=?, Sucursal_id=?, Repartidor_id=?, lat=?, lon=?, nombre_cliente=?, where id = ?",array($obj->getFechaHora(),$obj->getDireccion(),$obj->getSucursalId(),$obj->getRepartidorId(),$obj->getLat(),$obj->getLon(),$obj->getNombreCliente(),$obj->getId()));
+            Conexion::execute("update Orden set id=?, fecha_hora=?, direccion=?, Sucursal_id=?, Repartidor_id=?, lat=?, lon=?, nombre_cliente=?, tel_cliente=?, email_cliente=? where id = ?",array($obj->getFechaHora(),$obj->getDireccion(),$obj->getSucursalId(),$obj->getRepartidorId(),$obj->getLat(),$obj->getLon(),$obj->getNombreCliente(),$obj->getTelCliente(),$obj->getEmailCliente(),$obj->getId()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

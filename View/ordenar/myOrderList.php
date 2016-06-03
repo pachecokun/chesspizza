@@ -1,15 +1,27 @@
 <?php
-	require_once "../../Controller/OrdenController.php";
+require_once "../../Controller/OrdenController.php";
 
-	$active = "ordenar";
-	require_once("../layout/navs/cliente.php");
-	require_once("../layout/header.php");
 
-	if (isset($_POST['nom'])) {
-		OrdenController::setDatosOrden($_POST['nom'], $_POST['tel'], "", $_POST['lat'], $_POST['lon']);
-	}
+$pos ="../"; //fix para la ubicación relativa en las rutas.
+$active = "ordenar";
+
+require_once($pos."headerCliente.php");
+
+if (isset($_POST['nom'])) {
+	$dir = $_POST['calle'];
+	$dir .= ' '.$_POST['ne'];
+	$dir .= $_POST['ni'] != '' ? ' int. '.$_POST['ni'] : '';
+	$dir .= ', '.$_POST['col'];
+	$dir .= ', '.$_POST['mun'];
+	$dir .= ', '.$_POST['cp'];
+
+	$orden = OrdenController::setDatosOrden($_POST['nom'], $_POST['tel'], $dir, $_POST['email'], $_POST['lat'], $_POST['lon'], $_POST['suc']);
+}
+else{
 	$orden = OrdenController::getDatosOrden();
-	$total = 0.00;
+}
+$orden = OrdenController::getDatosOrden();
+$total = 0.00;
 ?>
     <!-- <head> content aquí -->
 	<style>
@@ -23,13 +35,13 @@
 		}
 	</style>
 <?php
-	require_once("../layout/body.php");
-	//print_r($_POST);
+	require_once($pos."body.php");
+//print_r($_POST);
 ?>
     <!-- Contenido va aquí-->
     <h1>Orden</h1>
 	<?php
-		if(isset($_GET['orden'])){
+		if(isset($_GET['added'])){
 			echo "<div class='table'><table>"
 				."<tr>"
 					."<td>x3</td>"
@@ -59,33 +71,26 @@
 					."<td>$30</td>"
 					."<td>$60</td>"
 				."</tr>"
-				."</table></div>";
+				."</table></table>";
 			$total = 919.00;
-			echo "<h3 class='total text-info'>Total: <span class='text-success'>$".$total.".00</span></h3>";
-			echo "<div class='row'>"
-						."<div class='col-6 col-m-6'>"
-							."<button type='button' class='btn-danger'>Cancelar</button>"
-						."</div><div class='col-6 col-m-6'>"
-							."<button type='button' class='btn-success'>Listo!</button>"
-						."</div>"
-					."</div>";
 		}
 	?>
+	<h3 class='total text-info'>Total: <span class='text-success'>$<?=number_format($total,2)?></span></h3>
 	<p>Agregar a mi orden:</p>
 	<div class='row'>
 		<div class='col-3 col-m-6'>
 			<a href="choosePizza"><button type='button' class="btn-success">Especialidades</button></a>
 		</div>
 		<div class='col-3 col-m-6'>
-			<a href="makePizza"><button type='button' class="btn-success">Pizza Personalizada</button></a>
+			<button type='button' class="btn-success">Pizza Personalizada</button>
 		</div>
 		<div class='col-3 col-m-6'>
 			<button type='button' class="btn-success">Paquetes</button>
 		</div>
 		<div class='col-3 col-m-6'>
-			<a href="addComplement"><button type='button' class="btn-success">Complementos</button></a>
+			<button type='button' class="btn-success">Complementos</button>
 		</div>
 	</div>
 <?php
-	include_once("../layoutfooter.php");
+	include_once($pos."footer.php");
 ?>

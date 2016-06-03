@@ -59,6 +59,7 @@ if (!is_null($nearestSucursal)) {
 			<select disabled='disabled'>
 				<option><?php echo $nameSuc?></option>
 			</select>
+			<input type="hidden" name="suc" value="<?=$nearestSucursal->getId()?>">
 		</div>
 		<div class='form-group'>
 			<input type='text' required placeholder='Calle' name="calle" value="<?php echo $street ?>"/>

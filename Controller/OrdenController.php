@@ -1,28 +1,33 @@
 <?php
 require_once __DIR__ . "/../DAO/OrdenDAO.php";
+require_once __DIR__ . "/../Model/Orden.php";
 
 class OrdenController
 {
-    public static function setDatosOrden($nombre, $tel, $direccion, $lat, $lon)
+    public static function setDatosOrden($nombre, $tel, $direccion,$mail, $lat, $lon,$suc)
     {
         session_start();
-        $_SESSION['nom'] = $nombre;
-        $_SESSION['tel'] = $tel;
-        $_SESSION['dir'] = $direccion;
-        $_SESSION['lat'] = $lat;
-        $_SESSION['lon'] = $lon;
+		if(isset($_SESSION['orden'])){
+			unset($_SESSION['orden']);
+			$_SESSION['orden'] = null;
+		}
+        $orden = new Orden();
+        $orden->setDireccion($direccion);
+        $orden->setNombreCliente($nombre);
+        $orden->setLat($lat);
+        $orden->setLon($lon);
+        $orden->setTelCliente($tel);
+        $orden->setEmailCliente($mail);
+		$orden->setSucursalId($suc);
+
+        $_SESSION['orden'] = $orden;
+		return $orden;
     }
 
     public static function getDatosOrden()
     {
         session_start();
-        return array(
-            'nom' => $_SESSION['nom'],
-            'tel' => $_SESSION['tel'],
-            'dir' => $_SESSION['dir'],
-            'lat' => $_SESSION['lat'],
-            'lon' => $_SESSION['lon']
-        );
+        return $_SESSION['orden'];
     }
 }
 

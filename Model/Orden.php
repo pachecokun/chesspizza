@@ -9,6 +9,8 @@ class Orden{
     private $lat;
     private $lon;
     private $nombre_cliente;
+    private $tel_cliente;
+    private $email_cliente;
 
     /**
      * Orden constructor.
@@ -20,8 +22,10 @@ class Orden{
      * @param $lat
      * @param $lon
      * @param $nombre_cliente
+     * @param $tel_cliente
+     * @param $email_cliente
      */
-    public function __construct($id = null, $fecha_hora = null, $direccion = null, $sucursal_id = null, $repartidor_id = null, $lat = null, $lon = null, $nombre_cliente = null)
+    public function __construct($id=null, $fecha_hora=null, $direccion=null, $sucursal_id=null, $repartidor_id=null, $lat=null, $lon=null, $nombre_cliente=null, $tel_cliente=null, $email_cliente=null)
     {
         $this->id = $id;
         $this->fecha_hora = $fecha_hora;
@@ -31,7 +35,47 @@ class Orden{
         $this->lat = $lat;
         $this->lon = $lon;
         $this->nombre_cliente = $nombre_cliente;
+        $this->tel_cliente = $tel_cliente;
+        $this->email_cliente = $email_cliente;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getTelCliente()
+    {
+        return $this->tel_cliente;
+    }
+
+    /**
+     * @param mixed $tel_cliente
+     * @return Orden
+     */
+    public function setTelCliente($tel_cliente)
+    {
+        $this->tel_cliente = $tel_cliente;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEmailCliente()
+    {
+        return $this->email_cliente;
+    }
+
+    /**
+     * @param mixed $email_cliente
+     * @return Orden
+     */
+    public function setEmailCliente($email_cliente)
+    {
+        $this->email_cliente = $email_cliente;
+        return $this;
+    }
+
+
 
     /**
      * @return mixed
