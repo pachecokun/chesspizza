@@ -10,7 +10,7 @@ class EspecialDAO implements DAO
     {
         try {
             $sucs = array();
-            $stm = Conexion::execute("SELECT * FROM Especial where ".$cond,$args);
+            $stm = Conexion::execute("SELECT * FROM especial where " . $cond, $args);
 
             while ($obj = $stm->fetch()) {
                 $pizza = PizzaDAO::get($obj['Pizza_id']);
@@ -29,7 +29,7 @@ class EspecialDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Especial(producto_id,precio,Pizza_id,nombre) values(?,?,?)", array($obj->getProductoId(), $obj->getPrecio(), $obj->getPizza()->getId(), $obj->getNombre()));
+            Conexion::execute("insert into especial(producto_id,precio,Pizza_id,nombre) values(?,?,?)", array($obj->getProductoId(), $obj->getPrecio(), $obj->getPizza()->getId(), $obj->getNombre()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -43,7 +43,7 @@ class EspecialDAO implements DAO
     public static function update($obj)
     {
         try {
-            Conexion::execute("update Especial set precio=?, Pizza_id=? where Producto_id = ?", array($obj->getPrecio(), $obj->getPizza()->getId(), $obj->getNombre(), $obj->getId()));
+            Conexion::execute("update especial set precio=?, Pizza_id=? where Producto_id = ?", array($obj->getPrecio(), $obj->getPizza()->getId(), $obj->getNombre(), $obj->getId()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -57,7 +57,7 @@ class EspecialDAO implements DAO
     public static function delete($id)
     {
         try {
-            Conexion::execute("delete from where Producto_id=?", array($id));
+            Conexion::execute("delete from especial where Producto_id=?", array($id));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -71,7 +71,7 @@ class EspecialDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Especial where Producto_id=?", array($id));
+            $stm = Conexion::execute("SELECT * FROM especial where Producto_id=?", array($id));
 
             if ($obj = $stm->fetch()) {
                 $pizza = PizzaDAO::get($obj['Pizza_id']);
