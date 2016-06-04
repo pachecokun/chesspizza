@@ -31,8 +31,8 @@ if (!is_null($nearestSucursal)) {
     $mun = $address->getMun();
     $zipCode = $address->getZipCode();
 } else {
-  $_SESSION["message"] = "No se encuentran sucursales cercanas a su ubicación...";
-    header("location:/");
+  //$_SESSION["message"] = "No se encuentran sucursales cercanas a su ubicación...";
+    //header("location:/");
 }
 ?>
     <!-- Contenido va aquí-->
