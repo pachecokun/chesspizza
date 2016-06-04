@@ -1,7 +1,7 @@
 <?php
-	$pos =""; //fix para la ubicación relativa en las rutas.
 	$active = "inicio"; //sección activa en la barra de navegación.
-	require_once($pos."../headerCliente.php");
+	require_once("../layout/navs/cliente.php");
+	require_once("../layout/header.php");
 ?>
     <!-- <head> content aquí -->
     <style>
@@ -18,7 +18,8 @@
 		}
 	</style>
 <?php
-	require_once($pos."../body.php");
+	$title = "";
+	require_once("../layout/body.php");
 ?>
     <!-- Contenido va aquí-->
     <img src="../img/1.jpg" style="max-width: 100%; padding: -10px;" />
@@ -42,5 +43,5 @@
         </div>
     </div>
 <?php
-	include_once($pos."../footer.php");
+	include_once("../layout/footer.php");
 ?>

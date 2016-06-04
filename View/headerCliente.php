@@ -1,7 +1,8 @@
 <?php
-	/****************
-	****NO TOCAR*****
-	*****************/
+	/*********************************************
+	***************** OBSOLETO********************
+	*** Utilizar layout/header.php en su lugar ***
+	*********************************************/
 	
 	/***** headerCliente.php *****/
 	/*
@@ -23,7 +24,6 @@
 				"ordenar" => array("Ordenar", "../ordenar/getLocation", ""),
 				"miOrden" => array("Mi Orden", "../miOrden", ""),
 				"sucursales" => array("Sucursales", "../Sucursal", "")
-				//"login" => array("Iniciar sesion", "login", "")
 	);
 	require_once("htmlhead.php"); //Genera el inicio de documento (<html> <head>).
 ?>

@@ -232,6 +232,14 @@ div#navbar{
 	padding: 10px;
 }
 
+#navbar > ul > li > ul > li > a.active,
+#navbar > ul > li > ul > li:hover > a.active,
+#navbar > ul > li > ul > li:active > a.active,
+#navbar > ul > li > ul > li:focus > a.active{
+	color: #FFFF66;
+	background-color: #000;
+}
+
 #navbar > ul > li > ul > li:hover > a,
 #navbar > ul > li > ul > li:active > a,
 #navbar > ul > li > ul > li:focus > a{
@@ -300,6 +308,12 @@ div#navbar{
     float: left;
     padding: 5px;
 }
+
+[class*="col-"] button{
+	margin: 0;
+    width: 100%;
+}
+
 
 input, textarea, select, button{
 	display: block;

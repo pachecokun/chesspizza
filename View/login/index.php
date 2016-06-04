@@ -4,32 +4,37 @@
 	require_once("../../Controller/UsuarioController.php");
 	
 	if(isset($_POST['user']) && isset($_POST['pass'])){
-		echo "<script>alert('hola');</script>";
 		UsuarioController::login($_POST['user'], $_POST['pass']);
+		if(!isset($_SESSION['empleado'])){
+			$_SESSION['message'] = array("danger", "Usuario o contraseña incorrectos");
+		}
+		else{
+			if($_SESSION['empleado']['tipoEmpleado'] == 3){
+				header("location: ../gerente");
+			}
+			else if($_SESSION['empleado']['tipoEmpleado'] == 2){
+				header("location: ../repartidor");
+			}
+			else if($_SESSION['empleado']['tipoEmpleado'] == 1){
+				header("location: ../chef");
+			}
+			else{
+				$_SESSION['message'] = array("danger", "Acceso denegado");
+				header("location: /");
+			}
+		}
 	}
 ?>
 	<!-- Head content aquí -->
 	<link rel="stylesheet" type="text/css" href="../css/login.css" />
 <?php
-	//$userSession = true;
 	require_once("../layout/body.php");
 ?>
 	<!-- Contenido va aquí-->
 	<h1>Iniciar sesión</h1>
-	<?php
-		if(isset($_SESSION['AUTH_ERR'])){
-			echo "<span id='message' style='color: #cc0000;'>Usuario o contraseña incorrectos</span>";
-			unset($_SESSION['AUTH_ERR']);
-		}
-		else{
-			echo "<span id='message'></span>";
-		}
-		var_dump($_SESSION['empleado']);
-		
-	?>
 	
 	<form action="../login" method="post" id="form">
-		<input type="text" name="user" placeholder="Nombre de usuario" id="user"/>
+		<input type="text" name="user" placeholder="Nombre de usuario" id="user" autocomplete="off"/>
 		<input type="password" name="pass" placeholder="Contraseña" id="pass" />
 		<button type="Button" onClick="valida()">Acceder</button>
 	</form>

@@ -1,38 +1,26 @@
 <?php
 	require_once __DIR__ . "/../DAO/EmpleadoDAO.php";
+	require_once __DIR__ . "/../DAO/SucursalDAO.php";
 	class UsuarioController{
 		public static function login($usr, $psw){
 			$emp = EmpleadoDAO::getAll("username=? and password=?",array($usr, $psw));
-			if(!empty($emp))
+			if(!empty($emp) && count($emp) == 1){
+				$suc = SucursalDAO::getAll("id=?", array($emp[0]->getSucursal()));
 				$_SESSION['empleado'] = array();
+				$_SESSION['empleado']['id'] = $emp[0]->getId();
+				$_SESSION['empleado']['sucursal'] = $emp[0]->getSucursal();
+				$_SESSION['empleado']['nomSucursal'] = $suc[0]->getNombre();
+				$_SESSION['empleado']['nombre'] = $emp[0]->getNombre();
+				$_SESSION['empleado']['apellido'] = $emp[0]->getApPaterno();
+				$_SESSION['empleado']['tipoEmpleado'] = $emp[0]->getTipoEmpleado();
+			}
 		}
 		
 		public static function logout(){
 			if(isset($_SESSION['empleado'])){
 				unset($_SESSION['empleado']);
+				header("location:/");
 			}
 		}
 	}
-	/*session_start();
-	include_once("../DAO/SucursalDAO.php");
-	$user = $_POST['user'];
-	$pass = $_POST['pass'];
-	if(empty($user) || empty($pass)){
-		$_SESSION['AUTH_ERR'] = true;
-		header("location: ../View/principal/login/");
-	}
-	$sucDAO = new SucursalDAO();
-	$reg = $sucDAO->get($user);
-	if(empty($reg)){
-		$_SESSION['AUTH_ERR'] = true;
-		header("location: ../View/principal/login/");
-	}
-	else if($reg->getPassword() != $pass){
-		$_SESSION['AUTH_ERR'] = true;
-		header("location: ../View/principal/login/");
-	}
-	else{
-		$_SESSION['idSuc'] = $reg->getId();
-		header("location:../View/principal/login/");
-	}*/
 ?>
