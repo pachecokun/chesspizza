@@ -19,7 +19,7 @@ if (isset($_GET["Lat"]) && isset($_GET["Lon"])) {
     $lat = $_GET["Lat"];
     $lon = $_GET["Lon"];
 } else {
-    header("location:/");
+    //header("location:/");
 }
 $nearestSucursal = SucursalController::getNearestSucursal($lat, $lon);
 if (!is_null($nearestSucursal)) {
