@@ -1,41 +1,44 @@
 <?php
 class Especial{
-    private $id;
+    private $producto_id;
     private $precio;
-    private $pizza_id;
     private $nombre;
+    private $pizza;
 
     /**
      * Especial constructor.
      * @param $id
      * @param $precio_pizza
-     * @param $pizza_id
+     * @param null $nombre
+     * @param null $pizza
+     * @internal param $pizza_id
      */
-    public function __construct($id = null, $precio_pizza = null, $pizza_id = null,$nombre=null)
+    public function __construct($producto_id = null, $precio_pizza = null, $nombre = null, $pizza = null)
     {
-        $this->id = $id;
+        $this->producto_id = $producto_id;
         $this->precio = $precio_pizza;
-        $this->pizza_id = $pizza_id;
-        $this->nombre = null;
+        $this->nombre = $nombre;
+        $this->pizza = $pizza;
     }
 
     /**
-     * @return mixed
+     * @return null
      */
-    public function getId()
+    public function getProductoId()
     {
-        return $this->id;
+        return $this->producto_id;
     }
 
     /**
-     * @param mixed $id
+     * @param null $producto_id
      * @return Especial
      */
-    public function setId($id)
+    public function setProductoId($producto_id)
     {
-        $this->id = $id;
+        $this->producto_id = $producto_id;
         return $this;
     }
+
 
     /**
      * @return mixed
@@ -56,24 +59,6 @@ class Especial{
     }
 
     /**
-     * @return mixed
-     */
-    public function getPizzaId()
-    {
-        return $this->pizza_id;
-    }
-
-    /**
-     * @param mixed $pizza_id
-     * @return Especial
-     */
-    public function setPizzaId($pizza_id)
-    {
-        $this->pizza_id = $pizza_id;
-        return $this;
-    }
-
-    /**
      * @return null
      */
     public function getNombre()
@@ -90,5 +75,23 @@ class Especial{
         $this->nombre = $nombre;
         return $this;
     }
+    /**
+     * @return null
+     */
+    public function getPizza()
+    {
+        return $this->pizza;
+    }
+
+    /**
+     * @param null $pizza
+     * @return Especial
+     */
+    public function setPizza($pizza)
+    {
+        $this->pizza = $pizza;
+        return $this;
+    }
+
 
 }

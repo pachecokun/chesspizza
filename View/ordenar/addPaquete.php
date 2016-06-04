@@ -2,6 +2,9 @@
 	$active = "ordenar";
 	require_once("../layout/navs/cliente.php");
 	require_once("../layout/header.php");
+require_once("../../Controller/OrdenController.php");
+
+$paquetes = PaqueteDAO::getAll();
 ?>
     <!-- <head> content aquí -->
 	<style>
@@ -32,9 +35,26 @@
 <?php
 	require_once("../layout/body.php");
 ?>
+
     <!-- Contenido va aquí-->
     <h1>Escoge un paquete</h1>
 	<div class='row'>
+
+		<div class='col-4 col-m-6'>
+			<div class='paquete'>
+				<p>PQT Diviertas</p>
+				<div class='elements'>
+					<ul>
+						<li>1 Pizza grande de 2 ingredienes</li>
+						<li>2 refrescos chicos</li>
+					</ul>
+				</div>
+				<p class='precio text-success'>$169</p>
+				<a href='setPaquete?id=1'>
+					<button class='btn-success'>Elegir</button>
+				</a>
+			</div>
+		</div>
 		<div class='col-4 col-m-6'>
 			<div class='paquete'>
 				<p>PQT Diviertas</p>

@@ -2,6 +2,7 @@
 
 include_once(__DIR__.'/../Model/Pizza.php');
 include_once(__DIR__.'/DAO.php');
+include_once(__DIR__ . '/IngredienteDAO.php');
 
 class PizzaDAO implements DAO
 {
@@ -12,7 +13,7 @@ class PizzaDAO implements DAO
             $stm = Conexion::execute("SELECT * FROM Pizza where ".$cond,$args);
 
             while ($obj = $stm->fetch()) {
-                $sucs[] = new Pizza($obj['producto_id'],$obj['tamano']);
+                $sucs[] = new Pizza($obj['Producto_id'], $obj['tamano'], IngredienteDAO::getIngredientesPizza($obj['Producto_id']));
             }
             return $sucs;
         } catch (Exception $e) {
@@ -28,6 +29,9 @@ class PizzaDAO implements DAO
     {
         try {
             Conexion::execute("insert into Pizza values(?,?)",array($obj->getProductoId(),$obj->getTamano()));
+            foreach ($obj->getIngredientes() as $ingrediente) {
+                Conexion::execute("insert into pizza_ingrediente values(?,?)", array($obj->getProductoId(), $ingrediente->getId()));
+            }
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -73,7 +77,7 @@ class PizzaDAO implements DAO
             $stm = Conexion::execute("SELECT * FROM Pizza where Producto_id=?",array($id));
 
             if ($obj = $stm->fetch()) {
-                return new Pizza($obj['producto_id'],$obj['tamano']);
+                return new Pizza($obj['Producto_id'], $obj['tamano'], IngredienteDAO::getIngredientesPizza($obj['Producto_id']));
             }
             else {
                 return null;

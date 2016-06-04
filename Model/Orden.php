@@ -12,6 +12,7 @@ class Orden{
     private $tel_cliente;
     private $email_cliente;
 
+    private $productos;
     /**
      * Orden constructor.
      * @param $id

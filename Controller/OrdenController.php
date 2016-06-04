@@ -1,5 +1,8 @@
 <?php
 require_once __DIR__ . "/../DAO/OrdenDAO.php";
+require_once __DIR__ . "/../DAO/PaqueteDAO.php";
+require_once __DIR__ . "/../DAO/EspecialDAO.php";
+require_once __DIR__ . "/../DAO/OrillaDAO.php";
 require_once __DIR__ . "/../Model/Orden.php";
 
 class OrdenController
@@ -29,6 +32,16 @@ class OrdenController
         session_start();
         return $_SESSION['orden'];
     }
+
+	public static function getPaquetes()
+	{
+		return PaqueteDAO::getAll();
+	}
+
+	public static function getEspeciales()
+	{
+		return EspecialDAO::getAll();
+	}
 }
 
 if(isset($_POST['add'])){
@@ -56,4 +69,6 @@ if(isset($_REQUEST['killOrden'])){
 	unset($_SESSION['orden']);
 	echo "Done";
 }
+
+
 ?>

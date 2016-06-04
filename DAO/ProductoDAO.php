@@ -2,19 +2,33 @@
 
 include_once(__DIR__.'/../Model/Producto.php');
 include_once(__DIR__.'/DAO.php');
+include_once(__DIR__ . '/PizzaDAO.php');
+include_once(__DIR__ . '/EspecialDAO.php');
+include_once(__DIR__ . '/PaqueteDAO.php');
+include_once(__DIR__ . '/RefrescoDAO.php');
 
 class ProductoDAO implements DAO
 {
     public static function getAll($cond= "1=1",$args = array())
     {
         try {
-            $sucs = array();
+            $prods = array();
             $stm = Conexion::execute("SELECT * FROM Producto where ".$cond,$args);
 
             while ($obj = $stm->fetch()) {
-                $sucs[] = new Producto($obj['id'],$obj['tipo'],$obj['precio']);
+                $prod = new Producto($obj['id'], $obj['tipo'], $obj['precio']);
+                if ($prod->getTipo() == 0) {
+                    $prod->setPizza(PizzaDAO::get($prod->getId()));
+                } elseif ($prod->getTipo() == 1) {
+                    $prod->setEspecial(EspecialDAO::get($prod->getId()));
+                } elseif ($prod->getTipo() == 2) {
+                    $prod->setPaquete(PaqueteDAO::get($prod->getId()));
+                } elseif ($prod->getTipo() == 3) {
+                    $prod->setRefresco(RefrescoDAO::get($prod->getId()));
+                }
+                $prods [] = $prod;
             }
-            return $sucs;
+            return $prods;
         } catch (Exception $e) {
             echo $e->getMessage();
             return null;
