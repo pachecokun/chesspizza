@@ -3,6 +3,7 @@ $active = "ordenar";
 require_once("../layout/navs/cliente.php");
 require_once("../layout/header.php");
 require_once("../../Controller/OrdenController.php");
+require_once("../../Controller/EspecialController.php");
 
 if (!empty($_POST)) {
 
@@ -11,10 +12,7 @@ if (!empty($_POST)) {
 $especial = EspecialDAO::get($_GET['id']);
 $orillas = OrillaDAO::getAll();
 
-$precio = 50;
-foreach ($especial->getPizza()->getIngredientes() as $ingrediente) {
-	$precio += $ingrediente->getPrecio();
-}
+$precio = EspecialController::getPrecio($especial);
 
 ?>
     <!-- <head> content aquí -->

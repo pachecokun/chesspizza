@@ -75,7 +75,7 @@ class EspecialDAO implements DAO
 
             if ($obj = $stm->fetch()) {
                 $pizza = PizzaDAO::get($obj['Pizza_id']);
-                return new Especial($obj['id'], $obj['precio'], $obj['nombre'], $pizza);
+                return new Especial($obj['Producto_id'], $obj['precio'], $obj['nombre'], $pizza);
             }
             else {
                 return null;

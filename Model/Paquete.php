@@ -2,23 +2,25 @@
 
 class Paquete{
     private $producto_id;
-    private $refresco_producto_id;
-    private $especial_id;
+    private $especial;
+    private $refresco;
     private $nombre;
+    private $precio;
 
     /**
      * Paquete constructor.
      * @param $producto_id
-     * @param $refresco_producto_id
-     * @param $especial_id
+     * @param $especial
+     * @param $refresco
      * @param $nombre
      */
-    public function __construct($producto_id=null, $refresco_producto_id=null, $especial_id=null, $nombre=null)
+    public function __construct($producto_id = null, $especial = null, $refresco = null, $nombre = null, $precio = null)
     {
         $this->producto_id = $producto_id;
-        $this->refresco_producto_id = $refresco_producto_id;
-        $this->especial_id = $especial_id;
+        $this->especial = $especial;
+        $this->refresco = $refresco;
         $this->nombre = $nombre;
+        $this->precio = $precio;
     }
 
     /**
@@ -42,36 +44,36 @@ class Paquete{
     /**
      * @return mixed
      */
-    public function getRefrescoProductoId()
+    public function getEspecial()
     {
-        return $this->refresco_producto_id;
+        return $this->especial;
     }
 
     /**
-     * @param mixed $refresco_producto_id
+     * @param mixed $especial
      * @return Paquete
      */
-    public function setRefrescoProductoId($refresco_producto_id)
+    public function setEspecial($especial)
     {
-        $this->refresco_producto_id = $refresco_producto_id;
+        $this->especial = $especial;
         return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getEspecialId()
+    public function getRefresco()
     {
-        return $this->especial_id;
+        return $this->refresco;
     }
 
     /**
-     * @param mixed $especial_id
+     * @param mixed $refresco
      * @return Paquete
      */
-    public function setEspecialId($especial_id)
+    public function setRefresco($refresco)
     {
-        $this->especial_id = $especial_id;
+        $this->refresco = $refresco;
         return $this;
     }
 
@@ -93,5 +95,23 @@ class Paquete{
         return $this;
     }
 
+    /**
+     * @return null
+     */
+    public function getPrecio()
+    {
+        return $this->precio;
+    }
+
+    /**
+     * @param null $precio
+     * @return Paquete
+     */
+    public function setPrecio($precio)
+    {
+        $this->precio = $precio;
+        return $this;
+    }
+    
 
 }

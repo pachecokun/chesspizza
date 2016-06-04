@@ -39,22 +39,23 @@ $paquetes = PaqueteDAO::getAll();
     <!-- Contenido va aquí-->
     <h1>Escoge un paquete</h1>
 	<div class='row'>
-
+		<?php foreach ($paquetes as $paquete): ?>
 		<div class='col-4 col-m-6'>
 			<div class='paquete'>
-				<p>PQT Diviertas</p>
+				<p><?= $paquete->getNombre() ?></p>
 				<div class='elements'>
 					<ul>
-						<li>1 Pizza grande de 2 ingredienes</li>
-						<li>2 refrescos chicos</li>
+						<li>1 pizza <?= $paquete->getEspecial()->getNombre() ?></li>
+						<li>1 refresco <?= $paquete->getRefresco()->getNombre() ?></li>
 					</ul>
 				</div>
-				<p class='precio text-success'>$169</p>
-				<a href='setPaquete?id=1'>
+				<p class='precio text-success'>$<?= number_format($paquete->getPrecio(), 2) ?></p>
+				<a href='setPaquete?id=<?= $paquete->getProductoId() ?>'>
 					<button class='btn-success'>Elegir</button>
 				</a>
 			</div>
 		</div>
+		<?php endforeach; ?>
 		<div class='col-4 col-m-6'>
 			<div class='paquete'>
 				<p>PQT Diviertas</p>

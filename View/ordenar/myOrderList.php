@@ -85,7 +85,9 @@ $total = 0.00;
 			<button type='button' class="btn-success">Pizza Personalizada</button>
 		</div>
 		<div class='col-3 col-m-6'>
-			<button type='button' class="btn-success">Paquetes</button>
+			<a href="addPaquete">
+				<button type='button' class="btn-success">Paquetes</button>
+			</a>
 		</div>
 		<div class='col-3 col-m-6'>
 			<button type='button' class="btn-success">Complementos</button>

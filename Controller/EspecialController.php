@@ -9,4 +9,13 @@ class EspecialController{
     public static function registrar(){
 
     }
+
+    public static function getPrecio($especial)
+    {
+        $precio = 50;
+        foreach ($especial->getPizza()->getIngredientes() as $ingrediente) {
+            $precio += $ingrediente->getPrecio();
+        }
+        return $precio;
+    }
 }
