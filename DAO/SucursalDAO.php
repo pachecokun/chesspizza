@@ -5,11 +5,11 @@ include_once(__DIR__.'/DAO.php');
 
 class SucursalDAO implements DAO
 {
-    public static function getAll($cond= "1=1",$args = array())
+    public static function getAll($cond= "1=1")
     {
         try {
             $sucs = array();
-            $stm = Conexion::execute("SELECT * FROM Sucursal where ".$cond,$args);
+            $stm = Conexion::execute("SELECT * FROM Sucursal where ".$cond);
 
             while ($obj = $stm->fetch()) {
                 $sucs[] = new Sucursal($obj['id'],$obj['direccion'],$obj['lat'],$obj['lon'],$obj['nombre'], $obj['password']);
