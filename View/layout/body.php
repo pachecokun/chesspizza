@@ -28,7 +28,17 @@ Todo el contenido de la página va después de incluir body.php.
 					<?php
 						if(isset($navElements)){
 							foreach($navElements as $elem){
-								echo "<li><a href='".$elem[1]."/' ".$elem[2].">".strtoupper($elem[0])."</a></li>";//strtoupper convierte la cadena a mayúsculas
+								if(isset($elem[3])){
+									echo "<li class='dropdown'><a href='".$elem[1]."/' ".$elem[2].">".strtoupper($elem[0])."</a>"
+											."<ul>";
+									foreach($elem[3] as $subMenu){
+										echo "<li><a href='".$subMenu[1]."/' ".$subMenu[2].">".$subMenu[0]."</a>";
+									}
+									echo "</ul>"
+										."</li>";
+								}
+								else
+									echo "<li><a href='".$elem[1]."/' ".$elem[2].">".strtoupper($elem[0])."</a></li>";//strtoupper convierte la cadena a mayúsculas
 							}
 						}
 						if(isset($userSession)){
