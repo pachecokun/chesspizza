@@ -33,6 +33,9 @@ if (isset($_POST['nom'])) {
 }
 else{
 	$orden = OrdenController::getOrdenSesion();
+	if ($orden == null) {
+		header('Location: /');
+	}
 }
 $total = 0.00;
 ?>

@@ -25,23 +25,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="myOrderList.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="myOrderList.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/View/ordenar/myOrderList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
+            <state relative-caret-position="493">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
-                <marker date="1465159383152" expanded="true" signature="4915:4928" placeholder="..." />
+                <marker date="1465161324835" expanded="true" signature="4967:4980" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="confirmar.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="confirmar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/ordenar/confirmar.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+              <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -60,7 +60,7 @@
       <file leaf-file-name="OrdenController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/OrdenController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="221">
               <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
               <folding />
             </state>
@@ -70,8 +70,8 @@
       <file leaf-file-name="OrdenDAO.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="47" column="76" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
+            <state relative-caret-position="833">
+              <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
               <folding>
                 <marker date="1465159179766" expanded="true" signature="313:339" placeholder="SELECT * FRO... Orden" />
                 <marker date="1465159179766" expanded="true" signature="1248:1392" placeholder="insert into Orden... " />
@@ -489,14 +489,7 @@
       <workItem from="1464987273164" duration="17935000" />
       <workItem from="1465070643359" duration="114000" />
       <workItem from="1465135888621" duration="204000" />
-      <workItem from="1465137022470" duration="21616000" />
-    </task>
-    <task id="LOCAL-00018" summary="test sucursales">
-      <created>1462753555150</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1462753555150</updated>
+      <workItem from="1465137022470" duration="22428000" />
     </task>
     <task id="LOCAL-00019" summary="arreglados include">
       <created>1462753997492</created>
@@ -834,11 +827,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465159183454</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="orden">
+      <created>1465160525093</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1465160525093</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108162000" />
+    <option name="totallyTimeSpent" value="108974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1288,6 +1288,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/View/ordenar/confirmar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/View/ordenar/eliminar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1298,7 +1306,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/OrdenController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="221">
           <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
           <folding />
         </state>
@@ -1306,8 +1314,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="47" column="76" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
+        <state relative-caret-position="833">
+          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
           <folding>
             <marker date="1465159179766" expanded="true" signature="313:339" placeholder="SELECT * FRO... Orden" />
             <marker date="1465159179766" expanded="true" signature="1248:1392" placeholder="insert into Orden... " />
@@ -1333,19 +1341,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/View/ordenar/myOrderList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
+        <state relative-caret-position="493">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <marker date="1465159383152" expanded="true" signature="4915:4928" placeholder="..." />
+            <marker date="1465161324835" expanded="true" signature="4967:4980" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/ordenar/confirmar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
