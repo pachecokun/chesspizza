@@ -9,6 +9,7 @@ class Conexion{
 
 
     public static function execute($query,$args=array()){
+        echo '<script>alert("' . $query . '")</script>';
         $con = self::getConexion();
         $stm = $con->prepare($query);
         if(sizeof($args)==0){
