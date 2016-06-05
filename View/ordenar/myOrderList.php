@@ -142,19 +142,20 @@ echo '</pre>';*/
 	<b>Teléfono: </b><br><?= $orden->getTelCliente() ?><br><br>
 	<b>Correo electrónico: </b><br><?= $orden->getEmailCliente() ?><br><br><br>
 	<div class='row'>
-	<a href="/orden/confirmar">
 		<div class='col-6 col-m-6'>
 			<a href="/ordenar/?Lat=<?= $orden->getLat() ?>&Lon=<?= $orden->getLon() ?>">
 				<button name='addPaquete' class='btn-success'>Modificar datos</button>
 			</a>
 		</div>
+		<?php if ($total != 0) { ?>
 		<div class='col-6 col-m-6'>
 			<a href="/ordenar/confirmar">
-				<button name='addPaquete' class='btn-success'<?= ($total == 0) ? 'disabled' : '' ?>>Confirmar orden
+				<button name='addPaquete' class='btn-success'>Confirmar orden
 				</button>
 			</a>
 		</div>
-	</a>
+		<?php } ?>
+	</div>
 <?php
 	include_once($pos."footer.php");
 ?>
