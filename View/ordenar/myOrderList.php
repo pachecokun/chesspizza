@@ -8,6 +8,11 @@ $active = "ordenar";
 require_once($pos."headerCliente.php");
 
 if (isset($_POST['nom'])) {
+	if (OrdenController::getOrdenSesion() != null) {
+		$orden = OrdenController::getOrdenSesion();
+	} else {
+		$orden = new Orden();
+	}
 	$dir = $_POST['calle'];
 	$dir .= ' '.$_POST['ne'];
 	$dir .= $_POST['ni'] != '' ? ' int. '.$_POST['ni'] : '';
@@ -15,7 +20,16 @@ if (isset($_POST['nom'])) {
 	$dir .= ', '.$_POST['mun'];
 	$dir .= ', '.$_POST['cp'];
 
-	$orden = OrdenController::setDatosOrden($_POST['nom'], $_POST['tel'], $dir, $_POST['email'], $_POST['lat'], $_POST['lon'], $_POST['suc']);
+	$orden->setDireccion($dir);
+	$orden->setNombreCliente($_POST['nom']);
+	$orden->setTelCliente($_POST['tel']);
+	$orden->setEmailCliente($_POST['email']);
+	$orden->setLat($_POST['lat']);
+	$orden->setLon($_POST['lon']);
+	$orden->setSucursalId($_POST['suc']);
+
+	OrdenController::setOrdenSesion($orden);
+
 }
 else{
 	$orden = OrdenController::getOrdenSesion();
@@ -101,43 +115,8 @@ echo '</pre>';*/
 			<?php endforeach; ?>
 		</table>
 	</div>
-	<?php
-		if(isset($_GET['added'])){
-			echo "<div class='table'><table>"
-				."<tr>"
-					."<td>x3</td>"
-					."<td>Pizza hawaiana</td>"
-					."<td>Grande, orilla rellena de queso, masa crujiente.</td>"
-					."<td>$150</td>"
-					."<td>$450</td>"
-				."</tr>"
-				."<tr>"
-					."<td>x1</td>"
-					."<td>Pizza Suprema</td>"
-					."<td>Mediana, orilla normal, masa receta secreta.</td>"
-					."<td>$199</td>"
-					."<td>$199</td>"
-				."</tr>"
-				."<tr>"
-					."<td>x1</td>"
-					."<td>Pa Q T Chingues</td>"
-					."<td>Pizza de peperoni grande, Manzanita sol de 2 Lt.</td>"
-					."<td>$210</td>"
-					."<td>$210</td>"
-				."</tr>"
-				."<tr>"
-					."<td>x2</td>"
-					."<td>Pepsi</td>"
-					."<td>1.5 Lt.</td>"
-					."<td>$30</td>"
-					."<td>$60</td>"
-				."</tr>"
-				."</table></table>";
-			$total = 919.00;
-		}
-	?>
 	<h3 class='total text-info'>Total: <span class='text-success'>$<?=number_format($total,2)?></span></h3>
-	<p>Agregar a mi orden:</p>
+	<h2>Agregar a mi orden:</h2>
 	<div class='row'>
 		<div class='col-3 col-m-6'>
 			<a href="choosePizza"><button type='button' class="btn-success">Especialidades</button></a>
@@ -156,9 +135,25 @@ echo '</pre>';*/
 			</a>
 		</div>
 	</div>
-	<p>Finalizar pedido:</p>
+	<h2>Finalizar pedido:</h2>
+	<h3>Confirme sus datos</h3>
+	<b>Dirección: </b><br><?= $orden->getDireccion() ?><br><br>
+	<b>Nombre de responsable: </b><br><?= $orden->getNombreCliente() ?><br><br>
+	<b>Teléfono: </b><br><?= $orden->getTelCliente() ?><br><br>
+	<b>Correo electrónico: </b><br><?= $orden->getEmailCliente() ?><br><br><br>
+	<div class='row'>
 	<a href="/orden/confirmar">
-		<button type='submit' name='addPaquete' class='btn-success'>Confirmar orden</button>
+		<div class='col-6 col-m-6'>
+			<a href="/ordenar/?Lat=<?= $orden->getLat() ?>&Lon=<?= $orden->getLon() ?>">
+				<button name='addPaquete' class='btn-success'>Modificar datos</button>
+			</a>
+		</div>
+		<div class='col-6 col-m-6'>
+			<a href="/ordenar/confirmar">
+				<button name='addPaquete' class='btn-success'<?= ($total == 0) ? 'disabled' : '' ?>>Confirmar orden
+				</button>
+			</a>
+		</div>
 	</a>
 <?php
 	include_once($pos."footer.php");

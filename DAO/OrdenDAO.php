@@ -33,20 +33,21 @@ class OrdenDAO implements DAO
     {
         try {
 
-            Conexion::execute("insert into Orden(fecha_hora,direccion,Sucursal_id,Repartidor_id,lat,lon,nombre_cliente) values(?,?,?,?,?,?,?,?,?)", array($obj->getFechaHora(), $obj->getDireccion(), $obj->getSucursalId(), $obj->getRepartidorId(), $obj->getLat(), $obj->getLon(), $obj->getNombreCliente(), $obj->getTelCliente(), $obj->getEmailCliente(), $obj->getPizzas(), $obj->getEspeciales(), $obj->getPaquetes(), $obj->getRefrescos()));
+            Conexion::execute("insert into Orden(fecha_hora,direccion,Sucursal_id,Repartidor_id,lat,lon,nombre_cliente,tel_cliente,email_cliente) values(NOW(),?,?,?,?,?,?,?,?)", array($obj->getDireccion(), $obj->getSucursalId(), $obj->getRepartidorId(), $obj->getLat(), $obj->getLon(), $obj->getNombreCliente(), $obj->getTelCliente(), $obj->getEmailCliente()));
+            $obj->setId(Conexion::lastId());
             foreach ($obj->getPizzas() as $ob) {
-                Conexion::execute("insert into orden_pizza values(?,?,?,?)", array($obj->getId(), $ob->getId(), $ob->orilla->getId(), $ob->tamano, $ob->cantidad));
+                Conexion::execute("insert into orden_pizza values(?,?,?,?,?)", array($obj->getId(), $ob->getId(), $ob->orilla->getId(), $ob->tamano, $ob->cantidad));
             }
             foreach ($obj->getEspeciales() as $ob) {
-                Conexion::execute("insert into orden_especial values(?,?,?,?)", array($obj->getId(), $ob->getId(), $ob->orilla->getId(), $ob->tamano, $ob->cantidad));
+                Conexion::execute("insert into orden_especial values(?,?,?,?,?)", array($obj->getId(), $ob->getId(), $ob->orilla->getId(), $ob->tamano, $ob->cantidad));
             }
             foreach ($obj->getPaquetes() as $ob) {
-                Conexion::execute("insert into orden_paquete values(?,?,?,?,?)", array($obj->getId(), $ob->getId(), $ob->orilla->getId(), $ob->tamano_pizza, $ob->tamano_refresco, $ob->cantidad));
+                Conexion::execute("insert into orden_paquete values(?,?,?,?,?,?)", array($obj->getId(), $ob->getId(), $ob->orilla->getId(), $ob->tamano_pizza, $ob->tamano_refresco, $ob->cantidad));
             }
             foreach ($obj->getRefrescos() as $ob) {
-                Conexion::execute("insert into orden_refresco values(?,?,?)", array($obj->getId(), $ob->getId(), $ob->tamano, $ob->cantidad));
+                Conexion::execute("insert into orden_refresco values(?,?,?,?)", array($obj->getId(), $ob->getId(), $ob->tamano, $ob->cantidad));
             }
-            return true;
+            return $obj;
         } catch (Exception $e) {
             echo $e->getMessage();
             return false;

@@ -48,7 +48,11 @@ class OrdenController
 	public static function getOrdenSesion()
 	{
 		session_start();
-		return $_SESSION['orden'];
+		if (isset($_SESSION['orden'])) {
+			return $_SESSION['orden'];
+		} else {
+			return null;
+		}
 	}
 
 	public static function getPaquetes()
@@ -126,6 +130,15 @@ class OrdenController
 	public static function getSizeRefresco($tamano)
 	{
 		return $tamano == 0 ? "600 ml." : ($tamano == 1 ? "1.5 L" : "2.5 L");
+	}
+
+	public static function confirmarOrden()
+	{
+		$orden = self::getOrdenSesion();
+		if ($orden == null) {
+			header('Location: /');
+		}
+		return OrdenDAO::save($orden);
 	}
 }
 

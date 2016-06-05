@@ -9,6 +9,7 @@ class Conexion{
 
 
     public static function execute($query,$args=array()){
+        //echo $query.'<br>';
         $con = self::getConexion();
         $stm = $con->prepare($query);
         if(sizeof($args)==0){
@@ -18,6 +19,11 @@ class Conexion{
             $stm->execute($args);
         }
         return $stm;
+    }
+
+    public static function lastId()
+    {
+        return self::$conexion->lastInsertId();
     }
 
     private static function getConexion(){
