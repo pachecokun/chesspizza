@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/../DAO/OrdenDAO.php";
+require_once __DIR__ . "/../DAO/PizzaDAO.php";
 require_once __DIR__ . "/../DAO/PaqueteDAO.php";
 require_once __DIR__ . "/../DAO/EspecialDAO.php";
 require_once __DIR__ . "/../DAO/OrillaDAO.php";
@@ -7,13 +8,22 @@ require_once __DIR__ . "/../Model/Orden.php";
 
 class OrdenController
 {
-    public static function setDatosOrden($nombre, $tel, $direccion,$mail, $lat, $lon,$suc)
-    {
-        session_start();
-		if(isset($_SESSION['orden'])){
+	public static function limpiarSesion()
+	{
+		session_destroy();
+	}
+
+	public static function setOrdenSesion($orden)
+	{
+		session_start();
+		if (isset($_SESSION['orden'])) {
 			unset($_SESSION['orden']);
 			$_SESSION['orden'] = null;
 		}
+		$_SESSION['orden'] = $orden;
+	}
+    public static function setDatosOrden($nombre, $tel, $direccion,$mail, $lat, $lon,$suc)
+    {
         $orden = new Orden();
         $orden->setDireccion($direccion);
         $orden->setNombreCliente($nombre);
@@ -23,11 +33,12 @@ class OrdenController
         $orden->setEmailCliente($mail);
 		$orden->setSucursalId($suc);
 
-        $_SESSION['orden'] = $orden;
+		self::setOrdenSesion($orden);
+
 		return $orden;
     }
 
-    public static function getDatosOrden()
+	public static function getOrdenSesion()
     {
         session_start();
         return $_SESSION['orden'];
@@ -42,7 +53,40 @@ class OrdenController
 	{
 		return EspecialDAO::getAll();
 	}
+
+	public static function addPizza($idpizza, $idorilla, $tamano, $cant)
+	{
+		$orden = self::getOrdenSesion();
+		$orden->addPizza(EspecialDAO::get($idpizza), OrillaDAO::get($idorilla), $tamano, $cant);
+		self::setOrdenSesion($orden);
+		header('Location: /ordenar/myOrderList');
+	}
+
+	public static function addPaquete($idpaquete, $idorilla, $spizza, $srefresco, $cant)
+	{
+		$orden = self::getOrdenSesion();
+		$orden->addPaquete(PaqueteDAO::get($idpaquete), OrillaDAO::get($idorilla), $spizza, $srefresco, $cant);
+		self::setOrdenSesion($orden);
+		header('Location: /ordenar/myOrderList');
+	}
+
+	public static function addEspecial($idespecial, $idorilla, $tamano, $cant)
+	{
+		$orden = self::getOrdenSesion();
+		$orden->addEspecial(EspecialDAO::get($idespecial), OrillaDAO::get($idorilla), $tamano, $cant);
+		self::setOrdenSesion($orden);
+		header('Location: /ordenar/myOrderList');
+	}
+
+	public static function addRefresco($idrefresco, $tamano, $cant)
+	{
+		$orden = self::getOrdenSesion();
+		$orden->addRefresco(RefrescoDAO::get($idrefresco), $tamano, $cant);
+		self::setOrdenSesion($orden);
+		header('Location: /ordenar/myOrderList');
+	}
 }
+
 
 if(isset($_POST['add'])){
 	session_start();

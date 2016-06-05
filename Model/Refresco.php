@@ -1,7 +1,7 @@
 <?php
 
 class Refresco{
-    private $producto_id;
+    private $id;
     private $nombre;
 
     /**
@@ -11,25 +11,25 @@ class Refresco{
      */
     public function __construct($producto_id, $nombre)
     {
-        $this->producto_id = $producto_id;
+        $this->id = $producto_id;
         $this->nombre = $nombre;
     }
 
     /**
      * @return mixed
      */
-    public function getProductoId()
+    public function getId()
     {
-        return $this->producto_id;
+        return $this->id;
     }
 
     /**
-     * @param mixed $producto_id
+     * @param mixed $id
      * @return Refresco
      */
-    public function setProductoId($producto_id)
+    public function setId($id)
     {
-        $this->producto_id = $producto_id;
+        $this->id = $id;
         return $this;
     }
 

@@ -3,8 +3,11 @@
 	require_once("../layout/navs/cliente.php");
 	require_once("../layout/header.php");
 	include_once("../../DAO/SucursalDAO.php");
-	include_once("../../Controller/SucursalController.php");
+include_once("../../Controller/SucursalController.php");
+include_once("../../Controller/OrdenController.php");
 	include_once("../../Controller/Address.php");
+
+OrdenController::limpiarSesion();
 ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTNw24eYAdlQdFZOQeTZEdDCJmUoClqG4&language=es"
 		type="text/javascript"></script>

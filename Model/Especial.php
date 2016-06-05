@@ -1,6 +1,6 @@
 <?php
 class Especial{
-    private $producto_id;
+    private $id;
     private $precio;
     private $nombre;
     private $pizza;
@@ -15,7 +15,7 @@ class Especial{
      */
     public function __construct($producto_id = null, $precio_pizza = null, $nombre = null, $pizza = null)
     {
-        $this->producto_id = $producto_id;
+        $this->id = $producto_id;
         $this->precio = $precio_pizza;
         $this->nombre = $nombre;
         $this->pizza = $pizza;
@@ -24,18 +24,18 @@ class Especial{
     /**
      * @return null
      */
-    public function getProductoId()
+    public function getId()
     {
-        return $this->producto_id;
+        return $this->id;
     }
 
     /**
-     * @param null $producto_id
+     * @param null $id
      * @return Especial
      */
-    public function setProductoId($producto_id)
+    public function setId($id)
     {
-        $this->producto_id = $producto_id;
+        $this->id = $id;
         return $this;
     }
 

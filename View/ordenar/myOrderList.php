@@ -18,9 +18,8 @@ if (isset($_POST['nom'])) {
 	$orden = OrdenController::setDatosOrden($_POST['nom'], $_POST['tel'], $dir, $_POST['email'], $_POST['lat'], $_POST['lon'], $_POST['suc']);
 }
 else{
-	$orden = OrdenController::getDatosOrden();
+	$orden = OrdenController::getOrdenSesion();
 }
-$orden = OrdenController::getDatosOrden();
 $total = 0.00;
 ?>
     <!-- <head> content aquí -->
@@ -36,6 +35,9 @@ $total = 0.00;
 	</style>
 <?php
 	require_once($pos."body.php");
+echo '<pre>';
+print_r($orden);
+echo '</pre>';
 //print_r($_POST);
 ?>
     <!-- Contenido va aquí-->
@@ -90,7 +92,9 @@ $total = 0.00;
 			</a>
 		</div>
 		<div class='col-3 col-m-6'>
-			<button type='button' class="btn-success">Complementos</button>
+			<a href="addRefresco">
+				<button type='button' class="btn-success">Refrescos</button>
+			</a>
 		</div>
 	</div>
 <?php

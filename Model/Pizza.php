@@ -1,8 +1,7 @@
 <?php
 
 class Pizza{
-    private $producto_id;
-    private $tamano;
+    private $id;
     private $ingredientes;
 
     /**
@@ -11,46 +10,27 @@ class Pizza{
      * @param $tamano
      * @param null $ingredientes
      */
-    public function __construct($producto_id = null, $tamano = null, $ingredientes = null)
+    public function __construct($producto_id = null, $ingredientes = null)
     {
-        $this->producto_id = $producto_id;
-        $this->tamano = $tamano;
+        $this->id = $producto_id;
         $this->ingredientes = $ingredientes;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTamano()
-    {
-        return $this->tamano;
-    }
-
-    /**
-     * @param mixed $tamano
-     * @return Pizza
-     */
-    public function setTamano($tamano)
-    {
-        $this->tamano = $tamano;
-        return $this;
     }
 
     /**
      * @return null
      */
-    public function getProductoId()
+    public function getId()
     {
-        return $this->producto_id;
+        return $this->id;
     }
 
     /**
-     * @param null $producto_id
+     * @param null $id
      * @return Pizza
      */
-    public function setProductoId($producto_id)
+    public function setId($id)
     {
-        $this->producto_id = $producto_id;
+        $this->id = $id;
         return $this;
     }
 

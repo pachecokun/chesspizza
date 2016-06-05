@@ -1,14 +1,18 @@
 <?php
-	$active = "ordenar";
-	require_once("../layout/navs/cliente.php");
+require_once("../../Controller/OrdenController.php");
+$active = "ordenar";
+require_once("../layout/navs/cliente.php");
 require_once("../layout/header.php");
 require_once("../../Controller/EspecialController.php");
-require_once("../../Controller/OrdenController.php");
 
 $paquete = PaqueteDAO::get($_GET['id']);
 $orillas = OrillaDAO::getAll();
 
 $precio = EspecialController::getPrecio($paquete->getEspecial());
+
+if (isset($_POST['idPaquete'])) {
+	OrdenController::addPaquete($_POST['idPaquete'], $_POST['orilla'], $_POST['size'], $_POST['refresco'], $_POST['cantidad']);
+}
 ?>
     <!-- <head> content aquí -->
 	<style>
@@ -35,19 +39,23 @@ $precio = EspecialController::getPrecio($paquete->getEspecial());
 			var srefresco = getSelectedText("refresco");
 			var tam = stam.substring(stam.indexOf('$') + 1);
 			var orilla = sorilla.substring(sorilla.indexOf('$') + 1);
+			var cantidad = document.getElementById("cantidad").value;
 			var refresco = srefresco.substring(srefresco.indexOf('$') + 1);
-			var precio = base + (Number(tam) + Number(orilla) + Number(refresco));
+			var precio = (base + (Number(tam) + Number(orilla) + Number(refresco))) * cantidad;
 			document.getElementById("precio").innerHTML = "$" + precio.toFixed(2);
 		}
 	</script>
 <?php
 	require_once("../layout/body.php");
+if (isset($orden)) {
+	print_r($orden);
+}
 ?>
     <!-- Contenido va aquí-->
     <h1>Armar Paquete</h1>
 	<h2><?= $paquete->getNombre() ?> - $<?= number_format($paquete->getPrecio(), 2) ?></h2>
-	<form action='myOrderList' method="post">
-		<input type='hidden' name='idPaquete' value='2'>
+	<form method="post">
+		<input type='hidden' name='idPaquete' value='<?= $paquete->getId() ?>'>
 		<h3>Pizza <?= $paquete->getEspecial()->getNombre() ?></h3>
 		<p>Tamaño</p>
 		<select name='size' id="size" onchange="update()">
@@ -69,6 +77,11 @@ $precio = EspecialController::getPrecio($paquete->getEspecial());
 			<option value='1'>1.5 L - $10.00</option>
 			<option value='2'>2.5 L - $20.00</option>
 		</select>
+		<h3>Cantidad</h3>
+		<div class='form-group'>
+			<input type='number' name='cantidad' id="cantidad" placeholder='cantidad' value="1" min="1"
+				   onchange="update()" onkeyup="update()"/>
+		</div>
 		<p>Total <strong class='text-success' id="precio">$1000000</strong></p>
 		<div class='row'>
 			<div class='col-6'>

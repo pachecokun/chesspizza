@@ -41,7 +41,7 @@ class OrillaDAO implements DAO
     public static function update($obj)
     {
         try {
-            Conexion::execute("update Orilla set nombre = ?, precioExtra=? where id = ?", array($obj->getTamano(), $obj->getProductoId()));
+            Conexion::execute("update Orilla set nombre = ?, precioExtra=? where id = ?", array($obj->getTamano(), $obj->getId()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

@@ -48,7 +48,7 @@ $especiales = OrdenController::getEspeciales();
 						<?php endforeach; ?>
 					</ul>
 				</div>
-				<a href='setPizza?id=<?= $especial->getProductoId() ?>'>
+				<a href='setPizza?id=<?= $especial->getId() ?>'>
 					<button class='btn-success'>Elegir</button>
 				</a>
 			</div>

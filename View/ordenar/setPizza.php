@@ -1,12 +1,12 @@
 <?php
 $active = "ordenar";
+require_once("../../Controller/OrdenController.php");
 require_once("../layout/navs/cliente.php");
 require_once("../layout/header.php");
-require_once("../../Controller/OrdenController.php");
 require_once("../../Controller/EspecialController.php");
 
 if (!empty($_POST)) {
-
+	OrdenController::addEspecial($_POST['id'], $_POST['orilla'], $_POST['size'], $_POST['cantidad']);
 }
 
 $especial = EspecialDAO::get($_GET['id']);
@@ -45,8 +45,8 @@ require_once("../layout/body.php");
     <!-- Contenido va aquí-->
     <h1>Preferencias de la pizza</h1>
 	<h3><?= $especial->getNombre() ?></h3>
-	<form action='myOrderList' method="post">
-		<input type='hidden' name='id' value='001' />
+	<form method="post">
+		<input type='hidden' name='id' value='<?= $especial->getId() ?>'/>
 		<p>Tamaño</p>
 		<select name='size' id="size" onchange="update()">
 			<option value='0'>Chica - $<?= number_format($precio, 2) ?></option>

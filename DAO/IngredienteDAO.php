@@ -90,7 +90,7 @@ class IngredienteDAO implements DAO
     public static function getIngredientesPizza($id)
     {
         $ingredientes = array();
-        $stm2 = Conexion::execute("SELECT * FROM pizza_ingrediente where Pizza_Producto_id = ?", array($id));
+        $stm2 = Conexion::execute("SELECT * FROM pizza_ingrediente where Pizza_id = ?", array($id));
         while ($pi = $stm2->fetch()) {
             $ingredientes[] = self::get($pi['Ingrediente_id']);
         }

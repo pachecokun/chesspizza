@@ -6,7 +6,6 @@ class Sucursal{
     private $lat;
     private $lon;
     private $nombre;
-	private $password;
 
     /**
      * Sucursal constructor.
@@ -15,16 +14,14 @@ class Sucursal{
      * @param $lat
      * @param $lon
      * @param $nombre
-	 * @param $password
      */
-    public function __construct($id, $direccion, $lat, $lon, $nombre, $password)
+    public function __construct($id, $direccion, $lat, $lon, $nombre)
     {
         $this->id = $id;
         $this->direccion = $direccion;
         $this->lat = $lat;
         $this->lon = $lon;
         $this->nombre = $nombre;
-        $this->password = $password;
     }
 
 
@@ -115,16 +112,6 @@ class Sucursal{
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
-        return $this;
-    }
-
-	public function getPassword(){
-		return $this->password;
-	}
-	
-	public function setPassword($password)
-    {
-        $this->password = $password;
         return $this;
     }
 }

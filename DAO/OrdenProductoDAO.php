@@ -45,7 +45,7 @@ class OrdenProductoDAO implements DAO
     public static function update($obj)
     {
         try {
-            Conexion::execute("update orden_producto set precio=?,cantidad=? where Orden_id = ? and Producto_id = ?", array($obj->getPrecio(), $obj->getCantidad(), $obj->getOrdenId(), $obj->getProductoId()));
+            Conexion::execute("update orden_producto set precio=?,cantidad=? where Orden_id = ? and Producto_id = ?", array($obj->getPrecio(), $obj->getCantidad(), $obj->getOrdenId(), $obj->getId()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();

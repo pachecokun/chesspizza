@@ -14,7 +14,7 @@ class PaqueteDAO implements DAO
             $stm = Conexion::execute("SELECT * FROM Paquete where ".$cond,$args);
 
             while ($obj = $stm->fetch()) {
-                $sucs[] = new Paquete($obj['Producto_id'], EspecialDAO::get($obj['Especial_id']), RefrescoDAO::get($obj['Refresco_Producto_id']), $obj['nombre'], $obj['precio']);
+                $sucs[] = new Paquete($obj['id'], EspecialDAO::get($obj['Especial_id']), RefrescoDAO::get($obj['Refresco_id']), $obj['nombre'], $obj['precio']);
             }
             return $sucs;
         } catch (Exception $e) {
@@ -29,7 +29,7 @@ class PaqueteDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Paquete values(?,?,?,?,?)", array($obj->getProductoId(), $obj->getEspecial()->getProducto_Id(), $obj->getRefresco->getProducto_Id(), $obj->getNombre(), $obj->getPrecio()));
+            Conexion::execute("insert into Paquete values(?,?,?,?,?)", array($obj->getId(), $obj->getEspecial()->getId(), $obj->getRefresco->getId(), $obj->getNombre(), $obj->getPrecio()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -43,7 +43,7 @@ class PaqueteDAO implements DAO
     public static function update($obj)
     {
         try {
-            Conexion::execute("update Paquete set Refresco_Producto_id=?, =?, Especial_id = ?, nombre = ?,precio = ? where Producto_id = ?", array($obj->getRefreascoProductoId(), $obj->getEspecialId(), $obj->getNombre(), $obj->getProductoId(), $obj->getPrecio()));
+            Conexion::execute("update Paquete set Refresco_id=?, =?, Especial_id = ?, nombre = ?,precio = ? where id = ?", array($obj->getRefreascoProductoId(), $obj->getEspecialId(), $obj->getNombre(), $obj->getId(), $obj->getPrecio()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -57,7 +57,7 @@ class PaqueteDAO implements DAO
     public static function delete($id)
     {
         try {
-            Conexion::execute("delete from Paquete where Producto_id=?",array($id));
+            Conexion::execute("delete from Paquete where id=?", array($id));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -72,10 +72,10 @@ class PaqueteDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Paquete where Producto_id=?",array($id));
+            $stm = Conexion::execute("SELECT * FROM Paquete where id=?", array($id));
 
             if ($obj = $stm->fetch()) {
-                return new Paquete($obj['Producto_id'], EspecialDAO::get($obj['Especial_id']), RefrescoDAO::get($obj['Refresco_Producto_id']), $obj['nombre'], $obj['precio']);
+                return new Paquete($obj['id'], EspecialDAO::get($obj['Especial_id']), RefrescoDAO::get($obj['Refresco_id']), $obj['nombre'], $obj['precio']);
             }
             else {
                 return null;
@@ -87,6 +87,20 @@ class PaqueteDAO implements DAO
             echo $e->getMessage();
             return null;
         }
+    }
+
+    public static function getOrden($id)
+    {
+        $res = array();
+        $stm = Conexion::execute("SELECT * FROM orden_paquete where Orden_id = ?", array($id));
+        while ($row = $stm->fetch()) {
+            $obj = self::get($row['Paquete_id']);
+            $obj->tamano_pizza = $row['tamano_pizza'];
+            $obj->tamano_refresco = $row['tamano_refresco'];
+            $obj->orilla = OrillaDAO::get($row['orilla_id']);
+            $res[] = $obj;
+        }
+        return $res;
     }
 
 }

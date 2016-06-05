@@ -1,7 +1,7 @@
 <?php
 
 class Paquete{
-    private $producto_id;
+    private $id;
     private $especial;
     private $refresco;
     private $nombre;
@@ -16,7 +16,7 @@ class Paquete{
      */
     public function __construct($producto_id = null, $especial = null, $refresco = null, $nombre = null, $precio = null)
     {
-        $this->producto_id = $producto_id;
+        $this->id = $producto_id;
         $this->especial = $especial;
         $this->refresco = $refresco;
         $this->nombre = $nombre;
@@ -26,18 +26,18 @@ class Paquete{
     /**
      * @return mixed
      */
-    public function getProductoId()
+    public function getId()
     {
-        return $this->producto_id;
+        return $this->id;
     }
 
     /**
-     * @param mixed $producto_id
+     * @param mixed $id
      * @return Paquete
      */
-    public function setProductoId($producto_id)
+    public function setId($id)
     {
-        $this->producto_id = $producto_id;
+        $this->id = $id;
         return $this;
     }
 

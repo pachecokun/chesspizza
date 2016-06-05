@@ -3,6 +3,7 @@
 include_once(__DIR__.'/../Model/Especial.php');
 include_once(__DIR__.'/DAO.php');
 include_once(__DIR__ . '/PizzaDAO.php');
+include_once(__DIR__ . '/OrillaDAO.php');
 
 class EspecialDAO implements DAO
 {
@@ -10,11 +11,10 @@ class EspecialDAO implements DAO
     {
         try {
             $sucs = array();
-            $stm = Conexion::execute("SELECT * FROM especial where " . $cond, $args);
+            $stm = Conexion::execute("SELECT * FROM Especial where " . $cond, $args);
 
             while ($obj = $stm->fetch()) {
-                $pizza = PizzaDAO::get($obj['Pizza_id']);
-                $sucs[] = new Especial($obj['Producto_id'], $obj['precio'], $obj['nombre'], $pizza);
+                $sucs[] = new Especial($obj['id'], $obj['precio'], $obj['nombre'], PizzaDAO::get($obj['Pizza_id']));
             }
             return $sucs;
         } catch (Exception $e) {
@@ -29,7 +29,7 @@ class EspecialDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into especial(producto_id,precio,Pizza_id,nombre) values(?,?,?)", array($obj->getProductoId(), $obj->getPrecio(), $obj->getPizza()->getId(), $obj->getNombre()));
+            Conexion::execute("insert into Especial(producto_id,precio,nombre,Pizza_id) values(?,?,?,?)", array($obj->getId(), $obj->getPrecio(), $obj->getNombre(), $obj->getPizza()->getId()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -43,7 +43,7 @@ class EspecialDAO implements DAO
     public static function update($obj)
     {
         try {
-            Conexion::execute("update especial set precio=?, Pizza_id=? where Producto_id = ?", array($obj->getPrecio(), $obj->getPizza()->getId(), $obj->getNombre(), $obj->getId()));
+            Conexion::execute("update Especial set precio=?, Pizza_id=?, nombre = ? where id = ?", array($obj->getPrecio(), $obj->getPizza()->getId(), $obj->getNombre(), $obj->getId()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -57,7 +57,7 @@ class EspecialDAO implements DAO
     public static function delete($id)
     {
         try {
-            Conexion::execute("delete from especial where Producto_id=?", array($id));
+            Conexion::execute("delete from Especial where id=?", array($id));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -71,11 +71,10 @@ class EspecialDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM especial where Producto_id=?", array($id));
+            $stm = Conexion::execute("SELECT * FROM Especial where id=?", array($id));
 
             if ($obj = $stm->fetch()) {
-                $pizza = PizzaDAO::get($obj['Pizza_id']);
-                return new Especial($obj['Producto_id'], $obj['precio'], $obj['nombre'], $pizza);
+                return new Especial($obj['id'], $obj['precio'], $obj['nombre'], PizzaDAO::get($obj['Pizza_id']));
             }
             else {
                 return null;
@@ -89,6 +88,18 @@ class EspecialDAO implements DAO
         }
     }
 
+    public static function getOrden($id)
+    {
+        $res = array();
+        $stm = Conexion::execute("SELECT * FROM orden_especial where Orden_id = ?", array($id));
+        while ($row = $stm->fetch()) {
+            $obj = self::get($row['Especial_id']);
+            $obj->tamano = $row['tamano'];
+            $obj->orilla = OrillaDAO::get($row['orilla_id']);
+            $res[] = $obj;
+        }
+        return $res;
+    }
 
 }
 ?>
