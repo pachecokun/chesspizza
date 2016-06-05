@@ -104,8 +104,8 @@
       <file leaf-file-name="Conexion.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BD/Conexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -449,14 +449,7 @@
       <workItem from="1464987273164" duration="17935000" />
       <workItem from="1465070643359" duration="114000" />
       <workItem from="1465135888621" duration="204000" />
-      <workItem from="1465137022470" duration="11465000" />
-    </task>
-    <task id="LOCAL-00014" summary="test sucursales">
-      <created>1462753180395</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1462753180395</updated>
+      <workItem from="1465137022470" duration="11514000" />
     </task>
     <task id="LOCAL-00015" summary="test sucursales">
       <created>1462753356504</created>
@@ -794,11 +787,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465149332937</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="orden">
+      <created>1465149567534</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1465149567534</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98011000" />
+    <option name="totallyTimeSpent" value="98060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1292,8 +1292,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BD/Conexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state relative-caret-position="170">
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
           <folding />
         </state>
       </provider>
