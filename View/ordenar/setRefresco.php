@@ -8,7 +8,7 @@ require_once("../../Controller/EspecialController.php");
 $refresco = RefrescoDAO::get($_GET['id']);
 
 if (isset($_POST['idRefresco'])) {
-    OrdenController::addRefresco($_POST['idRefresco'], $_POST['tamano'], $_POST['cantidad']);
+    OrdenController::addRefresco($_POST['idRefresco'], $_POST['refresco'], $_POST['cantidad']);
 }
 ?>
     <!-- <head> content aquí -->
@@ -50,9 +50,9 @@ if (isset($orden)) {
         <input type='hidden' name='idRefresco' value='<?= $refresco->getId() ?>'>
         <h3>Tamaño</h3>
         <select name='refresco' id="refresco" onchange="update()">
-            <option value='0'>600 ml - $15.00</option>
-            <option value='1'>1.5 L - $25.00</option>
-            <option value='2'>2.5 L - $35.00</option>
+            <option value='0'>600 ml - $<?= number_format(REFRECO_CHICO, 2) ?></option>
+            <option value='1'>1.5 L - $<?= number_format(REFRECO_MEDIANO, 2) ?></option>
+            <option value='2'>2.5 L - $<?= number_format(REFRECO_GRANDE, 2) ?></option>
         </select>
         <h3>Cantidad</h3>
         <div class='form-group'>

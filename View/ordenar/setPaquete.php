@@ -73,9 +73,9 @@ if (isset($orden)) {
 		<h3>Refresco <?= $paquete->getRefresco()->getNombre() ?></h3>
 		<p>Tamaño</p>
 		<select name='refresco' id="refresco" onchange="update()">
-			<option value='0'>600 ml - $0.00</option>
-			<option value='1'>1.5 L - $10.00</option>
-			<option value='2'>2.5 L - $20.00</option>
+			<option value='0'>600 ml - $<?= number_format(0, 2) ?></option>
+			<option value='1'>1.5 L - $<?= number_format(REFRECO_MEDIANO - REFRECO_CHICO, 2) ?></option>
+			<option value='2'>2.5 L - $<?= number_format(REFRECO_GRANDE - REFRECO_CHICO, 2) ?></option>
 		</select>
 		<h3>Cantidad</h3>
 		<div class='form-group'>

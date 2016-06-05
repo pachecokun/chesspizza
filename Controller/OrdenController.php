@@ -5,6 +5,12 @@ require_once __DIR__ . "/../DAO/PaqueteDAO.php";
 require_once __DIR__ . "/../DAO/EspecialDAO.php";
 require_once __DIR__ . "/../DAO/OrillaDAO.php";
 require_once __DIR__ . "/../Model/Orden.php";
+require_once __DIR__ . "/EspecialController.php";
+
+define("REFRECO_CHICO", 15);
+define("REFRECO_MEDIANO", 25);
+define("REFRECO_GRANDE", 35);
+
 
 class OrdenController
 {
@@ -22,27 +28,28 @@ class OrdenController
 		}
 		$_SESSION['orden'] = $orden;
 	}
-    public static function setDatosOrden($nombre, $tel, $direccion,$mail, $lat, $lon,$suc)
-    {
-        $orden = new Orden();
-        $orden->setDireccion($direccion);
-        $orden->setNombreCliente($nombre);
-        $orden->setLat($lat);
-        $orden->setLon($lon);
-        $orden->setTelCliente($tel);
-        $orden->setEmailCliente($mail);
+
+	public static function setDatosOrden($nombre, $tel, $direccion, $mail, $lat, $lon, $suc)
+	{
+		$orden = new Orden();
+		$orden->setDireccion($direccion);
+		$orden->setNombreCliente($nombre);
+		$orden->setLat($lat);
+		$orden->setLon($lon);
+		$orden->setTelCliente($tel);
+		$orden->setEmailCliente($mail);
 		$orden->setSucursalId($suc);
 
 		self::setOrdenSesion($orden);
 
 		return $orden;
-    }
+	}
 
 	public static function getOrdenSesion()
-    {
-        session_start();
-        return $_SESSION['orden'];
-    }
+	{
+		session_start();
+		return $_SESSION['orden'];
+	}
 
 	public static function getPaquetes()
 	{
@@ -84,6 +91,41 @@ class OrdenController
 		$orden->addRefresco(RefrescoDAO::get($idrefresco), $tamano, $cant);
 		self::setOrdenSesion($orden);
 		header('Location: /ordenar/myOrderList');
+	}
+
+	public static function getPrecioPaquete($paquete, $cantidad = 1)
+	{
+		$precio = $paquete->getPrecio();
+		$precioEsp = EspecialController::getPrecio($paquete->getEspecial());
+		$precioRef = $paquete->tamano_refresco == 0 ? REFRECO_CHICO : ($paquete->tamano_refresco == 1 ? REFRECO_MEDIANO : REFRECO_GRANDE);
+		$precio += $precioEsp * ($paquete->tamano_pizza == 0 ? 0 : ($paquete->tamano_pizza == 1 ? 0.3 : 0.5));
+		$precio += $paquete->orilla->getPrecioExtra();
+		$precio += $precioRef - REFRECO_CHICO;
+		return $precio * $cantidad;
+	}
+
+	public static function getPrecioEspecial($especial, $cantidad = 1)
+	{
+		$precio = EspecialController::getPrecio($especial);
+		$precio = $precio * ($especial->tamano == 0 ? 1 : ($especial->tamano == 1 ? 1.3 : 1.5));
+		$precio += $especial->orilla->getPrecioExtra();
+		return $precio * $cantidad;
+	}
+
+	public static function getPrecioRefresco($refresco, $cantidad = 1)
+	{
+		$precio = $refresco->tamano == 0 ? REFRECO_CHICO : ($refresco->tamano == 1 ? REFRECO_MEDIANO : REFRECO_GRANDE);
+		return $precio * $cantidad;
+	}
+
+	public static function getSizePizza($tamano)
+	{
+		return $tamano == 0 ? "chica" : ($tamano == 1 ? "mediana" : "grande");
+	}
+
+	public static function getSizeRefresco($tamano)
+	{
+		return $tamano == 0 ? "600 ml." : ($tamano == 1 ? "1.5 L" : "2.5 L");
 	}
 }
 

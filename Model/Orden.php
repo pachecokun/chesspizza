@@ -34,7 +34,7 @@ class Orden{
      * @param $paquetes
      * @param $refrescos
      */
-    public function __construct($id = null, $fecha_hora = null, $direccion = null, $sucursal_id = null, $repartidor_id = null, $lat = null, $lon = null, $nombre_cliente = null, $tel_cliente = null, $email_cliente = null, $pizzas = null, $especiales = null, $paquetes = null, $refrescos = null)
+    public function __construct($id = null, $fecha_hora = null, $direccion = null, $sucursal_id = null, $repartidor_id = null, $lat = null, $lon = null, $nombre_cliente = null, $tel_cliente = null, $email_cliente = null, $pizzas = array(), $especiales = array(), $paquetes = array(), $refrescos = array())
     {
         $this->id = $id;
         $this->fecha_hora = $fecha_hora;

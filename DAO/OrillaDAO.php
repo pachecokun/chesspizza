@@ -73,7 +73,7 @@ class OrillaDAO implements DAO
             $stm = Conexion::execute("SELECT * FROM orilla where id=?", array($id));
 
             if ($obj = $stm->fetch()) {
-                return new Orilla($obj['id'], $obj['nombre'], $obj['precio_extra']);
+                return new Orilla($obj['id'], $obj['nombre'], $obj['precioExtra']);
             } else {
                 return null;
             }
