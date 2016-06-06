@@ -135,6 +135,21 @@ class OrdenController
 		}
 		return OrdenDAO::save($orden);
 	}
+
+	public static function getPrecioOrden($orden)
+	{
+		$total = 0;
+		foreach ($orden->getEspeciales() as $obj) {
+			$total += self::getPrecioEspecial($obj, $obj->cantidad);
+		}
+		foreach ($orden->getPaquetes() as $obj) {
+			$total += self::getPrecioPaquete($obj, $obj->cantidad);
+		}
+		foreach ($orden->getRefrescos() as $obj) {
+			$total += self::getPrecioRefresco($obj, $obj->cantidad);
+		}
+		return $total;
+	}
 }
 
 

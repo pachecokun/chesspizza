@@ -52,16 +52,7 @@ $total = 0.00;
 	</style>
 <?php
 	require_once($pos."body.php");
-$total = 0;
-foreach ($orden->getEspeciales() as $obj) {
-	$total += OrdenController::getPrecioEspecial($obj, $obj->cantidad);
-}
-foreach ($orden->getPaquetes() as $obj) {
-	$total += OrdenController::getPrecioPaquete($obj, $obj->cantidad);
-}
-foreach ($orden->getRefrescos() as $obj) {
-	$total += OrdenController::getPrecioRefresco($obj, $obj->cantidad);
-}
+$total = OrdenController::getPrecioOrden($orden);
 /*echo '<pre>';
 print_r($orden);
 echo '</pre>';*/
