@@ -53,9 +53,12 @@ $total = 0.00;
 <?php
 	require_once($pos."body.php");
 $total = OrdenController::getPrecioOrden($orden);
+$faltantes = OrdenController::getFaltantes($orden);
 /*echo '<pre>';
 print_r($orden);
 echo '</pre>';*/
+$ingredientes = $faltantes['ingredientes'];
+$refrescos = $faltantes['refrescos'];
 //print_r($_POST);
 ?>
     <!-- Contenido va aquí-->
@@ -111,6 +114,24 @@ echo '</pre>';*/
 		</table>
 	</div>
 	<h3 class='total text-info'>Total: <span class='text-success'>$<?=number_format($total,2)?></span></h3>
+<div style="color: red">
+	<?php if (!empty($ingredientes)) { ?>
+		<p style="color:red">No se cuenta con los suficientes ingredientes en sucursal: </p>
+		<ul>
+			<?php foreach ($ingredientes as $ingrediente): ?>
+				<li><?= $ingrediente->getNombre() ?></li>
+			<?php endforeach; ?>
+		</ul>
+	<?php } ?>
+	<?php if (!empty($refrescos)) { ?>
+		<p style="color:red">No se cuenta con los suficientes refrescos en sucursal: </p>
+		<ul>
+			<?php foreach ($refrescos as $refresco): ?>
+				<li><?= $refresco->getNombre() ?></li>
+			<?php endforeach; ?>
+		</ul>
+	<?php } ?>
+</div>
 	<h2>Agregar a mi orden:</h2>
 	<div class='row'>
 		<div class='col-3 col-m-6'>
@@ -148,7 +169,7 @@ echo '</pre>';*/
 				<button name='addPaquete' class='btn-success'>Modificar datos</button>
 			</a>
 		</div>
-		<?php if ($total != 0) { ?>
+		<?php if ($total != 0 && empty($ingredientes) && empty($refrescos)) { ?>
 			<div class='col-6 col-m-6'>
 				<a href="/ordenar/confirmar">
 					<button type='submit' name='addPaquete' class='btn-success'>Confirmar orden</button>
