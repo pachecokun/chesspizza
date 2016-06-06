@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b36fc594-d570-418e-9762-8e0e22335732" name="Default" comment="orden">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/ordenar/myOrderList.php" afterPath="$PROJECT_DIR$/View/ordenar/myOrderList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/OrdenDAO.php" afterPath="$PROJECT_DIR$/DAO/OrdenDAO.php" />
     </list>
     <ignored path="chesspizza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,13 +25,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="myOrderList.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="myOrderList.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/ordenar/myOrderList.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
               <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
-                <marker date="1465161324835" expanded="true" signature="4967:4980" placeholder="..." />
+                <marker date="1465161357232" expanded="true" signature="4971:4984" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -67,30 +67,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrdenDAO.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OrdenDAO.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+            <state relative-caret-position="476">
+              <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
               <folding>
-                <marker date="1465159179766" expanded="true" signature="313:339" placeholder="SELECT * FRO... Orden" />
-                <marker date="1465159179766" expanded="true" signature="1248:1392" placeholder="insert into Orden... " />
-                <marker date="1465159179766" expanded="true" signature="1708:1749" placeholder="insert into orden_pizza... " />
-                <marker date="1465159179766" expanded="true" signature="1941:1985" placeholder="insert into orden_especial... " />
-                <marker date="1465159179766" expanded="true" signature="2175:2220" placeholder="insert into orden_paquete... " />
-                <marker date="1465159179766" expanded="true" signature="2439:2481" placeholder="insert into orden_refresco... " />
-                <marker date="1465159179766" expanded="true" signature="2926:3083" placeholder="update Orden... " />
-                <marker date="1465159179766" expanded="true" signature="3652:3691" placeholder="insert into orden_pizza... " />
-                <marker date="1465159179766" expanded="true" signature="4156:4213" placeholder="delete from " />
-                <marker date="1465159179766" expanded="true" signature="4167:4213" placeholder="insert into orden_pizza... " />
-                <marker date="1465159179766" expanded="true" signature="4649:4691" placeholder="insert into orden_especial... " />
-                <marker date="1465159179766" expanded="true" signature="5156:5219" placeholder="delete from " />
-                <marker date="1465159179766" expanded="true" signature="5651:5692" placeholder="insert into orden_paquete... " />
-                <marker date="1465159179766" expanded="true" signature="6157:6218" placeholder="delete from " />
-                <marker date="1465159179766" expanded="true" signature="6652:6694" placeholder="insert into orden_refresco... " />
-                <marker date="1465159179766" expanded="true" signature="7159:7222" placeholder="delete from " />
-                <marker date="1465159179766" expanded="true" signature="7613:7641" placeholder="delete from " />
-                <marker date="1465159179766" expanded="true" signature="7977:8007" placeholder="SELECT * FRO... Orden" />
+                <marker date="1465168867893" expanded="true" signature="313:339" placeholder="SELECT * FRO... Orden" />
+                <marker date="1465168867893" expanded="true" signature="1248:1392" placeholder="insert into Orden... " />
+                <marker date="1465168867893" expanded="true" signature="1708:1754" placeholder="insert into orden_pizza... " />
+                <marker date="1465168867893" expanded="true" signature="1946:1995" placeholder="insert into orden_especial... " />
+                <marker date="1465168867893" expanded="true" signature="2185:2235" placeholder="insert into orden_paquete... " />
+                <marker date="1465168867893" expanded="true" signature="2454:2501" placeholder="insert into orden_refresco... " />
+                <marker date="1465168867893" expanded="true" signature="2946:3103" placeholder="update Orden... " />
+                <marker date="1465168867893" expanded="true" signature="3672:3711" placeholder="insert into orden_pizza... " />
+                <marker date="1465168867893" expanded="true" signature="4176:4233" placeholder="delete from " />
+                <marker date="1465168867893" expanded="true" signature="4187:4233" placeholder="insert into orden_pizza... " />
+                <marker date="1465168867893" expanded="true" signature="4669:4711" placeholder="insert into orden_especial... " />
+                <marker date="1465168867893" expanded="true" signature="5176:5239" placeholder="delete from " />
+                <marker date="1465168867893" expanded="true" signature="5671:5712" placeholder="insert into orden_paquete... " />
+                <marker date="1465168867893" expanded="true" signature="6177:6238" placeholder="delete from " />
+                <marker date="1465168867893" expanded="true" signature="6672:6714" placeholder="insert into orden_refresco... " />
+                <marker date="1465168867893" expanded="true" signature="7179:7242" placeholder="delete from " />
+                <marker date="1465168867893" expanded="true" signature="7633:7661" placeholder="delete from " />
+                <marker date="1465168867893" expanded="true" signature="7997:8027" placeholder="SELECT * FRO... Orden" />
               </folding>
             </state>
           </provider>
@@ -208,9 +208,9 @@
         <option value="$PROJECT_DIR$/View/ordenar/index.php" />
         <option value="$PROJECT_DIR$/BD/Conexion.php" />
         <option value="$PROJECT_DIR$/Controller/OrdenController.php" />
-        <option value="$PROJECT_DIR$/DAO/OrdenDAO.php" />
         <option value="$PROJECT_DIR$/View/ordenar/confirmar.php" />
         <option value="$PROJECT_DIR$/View/ordenar/myOrderList.php" />
+        <option value="$PROJECT_DIR$/DAO/OrdenDAO.php" />
       </list>
     </option>
   </component>
@@ -489,14 +489,7 @@
       <workItem from="1464987273164" duration="17935000" />
       <workItem from="1465070643359" duration="114000" />
       <workItem from="1465135888621" duration="204000" />
-      <workItem from="1465137022470" duration="22428000" />
-    </task>
-    <task id="LOCAL-00019" summary="arreglados include">
-      <created>1462753997492</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1462753997492</updated>
+      <workItem from="1465137022470" duration="24726000" />
     </task>
     <task id="LOCAL-00020" summary="agregadas funciones de dao">
       <created>1462760486777</created>
@@ -834,11 +827,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465160525093</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="orden">
+      <created>1465161358960</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1465161358960</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108974000" />
+    <option name="totallyTimeSpent" value="111272000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1312,39 +1312,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-          <folding>
-            <marker date="1465159179766" expanded="true" signature="313:339" placeholder="SELECT * FRO... Orden" />
-            <marker date="1465159179766" expanded="true" signature="1248:1392" placeholder="insert into Orden... " />
-            <marker date="1465159179766" expanded="true" signature="1708:1749" placeholder="insert into orden_pizza... " />
-            <marker date="1465159179766" expanded="true" signature="1941:1985" placeholder="insert into orden_especial... " />
-            <marker date="1465159179766" expanded="true" signature="2175:2220" placeholder="insert into orden_paquete... " />
-            <marker date="1465159179766" expanded="true" signature="2439:2481" placeholder="insert into orden_refresco... " />
-            <marker date="1465159179766" expanded="true" signature="2926:3083" placeholder="update Orden... " />
-            <marker date="1465159179766" expanded="true" signature="3652:3691" placeholder="insert into orden_pizza... " />
-            <marker date="1465159179766" expanded="true" signature="4156:4213" placeholder="delete from " />
-            <marker date="1465159179766" expanded="true" signature="4167:4213" placeholder="insert into orden_pizza... " />
-            <marker date="1465159179766" expanded="true" signature="4649:4691" placeholder="insert into orden_especial... " />
-            <marker date="1465159179766" expanded="true" signature="5156:5219" placeholder="delete from " />
-            <marker date="1465159179766" expanded="true" signature="5651:5692" placeholder="insert into orden_paquete... " />
-            <marker date="1465159179766" expanded="true" signature="6157:6218" placeholder="delete from " />
-            <marker date="1465159179766" expanded="true" signature="6652:6694" placeholder="insert into orden_refresco... " />
-            <marker date="1465159179766" expanded="true" signature="7159:7222" placeholder="delete from " />
-            <marker date="1465159179766" expanded="true" signature="7613:7641" placeholder="delete from " />
-            <marker date="1465159179766" expanded="true" signature="7977:8007" placeholder="SELECT * FRO... Orden" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/ordenar/myOrderList.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <marker date="1465161324835" expanded="true" signature="4967:4980" placeholder="..." />
+            <marker date="1465161357232" expanded="true" signature="4971:4984" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+          <folding>
+            <marker date="1465168867893" expanded="true" signature="313:339" placeholder="SELECT * FRO... Orden" />
+            <marker date="1465168867893" expanded="true" signature="1248:1392" placeholder="insert into Orden... " />
+            <marker date="1465168867893" expanded="true" signature="1708:1754" placeholder="insert into orden_pizza... " />
+            <marker date="1465168867893" expanded="true" signature="1946:1995" placeholder="insert into orden_especial... " />
+            <marker date="1465168867893" expanded="true" signature="2185:2235" placeholder="insert into orden_paquete... " />
+            <marker date="1465168867893" expanded="true" signature="2454:2501" placeholder="insert into orden_refresco... " />
+            <marker date="1465168867893" expanded="true" signature="2946:3103" placeholder="update Orden... " />
+            <marker date="1465168867893" expanded="true" signature="3672:3711" placeholder="insert into orden_pizza... " />
+            <marker date="1465168867893" expanded="true" signature="4176:4233" placeholder="delete from " />
+            <marker date="1465168867893" expanded="true" signature="4187:4233" placeholder="insert into orden_pizza... " />
+            <marker date="1465168867893" expanded="true" signature="4669:4711" placeholder="insert into orden_especial... " />
+            <marker date="1465168867893" expanded="true" signature="5176:5239" placeholder="delete from " />
+            <marker date="1465168867893" expanded="true" signature="5671:5712" placeholder="insert into orden_paquete... " />
+            <marker date="1465168867893" expanded="true" signature="6177:6238" placeholder="delete from " />
+            <marker date="1465168867893" expanded="true" signature="6672:6714" placeholder="insert into orden_refresco... " />
+            <marker date="1465168867893" expanded="true" signature="7179:7242" placeholder="delete from " />
+            <marker date="1465168867893" expanded="true" signature="7633:7661" placeholder="delete from " />
+            <marker date="1465168867893" expanded="true" signature="7997:8027" placeholder="SELECT * FRO... Orden" />
           </folding>
         </state>
       </provider>
