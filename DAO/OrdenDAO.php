@@ -12,7 +12,6 @@ class OrdenDAO implements DAO
         try {
             $sucs = array();
             $stm = Conexion::execute("SELECT * FROM Orden where ".$cond,$args);
-
             while ($obj = $stm->fetch()) {
                 $pizzas = PizzaDAO::getOrden($obj['id']);
                 $especiales = EspecialDAO::getOrden($obj['id']);
