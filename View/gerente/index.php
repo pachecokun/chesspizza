@@ -8,9 +8,9 @@
 ?>
     <!-- <head> content aquí -->
 <?php
+	$title = "Bienvenido";
 	require_once("../layout/body.php");
 ?>
-    <h1>Bienvenido</h1>
 	<p>Seleccione una sección utilizando la barra de navegación.</p>
 <?php
 	include_once("../layout/footer.php");

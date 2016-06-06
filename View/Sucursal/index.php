@@ -1,7 +1,8 @@
 <?php
-$pos = "../"; //fix para la ubicación relativa en las rutas.
 $active = "sucursales";
-require_once($pos . "headerCliente.php");
+
+require_once("../layout/navs/cliente.php");
+require_once("../layout/header.php");
 ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTNw24eYAdlQdFZOQeTZEdDCJmUoClqG4&language=es"
         type="text/javascript"></script>
@@ -21,14 +22,14 @@ require_once($pos . "headerCliente.php");
     }
 </style>
 <?php
-require_once($pos . "body.php");
+require_once("../layout/body.php");
 ?>
-<h1>Sucursales</h1>
 
 <div id="mapa"></div>
 <div id="sucs">
     <?php
-    include_once $pos.'../Controller/SucursalController.php';
+	/** QUITAR UN ../ SI FALLA **/
+    include_once '../../Controller/SucursalController.php';
 
     $sucursales = SucursalController::getAllSucursales();
 
@@ -49,5 +50,5 @@ require_once($pos . "body.php");
 </script>
 
 <?php
-include_once($pos . "footer.php");
+include_once("../layout/footer.php");
 ?>

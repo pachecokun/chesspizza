@@ -1,0 +1,39 @@
+<?php
+	$active="miOrden";
+	require_once("../layout/navs/cliente.php");
+	require_once("../layout/header.php");
+	require_once("../../Controller/OrdenController.php");
+	
+	if(!isset($_GET['order']) || !isset($_GET['email'])){
+		header("location: getOrden");
+	}else{
+	
+		$orden= OrdenController::getOrden($_GET['order'], $_GET['email']);
+		if(empty($orden)){
+			$_SESSION['message'] = array("danger", "Orden no encontrada, verifica tus datos");
+			header("location: getOrden");
+			exit();
+		}
+	
+	}
+	if(empty($orden->getRepartidorId())){
+		$repartidor = "no asignado";
+	}else{
+		$repartidor = $orden->getRepartidorId();
+	}
+?>
+    <!-- <head> content aquí -->
+<?php
+	require_once("../layout/body.php");
+?>
+	<p><strong>Número de orden:</strong> <span class='text-info'><?=	$orden->getId();	?></span></p>
+	<p>Status: <span class='text-danger'>Ordenada</span></p>
+	<p class='text-info'><?=	$orden->getFechaHora();	?></p>
+	<p>A nombre de: <strong><?=	$orden->getNombreCliente();	?></strong></p>
+	<p>Sucursal: <span class='text-info'><?=	$orden->getSucursalId();	?></span></p>
+	<p>Repartidor: <span class='text-info'><?=	$repartidor;	?></span></p>
+	<p>Dirección:<br><?=	$orden->getDireccion();	?></p>
+	<div class='sample'>Mapita aquí</div>
+<?php
+	include_once("../layout/footer.php");
+?>
