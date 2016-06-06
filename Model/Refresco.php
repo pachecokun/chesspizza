@@ -9,6 +9,7 @@ class Refresco{
      * Refresco constructor.
      * @param $producto_id
      * @param $nombre
+     * @param $precio
      */
     public function __construct($producto_id = null, $nombre = null, $precio = null)
     {
@@ -54,7 +55,7 @@ class Refresco{
     }
 
     /**
-     * @return null
+     * @return mixed
      */
     public function getPrecio()
     {
@@ -62,7 +63,7 @@ class Refresco{
     }
 
     /**
-     * @param null $precio
+     * @param mixed $precio
      * @return Refresco
      */
     public function setPrecio($precio)

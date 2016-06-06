@@ -5,8 +5,8 @@
 	);
 	$inventarioSub = array(
 		"showAll"=>array("Todo", "../inventario", ""),
-		"showRegrescos"=>array("Refrescos", "../inventario/?show=Refrescos", ""),
-		"showIngredientes"=>array("Ingredientes", "../inventario/?show=Ingredientes", "")
+		"showRefrescos"=>array("Refrescos", "../inventario?show=Refrescos", ""),
+		"showIngredientes"=>array("Ingredientes", "../inventario?show=Ingredientes", "")
 	);
 	$empleadosSub = array(
 		"showAll"=>array("Todos", "../empleados", ""),
@@ -16,9 +16,9 @@
 	);
 	$navElements = array("inicio"=>array("Inicio", "../gerente", ""),
 		"ordenes"=>array("Consultar ordenes", "../ordenes", ""),
-		"ingredientes"=>array("Ingredientes", "../ingredientes", "", $ingredientesSub),
+		//"ingredientes"=>array("Ingredientes", "../ingredientes", "", $ingredientesSub),
 		"inventario"=>array("Inventario", "../inventario", "", $inventarioSub),
-		"carta"=>array("Carta", "../carta", ""),
+		//"carta"=>array("Carta", "../carta", ""),
 		"empleados"=>array("Empleados", "../empleados", "", $empleadosSub)
 	);
 ?>	

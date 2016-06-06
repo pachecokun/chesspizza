@@ -27,7 +27,7 @@ class RefrescoDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Refresco values(null,?,?)", array($obj->getNombre(), $obj->getPrecio()));
+            Conexion::execute("insert into Refresco (nombre,precio) values(?,?)", array($obj->getNombre(), $obj->getPrecio()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -41,7 +41,7 @@ class RefrescoDAO implements DAO
     public static function update($obj)
     {
         try {
-            Conexion::execute("update Refresco set nombre=?,precio=? where id = ?", array($obj->getNombre(), $obj->getPrecio(), $obj->getId()));
+            Conexion::execute("update Refresco set nombre=?, precio=? where id = ?", array($obj->getNombre(), $obj->getPrecio(), $obj->getId()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -97,6 +97,19 @@ class RefrescoDAO implements DAO
             $res[] = $obj;
         }
         return $res;
+    }
+	
+	public static function getRefrescosSucursal($id)
+    {
+        $refrescos = array();
+        $stm2 = Conexion::execute("SELECT * FROM inv_refresco where Sucursal_id = ?", array($id));
+        while ($re = $stm2->fetch()) {
+            $refrescos[] = array(
+				'refresco' => self::get($re['Refresco_id']),
+				'cantidad' => $re['cantidad']
+			);
+        }
+        return $refrescos;
     }
 
 }
