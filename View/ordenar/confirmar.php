@@ -33,7 +33,7 @@ if(!empty($_POST['dir']) AND !empty($_POST['nom']) AND !empty($_POST['tel']) AND
 
     $header .= "Content-Type: text/plain";
 
-    $tema = "Confirmación de orden";
+    $tema = "Confirmación de orden No. ".$orden->getId()."";
 
     $mensaje="
     <div style='border-radius: 10px; background-color: #F2F2F2; padding: 25px;'>
