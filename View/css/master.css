@@ -347,6 +347,20 @@ button:hover{
 	cursor: pointer;
 }
 
+button.btn-sm{
+	min-width: 0;
+	padding: 5px;
+	margin: 5px;
+	font-size: 14px;
+}
+		
+button.btn-md{
+	min-width: 0;
+	font-size: 18px;
+	padding: 10px;
+	margin: 5px;
+}
+
 .btn-default{ color: #333; background-color: #CCC; }
 .btn-default:hover{ color: #FFF; background-color: #333; }
 

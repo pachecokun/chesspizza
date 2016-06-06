@@ -26,7 +26,7 @@ class IngredienteDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Ingrediente(nombre,precio) values(?,?)",array($obj->getNombre(),$obj->getPrecio(),));
+            Conexion::execute("insert into Ingrediente(nombre,precio) values(?,?)",array($obj->getNombre(),$obj->getPrecio()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -40,7 +40,7 @@ class IngredienteDAO implements DAO
     public static function update($obj)
     {
         try {
-            Conexion::execute("update Ingrediente set nombre=?, nombre=? where id = ?",array($obj->getNombre(),$obj->getPrecio(),$obj->getId(),));
+            Conexion::execute("update Ingrediente set nombre=?, nombre=? where id = ?",array($obj->getNombre(),$obj->getPrecio(),$obj->getId()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -93,6 +93,19 @@ class IngredienteDAO implements DAO
         $stm2 = Conexion::execute("SELECT * FROM pizza_ingrediente where Pizza_id = ?", array($id));
         while ($pi = $stm2->fetch()) {
             $ingredientes[] = self::get($pi['Ingrediente_id']);
+        }
+        return $ingredientes;
+    }
+
+    public static function getIngredientesSucursal($id)
+    {
+        $ingredientes = array();
+        $stm2 = Conexion::execute("SELECT * FROM inv_ingrediente where Sucursal_id = ?", array($id));
+        while ($pi = $stm2->fetch()) {
+            $ingredientes[] = array(
+				'ingrediente' => self::get($pi['Ingrediente_id']),
+				'existencias' => $pi['existencias']
+			);
         }
         return $ingredientes;
     }
