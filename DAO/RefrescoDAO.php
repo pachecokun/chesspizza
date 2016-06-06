@@ -12,7 +12,7 @@ class RefrescoDAO implements DAO
             $stm = Conexion::execute("SELECT * FROM Refresco where ".$cond,$args);
 
             while ($obj = $stm->fetch()) {
-                $sucs[] = new Refresco($obj['id'], $obj['nombre']);
+                $sucs[] = new Refresco($obj['id'], $obj['nombre'], $obj['precio']);
             }
             return $sucs;
         } catch (Exception $e) {
@@ -27,7 +27,7 @@ class RefrescoDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Refresco values(?,?)", array($obj->getId(), $obj->getNombre(),));
+            Conexion::execute("insert into Refresco values(null,?,?)", array($obj->getNombre(), $obj->getPrecio()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -41,7 +41,7 @@ class RefrescoDAO implements DAO
     public static function update($obj)
     {
         try {
-            Conexion::execute("update Refresco set =?, where id = ?", array($obj->getNombre(), $obj->getId()));
+            Conexion::execute("update Refresco set nombre=?,precio=? where id = ?", array($obj->getNombre(), $obj->getPrecio(), $obj->getId()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -73,7 +73,7 @@ class RefrescoDAO implements DAO
             $stm = Conexion::execute("SELECT * FROM Refresco where id=?", array($id));
 
             if ($obj = $stm->fetch()) {
-                return new Refresco($obj['id'], $obj['nombre']);
+                return new Refresco($obj['id'], $obj['nombre'], $obj['precio']);
             }
             else {
                 return null;
@@ -93,7 +93,7 @@ class RefrescoDAO implements DAO
         $stm = Conexion::execute("SELECT * FROM orden_refresco where Orden_id = ?", array($id));
         while ($row = $stm->fetch()) {
             $obj = self::get($row['Refresco_id']);
-            $obj->tamano = $row['tamano'];
+            $obj->cantidad = $row['cantidad'];
             $res[] = $obj;
         }
         return $res;

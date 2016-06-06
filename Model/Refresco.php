@@ -3,16 +3,18 @@
 class Refresco{
     private $id;
     private $nombre;
+    private $precio;
 
     /**
      * Refresco constructor.
      * @param $producto_id
      * @param $nombre
      */
-    public function __construct($producto_id, $nombre)
+    public function __construct($producto_id = null, $nombre = null, $precio = null)
     {
         $this->id = $producto_id;
         $this->nombre = $nombre;
+        $this->precio = $precio;
     }
 
     /**
@@ -48,6 +50,24 @@ class Refresco{
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+        return $this;
+    }
+
+    /**
+     * @return null
+     */
+    public function getPrecio()
+    {
+        return $this->precio;
+    }
+
+    /**
+     * @param null $precio
+     * @return Refresco
+     */
+    public function setPrecio($precio)
+    {
+        $this->precio = $precio;
         return $this;
     }
 

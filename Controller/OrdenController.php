@@ -7,9 +7,6 @@ require_once __DIR__ . "/../DAO/OrillaDAO.php";
 require_once __DIR__ . "/../Model/Orden.php";
 require_once __DIR__ . "/EspecialController.php";
 
-define("REFRECO_CHICO", 15);
-define("REFRECO_MEDIANO", 25);
-define("REFRECO_GRANDE", 35);
 
 
 class OrdenController
@@ -101,10 +98,8 @@ class OrdenController
 	{
 		$precio = $paquete->getPrecio();
 		$precioEsp = EspecialController::getPrecio($paquete->getEspecial());
-		$precioRef = $paquete->tamano_refresco == 0 ? REFRECO_CHICO : ($paquete->tamano_refresco == 1 ? REFRECO_MEDIANO : REFRECO_GRANDE);
 		$precio += $precioEsp * ($paquete->tamano_pizza == 0 ? 0 : ($paquete->tamano_pizza == 1 ? 0.3 : 0.5));
 		$precio += $paquete->orilla->getPrecioExtra();
-		$precio += $precioRef - REFRECO_CHICO;
 		return $precio * $cantidad;
 	}
 
@@ -118,7 +113,7 @@ class OrdenController
 
 	public static function getPrecioRefresco($refresco, $cantidad = 1)
 	{
-		$precio = $refresco->tamano == 0 ? REFRECO_CHICO : ($refresco->tamano == 1 ? REFRECO_MEDIANO : REFRECO_GRANDE);
+		$precio = $refresco->getPrecio();
 		return $precio * $cantidad;
 	}
 

@@ -42,10 +42,10 @@ class OrdenDAO implements DAO
                 Conexion::execute("insert into orden_especial values(null,?,?,?,?,?)", array($obj->getId(), $ob->getId(), $ob->orilla->getId(), $ob->tamano, $ob->cantidad));
             }
             foreach ($obj->getPaquetes() as $ob) {
-                Conexion::execute("insert into orden_paquete values(null,?,?,?,?,?,?)", array($obj->getId(), $ob->getId(), $ob->orilla->getId(), $ob->tamano_pizza, $ob->tamano_refresco, $ob->cantidad));
+                Conexion::execute("insert into orden_paquete values(null,?,?,?,?,?)", array($obj->getId(), $ob->getId(), $ob->orilla->getId(), $ob->tamano_pizza, $ob->cantidad));
             }
             foreach ($obj->getRefrescos() as $ob) {
-                Conexion::execute("insert into orden_refresco values(null,?,?,?,?)", array($obj->getId(), $ob->getId(), $ob->tamano, $ob->cantidad));
+                Conexion::execute("insert into orden_refresco values(null,?,?,?)", array($obj->getId(), $ob->getId(), $ob->cantidad));
             }
             return $obj;
         } catch (Exception $e) {

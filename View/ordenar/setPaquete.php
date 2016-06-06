@@ -36,12 +36,10 @@ if (isset($_POST['idPaquete'])) {
 		function update() {
 			var stam = getSelectedText("size");
 			var sorilla = getSelectedText("orilla");
-			var srefresco = getSelectedText("refresco");
 			var tam = stam.substring(stam.indexOf('$') + 1);
 			var orilla = sorilla.substring(sorilla.indexOf('$') + 1);
 			var cantidad = document.getElementById("cantidad").value;
-			var refresco = srefresco.substring(srefresco.indexOf('$') + 1);
-			var precio = (base + (Number(tam) + Number(orilla) + Number(refresco))) * cantidad;
+			var precio = (base + (Number(tam) + Number(orilla))) * cantidad;
 			document.getElementById("precio").innerHTML = "$" + precio.toFixed(2);
 		}
 	</script>
@@ -70,13 +68,7 @@ if (isset($orden)) {
 					$<?= number_format($orilla->getPrecioExtra(), 2) ?></option>
 			<?php endforeach; ?>
 		</select>
-		<h3>Refresco <?= $paquete->getRefresco()->getNombre() ?></h3>
-		<p>Tamaño</p>
-		<select name='refresco' id="refresco" onchange="update()">
-			<option value='0'>600 ml - $<?= number_format(0, 2) ?></option>
-			<option value='1'>1.5 L - $<?= number_format(REFRECO_MEDIANO - REFRECO_CHICO, 2) ?></option>
-			<option value='2'>2.5 L - $<?= number_format(REFRECO_GRANDE - REFRECO_CHICO, 2) ?></option>
-		</select>
+		<h3>Refresco <?= $paquete->getRefresco()->getNombre() ?> - $0.00</h3>
 		<h3>Cantidad</h3>
 		<div class='form-group'>
 			<input type='number' name='cantidad' id="cantidad" placeholder='cantidad' value="1" min="1"
