@@ -33,7 +33,7 @@ if(!empty($_POST['dir']) AND !empty($_POST['nom']) AND !empty($_POST['tel']) AND
 
     $header .= "Content-Type: text/plain";
 
-    $tema = "ConfirmaciÃ³n de orden";
+    $tema = "Confirmación de orden";
 
     $mensaje="
     <div style='border-radius: 10px; background-color: #F2F2F2; padding: 25px;'>
@@ -68,7 +68,7 @@ if(!empty($_POST['dir']) AND !empty($_POST['nom']) AND !empty($_POST['tel']) AND
        <td align='left'>$560.00 MXN</td>
       </tr>
       </table>
-      <p>El tiempo estimado de entrega es de MÃXIMO 45 minutos a partir de la siguiente hora: <strong>" . date("H:i", $time-3600) . "</strong></p>
+      <p>El tiempo estimado de entrega es de MÁXIMO 45 minutos a partir de la siguiente hora: <strong>" . date("H:i", $time-3600) . "</strong></p>
     </div>
     ";
 
