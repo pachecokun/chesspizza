@@ -140,25 +140,30 @@ echo '</pre>';*/
 	</div>
 	<h2>Finalizar pedido:</h2>
 	<h3>Confirme sus datos</h3>
-	<b>Dirección: </b><br><?= $orden->getDireccion() ?><br><br>
-	<b>Nombre de responsable: </b><br><?= $orden->getNombreCliente() ?><br><br>
-	<b>Teléfono: </b><br><?= $orden->getTelCliente() ?><br><br>
-	<b>Correo electrónico: </b><br><?= $orden->getEmailCliente() ?><br><br><br>
-	<div class='row'>
-		<div class='col-6 col-m-6'>
-			<a href="/ordenar/?Lat=<?= $orden->getLat() ?>&Lon=<?= $orden->getLon() ?>">
-				<button name='addPaquete' class='btn-success'>Modificar datos</button>
-			</a>
+	<form action="/ordenar/confirmar" method="post">
+		<b>Dirección: </b><br><?= $orden->getDireccion() ?><br><br>
+		<input type="hidden" value='<?= $orden->getDireccion() ?>' name='dir' id='dir'>
+		<b>Nombre de responsable: </b><br><?= $orden->getNombreCliente() ?><br><br>
+		<input type="hidden" value='<?= $orden->getNombreCliente() ?>' name='nom' id='nom'>
+		<b>Teléfono: </b><br><?= $orden->getTelCliente() ?><br><br>
+		<input type="hidden" value='<?= $orden->getTelCliente() ?>' name='tel' id='tel'>
+		<b>Correo electrónico: </b><br><?= $orden->getEmailCliente() ?><br><br><br>
+		<input type="hidden" value='<?= $orden->getEmailCliente() ?>' name='email' id='email'>
+		<div class='row'>
+			<div class='col-6 col-m-6'>
+				<a href="/ordenar/?Lat=<?= $orden->getLat() ?>&Lon=<?= $orden->getLon() ?>">
+					<button name='addPaquete' class='btn-success'>Modificar datos</button>
+				</a>
+			</div>
+			<?php if ($total != 0) { ?>
+			<div class='col-6 col-m-6'>
+				<a href="/ordenar/confirmar">
+					<button type='submit' name='addPaquete' class='btn-success'>Confirmar orden</button>
+				</a>
+			</div>
+			<?php } ?>
 		</div>
-		<?php if ($total != 0) { ?>
-		<div class='col-6 col-m-6'>
-			<a href="/ordenar/confirmar">
-				<button name='addPaquete' class='btn-success'>Confirmar orden
-				</button>
-			</a>
-		</div>
-		<?php } ?>
-	</div>
+	</form>
 <?php
 	include_once($pos."footer.php");
 ?>
