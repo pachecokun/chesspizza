@@ -61,7 +61,7 @@ if(!empty($_POST['dir']) AND !empty($_POST['nom']) AND !empty($_POST['tel']) AND
       </tr>
       <tr>
        <td align='right' bgcolor='#FFFFFF'><strong>Total:</strong></td>
-       <td align='left'>$$_POST[tot]</td>
+       <td align='left'>$ $_POST[tot]</td>
       </tr>
       </table>
       <p>El tiempo estimado de entrega es de MÁXIMO 45 minutos a partir de la siguiente hora: <strong>" . date("H:i", $time-3600) . "</strong></p>
