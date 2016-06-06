@@ -60,6 +60,10 @@ class SucursalController
     {
         Conexion::execute("update inv_refresco set cantidad = cantidad-? where Sucursal_id=? and Refresco_id=?", array($refresco->cantidad, $sucursal->getId(), $refresco->getId()));
     }
+	
+	public static function get($id){
+		return SucursalDAO::get($id);
+	}
 }
 
 ?>

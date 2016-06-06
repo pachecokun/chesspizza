@@ -21,16 +21,19 @@
 	}else{
 		$repartidor = $orden->getRepartidorId();
 	}
+	
+	$sucursal = SucursalController::get($orden->getSucursalId())->getNombre();
 ?>
     <!-- <head> content aquí -->
 <?php
+	var_dump($orden);
 	require_once("../layout/body.php");
 ?>
 	<p><strong>Número de orden:</strong> <span class='text-info'><?=	$orden->getId();	?></span></p>
 	<p>Status: <span class='text-danger'>Ordenada</span></p>
 	<p class='text-info'><?=	$orden->getFechaHora();	?></p>
 	<p>A nombre de: <strong><?=	$orden->getNombreCliente();	?></strong></p>
-	<p>Sucursal: <span class='text-info'><?=	$orden->getSucursalId();	?></span></p>
+	<p>Sucursal: <span class='text-info'><?=	$sucursal	?></span></p>
 	<p>Repartidor: <span class='text-info'><?=	$repartidor;	?></span></p>
 	<p>Dirección:<br><?=	$orden->getDireccion();	?></p>
 	<div class='sample'>Mapita aquí</div>
