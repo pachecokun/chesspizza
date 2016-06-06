@@ -41,23 +41,23 @@ if(!empty($_POST['dir']) AND !empty($_POST['nom']) AND !empty($_POST['tel']) AND
       <table border='0' cellspacing='2' cellpadding='2'>
         <tr>
           <td width='20%' align='center' bgcolor='#FFFFCC'><strong>No. Orden:</strong></td>
-          <td width='80%' align='left' style='font-size: 12px;'>" . $orden->getId() . "</td>
+          <td width='80%' align='left'>".$orden->getId()."</td>
         </tr>
         <tr>
          <td width='20%' align='center' bgcolor='#FFFFCC'><strong>A nombre de:</strong></td>
-         <td width='80%' align='left' style='font-size: 12px;'>$_POST[nom]</td>
+         <td width='80%' align='left'>$_POST[nom]</td>
        </tr>
        <tr>
         <td width='20%' align='center' bgcolor='#FFFFCC'><strong>Dirección:</strong></td>
-        <td width='80%' align='left' style='font-size: 12px;'>$_POST[dir]</td>
+        <td width='80%' align='left'>$_POST[dir]</td>
       </tr>
        <tr>
          <td align='center' bgcolor='#FFFFCC'><strong>Email:</strong></td>
-         <td width='80%' align='left' style='font-size: 12px;'>$_POST[email]</td>
+         <td width='80%' align='left'>$_POST[email]</td>
        </tr>
       <tr>
         <td align='center' bgcolor='#FFFFCC'><strong>Teléfono:</strong></td>
-        <td width='80%' align='left' style='font-size: 12px;'>$_POST[tel]</td>
+        <td width='80%' align='left'>$_POST[tel]</td>
       </tr>
       <tr>
        <td align='right' bgcolor='#FFFFFF'><strong>Total:</strong></td>
