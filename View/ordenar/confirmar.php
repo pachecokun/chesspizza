@@ -78,6 +78,7 @@ if(!empty($_POST['dir']) AND !empty($_POST['nom']) AND !empty($_POST['tel']) AND
     <!-- Contenido va aquí-->
     <h1>Orden confirmada</h1>
     <h2>Clave de orden: <?= $orden->getId() ?></h2>
+<h2>Importe: <?= OrdenController::getPrecioOrden($orden) ?></h2>
     <p>Su orden ha sido confirmada correctamente. El tiempo de llegada estimado para la orden es de 15 minutos.</p>
     <p>La información del pedido ha sido enviada al correo electrónico '<?= $orden->getEmailCliente() ?>' .</p>
     <p><strong>NOTA:</strong> Recuerda que si no encuentras el correo en la bandeja de entrada, deberias revisas la carpeta de SPAM</p>
