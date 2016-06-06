@@ -20,6 +20,65 @@ require_once("../layout/header.php");
 <?php
 require_once("../layout/body.php");
 ?>
+<?php
+if(!empty($_POST['dir']) AND !empty($_POST['nom']) AND !empty($_POST['tel']) AND !empty($_POST['email'])){
+    $time = time();
+
+    $to = "$_POST[email]";
+
+    $header = "From: Chess Pizzas <no-reply@pizza.escom.xyz> \r\n";
+    $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+    $header .= "Mime-Version: 1.0 \r\n";
+    $header .= "Content-Type: text/html; charset=UTF-8";
+
+    $header .= "Content-Type: text/plain";
+
+    $tema = "ConfirmaciÃ³n de orden";
+
+    $mensaje="
+    <div style='border-radius: 10px; background-color: #F2F2F2; padding: 25px;'>
+      <img src='http://services.escom.xyz/media/logo-nav.png' alt='Chess Pizza Logo' width='75%' style='margin-bottom: 25px;'>
+      <table border='0' cellspacing='2' cellpadding='2'>
+        <tr>
+          <td width='20%' align='center' bgcolor='#FFFFCC'><strong>No. Orden:</strong></td>
+          <td width='80%' align='left'>" . $orden->getId(); . "</td>
+        </tr>
+        <tr>
+         <td width='20%' align='center' bgcolor='#FFFFCC'><strong>A nombre de:</strong></td>
+         <td width='80%' align='left'>$_POST[nom]</td>
+       </tr>
+       <tr>
+        <td width='20%' align='center' bgcolor='#FFFFCC'><strong>Dirección:</strong></td>
+        <td width='80%' align='left'>$_POST[dir]</td>
+      </tr>
+       <tr>
+         <td align='center' bgcolor='#FFFFCC'><strong>Email:</strong></td>
+         <td align='left'>$_POST[email]</td>
+       </tr>
+      <tr>
+        <td align='center' bgcolor='#FFFFCC'><strong>Teléfono:</strong></td>
+        <td align='left'>$_POST[tel]</td>
+      </tr>
+      <tr>
+       <td align='center' bgcolor='#FFFFCC'><strong>Descripción:</strong></td>
+       <td align='left'>1 x Pizza Familiar Hawaiana, 2 x Pkt Diviertas, 1 x Refresco</td>
+      </tr>
+      <tr>
+       <td align='right' bgcolor='#FFFFFF'><strong>Total:</strong></td>
+       <td align='left'>$560.00 MXN</td>
+      </tr>
+      </table>
+      <p>El tiempo estimado de entrega es de MÃXIMO 45 minutos a partir de la siguiente hora: <strong>" . date("H:i", $time-3600) . "</strong></p>
+    </div>
+    ";
+
+    if(mail($to,utf8_decode($tema),utf8_decode($mensaje),$header)){
+      echo "<script>alert('Correo enviado satisfactoriamente a ". $to ."')</script>";
+    }else{
+      echo "<script>alert('Error en el envio del mail')</script>";
+    }
+}
+?>
     <!-- Contenido va aquí-->
     <h1>Orden confirmada</h1>
     <h2>Clave de orden: <?= $orden->getId() ?></h2>
