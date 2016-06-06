@@ -13,7 +13,7 @@ require_once __DIR__ . "/SucursalController.php";
 
 class OrdenController
 {
-	
+
 	public static function limpiarSesion()
 	{
 		session_destroy();
@@ -133,10 +133,10 @@ class OrdenController
 	public static function confirmarOrden()
 	{
 		$orden = self::getOrdenSesion();
-		$sucursal = SucursalDAO::get($orden->getSucursalId());
 		if ($orden == null) {
 			header('Location: /');
 		}
+		$sucursal = SucursalDAO::get($orden->getSucursalId());
 		foreach (self::getIngredientes($orden) as $ingrediente) {
 			SucursalController::reducirInventarioIngrediente($sucursal, $ingrediente);
 		}
@@ -282,13 +282,13 @@ class OrdenController
 		);
 
 	}
-	
-	public static function getOrden($id, $email){
-		$orden= OrdenDAO::get($id);
-		if(!empty($orden) && $orden->getEmailCliente() == $email){
+
+	public static function getOrden($id, $email)
+	{
+		$orden = OrdenDAO::get($id);
+		if (!empty($orden) && $orden->getEmailCliente() == $email) {
 			return $orden;
-		}
-		else{
+		} else {
 			return null;
 		}
 	}
