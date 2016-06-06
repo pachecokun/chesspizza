@@ -140,9 +140,6 @@ echo '</pre>';*/
 	</div>
 	<h2>Finalizar pedido:</h2>
 	<h3>Confirme sus datos</h3>
-	<form action="/ordenar/confirmar" method="post">
-
-	</form>
 	<b>Dirección: </b><br><?= $orden->getDireccion() ?><br><br>
 	<input type="hidden" value='<?= $orden->getDireccion() ?>' name='dir' id='dir'>
 	<b>Nombre de responsable: </b><br><?= $orden->getNombreCliente() ?><br><br>
