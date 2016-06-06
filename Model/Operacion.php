@@ -6,6 +6,7 @@ class Operacion{
     private $fecha_hora;
     private $lat;
     private $lon;
+    private $status;
 
     /**
      * Operacion constructor.
@@ -14,14 +15,16 @@ class Operacion{
      * @param $fecha_hora
      * @param $lat
      * @param $lon
+     * @param null $status
      */
-    public function __construct($id = null, $orden_id = null, $fecha_hora = null, $lat = null, $lon = null)
+    public function __construct($id = null, $orden_id = null, $fecha_hora = null, $lat = null, $lon = null, $status = null)
     {
         $this->id = $id;
         $this->orden_id = $orden_id;
         $this->fecha_hora = $fecha_hora;
         $this->lat = $lat;
         $this->lon = $lon;
+        $this->status = $status;
     }
 
     /**
@@ -111,6 +114,24 @@ class Operacion{
     public function setLon($lon)
     {
         $this->lon = $lon;
+        return $this;
+    }
+
+    /**
+     * @return null
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param null $status
+     * @return Operacion
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
         return $this;
     }
 
