@@ -11,7 +11,7 @@ class Refresco{
      * @param $nombre
      * @param $precio
      */
-    public function __construct($producto_id, $nombre, $precio)
+    public function __construct($producto_id = null, $nombre = null, $precio = null)
     {
         $this->id = $producto_id;
         $this->nombre = $nombre;

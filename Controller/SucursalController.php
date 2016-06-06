@@ -32,6 +32,34 @@ class SucursalController
     public static function getAllSucursales(){
         return SucursalDAO::getAll();
     }
+
+    public static function getInventarioIngrediente($sucursal, $ingrediente)
+    {
+        $stm = Conexion::execute("select*from inv_ingrediente where Sucursal_id=? and Ingrediente_id=?", array($sucursal->getId(), $ingrediente->getId()));
+        if ($row = $stm->fetch()) {
+            return $row['existencias'];
+        }
+        return 0;
+    }
+
+    public static function getInventarioRefresco($sucursal, $refresco)
+    {
+        $stm = Conexion::execute("select*from inv_refresco where Sucursal_id=? and Refresco_id=?", array($sucursal->getId(), $refresco->getId()));
+        if ($row = $stm->fetch()) {
+            return $row['cantidad'];
+        }
+        return 0;
+    }
+
+    public static function reducirInventarioIngrediente($sucursal, $ingrediente)
+    {
+        Conexion::execute("update inv_ingrediente set existencias = existencias-? where Sucursal_id=? and Ingrediente_id=?", array($ingrediente->cantidad, $sucursal->getId(), $ingrediente->getId()));
+    }
+
+    public static function reducirInventarioRefresco($sucursal, $refresco)
+    {
+        Conexion::execute("update inv_refresco set cantidad = cantidad-? where Sucursal_id=? and Refresco_id=?", array($refresco->cantidad, $sucursal->getId(), $refresco->getId()));
+    }
 }
 
 ?>

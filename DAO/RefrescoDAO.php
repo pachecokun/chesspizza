@@ -93,7 +93,7 @@ class RefrescoDAO implements DAO
         $stm = Conexion::execute("SELECT * FROM orden_refresco where Orden_id = ?", array($id));
         while ($row = $stm->fetch()) {
             $obj = self::get($row['Refresco_id']);
-            $obj->tamano = $row['tamano'];
+            $obj->cantidad = $row['cantidad'];
             $res[] = $obj;
         }
         return $res;

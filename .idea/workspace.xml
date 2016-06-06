@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b36fc594-d570-418e-9762-8e0e22335732" name="Default" comment="orden">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View/ordenar/confirmar.php" />
+    <list default="true" id="b36fc594-d570-418e-9762-8e0e22335732" name="Default" comment="muestra total de orden">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BD/Conexion.php" afterPath="$PROJECT_DIR$/BD/Conexion.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/OrdenController.php" afterPath="$PROJECT_DIR$/Controller/OrdenController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/OrdenDAO.php" afterPath="$PROJECT_DIR$/DAO/OrdenDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/ordenar/index.php" afterPath="$PROJECT_DIR$/View/ordenar/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/SucursalController.php" afterPath="$PROJECT_DIR$/Controller/SucursalController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/ordenar/myOrderList.php" afterPath="$PROJECT_DIR$/View/ordenar/myOrderList.php" />
     </list>
     <ignored path="chesspizza.iws" />
@@ -33,31 +30,13 @@
       <file leaf-file-name="myOrderList.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/ordenar/myOrderList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+            <state relative-caret-position="1624">
+              <caret line="121" column="54" selection-start-line="121" selection-start-column="54" selection-end-line="121" selection-end-column="54" />
               <folding>
-                <marker date="1465158883889" expanded="true" signature="4896:4910" placeholder="..." />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#div#1;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="confirmar.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/View/ordenar/confirmar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eliminar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/ordenar/eliminar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -65,93 +44,31 @@
       <file leaf-file-name="OrdenController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/OrdenController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+            <state relative-caret-position="272">
+              <caret line="142" column="58" selection-start-line="142" selection-start-column="58" selection-end-line="142" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrdenDAO.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
+      <file leaf-file-name="SucursalController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Controller/SucursalController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="47" column="76" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
+            <state relative-caret-position="240">
+              <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
               <folding>
-                <marker date="1465158968075" expanded="true" signature="313:339" placeholder="SELECT * FRO... Orden" />
-                <marker date="1465158968075" expanded="true" signature="1248:1392" placeholder="insert into Orden... " />
-                <marker date="1465158968075" expanded="true" signature="1709:1750" placeholder="insert into orden_pizza... " />
-                <marker date="1465158968075" expanded="true" signature="1942:1986" placeholder="insert into orden_especial... " />
-                <marker date="1465158968075" expanded="true" signature="2176:2221" placeholder="insert into orden_paquete... " />
-                <marker date="1465158968075" expanded="true" signature="2440:2482" placeholder="insert into orden_refresco... " />
-                <marker date="1465158968075" expanded="true" signature="2927:3084" placeholder="update Orden... " />
-                <marker date="1465158968075" expanded="true" signature="3653:3692" placeholder="insert into orden_pizza... " />
-                <marker date="1465158968075" expanded="true" signature="4157:4214" placeholder="delete from " />
-                <marker date="1465158968075" expanded="true" signature="4168:4214" placeholder="insert into orden_pizza... " />
-                <marker date="1465158968075" expanded="true" signature="4650:4692" placeholder="insert into orden_especial... " />
-                <marker date="1465158968075" expanded="true" signature="5157:5220" placeholder="delete from " />
-                <marker date="1465158968075" expanded="true" signature="5652:5693" placeholder="insert into orden_paquete... " />
-                <marker date="1465158968075" expanded="true" signature="6158:6219" placeholder="delete from " />
-                <marker date="1465158968075" expanded="true" signature="6653:6695" placeholder="insert into orden_refresco... " />
-                <marker date="1465158968075" expanded="true" signature="7160:7223" placeholder="delete from " />
-                <marker date="1465158968075" expanded="true" signature="7614:7642" placeholder="delete from " />
-                <marker date="1465158968075" expanded="true" signature="7978:8008" placeholder="SELECT * FRO... Orden" />
+                <marker date="1465180705963" expanded="true" signature="2055:2150" placeholder="update inv_i... " />
+                <marker date="1465180705963" expanded="true" signature="2334:2417" placeholder="update inv_r... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Conexion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BD/Conexion.php">
+      <file leaf-file-name="RouteInfo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/RouteInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Orden.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/Orden.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="304" selection-start-line="36" selection-start-column="304" selection-end-line="36" selection-end-column="304" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setRefresco.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/ordenar/setRefresco.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding>
-                <marker date="1465155109867" expanded="true" signature="444:593" placeholder="..." />
-                <marker date="1465155109867" expanded="true" signature="468:514" placeholder="{...}" />
-                <marker date="1465155109867" expanded="true" signature="541:581" placeholder="{...}" />
-                <marker date="1465155109867" expanded="true" signature="652:849" placeholder="{...}" />
-                <marker date="1465155109867" expanded="true" signature="876:1000" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="makePizza.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/ordenar/makePizza.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setPaquete.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/ordenar/setPaquete.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="75" column="59" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
+            <state relative-caret-position="-476">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -171,7 +88,6 @@
         <option value="$PROJECT_DIR$/DAO/OperacionDAO.php" />
         <option value="$PROJECT_DIR$/DAO/StatusDAO.php" />
         <option value="$PROJECT_DIR$/Controller/RepartidorController.php" />
-        <option value="$PROJECT_DIR$/Controller/SucursalController.php" />
         <option value="$PROJECT_DIR$/View/Especial/Registrar.php" />
         <option value="$PROJECT_DIR$/Controller/PizzaController.php" />
         <option value="$PROJECT_DIR$/Controller/IngredienteController.php" />
@@ -193,11 +109,9 @@
         <option value="$PROJECT_DIR$/Model/Pizza.php" />
         <option value="$PROJECT_DIR$/Model/Especial.php" />
         <option value="$PROJECT_DIR$/Model/Paquete.php" />
-        <option value="$PROJECT_DIR$/Model/Refresco.php" />
         <option value="$PROJECT_DIR$/DAO/IngredienteDAO.php" />
         <option value="$PROJECT_DIR$/DAO/OrdenProductoDAO.php" />
         <option value="$PROJECT_DIR$/View/ordenar/addPaquete.php" />
-        <option value="$PROJECT_DIR$/DAO/RefrescoDAO.php" />
         <option value="$PROJECT_DIR$/DAO/PizzaDAO.php" />
         <option value="$PROJECT_DIR$/DAO/EspecialDAO.php" />
         <option value="$PROJECT_DIR$/DAO/PaqueteDAO.php" />
@@ -206,16 +120,19 @@
         <option value="$PROJECT_DIR$/View/ordenar/setPizza.php" />
         <option value="$PROJECT_DIR$/View/ordenar/addRefresco.php" />
         <option value="$PROJECT_DIR$/DAO/OrillaDAO.php" />
-        <option value="$PROJECT_DIR$/View/ordenar/setPaquete.php" />
         <option value="$PROJECT_DIR$/Model/Orden.php" />
         <option value="$PROJECT_DIR$/View/ordenar/eliminar.php" />
-        <option value="$PROJECT_DIR$/View/ordenar/setRefresco.php" />
         <option value="$PROJECT_DIR$/View/ordenar/index.php" />
         <option value="$PROJECT_DIR$/BD/Conexion.php" />
-        <option value="$PROJECT_DIR$/Controller/OrdenController.php" />
-        <option value="$PROJECT_DIR$/View/ordenar/myOrderList.php" />
+        <option value="$PROJECT_DIR$/Model/Refresco.php" />
+        <option value="$PROJECT_DIR$/DAO/RefrescoDAO.php" />
+        <option value="$PROJECT_DIR$/View/ordenar/setRefresco.php" />
+        <option value="$PROJECT_DIR$/View/ordenar/setPaquete.php" />
         <option value="$PROJECT_DIR$/DAO/OrdenDAO.php" />
         <option value="$PROJECT_DIR$/View/ordenar/confirmar.php" />
+        <option value="$PROJECT_DIR$/View/ordenar/myOrderList.php" />
+        <option value="$PROJECT_DIR$/Controller/OrdenController.php" />
+        <option value="$PROJECT_DIR$/Controller/SucursalController.php" />
       </list>
     </option>
   </component>
@@ -289,6 +206,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chesspizza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chesspizza" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="principal" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -424,6 +359,116 @@
       <recent name="C:\Users\David Pacheco\phpstorm\chesspizza\Documents\Primera entrega\Pasheco" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/ordenar/confirmar.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
@@ -494,63 +539,7 @@
       <workItem from="1464987273164" duration="17935000" />
       <workItem from="1465070643359" duration="114000" />
       <workItem from="1465135888621" duration="204000" />
-      <workItem from="1465137022470" duration="20688000" />
-    </task>
-    <task id="LOCAL-00017" summary="test sucursales">
-      <created>1462753509454</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1462753509454</updated>
-    </task>
-    <task id="LOCAL-00018" summary="test sucursales">
-      <created>1462753555150</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1462753555150</updated>
-    </task>
-    <task id="LOCAL-00019" summary="arreglados include">
-      <created>1462753997492</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1462753997492</updated>
-    </task>
-    <task id="LOCAL-00020" summary="agregadas funciones de dao">
-      <created>1462760486777</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1462760486777</updated>
-    </task>
-    <task id="LOCAL-00021" summary="agregadas funciones de dao">
-      <created>1462760564617</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1462760564617</updated>
-    </task>
-    <task id="LOCAL-00022" summary="agregadas funciones de dao">
-      <created>1462760657540</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1462760657540</updated>
-    </task>
-    <task id="LOCAL-00023" summary="agregadas funciones de dao">
-      <created>1462760674559</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1462760674559</updated>
-    </task>
-    <task id="LOCAL-00024" summary="agregadas funciones de dao">
-      <created>1462760730265</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1462760730265</updated>
+      <workItem from="1465137022470" duration="33284000" />
     </task>
     <task id="LOCAL-00025" summary="agregadas funciones de dao">
       <created>1462764255050</created>
@@ -839,15 +828,71 @@
       <option name="project" value="LOCAL" />
       <updated>1465155112308</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="orden">
+      <created>1465159183454</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1465159183454</updated>
+    </task>
+    <task id="LOCAL-00067" summary="orden">
+      <created>1465160525093</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1465160525093</updated>
+    </task>
+    <task id="LOCAL-00068" summary="orden">
+      <created>1465161358960</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1465161358960</updated>
+    </task>
+    <task id="LOCAL-00069" summary="orden">
+      <created>1465170976653</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1465170976653</updated>
+    </task>
+    <task id="LOCAL-00070" summary="corregidos refrescos">
+      <created>1465174837963</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1465174837963</updated>
+    </task>
+    <task id="LOCAL-00071" summary="corregidos refrescos">
+      <created>1465175392285</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1465175392285</updated>
+    </task>
+    <task id="LOCAL-00072" summary="muestra total de orden">
+      <created>1465175482774</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1465175482774</updated>
+    </task>
+    <task id="LOCAL-00073" summary="muestra total de orden">
+      <created>1465175570262</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1465175570262</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107234000" />
+    <option name="totallyTimeSpent" value="119830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15729167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -856,7 +901,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22198732" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22198732" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -891,7 +936,9 @@
     <MESSAGE value="un chorro de cosas" />
     <MESSAGE value="agregar paquete&#10;" />
     <MESSAGE value="orden" />
-    <option name="LAST_COMMIT_MESSAGE" value="orden" />
+    <MESSAGE value="corregidos refrescos" />
+    <MESSAGE value="muestra total de orden" />
+    <option name="LAST_COMMIT_MESSAGE" value="muestra total de orden" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -901,15 +948,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/View/admin/index.php" />
-    <entry file="file://$PROJECT_DIR$/View/headerAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/bodyCliente.php" />
     <entry file="file://$PROJECT_DIR$/View/htmlhead.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -953,13 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/principal/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1049,26 +1080,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Especial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Esquema BD/Pizzeria2_backup.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="399" column="3" selection-start-line="399" selection-start-column="3" selection-end-line="399" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Refresco.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1129,21 +1144,6 @@
             <marker date="1465149328241" expanded="true" signature="1939:1969" placeholder="delete from " />
             <marker date="1465149328241" expanded="true" signature="2306:2338" placeholder="SELECT * FRO... Paquete" />
             <marker date="1465149328241" expanded="true" signature="2933:2979" placeholder="SELECT * FRO... orden_paquete" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/RefrescoDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-          <folding>
-            <marker date="1465149328034" expanded="true" signature="276:305" placeholder="SELECT * FRO... Refresco" />
-            <marker date="1465149328034" expanded="true" signature="761:793" placeholder="insert into Refresco... " />
-            <marker date="1465149328034" expanded="true" signature="1156:1192" placeholder="update Refre... " />
-            <marker date="1465149328034" expanded="true" signature="1553:1584" placeholder="delete from " />
-            <marker date="1465149328034" expanded="true" signature="1921:1954" placeholder="SELECT * FRO... Refresco" />
-            <marker date="1465149328034" expanded="true" signature="2456:2503" placeholder="SELECT * FRO... orden_refresco" />
           </folding>
         </state>
       </provider>
@@ -1231,14 +1231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/ordenar/setPaquete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="75" column="59" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/Orden.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -1252,36 +1244,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD/Conexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/ordenar/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/ordenar/setRefresco.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1465155109867" expanded="true" signature="444:593" placeholder="..." />
-            <marker date="1465155109867" expanded="true" signature="468:514" placeholder="{...}" />
-            <marker date="1465155109867" expanded="true" signature="541:581" placeholder="{...}" />
-            <marker date="1465155109867" expanded="true" signature="652:849" placeholder="{...}" />
-            <marker date="1465155109867" expanded="true" signature="876:1000" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1301,56 +1263,176 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/OrdenController.php">
+    <entry file="file://$PROJECT_DIR$/View/principal/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/ordenar/getLocation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/ordenar/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Refresco.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/ordenar/setRefresco.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="34" column="60" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
+          <folding>
+            <marker date="1465174836183" expanded="true" signature="876:877" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/ordenar/setPaquete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/RefrescoDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="95" column="43" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+          <folding>
+            <marker date="1465174836128" expanded="true" signature="276:305" placeholder="SELECT * FRO... Refresco" />
+            <marker date="1465174836128" expanded="true" signature="777:814" placeholder="insert into Refresco... " />
+            <marker date="1465174836128" expanded="true" signature="1180:1230" placeholder="update Refre... " />
+            <marker date="1465174836128" expanded="true" signature="1610:1641" placeholder="delete from " />
+            <marker date="1465174836128" expanded="true" signature="1978:2011" placeholder="SELECT * FRO... Refresco" />
+            <marker date="1465174836128" expanded="true" signature="2529:2576" placeholder="SELECT * FRO... orden_refresco" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="47" column="76" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
+        <state relative-caret-position="425">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding>
-            <marker date="1465158968075" expanded="true" signature="313:339" placeholder="SELECT * FRO... Orden" />
-            <marker date="1465158968075" expanded="true" signature="1248:1392" placeholder="insert into Orden... " />
-            <marker date="1465158968075" expanded="true" signature="1709:1750" placeholder="insert into orden_pizza... " />
-            <marker date="1465158968075" expanded="true" signature="1942:1986" placeholder="insert into orden_especial... " />
-            <marker date="1465158968075" expanded="true" signature="2176:2221" placeholder="insert into orden_paquete... " />
-            <marker date="1465158968075" expanded="true" signature="2440:2482" placeholder="insert into orden_refresco... " />
-            <marker date="1465158968075" expanded="true" signature="2927:3084" placeholder="update Orden... " />
-            <marker date="1465158968075" expanded="true" signature="3653:3692" placeholder="insert into orden_pizza... " />
-            <marker date="1465158968075" expanded="true" signature="4157:4214" placeholder="delete from " />
-            <marker date="1465158968075" expanded="true" signature="4168:4214" placeholder="insert into orden_pizza... " />
-            <marker date="1465158968075" expanded="true" signature="4650:4692" placeholder="insert into orden_especial... " />
-            <marker date="1465158968075" expanded="true" signature="5157:5220" placeholder="delete from " />
-            <marker date="1465158968075" expanded="true" signature="5652:5693" placeholder="insert into orden_paquete... " />
-            <marker date="1465158968075" expanded="true" signature="6158:6219" placeholder="delete from " />
-            <marker date="1465158968075" expanded="true" signature="6653:6695" placeholder="insert into orden_refresco... " />
-            <marker date="1465158968075" expanded="true" signature="7160:7223" placeholder="delete from " />
-            <marker date="1465158968075" expanded="true" signature="7614:7642" placeholder="delete from " />
-            <marker date="1465158968075" expanded="true" signature="7978:8008" placeholder="SELECT * FRO... Orden" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/ordenar/myOrderList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-          <folding>
-            <marker date="1465158883889" expanded="true" signature="4896:4910" placeholder="..." />
+            <marker date="1465174821707" expanded="true" signature="313:339" placeholder="SELECT * FRO... Orden" />
+            <marker date="1465174821707" expanded="true" signature="1248:1392" placeholder="insert into Orden... " />
+            <marker date="1465174821707" expanded="true" signature="1708:1754" placeholder="insert into orden_pizza... " />
+            <marker date="1465174821707" expanded="true" signature="1946:1995" placeholder="insert into orden_especial... " />
+            <marker date="1465174821707" expanded="true" signature="2185:2233" placeholder="insert into orden_paquete... " />
+            <marker date="1465174821707" expanded="true" signature="2430:2475" placeholder="insert into orden_refresco... " />
+            <marker date="1465174821707" expanded="true" signature="2907:3064" placeholder="update Orden... " />
+            <marker date="1465174821707" expanded="true" signature="3633:3672" placeholder="insert into orden_pizza... " />
+            <marker date="1465174821707" expanded="true" signature="4137:4194" placeholder="delete from " />
+            <marker date="1465174821707" expanded="true" signature="4148:4194" placeholder="insert into orden_pizza... " />
+            <marker date="1465174821707" expanded="true" signature="4630:4672" placeholder="insert into orden_especial... " />
+            <marker date="1465174821707" expanded="true" signature="5137:5200" placeholder="delete from " />
+            <marker date="1465174821707" expanded="true" signature="5632:5673" placeholder="insert into orden_paquete... " />
+            <marker date="1465174821707" expanded="true" signature="6138:6199" placeholder="delete from " />
+            <marker date="1465174821707" expanded="true" signature="6633:6675" placeholder="insert into orden_refresco... " />
+            <marker date="1465174821707" expanded="true" signature="7140:7203" placeholder="delete from " />
+            <marker date="1465174821707" expanded="true" signature="7594:7622" placeholder="delete from " />
+            <marker date="1465174821707" expanded="true" signature="7958:7988" placeholder="SELECT * FRO... Orden" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View/ordenar/confirmar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+        <state relative-caret-position="325">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+          <folding>
+            <marker date="1465180828781" expanded="false" signature="983:1045" placeholder="..." />
+            <marker date="1465180828781" expanded="true" signature="2061:2401" placeholder="..." />
+            <marker date="1465180828781" expanded="false" signature="1152:1172" placeholder="..." />
+            <marker date="1465180828781" expanded="true" signature="2061:2243" placeholder="..." />
+            <marker date="1465180828781" expanded="true" signature="1243:1442" placeholder="..." />
+            <marker date="1465180828781" expanded="false" signature="1383:1399" placeholder="..." />
+            <marker date="1465180828781" expanded="true" signature="1455:1641" placeholder="..." />
+            <marker date="1465180828781" expanded="false" signature="1595:1611" placeholder="..." />
+            <marker date="1465180828781" expanded="true" signature="1653:1834" placeholder="..." />
+            <marker date="1465180828781" expanded="false" signature="1789:1805" placeholder="..." />
+            <marker date="1465180828781" expanded="true" signature="1846:2016" placeholder="..." />
+            <marker date="1465180828781" expanded="false" signature="1968:1984" placeholder="..." />
+            <marker date="1465180828781" expanded="true" signature="2061:2090" placeholder="..." />
+            <marker date="1465180828781" expanded="false" signature="2150:2166" placeholder="..." />
+            <marker date="1465180828781" expanded="true" signature="2101:2228" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/RouteInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Especial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/ordenar/myOrderList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1624">
+          <caret line="121" column="54" selection-start-line="121" selection-start-column="54" selection-end-line="121" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD/Conexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/OrdenController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="142" column="58" selection-start-line="142" selection-start-column="58" selection-end-line="142" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/SucursalController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+          <folding>
+            <marker date="1465180705963" expanded="true" signature="2055:2150" placeholder="update inv_i... " />
+            <marker date="1465180705963" expanded="true" signature="2334:2417" placeholder="update inv_r... " />
+          </folding>
         </state>
       </provider>
     </entry>

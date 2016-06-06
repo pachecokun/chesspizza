@@ -33,6 +33,9 @@ if (isset($_POST['nom'])) {
 }
 else{
 	$orden = OrdenController::getOrdenSesion();
+	if ($orden == null) {
+		header('Location: /');
+	}
 }
 $total = 0.00;
 ?>
@@ -49,19 +52,13 @@ $total = 0.00;
 	</style>
 <?php
 	require_once($pos."body.php");
-$total = 0;
-foreach ($orden->getEspeciales() as $obj) {
-	$total += OrdenController::getPrecioEspecial($obj, $obj->cantidad);
-}
-foreach ($orden->getPaquetes() as $obj) {
-	$total += OrdenController::getPrecioPaquete($obj, $obj->cantidad);
-}
-foreach ($orden->getRefrescos() as $obj) {
-	$total += OrdenController::getPrecioRefresco($obj, $obj->cantidad);
-}
+$total = OrdenController::getPrecioOrden($orden);
+$faltantes = OrdenController::getFaltantes($orden);
 /*echo '<pre>';
 print_r($orden);
 echo '</pre>';*/
+$ingredientes = $faltantes['ingredientes'];
+$refrescos = $faltantes['refrescos'];
 //print_r($_POST);
 ?>
     <!-- Contenido va aquí-->
@@ -94,7 +91,8 @@ echo '</pre>';*/
 					<td>x<?= $paq->cantidad ?></td>
 					<td>Paquete "<?= $paq->getNombre() ?>" con
 						pizza <?= OrdenController::getSizePizza($paq->tamano_pizza) ?> y refresco
-						de <?= OrdenController::getSizeRefresco($paq->tamano_refresco) ?></td>
+						"<?= $paq->getRefresco()->getNombre() ?>"
+					</td>
 					<td>$<?= number_format(OrdenController::getPrecioPaquete($paq), 2) ?></td>
 					<td>$<?= number_format(OrdenController::getPrecioPaquete($paq, $paq->cantidad), 2) ?></td>
 					<td><a href="/ordenar/eliminar?paquete&i=<?= $i ?>">
@@ -105,7 +103,7 @@ echo '</pre>';*/
 			<?php foreach ($orden->getRefrescos() as $i => $ref): ?>
 				<tr>
 					<td>x<?= $ref->cantidad ?></td>
-					<td>Refresco "<?= $ref->getNombre() ?>" <?= OrdenController::getSizeRefresco($ref->tamano) ?></td>
+					<td>Refresco "<?= $ref->getNombre() ?>"</td>
 					<td>$<?= number_format(OrdenController::getPrecioRefresco($ref), 2) ?></td>
 					<td>$<?= number_format(OrdenController::getPrecioRefresco($ref, $ref->cantidad), 2) ?></td>
 					<td><a href="/ordenar/eliminar?refresco&i=<?= $i ?>">
@@ -116,6 +114,24 @@ echo '</pre>';*/
 		</table>
 	</div>
 	<h3 class='total text-info'>Total: <span class='text-success'>$<?=number_format($total,2)?></span></h3>
+<div style="color: red">
+	<?php if (!empty($ingredientes)) { ?>
+		<p style="color:red">No se cuenta con los suficientes ingredientes en sucursal: </p>
+		<ul>
+			<?php foreach ($ingredientes as $ingrediente): ?>
+				<li><?= $ingrediente->getNombre() ?></li>
+			<?php endforeach; ?>
+		</ul>
+	<?php } ?>
+	<?php if (!empty($refrescos)) { ?>
+		<p style="color:red">No se cuenta con los suficientes refrescos en sucursal: </p>
+		<ul>
+			<?php foreach ($refrescos as $refresco): ?>
+				<li><?= $refresco->getNombre() ?></li>
+			<?php endforeach; ?>
+		</ul>
+	<?php } ?>
+</div>
 	<h2>Agregar a mi orden:</h2>
 	<div class='row'>
 		<div class='col-3 col-m-6'>
@@ -137,24 +153,31 @@ echo '</pre>';*/
 	</div>
 	<h2>Finalizar pedido:</h2>
 	<h3>Confirme sus datos</h3>
+<form action="/ordenar/confirmar" method="post">
 	<b>Dirección: </b><br><?= $orden->getDireccion() ?><br><br>
+	<input type="hidden" value='<?= $orden->getDireccion() ?>' name='dir' id='dir'>
 	<b>Nombre de responsable: </b><br><?= $orden->getNombreCliente() ?><br><br>
+	<input type="hidden" value='<?= $orden->getNombreCliente() ?>' name='nom' id='nom'>
 	<b>Teléfono: </b><br><?= $orden->getTelCliente() ?><br><br>
+	<input type="hidden" value='<?= $orden->getTelCliente() ?>' name='tel' id='tel'>
 	<b>Correo electrónico: </b><br><?= $orden->getEmailCliente() ?><br><br><br>
+	<input type="hidden" value='<?= $orden->getEmailCliente() ?>' name='email' id='email'>
+	<input type="hidden" value='<?= number_format($total, 2) ?>' name='tot' id='tot'>
 	<div class='row'>
-	<a href="/orden/confirmar">
 		<div class='col-6 col-m-6'>
 			<a href="/ordenar/?Lat=<?= $orden->getLat() ?>&Lon=<?= $orden->getLon() ?>">
 				<button name='addPaquete' class='btn-success'>Modificar datos</button>
 			</a>
 		</div>
-		<div class='col-6 col-m-6'>
-			<a href="/ordenar/confirmar">
-				<button name='addPaquete' class='btn-success'<?= ($total == 0) ? 'disabled' : '' ?>>Confirmar orden
-				</button>
-			</a>
+		<?php if ($total != 0 && empty($ingredientes) && empty($refrescos)) { ?>
+			<div class='col-6 col-m-6'>
+				<a href="/ordenar/confirmar">
+					<button type='submit' name='addPaquete' class='btn-success'>Confirmar orden</button>
+				</a>
+			</div>
+		<?php } ?>
 		</div>
-	</a>
+</form>
 <?php
 	include_once($pos."footer.php");
 ?>
