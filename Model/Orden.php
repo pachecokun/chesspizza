@@ -17,6 +17,8 @@ class Orden{
     private $paquetes;
     private $refrescos;
 
+    private $operaciones;
+
     /**
      * Orden constructor.
      * @param $id
@@ -34,7 +36,7 @@ class Orden{
      * @param $paquetes
      * @param $refrescos
      */
-    public function __construct($id = null, $fecha_hora = null, $direccion = null, $sucursal_id = null, $repartidor_id = null, $lat = null, $lon = null, $nombre_cliente = null, $tel_cliente = null, $email_cliente = null, $pizzas = array(), $especiales = array(), $paquetes = array(), $refrescos = array())
+    public function __construct($id = null, $fecha_hora = null, $direccion = null, $sucursal_id = null, $repartidor_id = null, $lat = null, $lon = null, $nombre_cliente = null, $tel_cliente = null, $email_cliente = null, $pizzas = array(), $especiales = array(), $paquetes = array(), $refrescos = array(), $operaciones = array())
     {
         $this->id = $id;
         $this->fecha_hora = $fecha_hora;
@@ -50,6 +52,7 @@ class Orden{
         $this->especiales = $especiales;
         $this->paquetes = $paquetes;
         $this->refrescos = $refrescos;
+        $this->operaciones = $operaciones;
     }
 
 
@@ -341,5 +344,27 @@ class Orden{
         return $this;
     }
 
+    /**
+     * @return array
+     */
+    public function getOperaciones()
+    {
+        return $this->operaciones;
+    }
 
+    /**
+     * @param array $operaciones
+     * @return Orden
+     */
+    public function setOperaciones($operaciones)
+    {
+        $this->operaciones = $operaciones;
+        return $this;
+    }
+
+    public function addOperacion($operacion)
+    {
+        $this->operaciones[] = $operacion;
+        return $this;
+    }
 }

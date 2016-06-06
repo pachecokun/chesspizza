@@ -143,6 +143,11 @@ class OrdenController
 		foreach (self::getRefrescos($orden) as $refresco) {
 			SucursalController::reducirInventarioRefresco($sucursal, $refresco);
 		}
+		$op = new Operacion();
+		$op->setStatus(StatusDAO::get(STATUS_CONFIRMADA))
+			->setLat($sucursal->getLat())
+			->setLon($sucursal->getLon());
+		$orden->addOperacion($op);
 		return OrdenDAO::save($orden);
 	}
 

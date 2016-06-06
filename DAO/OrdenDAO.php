@@ -3,6 +3,7 @@
 include_once(__DIR__.'/../Model/Orden.php');
 include_once(__DIR__.'/DAO.php');
 include_once(__DIR__ . '/PaqueteDAO.php');
+include_once(__DIR__ . '/OperacionDAO.php');
 
 class OrdenDAO implements DAO
 {
@@ -17,7 +18,8 @@ class OrdenDAO implements DAO
                 $especiales = EspecialDAO::getOrden($obj['id']);
                 $paquetes = PaqueteDAO::getOrden($obj['id']);
                 $refrescos = RefrescoDAO::getOrden($obj['id']);
-                $sucs[] = new Orden($obj['id'], $obj['fecha_hora'], $obj['direccion'], $obj['Sucursal_id'], $obj['Repartidor_id'], $obj['lat'], $obj['lon'], $obj['nombre_cliente'], $obj['tel_cliente'], $obj['email_cliente'], $pizzas, $especiales, $paquetes, $refrescos);
+                $operaciones = OperacionDAO::getOrden($obj['id']);
+                $sucs[] = new Orden($obj['id'], $obj['fecha_hora'], $obj['direccion'], $obj['Sucursal_id'], $obj['Repartidor_id'], $obj['lat'], $obj['lon'], $obj['nombre_cliente'], $obj['tel_cliente'], $obj['email_cliente'], $pizzas, $especiales, $paquetes, $refrescos, $operaciones);
             }
             return $sucs;
         } catch (Exception $e) {
@@ -47,6 +49,12 @@ class OrdenDAO implements DAO
             foreach ($obj->getRefrescos() as $ob) {
                 Conexion::execute("insert into orden_refresco values(null,?,?,?)", array($obj->getId(), $ob->getId(), $ob->cantidad));
             }
+            foreach ($obj->getOperaciones() as $operacion) {
+                $operacion->setOrdenId($obj->getId());
+                if ($operacion->getId() == null) {
+                    OperacionDAO::save($operacion);
+                }
+            }
             return $obj;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -62,7 +70,15 @@ class OrdenDAO implements DAO
         try {
             $orig = self::get($obj->getId());
             Conexion::execute("update Orden set id=?, fecha_hora=?, direccion=?, Sucursal_id=?, Repartidor_id=?, lat=?, lon=?, nombre_cliente=?, tel_cliente=?, email_cliente=? where id = ?",array($obj->getFechaHora(),$obj->getDireccion(),$obj->getSucursalId(),$obj->getRepartidorId(),$obj->getLat(),$obj->getLon(),$obj->getNombreCliente(),$obj->getTelCliente(),$obj->getEmailCliente(),$obj->getId()));
-            foreach ($obj->getPizzas() as $ob) {
+
+            foreach ($obj->getOperaciones() as $operacion) {
+                $operacion->setOrdenId($obj->getId());
+                if ($operacion->getId() == null) {
+                    OperacionDAO::save($operacion);
+                }
+            }
+
+            /*foreach ($obj->getPizzas() as $ob) {
                 $found = false;
                 foreach ($orig->getPizzas() as $ob2) {
                     if ($ob == $ob2) {
@@ -160,9 +176,7 @@ class OrdenDAO implements DAO
                 if (!$found) {
                     Conexion::execute("delete from orden_refresco where orden_id=? and Refresco_id = ?", array($obj->getId(), $ob->getId()));
                 }
-            }
-
-
+            }*/
 
             return true;
         } catch (Exception $e) {
@@ -207,6 +221,12 @@ class OrdenDAO implements DAO
 							$obj['tel_cliente'],
 							$obj['email_cliente']
 							);
+                $pizzas = PizzaDAO::getOrden($obj['id']);
+                $especiales = EspecialDAO::getOrden($obj['id']);
+                $paquetes = PaqueteDAO::getOrden($obj['id']);
+                $refrescos = RefrescoDAO::getOrden($obj['id']);
+                $operaciones = OperacionDAO::getOrden($obj['id']);
+                return new Orden($obj['id'], $obj['fecha_hora'], $obj['direccion'], $obj['Sucursal_id'], $obj['Repartidor_id'], $obj['lat'], $obj['lon'], $obj['nombre_cliente'], $obj['tel_cliente'], $obj['email_cliente'], $pizzas, $especiales, $paquetes, $refrescos, $operaciones);
             }
             else {
                 return null;
