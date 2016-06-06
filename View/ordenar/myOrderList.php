@@ -149,6 +149,7 @@ echo '</pre>';*/
 		<input type="hidden" value='<?= $orden->getTelCliente() ?>' name='tel' id='tel'>
 		<b>Correo electrónico: </b><br><?= $orden->getEmailCliente() ?><br><br><br>
 		<input type="hidden" value='<?= $orden->getEmailCliente() ?>' name='email' id='email'>
+		<input type="hidden" value='<?= number_format($total,2) ?>' name='tot' id='tot'>
 		<div class='row'>
 			<div class='col-6 col-m-6'>
 				<a href="/ordenar/?Lat=<?= $orden->getLat() ?>&Lon=<?= $orden->getLon() ?>">
