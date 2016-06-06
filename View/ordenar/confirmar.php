@@ -41,7 +41,7 @@ if(!empty($_POST['dir']) AND !empty($_POST['nom']) AND !empty($_POST['tel']) AND
       <table border='0' cellspacing='2' cellpadding='2'>
         <tr>
           <td width='20%' align='center' bgcolor='#FFFFCC'><strong>No. Orden:</strong></td>
-          <td width='80%' align='left'>" . $orden->getId(); . "</td>
+          <td width='80%' align='left'>$orden->getId()</td>
         </tr>
         <tr>
          <td width='20%' align='center' bgcolor='#FFFFCC'><strong>A nombre de:</strong></td>
