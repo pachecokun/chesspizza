@@ -2,6 +2,7 @@
 
 include_once(__DIR__.'/../Model/Sucursal.php');
 include_once(__DIR__.'/DAO.php');
+include_once(__DIR__ . '/OrdenDAO.php');
 
 class SucursalDAO implements DAO
 {
@@ -85,6 +86,19 @@ class SucursalDAO implements DAO
             echo $e->getMessage();
             return null;
         }
+    }
+
+    public static function getOrdenesEspera($sucursal)
+    {
+        $disp = array();
+        $ordenes = OrdenDAO::getAll("Sucursal_id=?", array($sucursal->getId()));
+        foreach ($ordenes as $orden) {
+            foreach ($orden->getOperaciones() as $operacion) ;
+            if ($operacion->getStatus()->getId() == STATUS_CONFIRMADA) {
+                $disp[] = $orden;
+            }
+        }
+        return $disp;
     }
 
 }

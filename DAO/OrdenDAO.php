@@ -68,7 +68,7 @@ class OrdenDAO implements DAO
     {
         try {
             $orig = self::get($obj->getId());
-            Conexion::execute("update Orden set id=?, fecha_hora=?, direccion=?, Sucursal_id=?, Repartidor_id=?, lat=?, lon=?, nombre_cliente=?, tel_cliente=?, email_cliente=? where id = ?",array($obj->getFechaHora(),$obj->getDireccion(),$obj->getSucursalId(),$obj->getRepartidorId(),$obj->getLat(),$obj->getLon(),$obj->getNombreCliente(),$obj->getTelCliente(),$obj->getEmailCliente(),$obj->getId()));
+            Conexion::execute("update Orden set fecha_hora=?, direccion=?, Sucursal_id=?, Repartidor_id=?, lat=?, lon=?, nombre_cliente=?, tel_cliente=?, email_cliente=? where id = ?", array($obj->getFechaHora(), $obj->getDireccion(), $obj->getSucursalId(), $obj->getRepartidorId(), $obj->getLat(), $obj->getLon(), $obj->getNombreCliente(), $obj->getTelCliente(), $obj->getEmailCliente(), $obj->getId()));
 
             foreach ($obj->getOperaciones() as $operacion) {
                 $operacion->setOrdenId($obj->getId());

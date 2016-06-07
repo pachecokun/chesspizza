@@ -96,6 +96,7 @@ class EspecialDAO implements DAO
             $obj = self::get($row['Especial_id']);
             $obj->tamano = $row['tamano'];
             $obj->orilla = OrillaDAO::get($row['orilla_id']);
+            $obj->cantidad = $row['cantidad'];
             $res[] = $obj;
         }
         return $res;

@@ -100,6 +100,7 @@ class PizzaDAO implements DAO
             $obj = self::get($row['Pizza_id']);
             $obj->tamano = $row['tamano'];
             $obj->orilla = OrillaDAO::get($row['orilla_id']);
+            $obj->cantidad = $row['cantidad'];
             $res[] = $obj;
         }
         return $res;

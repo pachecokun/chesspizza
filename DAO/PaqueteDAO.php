@@ -96,8 +96,8 @@ class PaqueteDAO implements DAO
         while ($row = $stm->fetch()) {
             $obj = self::get($row['Paquete_id']);
             $obj->tamano_pizza = $row['tamano_pizza'];
-            $obj->tamano_refresco = $row['tamano_refresco'];
             $obj->orilla = OrillaDAO::get($row['orilla_id']);
+            $obj->cantidad = $row['cantidad'];
             $res[] = $obj;
         }
         return $res;

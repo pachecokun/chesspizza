@@ -1,75 +1,55 @@
 <?php
 
 class Repartidor{
-    private $id;
-    private $nombre;
-    private $tel;
+    private $status;
+    private $empleado;
 
     /**
      * Repartidor constructor.
-     * @param $id
-     * @param $nombre
-     * @param $tel
+     * @param $status
+     * @param $empleado
      */
-    public function __construct($id=null, $nombre=null, $tel=null)
+    public function __construct($status = null, $empleado = null)
     {
-        $this->id = $id;
-        $this->nombre = $nombre;
-        $this->tel = $tel;
+        $this->status = $status;
+        $this->empleado = $empleado;
     }
 
     /**
-     * @return mixed
+     * @return null
      */
-    public function getId()
+    public function getStatus()
     {
-        return $this->id;
+        return $this->status;
     }
 
     /**
-     * @param mixed $id
+     * @param null $status
      * @return Repartidor
      */
-    public function setId($id)
+    public function setStatus($status)
     {
-        $this->id = $id;
+        $this->status = $status;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return null
      */
-    public function getTel()
+    public function getEmpleado()
     {
-        return $this->tel;
+        return $this->empleado;
     }
 
     /**
-     * @param mixed $tel
+     * @param null $empleado
      * @return Repartidor
      */
-    public function setTel($tel)
+    public function setEmpleado($empleado)
     {
-        $this->tel = $tel;
+        $this->empleado = $empleado;
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getNombre()
-    {
-        return $this->nombre;
-    }
-
-    /**
-     * @param mixed $nombre
-     * @return Repartidor
-     */
-    public function setNombre($nombre)
-    {
-        $this->nombre = $nombre;
-        return $this;
-    }
 
 }

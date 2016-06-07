@@ -367,4 +367,11 @@ class Orden{
         $this->operaciones[] = $operacion;
         return $this;
     }
+
+    public function getUltimaOperacion()
+    {
+        $operacion = null;
+        foreach ($this->operaciones as $operacion) ;
+        return $operacion;
+    }
 }
