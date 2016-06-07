@@ -9,7 +9,7 @@ class EmpleadoDAO implements DAO
     {
         try {
             $sucs = array();
-            $stm = Conexion::execute("SELECT * FROM Empleado where ".$cond, $args);
+            $stm = Conexion::execute("SELECT * FROM empleado where ".$cond, $args);
 
             while ($obj = $stm->fetch()) {
                 $sucs[] = new Empleado($obj['id'],$obj['Sucursal_id'],$obj['username'],$obj['password'],$obj['nombre'],$obj['apPaterno'],$obj['apMaterno'],$obj['telefono'],$obj['tipoEmpleado']);
@@ -27,7 +27,7 @@ class EmpleadoDAO implements DAO
     public static function save($obj)
     {
         try {
-            Conexion::execute("insert into Empleado(Sucursal_id,username,password,nombre,apPaterno,apMaterno,telefono,tipoEmpleado) values(?,?,?,?,?,?,?,?)",
+            Conexion::execute("insert into empleado(Sucursal_id,username,password,nombre,apPaterno,apMaterno,telefono,tipoEmpleado) values(?,?,?,?,?,?,?,?)",
 					array($obj->getSucursal(),$obj->getUsername(),$obj->getPassword(),$obj->getNombre(),$obj->getApPaterno(),$obj->getApMaterno,$obj->getTelefono(),$obj->getTipoEmpleado()));
             return true;
         } catch (Exception $e) {
@@ -42,7 +42,7 @@ class EmpleadoDAO implements DAO
     public static function update($obj)
     {
         try {
-            Conexion::execute("update Empleado set Sucursal_id=?, username=?, password=?, nombre=?, apPaterno=?, apMaterno=?, telefono=?, tipoEmpleado=? where id = ?",
+            Conexion::execute("update empleado set Sucursal_id=?, username=?, password=?, nombre=?, apPaterno=?, apMaterno=?, telefono=?, tipoEmpleado=? where id = ?",
 					array($obj->getSucursal(),$obj->getUsername(),$obj->getPassword(),$obj->getNombre(),$obj->getApPaterno(),$obj->getApMaterno,$obj->getTelefono(),$obj->getTipoEmpleado(),$obj->getId()));
             return true;
         } catch (Exception $e) {
@@ -57,7 +57,7 @@ class EmpleadoDAO implements DAO
     public static function delete($id)
     {
         try {
-            Conexion::execute("delete from Empleado where id=?",array($id));
+            Conexion::execute("delete from empleado where id=?",array($id));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -72,10 +72,10 @@ class EmpleadoDAO implements DAO
     public static function get($id)
     {
         try {
-            $stm = Conexion::execute("SELECT * FROM Empleado where id=?",array($id));
+            $stm = Conexion::execute("SELECT * FROM empleado where id=?",array($id));
 
             if ($obj = $stm->fetch()) {
-                return new Repartidor($obj['id'],$obj['nombre'],$obj['tel']);
+                return new Empleado($obj['id'],$obj['Sucursal_id'],$obj['username'],$obj['password'],$obj['nombre'],$obj['apPaterno'],$obj['apMaterno'],$obj['telefono'],$obj['tipoEmpleado']);
             }
             else {
                 return null;
@@ -87,6 +87,30 @@ class EmpleadoDAO implements DAO
             echo $e->getMessage();
             return null;
         }
+    }
+
+    public static function getEmpleadosSucursal($id)
+    {
+        $empleados = array();
+        $stm2 = Conexion::execute("SELECT * FROM empleado where Sucursal_id = ?", array($id));
+        while ($pi = $stm2->fetch()) {
+            $empleados[] = array(
+                'empleado' => self::get($pi['id'])
+            );
+        }
+        return $empleados;
+    }
+
+    public static function getTipoEmpleadosSucursal($id)
+    {
+        $empleados = array();
+        $stm2 = Conexion::execute("SELECT * FROM empleado where Sucursal_id = ? and tipoEmpleado = ?", array($id->getSucursal(), $id->getTipoEmpleado()));
+        while ($pi = $stm2->fetch()) {
+            $empleados[] = array(
+                'empleado' => self::get($pi['id'])
+            );
+        }
+        return $empleados;
     }
 
 }
