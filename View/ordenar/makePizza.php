@@ -1,7 +1,12 @@
 <?php
 	$active = "ordenar";
+	$active = "ordenar";
+	require_once("../../Controller/OrdenController.php");
 	require_once("../layout/navs/cliente.php");
 	require_once("../layout/header.php");
+	require_once("../../Controller/IngredienteController.php");
+
+	$ingredientes = IngredienteController::getAll();
 ?>
     <!-- <head> content aquí -->
 	<style>
@@ -12,6 +17,25 @@
 			font-size: 20px;
 		}
 	</style>
+	<script>
+		function getSelectedText(elementId) {
+			var elt = document.getElementById(elementId);
+
+			if (elt.selectedIndex == -1)
+				return null;
+
+			return elt.options[elt.selectedIndex].text;
+		}
+		function update() {
+			var stam = getSelectedText("size");
+			var sorilla = getSelectedText("orilla");
+			var tam = stam.substring(stam.indexOf('$') + 1);
+			var orilla = sorilla.substring(sorilla.indexOf('$') + 1);
+			var cantidad = document.getElementById("cantidad").value;
+			var precio = (Number(tam) + Number(orilla)) * cantidad;
+			document.getElementById("precio").innerHTML = "$" + precio.toFixed(2);
+		}
+	</script>
 <?php
 	require_once("../layout/body.php");
 ?>
@@ -41,16 +65,9 @@
 		</div>
 		<p>Ingredientes</p>
 		<ul>
-			<li><input type="checkbox" name="ingrediente" value="1">Jamón</li>
-			<li><input type="checkbox" name="ingrediente" value="2">Piña</li>
-			<li><input type="checkbox" name="ingrediente" value="3">Extra queso</li>
-			<li><input type="checkbox" name="ingrediente" value="4">Pepperoni</li>
-			<li><input type="checkbox" name="ingrediente" value="5">Aceitunas</li>
-			<li><input type="checkbox" name="ingrediente" value="6">Jalapeño</li>
-			<li><input type="checkbox" name="ingrediente" value="7">Salchicha Italiana</li>
-			<li><input type="checkbox" name="ingrediente" value="8">Quesillo</li>
-			<li><input type="checkbox" name="ingrediente" value="9">Milanesa</li>
-			<li><input type="checkbox" name="ingrediente" value="10">Pierna</li>
+		<?php foreach ($ingredientes as $ingrediente): ?>
+			<li><input type="checkbox" name="ingrediente" value="<?= $ingrediente->getId() ?>"><?= $ingrediente->getNombre() ?></li>
+		<?php endforeach; ?>
 		</ul>
 		<p>Total <strong class='text-success'>$150</strong></p>
 		<div class='row'>
@@ -62,6 +79,7 @@
 			</div>
 		</div>
 	</form>
+	<script>update()</script>
 <?php
 	include_once("../layout/footer.php");
 ?>
