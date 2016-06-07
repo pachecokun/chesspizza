@@ -1,20 +1,7 @@
 <?php
 	$active = "ordenar";
-	require_once("../../Controller/OrdenController.php");
 	require_once("../layout/navs/cliente.php");
 	require_once("../layout/header.php");
-	require_once("../../Controller/PizzaController.php");
-
-	if (!empty($_POST)) {
-		/*OrdenController::addPizza($_POST['id'], $_POST['orilla'], $_POST['size'], $_POST['cantidad']);*/
-		OrdenController::addPizza(1, 1, 1, 1);
-	}
-
-	$armada = PizzaDAO::get(1);
-	$orillas = OrillaDAO::getAll();
-
-	$precio = PizzaController::getPrecio($armada);
-
 ?>
     <!-- <head> content aquí -->
 	<style>
@@ -25,30 +12,11 @@
 			font-size: 20px;
 		}
 	</style>
-	<script>
-		function getSelectedText(elementId) {
-			var elt = document.getElementById(elementId);
-
-			if (elt.selectedIndex == -1)
-				return null;
-
-			return elt.options[elt.selectedIndex].text;
-		}
-		function update() {
-			var stam = getSelectedText("size");
-			var sorilla = getSelectedText("orilla");
-			var tam = stam.substring(stam.indexOf('$') + 1);
-			var orilla = sorilla.substring(sorilla.indexOf('$') + 1);
-			var cantidad = document.getElementById("cantidad").value;
-			var precio = (Number(tam) + Number(orilla)) * cantidad;
-			document.getElementById("precio").innerHTML = "$" + precio.toFixed(2);
-		}
-	</script>
 <?php
 	require_once("../layout/body.php");
 ?>
     <!-- Contenido va aquí-->
-  <h1>Armar Pizza</h1>
+    <h1>Armar Pizza</h1>
 	<form action='myOrderList' method="post">
 		<div class='row'>
 			<div class='col-4 col-md-6'>
@@ -94,8 +62,6 @@
 			</div>
 		</div>
 	</form>
-
-	<script>update()</script>
 <?php
 	include_once("../layout/footer.php");
 ?>
