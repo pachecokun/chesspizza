@@ -54,9 +54,6 @@ $total = 0.00;
 	require_once($pos."body.php");
 $total = OrdenController::getPrecioOrden($orden);
 $faltantes = OrdenController::getFaltantes($orden);
-/*echo '<pre>';
-print_r($orden);
-echo '</pre>';*/
 $ingredientes = $faltantes['ingredientes'];
 $refrescos = $faltantes['refrescos'];
 //print_r($_POST);
@@ -72,6 +69,19 @@ $refrescos = $faltantes['refrescos'];
 				<td>Total</td>
 				<td>Eliminar</td>
 			</tr>
+			<?php foreach ($orden->getPizzas() as $i => $pizza): ?>
+				<tr>
+					<td>x<?= $pizza->cantidad ?></td>
+					<td>Pizza personalizada tamaño <?= $pizza->tamano ?>, orilla
+						"<?= $pizza->orilla->getNombre() ?>"
+					</td>
+					<td>$<?= number_format(OrdenController::getPrecioPizza($pizza), 2) ?></td>
+					<td>$<?= number_format(OrdenController::getPrecioPizza($pizza, $pizza->cantidad), 2) ?></td>
+					<td><a href="/ordenar/eliminar?especial&i=<?= $i ?>">
+							<button type='submit' name='addPaquete'>Eliminar</button>
+						</a></td>
+				</tr>
+			<?php endforeach; ?>
 			<?php foreach ($orden->getEspeciales() as $i => $pizza): ?>
 				<tr>
 					<td>x<?= $pizza->cantidad ?></td>
@@ -164,7 +174,7 @@ $refrescos = $faltantes['refrescos'];
 	<input type="hidden" value='<?= number_format($total, 2) ?>' name='tot' id='tot'>
 	<div class='row'>
 		<div class='col-6 col-m-6'>
-			<a href="/ordenar/?Lat=<?= $orden->getLat() ?>&Lon=<?= $orden->getLon() ?>">
+			<a href="/ordenar/?Lat=<?= $orden->getLat() ?>&Lon=<?= $orden->getLon() ?>?datos=1">
 				<button name='addPaquete' class='btn-success'>Modificar datos</button>
 			</a>
 		</div>

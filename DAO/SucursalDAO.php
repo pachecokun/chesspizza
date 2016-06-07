@@ -94,7 +94,7 @@ class SucursalDAO implements DAO
         $ordenes = OrdenDAO::getAll("Sucursal_id=?", array($sucursal->getId()));
         foreach ($ordenes as $orden) {
             foreach ($orden->getOperaciones() as $operacion) ;
-            if ($operacion->getStatus()->getId() == STATUS_CONFIRMADA) {
+            if ($operacion->getStatus()->getId() == STATUS_LISTA) {
                 $disp[] = $orden;
             }
         }

@@ -6,8 +6,24 @@
 	require_once("../layout/header.php");
 	require_once("../../Controller/IngredienteController.php");
 
+$orden = OrdenController::getOrdenSesion();
+
 	$ingredientes = IngredienteController::getAll();
 	$orillas = OrillaDAO::getAll();
+if (!empty($_POST)) {
+	print_r($_POST);
+	$ingredientes = array();
+	foreach ($_POST['ingredientes'] as $ing => $val) {
+		$ingredientes[] = IngredienteDAO::get($ing);
+	}
+	$pizza = new Pizza();
+	$pizza->setIngredientes($ingredientes);
+	$pizza = PizzaDAO::save($pizza);
+	print_r($pizza);
+	$orden->addPizza($pizza, OrillaDAO::get($_POST['orilla']), $_POST['size'], $_POST['cantidad']);
+	OrdenController::setOrdenSesion($orden);
+	header('Location: /ordenar/myOrderList');
+}
 ?>
     <!-- <head> content aquí -->
 	<style>
@@ -42,7 +58,7 @@
 ?>
     <!-- Contenido va aquí-->
     <h1>Armar Pizza</h1>
-	<form action='myOrderList' method="post">
+<form method="post">
 		<p>Tamaño</p>
 		<select name='size' id="size" onchange="update()">
 			<option value='0'>Chica</option>
@@ -58,7 +74,8 @@
 		<p>Ingredientes</p>
 		<ul>
 		<?php foreach ($ingredientes as $ingrediente): ?>
-			<li><input type="checkbox" name="ingrediente" value="<?= $ingrediente->getId() ?>"><?= $ingrediente->getNombre() ?></li>
+			<li><input type="checkbox"
+					   name="ingredientes[<?= $ingrediente->getId() ?>]"><?= $ingrediente->getNombre() ?></li>
 		<?php endforeach; ?>
 		</ul>
 		<p>No. de pizzas</p>
@@ -66,7 +83,6 @@
 			<input type='number' name='cantidad' id="cantidad" placeholder='cantidad' value="1" min="1"
 					 onchange="update()" onkeyup="update()"/>
 		</div>
-		<p>Total <strong class='text-success'>$0</strong></p>
 		<div class='row'>
 			<div class='col-6'>
 				<a href='myOrderList'><button type='button' class='btn-danger'>Cancelar</button></a>

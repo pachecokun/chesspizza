@@ -97,6 +97,15 @@ class OrdenController
 		header('Location: /ordenar/myOrderList');
 	}
 
+	public static function getPrecioPizza($pizza, $cantidad = 1)
+	{
+		$precio = 50;
+		foreach ($pizza->getIngredientes() as $ingrediente) {
+			$precio += $ingrediente->getPrecio();
+		}
+		return $precio * $cantidad;
+	}
+
 	public static function getPrecioPaquete($paquete, $cantidad = 1)
 	{
 		$precio = $paquete->getPrecio();
@@ -154,6 +163,9 @@ class OrdenController
 	public static function getPrecioOrden($orden)
 	{
 		$total = 0;
+		foreach ($orden->getPizzas() as $obj) {
+			$total += self::getPrecioPizza($obj, $obj->cantidad);
+		}
 		foreach ($orden->getEspeciales() as $obj) {
 			$total += self::getPrecioEspecial($obj, $obj->cantidad);
 		}
@@ -205,7 +217,7 @@ class OrdenController
 	public static function getIngredientes($orden)
 	{
 		$ingredientes = array();
-		foreach ($orden->getPizzas() as $pizza) {
+		/*foreach ($orden->getPizzas() as $pizza) {
 			foreach ($pizza->getIngredientes() as $ing1) {
 				$found = false;
 				foreach ($ingredientes as $i => $ing2) {
@@ -220,7 +232,7 @@ class OrdenController
 					$ingredientes[] = $ing1;
 				}
 			}
-		}
+		}*/
 		foreach ($orden->getEspeciales() as $especial) {
 			foreach ($especial->getPizza()->getIngredientes() as $ing1) {
 				$found = false;

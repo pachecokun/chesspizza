@@ -15,6 +15,7 @@ class PizzaDAO implements DAO
 
             while ($obj = $stm->fetch()) {
                 $sucs[] = new Pizza($obj['id'], IngredienteDAO::getIngredientesPizza($obj['id']));
+
             }
             return $sucs;
         } catch (Exception $e) {
@@ -30,10 +31,11 @@ class PizzaDAO implements DAO
     {
         try {
             Conexion::execute("insert into Pizza values(?)", array($obj->getId()));
+            $id = Conexion::lastId();
             foreach ($obj->getIngredientes() as $ingrediente) {
-                Conexion::execute("insert into pizza_ingrediente values(?,?)", array($obj->getId(), $ingrediente->getId()));
+                Conexion::execute("insert into pizza_ingrediente values(?,?)", array($ingrediente->getId(), $id));
             }
-            return true;
+            return self::get($id);
         } catch (Exception $e) {
             echo $e->getMessage();
             return false;

@@ -46,6 +46,15 @@ class IngredienteController{
 			return InvIngredienteDAO::save(new InvIngrediente($idSuc, $idIng, $cantidad));
 		}
 	}
-	
+
+	public static function getPizza($pizza)
+	{
+		$res = array();
+		$stm = Conexion::execute("select*from pizza_ingredeinte where Pizza_id=?", array($pizza->getId()));
+		while ($row = $stm->fetch()) {
+			$res[] = self::get($row['Ingrediente_id']);
+		}
+		return $res;
+	}
 }
 ?>
