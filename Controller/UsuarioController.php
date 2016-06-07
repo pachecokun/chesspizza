@@ -2,6 +2,7 @@
 	require_once __DIR__ . "/../DAO/EmpleadoDAO.php";
 	require_once __DIR__ . "/../DAO/SucursalDAO.php";
 	class UsuarioController{
+		
 		public static function login($usr, $psw){
 			$emp = EmpleadoDAO::getAll("username=? and password=?",array($usr, $psw));
 			if(!empty($emp) && count($emp) == 1){
@@ -21,6 +22,14 @@
 				unset($_SESSION['empleado']);
 				header("location:/");
 			}
+		}
+		
+		public static function getEmpleado($id){
+			return EmpleadoDAO::get($id);
+		}
+		
+		public static function changePassword($empleado, $newPassword){
+			return EmpleadoDAO::update($empleado->setPassword($newPassword));
 		}
 	}
 ?>

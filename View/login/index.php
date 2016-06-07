@@ -32,7 +32,7 @@
 ?>
 	<!-- Contenido va aquí-->
 	<h1>Iniciar sesión</h1>
-	
+	<div id=message></div>
 	<form action="../login" method="post" id="form">
 		<input type="text" name="user" placeholder="Nombre de usuario" id="user" autocomplete="off"/>
 		<input type="password" name="pass" placeholder="Contraseña" id="pass" />

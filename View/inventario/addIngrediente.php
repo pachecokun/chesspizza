@@ -12,7 +12,7 @@
 		$success= IngredienteController::registrarIngredienteSuc($_POST['id'], $_SESSION['empleado']['sucursal'], $_POST['cantidad']);
 		if($success){
 			$_SESSION['message']= array("success", "Cantidad agredada a inventario");
-			header("location:../Inventario");
+			header("location:../inventario");
 			exit();
 		}
 		else{
