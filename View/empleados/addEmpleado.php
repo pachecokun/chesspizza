@@ -1,6 +1,5 @@
 <?php
 	$active = "empleados";
-	$activeSub = "showIngredientes";
 	$userSession = 3;
 	
 	require_once("../layout/navs/gerente.php");
