@@ -3,7 +3,7 @@
 	require_once("../layout/navs/login.php");
 	require_once("../layout/header.php");
 	require_once("../../Controller/UsuarioController.php");
-	
+
 	if($_SESSION['empleado']['tipoEmpleado'] == 3){
 		require_once("../layout/navs/gerente.php");
 	}
@@ -11,7 +11,7 @@
 		require_once("../layout/navs/repartidor.php");
 	}
 	else if($_SESSION['empleado']['tipoEmpleado'] == 1){
-		require_once("../layout/navs/chef.php");
+		//require_once("../layout/navs/chef.php");
 	}
 	else{
 		$_SESSION['message'] = array("danger", "Acceso denegado");
