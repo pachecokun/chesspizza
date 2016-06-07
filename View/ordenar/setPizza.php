@@ -45,7 +45,7 @@ require_once("../layout/body.php");
     <!-- Contenido va aquí-->
     <h1>Preferencias de la pizza</h1>
 	<h3><?= $especial->getNombre() ?></h3>
-	<form action='myOrderList' method="post">
+<form method="post">
 		<input type='hidden' name='id' value='<?= $especial->getId() ?>'/>
 		<p>Tamaño</p>
 		<select name='size' id="size" onchange="update()">
