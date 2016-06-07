@@ -1,10 +1,9 @@
 <?php
 $pos = ""; //fix para la ubicación relativa en las rutas.
 $active = "inicio";
+$userSession = 1;
 $navElements = array(
     "inicio" => array("CONSULTAR ÓRDENES", "menu", ""),
-    "sucursales" => array("SUCURSALES", "sucursales", ""),
-    "inicio_sesion" => array("CERRAR SESIÓN", "iniciar_sesion", "")
 );
 include_once($pos . "../layout/header.php");
 require_once($pos . "../../Controller/ChefController.php");
@@ -48,8 +47,8 @@ include_once($pos . "../layout/body.php");
 
 <?php
 $ordenes = ChefController::getOrdenesDeSucursal($_SESSION['empleado']['sucursal']);
-if (count($ordenes) == 0) {
-
+if (count($ordenes) == 0 || $ordenes == null) {
+    echo("<h3>No hay ordenes disponibles</h3>");
 } else {
     foreach ($ordenes as $orden) {
         echo(" <div class=\"orden\">");
@@ -90,7 +89,22 @@ if (count($ordenes) == 0) {
         }
         echo("</table>");
         echo("<div class=\"lista\">");
-        echo("<button>Orden lista</button>");
+        $operacion = $orden->getUltimaOperacion();
+        $status = $operacion->getStatus()->getId();
+        if ($status == STATUS_CONFIRMADA) {
+            echo("<form action='/chef/ingresarHorno' method='POST'>");
+            echo("<input type='hidden' name='idOrden' value='" . $orden->getId() . "'/>");
+            echo("<input type='submit' value='Meter al horno'/>");
+            echo("</form>");
+        } else if ($status == STATUS_HORNO) {
+            echo("<form action='/chef/ordenLista' method='POST'>");
+            echo("<input type='hidden' name='idOrden' value='" . $orden->getId() . "'/>");
+            echo("<input type='submit' value='Orden lista'/>");
+            echo("</form>");
+        } else {
+            echo($status);
+        }
+
         echo("</div>");
         echo("</div>");
     }

@@ -5,7 +5,7 @@
             if(navigator.geolocation){
                 navigator.geolocation.getCurrentPosition(locate);
             }else{
-                document.write("Este navegador no soporta la geolocalización...");
+                alert("No se pudo obtener su localización");
             }
         }
 

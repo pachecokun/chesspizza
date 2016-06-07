@@ -11,11 +11,20 @@ class ChefController
 {
     public static function getOrdenesDeSucursal($idSucursal)
     {
+
         $ordenes = OrdenDAO::getAll("Sucursal_id = ?", array($idSucursal));
-        if ($ordenes == null) {
-            $_SESSION['message'] = array("danger", "Hubo un error la base de datos");
-            header("location: /");
+        $result = array();
+        foreach ($ordenes as $orden) {
+            $ultimaOperacion = $orden->getUltimaOperacion();
+            $status = $ultimaOperacion->getStatus();
+            if ($status->getId() == STATUS_CONFIRMADA || $status->getId() == STATUS_HORNO) {
+                $array[] = $orden;
+            }
         }
-        return $ordenes;
+        /* if ($ordenes == null) {
+             $_SESSION['message'] = array("danger", "Hubo un error la base de datos");
+             //header("location: /");
+         }*/
+        return $array;
     }
 }
