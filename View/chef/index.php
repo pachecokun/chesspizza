@@ -11,7 +11,11 @@ require_once($pos . "../../Controller/ChefController.php");
 
 
     <title><?php echo $title; ?>Órdenes</title>
-
+    <script>
+        window.setTimeout(function () {
+            location.reload();
+        }, 30 * 1000);
+    </script>
     <!-- <head> content aquí -->
     <style>
         .orden {
