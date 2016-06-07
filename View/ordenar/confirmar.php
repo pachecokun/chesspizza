@@ -1,6 +1,6 @@
 <?php
 require_once "../../Controller/OrdenController.php";
-require_once "../../Controller/RutaController.php";
+require_once "../../Controller/RutasController.php";
 
 $orden = OrdenController::confirmarOrden();
 OrdenController::limpiarSesion();

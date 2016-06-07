@@ -38,20 +38,20 @@
       <file leaf-file-name="confirmar.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/View/ordenar/confirmar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="67" column="105" selection-start-line="67" selection-start-column="105" selection-end-line="67" selection-end-column="105" />
+            <state relative-caret-position="34">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
               <folding>
-                <marker date="1465290253263" expanded="false" signature="1059:1121" placeholder="..." />
-                <marker date="1465290253263" expanded="true" signature="1122:2504" placeholder="..." />
-                <marker date="1465290253263" expanded="false" signature="1228:1248" placeholder="..." />
-                <marker date="1465290253263" expanded="true" signature="1319:1489" placeholder="..." />
-                <marker date="1465290253263" expanded="true" signature="1502:1663" placeholder="..." />
-                <marker date="1465290253263" expanded="true" signature="1675:1831" placeholder="..." />
-                <marker date="1465290253263" expanded="true" signature="1843:1988" placeholder="..." />
-                <marker date="1465290253263" expanded="true" signature="2113:2142" placeholder="..." />
-                <marker date="1465290253263" expanded="true" signature="2113:2295" placeholder="..." />
-                <marker date="1465290253263" expanded="true" signature="2113:2504" placeholder="..." />
-                <marker date="1465290253263" expanded="true" signature="2153:2280" placeholder="..." />
+                <marker date="1465290359450" expanded="false" signature="1060:1122" placeholder="..." />
+                <marker date="1465290359450" expanded="true" signature="1123:2507" placeholder="..." />
+                <marker date="1465290359450" expanded="false" signature="1229:1249" placeholder="..." />
+                <marker date="1465290359450" expanded="true" signature="1320:1490" placeholder="..." />
+                <marker date="1465290359450" expanded="true" signature="1503:1664" placeholder="..." />
+                <marker date="1465290359450" expanded="true" signature="1676:1832" placeholder="..." />
+                <marker date="1465290359450" expanded="true" signature="1844:1989" placeholder="..." />
+                <marker date="1465290359450" expanded="true" signature="2114:2143" placeholder="..." />
+                <marker date="1465290359450" expanded="true" signature="2114:2296" placeholder="..." />
+                <marker date="1465290359450" expanded="true" signature="2114:2507" placeholder="..." />
+                <marker date="1465290359450" expanded="true" signature="2154:2281" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -674,14 +674,7 @@
       <workItem from="1465137022470" duration="38955000" />
       <workItem from="1465219652894" duration="4740000" />
       <workItem from="1465254595678" duration="5685000" />
-      <workItem from="1465268831046" duration="19059000" />
-    </task>
-    <task id="LOCAL-00032" summary="agregadas funciones de dao">
-      <created>1462765017026</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1462765017026</updated>
+      <workItem from="1465268831046" duration="19169000" />
     </task>
     <task id="LOCAL-00033" summary="agregadas funciones de dao">
       <created>1462765069501</created>
@@ -1019,11 +1012,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465286003661</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="rutas">
+      <created>1465290263499</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1465290263499</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154985000" />
+    <option name="totallyTimeSpent" value="155095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1556,20 +1556,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/View/ordenar/confirmar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="67" column="105" selection-start-line="67" selection-start-column="105" selection-end-line="67" selection-end-column="105" />
+        <state relative-caret-position="34">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
           <folding>
-            <marker date="1465290253263" expanded="false" signature="1059:1121" placeholder="..." />
-            <marker date="1465290253263" expanded="true" signature="1122:2504" placeholder="..." />
-            <marker date="1465290253263" expanded="false" signature="1228:1248" placeholder="..." />
-            <marker date="1465290253263" expanded="true" signature="1319:1489" placeholder="..." />
-            <marker date="1465290253263" expanded="true" signature="1502:1663" placeholder="..." />
-            <marker date="1465290253263" expanded="true" signature="1675:1831" placeholder="..." />
-            <marker date="1465290253263" expanded="true" signature="1843:1988" placeholder="..." />
-            <marker date="1465290253263" expanded="true" signature="2113:2142" placeholder="..." />
-            <marker date="1465290253263" expanded="true" signature="2113:2295" placeholder="..." />
-            <marker date="1465290253263" expanded="true" signature="2113:2504" placeholder="..." />
-            <marker date="1465290253263" expanded="true" signature="2153:2280" placeholder="..." />
+            <marker date="1465290359450" expanded="false" signature="1060:1122" placeholder="..." />
+            <marker date="1465290359450" expanded="true" signature="1123:2507" placeholder="..." />
+            <marker date="1465290359450" expanded="false" signature="1229:1249" placeholder="..." />
+            <marker date="1465290359450" expanded="true" signature="1320:1490" placeholder="..." />
+            <marker date="1465290359450" expanded="true" signature="1503:1664" placeholder="..." />
+            <marker date="1465290359450" expanded="true" signature="1676:1832" placeholder="..." />
+            <marker date="1465290359450" expanded="true" signature="1844:1989" placeholder="..." />
+            <marker date="1465290359450" expanded="true" signature="2114:2143" placeholder="..." />
+            <marker date="1465290359450" expanded="true" signature="2114:2296" placeholder="..." />
+            <marker date="1465290359450" expanded="true" signature="2114:2507" placeholder="..." />
+            <marker date="1465290359450" expanded="true" signature="2154:2281" placeholder="..." />
           </folding>
         </state>
       </provider>
