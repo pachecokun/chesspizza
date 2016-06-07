@@ -62,6 +62,7 @@
 			<li><input type="checkbox" name="ingrediente" value="<?= $ingrediente->getId() ?>"><?= $ingrediente->getNombre() ?></li>
 		<?php endforeach; ?>
 		</ul>
+		<p>No. de pizzas</p>
 		<div class='form-group'>
 			<input type='number' name='cantidad' id="cantidad" placeholder='cantidad' value="1" min="1"
 					 onchange="update()" onkeyup="update()"/>
