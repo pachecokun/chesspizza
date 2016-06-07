@@ -74,7 +74,7 @@ if (!is_null($nearestSucursal)) {
 		<div class='form-group'>
 			Datos de contacto
 			<input type='text' required placeholder='Nombre' name="nom"/>
-			<input type='number' required placeholder='Teléfono' name="tel"/>
+			<input type='tel' required placeholder='Teléfono' name="tel"/>
 			<input type='email' required placeholder='Correo Electrónico' name="email"/>
 		</div>
 	<input type='submit' value="Siguiente paso"/>
