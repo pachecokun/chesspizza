@@ -13,7 +13,7 @@
 				header("location: ../gerente");
 			}
 			else if($_SESSION['empleado']['tipoEmpleado'] == 2){
-				header("location: ../repartidor");
+				header("location: ../Repartidor");
 			}
 			else if($_SESSION['empleado']['tipoEmpleado'] == 1){
 				header("location: ../chef");

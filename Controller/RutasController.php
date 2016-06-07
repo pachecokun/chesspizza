@@ -159,7 +159,7 @@ class RutasController
                             break;
                         }
                         $orden->setRepartidorId($repartidor->getEmpleado()->getId());
-                        $orden->addOperacion(new Operacion(null, $orden->getId(), null, $sucursal->getLat(), $sucursal->getLon(), StatusDAO::get(STATUS_ESPERA_REPARTIDOR)));
+                        $orden->addOperacion(new Operacion(null, $orden->getId(), null, $sucursal->getLat(), $sucursal->getLon(), StatusDAO::get(STATUS_EN_CAMINO)));
                         OrdenDAO::update($orden);
                         $ruta[] = $orden;
                     }
@@ -169,7 +169,7 @@ class RutasController
                             break;
                         }
                         $orden->setRepartidorId($repartidor->getEmpleado()->getId());
-                        $orden->addOperacion(new Operacion(null, $orden->getId(), null, $sucursal->getLat(), $sucursal->getLon(), StatusDAO::get(STATUS_ESPERA_REPARTIDOR)));
+                        $orden->addOperacion(new Operacion(null, $orden->getId(), null, $sucursal->getLat(), $sucursal->getLon(), StatusDAO::get(STATUS_EN_CAMINO)));
                         OrdenDAO::update($orden);
                         $ruta[] = $orden;
                     }

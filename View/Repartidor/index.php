@@ -1,11 +1,14 @@
 <?php
+
+$userSession = 2;
+require_once("../layout/navs/repartidor.php");
+require_once("../layout/header.php");
+
 require_once "../../Controller/RutasController.php";
 require_once "../../Controller/RepartidorController.php";
 
-$active = "ordenar";
-require_once("../layout/navs/cliente.php");
-require_once("../layout/header.php");
-$suc = SucursalDAO::get(RepartidorDAO::get($_GET['id'])->getEmpleado()->getSucursal());
+
+$suc = SucursalDAO::get(RepartidorDAO::get($_SESSION['empleado']['id'])->getEmpleado()->getSucursal());
 RutasController::getRutas($suc);
 ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTNw24eYAdlQdFZOQeTZEdDCJmUoClqG4&language=es"
@@ -71,7 +74,7 @@ RutasController::getRutas($suc);
     function getRuta() {
         var divordenes = document.getElementById("ordenes");
         var req = new XMLHttpRequest();
-        req.open("GET", "/Repartidor/xmlruta?id=<?=$_GET['id']?>");
+        req.open("GET", "/Repartidor/xmlruta?id=<?=$_SESSION['empleado']['id']?>");
         req.send();
         req.onreadystatechange = function () {
             if (req.readyState == 4 && req.status == 200) {
@@ -90,7 +93,7 @@ RutasController::getRutas($suc);
                     var titulo2 = document.createElement("h2");
                     titulo2.textContent = "Cliente: " + orden.getAttribute("cliente");
                     var linkentregar = document.createElement("a");
-                    linkentregar.href = "/Repartidor/confirmar?id=" + orden.getAttribute("id") + "&rep=" +<?=$_GET['id']?>;
+                    linkentregar.href = "/Repartidor/confirmar?id=" + orden.getAttribute("id") + "&rep=" +<?=$_SESSION['empleado']['id']?>;
                     var btnentregar = document.createElement("button");
                     btnentregar.textContent = "Confirmar entrega";
                     btnentregar.setAttribute("class", "btn-success");
