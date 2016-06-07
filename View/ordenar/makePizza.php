@@ -45,9 +45,11 @@
 			</div>
 		</div>
 		<p>Ingredientes</p>
+		<ul>
 		<?php foreach ($ingredientes as $ingrediente): ?>
-			<li><input type="checkbox" name="ingrediente" value="<?= $ingrediente->getId() ?>"></li>
+			<li><input type="checkbox" name="ingrediente" value="<?= $ingrediente->getId() ?>"><?= $ingrediente->getName() ?></li>
 		<?php endforeach; ?>
+		</ul>
 		<ul>
 			<li><input type="checkbox" name="ingrediente" value="1">Jamón</li>
 			<li><input type="checkbox" name="ingrediente" value="2">Piña</li>
