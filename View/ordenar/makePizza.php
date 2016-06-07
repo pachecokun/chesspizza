@@ -1,7 +1,12 @@
 <?php
 	$active = "ordenar";
+	$active = "ordenar";
+	require_once("../../Controller/OrdenController.php");
 	require_once("../layout/navs/cliente.php");
 	require_once("../layout/header.php");
+	require_once("../../Controller/IngredienteController.php");
+
+	$ingredientes = IngredienteController::getAll();
 ?>
     <!-- <head> content aquí -->
 	<style>
@@ -40,6 +45,9 @@
 			</div>
 		</div>
 		<p>Ingredientes</p>
+		<?php foreach ($ingredientes as $ingrediente): ?>
+			<li><input type="checkbox" name="ingrediente" value="<?= $ingrediente->getId() ?>"></li>
+		<?php endforeach; ?>
 		<ul>
 			<li><input type="checkbox" name="ingrediente" value="1">Jamón</li>
 			<li><input type="checkbox" name="ingrediente" value="2">Piña</li>
