@@ -45,15 +45,14 @@
 	<form action='myOrderList' method="post">
 		<p>Tamaño</p>
 		<select name='size' id="size" onchange="update()">
-			<option value='0'>Chica - $<?= number_format($precio, 2) ?></option>
-			<option value='1' selected='selected'>Mediana - $<?= number_format($precio * 1.3, 2) ?></option>
-			<option value='2'>Grande - $<?= number_format($precio * 1.5, 2) ?></option>
+			<option value='0'>Chica</option>
+			<option value='1' selected='selected'>Mediana</option>
+			<option value='2'>Grande</option>
 		</select>
 		<p>Orilla</p>
 		<select name='orilla' id="orilla" onchange="update()">
 			<?php foreach ($orillas as $orilla): ?>
-				<option value='<?= $orilla->getId() ?>'><?= $orilla->getNombre() ?> -
-					$<?= number_format($orilla->getPrecioExtra(), 2) ?></option>
+				<option value='<?= $orilla->getId() ?>'><?= $orilla->getNombre() ?></option>
 			<?php endforeach; ?>
 		</select>
 		<p>Ingredientes</p>
