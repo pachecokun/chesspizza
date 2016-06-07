@@ -7,6 +7,6 @@ class RepartidorController{
         $r->setNombre($nombre)->setTel($tel);
         return RepartidorDAO::save($r);
     }
-    
+
 
 }
