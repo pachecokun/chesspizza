@@ -7,6 +7,7 @@
 	require_once("../../Controller/IngredienteController.php");
 
 	$ingredientes = IngredienteController::getAll();
+	$orillas = OrillaDAO::getAll();
 ?>
     <!-- <head> content aquí -->
 	<style>
@@ -63,13 +64,23 @@
 				</select>
 			</div>
 		</div>
+		<select name='orilla' id="orilla" onchange="update()">
+			<?php foreach ($orillas as $orilla): ?>
+				<option value='<?= $orilla->getId() ?>'><?= $orilla->getNombre() ?> -
+					$<?= number_format($orilla->getPrecioExtra(), 2) ?></option>
+			<?php endforeach; ?>
+		</select>
+		<div class='form-group'>
+			<input type='number' name='cantidad' id="cantidad" placeholder='cantidad' value="1" min="1"
+					 onchange="update()" onkeyup="update()"/>
+		</div>
 		<p>Ingredientes</p>
 		<ul>
 		<?php foreach ($ingredientes as $ingrediente): ?>
 			<li><input type="checkbox" name="ingrediente" value="<?= $ingrediente->getId() ?>"><?= $ingrediente->getNombre() ?></li>
 		<?php endforeach; ?>
 		</ul>
-		<p>Total <strong class='text-success'>$150</strong></p>
+		<p>Total <strong class='text-success'>$0</strong></p>
 		<div class='row'>
 			<div class='col-6'>
 				<a href='myOrderList'><button type='button' class='btn-danger'>Cancelar</button></a>
