@@ -7,8 +7,9 @@ require_once("../layout/header.php");
 require_once "../../Controller/RutasController.php";
 require_once "../../Controller/RepartidorController.php";
 
+$rep = RepartidorDAO::get($_SESSION['empleado']['id']);
 
-$suc = SucursalDAO::get(RepartidorDAO::get($_SESSION['empleado']['id'])->getEmpleado()->getSucursal());
+$suc = SucursalDAO::get($rep->getEmpleado()->getSucursal());
 RutasController::getRutas($suc);
 ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTNw24eYAdlQdFZOQeTZEdDCJmUoClqG4&language=es"
@@ -145,6 +146,20 @@ RutasController::getRutas($suc);
                     dorden.appendChild(lista);
                     dorden.appendChild(linkentregar);
                     divordenes.appendChild(dorden);
+                }
+                if (k == 0 &&<?=$rep->getStatus() == 1 ? 1 : 0?>) {
+                    var linkdisp = document.createElement("a");
+                    linkdisp.href = "/Repartidor/listo?id=<?=$_SESSION['empleado']['id']?>";
+                    var btndisp = document.createElement("button");
+                    btndisp.textContent = "Confirmar disponibilidad";
+                    btndisp.setAttribute("class", "btn-success");
+                    linkdisp.appendChild(btndisp);
+                    divordenes.appendChild(linkdisp);
+                }
+                else if (<?=$rep->getStatus() == 0 ? 1 : 0?>) {
+                    var msg = document.createElement("h1");
+                    msg.textContent = "Esperando órdenes...";
+                    divordenes.appendChild(msg);
                 }
                 getLocation();
             }
