@@ -1,6 +1,10 @@
 <?php
 include_once __DIR__ . "/../DAO/EmpleadoDAO.php";
 class EmpleadoController{
+	public static function getInfo(){
+		return EmpleadoDAO::getAll("id=?", array($_SESSION['empleado']['id']));
+	}
+	
 	public static function getAll(){
 		return EmpleadoDAO::getAll();
 	}
