@@ -26,11 +26,12 @@
 ?>
     <!-- <head> content aquí -->
 <?php
-	var_dump($orden);
+	//var_dump($orden);
 	require_once("../layout/body.php");
 ?>
 	<p><strong>Número de orden:</strong> <span class='text-info'><?=	$orden->getId();	?></span></p>
 	<p>Status: <span class='text-danger'>Ordenada</span></p>
+	<button class='btn-sm btn-danger'>Cancelar orden</button>
 	<p class='text-info'><?=	$orden->getFechaHora();	?></p>
 	<p>A nombre de: <strong><?=	$orden->getNombreCliente();	?></strong></p>
 	<p>Sucursal: <span class='text-info'><?=	$sucursal	?></span></p>

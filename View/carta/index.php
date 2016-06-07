@@ -51,6 +51,7 @@
 			</div>
 		</div>
 <?php endforeach; ?>
+	</div>
 <?php
 	include_once("../layout/footer.php");
 ?>
