@@ -138,7 +138,7 @@ $refrescos = $faltantes['refrescos'];
 			<a href="choosePizza"><button type='button' class="btn-success">Especialidades</button></a>
 		</div>
 		<div class='col-3 col-m-6'>
-			<button type='button' class="btn-success">Pizza Personalizada</button>
+			<a href="makePizza"><button type='button' class="btn-success">Pizza Personalizada</button></a>
 		</div>
 		<div class='col-3 col-m-6'>
 			<a href="addPaquete">
