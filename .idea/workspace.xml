@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b36fc594-d570-418e-9762-8e0e22335732" name="Default" comment="rutas">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View/Repartidor/confirmar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/OrdenController.php" afterPath="$PROJECT_DIR$/Controller/OrdenController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/RepartidorDAO.php" afterPath="$PROJECT_DIR$/DAO/RepartidorDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Status.php" afterPath="$PROJECT_DIR$/Model/Status.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Repartidor/index.php" afterPath="$PROJECT_DIR$/View/Repartidor/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/ordenar/confirmar.php" afterPath="$PROJECT_DIR$/View/ordenar/confirmar.php" />
     </list>
     <ignored path="chesspizza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,9 +28,31 @@
       <file leaf-file-name="RutasController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/RutasController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1071">
-              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="114">
+              <caret line="35" column="48" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="48" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="confirmar.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/View/ordenar/confirmar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="67" column="105" selection-start-line="67" selection-start-column="105" selection-end-line="67" selection-end-column="105" />
+              <folding>
+                <marker date="1465290253263" expanded="false" signature="1059:1121" placeholder="..." />
+                <marker date="1465290253263" expanded="true" signature="1122:2504" placeholder="..." />
+                <marker date="1465290253263" expanded="false" signature="1228:1248" placeholder="..." />
+                <marker date="1465290253263" expanded="true" signature="1319:1489" placeholder="..." />
+                <marker date="1465290253263" expanded="true" signature="1502:1663" placeholder="..." />
+                <marker date="1465290253263" expanded="true" signature="1675:1831" placeholder="..." />
+                <marker date="1465290253263" expanded="true" signature="1843:1988" placeholder="..." />
+                <marker date="1465290253263" expanded="true" signature="2113:2142" placeholder="..." />
+                <marker date="1465290253263" expanded="true" signature="2113:2295" placeholder="..." />
+                <marker date="1465290253263" expanded="true" signature="2113:2504" placeholder="..." />
+                <marker date="1465290253263" expanded="true" signature="2153:2280" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,7 +60,7 @@
       <file leaf-file-name="OrdenController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/OrdenController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5083">
+            <state relative-caret-position="4165">
               <caret line="299" column="33" selection-start-line="299" selection-start-column="33" selection-end-line="299" selection-end-column="33" />
               <folding />
             </state>
@@ -63,19 +81,19 @@
         <entry file="file://$PROJECT_DIR$/View/Repartidor/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="92" column="115" selection-start-line="92" selection-start-column="115" selection-end-line="92" selection-end-column="115" />
+              <caret line="92" column="120" selection-start-line="92" selection-start-column="120" selection-end-line="92" selection-end-column="120" />
               <folding>
-                <marker date="1465285997290" expanded="true" signature="7426:7545" placeholder="..." />
+                <marker date="1465286001631" expanded="true" signature="7432:7551" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="confirmar.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="confirmar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/Repartidor/confirmar.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+              <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -137,16 +155,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getLocation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/ordenar/getLocation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="xmlruta.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/Repartidor/xmlruta.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -193,7 +201,6 @@
         <option value="$PROJECT_DIR$/Controller/SucursalController.php" />
         <option value="$PROJECT_DIR$/Model/Operacion.php" />
         <option value="$PROJECT_DIR$/DAO/OperacionDAO.php" />
-        <option value="$PROJECT_DIR$/View/ordenar/confirmar.php" />
         <option value="$PROJECT_DIR$/View/ordenar/miOrden.php" />
         <option value="$PROJECT_DIR$/View/layout/navs/cliente.php" />
         <option value="$PROJECT_DIR$/View/ordenar/myOrderList.php" />
@@ -216,6 +223,7 @@
         <option value="$PROJECT_DIR$/Model/Status.php" />
         <option value="$PROJECT_DIR$/View/Repartidor/index.php" />
         <option value="$PROJECT_DIR$/View/Repartidor/confirmar.php" />
+        <option value="$PROJECT_DIR$/View/ordenar/confirmar.php" />
       </list>
     </option>
   </component>
@@ -666,14 +674,7 @@
       <workItem from="1465137022470" duration="38955000" />
       <workItem from="1465219652894" duration="4740000" />
       <workItem from="1465254595678" duration="5685000" />
-      <workItem from="1465268831046" duration="16489000" />
-    </task>
-    <task id="LOCAL-00031" summary="agregadas funciones de dao">
-      <created>1462764956237</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1462764956237</updated>
+      <workItem from="1465268831046" duration="19059000" />
     </task>
     <task id="LOCAL-00032" summary="agregadas funciones de dao">
       <created>1462765017026</created>
@@ -1011,15 +1012,22 @@
       <option name="project" value="LOCAL" />
       <updated>1465284643121</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="rutas">
+      <created>1465286003661</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1465286003661</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152415000" />
+    <option name="totallyTimeSpent" value="154985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15729167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1028,7 +1036,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24207188" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24207188" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1257,26 +1265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/ordenar/confirmar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="76" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <marker date="1465222165330" expanded="false" signature="1007:1069" placeholder="..." />
-            <marker date="1465222165330" expanded="true" signature="1070:2401" placeholder="..." />
-            <marker date="1465222165330" expanded="false" signature="1176:1196" placeholder="..." />
-            <marker date="1465222165330" expanded="true" signature="1267:1437" placeholder="..." />
-            <marker date="1465222165330" expanded="true" signature="1450:1611" placeholder="..." />
-            <marker date="1465222165330" expanded="true" signature="1623:1779" placeholder="..." />
-            <marker date="1465222165330" expanded="true" signature="1791:1936" placeholder="..." />
-            <marker date="1465222165330" expanded="true" signature="2061:2090" placeholder="..." />
-            <marker date="1465222165330" expanded="true" signature="2061:2243" placeholder="..." />
-            <marker date="1465222165330" expanded="true" signature="2061:2401" placeholder="..." />
-            <marker date="1465222165330" expanded="true" signature="2101:2228" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/Sucursal/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
@@ -1482,14 +1470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/RutasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -1526,14 +1506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/OrdenController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5083">
-          <caret line="299" column="33" selection-start-line="299" selection-start-column="33" selection-end-line="299" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DAO/RepartidorDAO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1551,9 +1523,9 @@
     <entry file="file://$PROJECT_DIR$/View/Repartidor/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="92" column="115" selection-start-line="92" selection-start-column="115" selection-end-line="92" selection-end-column="115" />
+          <caret line="92" column="120" selection-start-line="92" selection-start-column="120" selection-end-line="92" selection-end-column="120" />
           <folding>
-            <marker date="1465285997290" expanded="true" signature="7426:7545" placeholder="..." />
+            <marker date="1465286001631" expanded="true" signature="7432:7551" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1561,8 +1533,44 @@
     <entry file="file://$PROJECT_DIR$/View/Repartidor/confirmar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/OrdenController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4165">
+          <caret line="299" column="33" selection-start-line="299" selection-start-column="33" selection-end-line="299" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/RutasController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/ordenar/confirmar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="67" column="105" selection-start-line="67" selection-start-column="105" selection-end-line="67" selection-end-column="105" />
+          <folding>
+            <marker date="1465290253263" expanded="false" signature="1059:1121" placeholder="..." />
+            <marker date="1465290253263" expanded="true" signature="1122:2504" placeholder="..." />
+            <marker date="1465290253263" expanded="false" signature="1228:1248" placeholder="..." />
+            <marker date="1465290253263" expanded="true" signature="1319:1489" placeholder="..." />
+            <marker date="1465290253263" expanded="true" signature="1502:1663" placeholder="..." />
+            <marker date="1465290253263" expanded="true" signature="1675:1831" placeholder="..." />
+            <marker date="1465290253263" expanded="true" signature="1843:1988" placeholder="..." />
+            <marker date="1465290253263" expanded="true" signature="2113:2142" placeholder="..." />
+            <marker date="1465290253263" expanded="true" signature="2113:2295" placeholder="..." />
+            <marker date="1465290253263" expanded="true" signature="2113:2504" placeholder="..." />
+            <marker date="1465290253263" expanded="true" signature="2153:2280" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

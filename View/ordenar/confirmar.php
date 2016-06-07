@@ -1,5 +1,6 @@
 <?php
 require_once "../../Controller/OrdenController.php";
+require_once "../../Controller/RutaController.php";
 
 $orden = OrdenController::confirmarOrden();
 OrdenController::limpiarSesion();
@@ -64,7 +65,7 @@ if(!empty($_POST['dir']) AND !empty($_POST['nom']) AND !empty($_POST['tel']) AND
        <td align='left'>$ $_POST[tot]</td>
       </tr>
       </table>
-      <p>El tiempo estimado de entrega es de MÁXIMO 45 minutos a partir de la siguiente hora: <strong>" . date("H:i", $time-3600) . "</strong></p>
+      <p>El tiempo estimado de entrega es de MÁXIMO <?=RutasController::getTiempoPreparacion($orden)+30?> minutos a partir de la siguiente hora: <strong>" . date("H:i", $time - 3600) . "</strong></p>
     </div>
     ";
 
@@ -79,7 +80,8 @@ if(!empty($_POST['dir']) AND !empty($_POST['nom']) AND !empty($_POST['tel']) AND
     <h1>Orden confirmada</h1>
     <h2>Clave de orden: <?= $orden->getId() ?></h2>
 <h2>Importe: $<?= number_format(OrdenController::getPrecioOrden($orden), 2) ?></h2>
-    <p>Su orden ha sido confirmada correctamente. El tiempo de llegada estimado para la orden es de 15 minutos.</p>
+<p>Su orden ha sido confirmada correctamente. El tiempo de llegada estimado para la orden es
+    de <?= RutasController::getTiempoPreparacion($orden) + 30 ?> minutos.</p>
     <p>La información del pedido ha sido enviada al correo electrónico '<?= $orden->getEmailCliente() ?>' .</p>
     <p><strong>NOTA:</strong> Recuerda que si no encuentras el correo en la bandeja de entrada, deberias revisas la carpeta de SPAM</p>
 <p>Puede rastrear su orden utilizando su clave de orden desde <a href="/ordenar/miOrden">aquí</a></p>
