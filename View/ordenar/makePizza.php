@@ -47,7 +47,7 @@
 		<p>Ingredientes</p>
 		<ul>
 		<?php foreach ($ingredientes as $ingrediente): ?>
-			<li><input type="checkbox" name="ingrediente" value="<?= $ingrediente->getId() ?>"><?= $ingrediente->getName() ?></li>
+			<li><input type="checkbox" name="ingrediente" value="<?= $ingrediente->getId() ?>"><?= $ingrediente->getNombre() ?></li>
 		<?php endforeach; ?>
 		</ul>
 		<ul>
