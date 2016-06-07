@@ -13,12 +13,12 @@
 ?>
 	
 <?php
+	echo "<a href='../empleados/addEmpleado'><button class='btn-md btn-success'>Agregar Empleado</button></a>";
 	/******* REPARTIDORES *******/
 	if($activeSub=='showRepartidores'){
 		require_once ("../../Controller/EmpleadoController.php");
 		
-		echo "<h3>Repartidores</h3>"
-			."<a href='../empleados/addEmpleado'><button class='btn-md btn-success'>Agregar Repartidor</button></a>";
+		echo "<h3>Repartidores</h3>";
 		$repartidoresSuc = EmpleadoController::getTipoEmpleado($_SESSION['empleado']['sucursal'], 1);
 		if(!empty($repartidoresSuc)){
 			echo "<div class='table'>"
@@ -50,8 +50,7 @@
 	if($activeSub=='showChefs'){
 		require_once ("../../Controller/EmpleadoController.php");
 		
-		echo "<h3>Chefs</h3>"
-			."<a href='../empleados/addEmpleado'><button class='btn-md btn-success'>Agregar Chef</button></a>";
+		echo "<h3>Chefs</h3>";
 		$chefsSuc = EmpleadoController::getTipoEmpleado($_SESSION['empleado']['sucursal'], 2);
 		if(!empty($chefsSuc)){
 			echo "<div class='table'>"
@@ -83,8 +82,7 @@
 	if($activeSub=='showGerentes'){
 		require_once ("../../Controller/EmpleadoController.php");
 		
-		echo "<h3>Gerentes</h3>"
-			."<a href='../empleados/addEmpleado'><button class='btn-md btn-success'>Agregar Gerente</button></a>";
+		echo "<h3>Gerentes</h3>";
 		$gerentesSuc = EmpleadoController::getTipoEmpleado($_SESSION['empleado']['sucursal'], 3);
 		if(!empty($gerentesSuc)){
 			echo "<div class='table'>"
