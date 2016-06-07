@@ -43,43 +43,29 @@
     <!-- Contenido va aquí-->
     <h1>Armar Pizza</h1>
 	<form action='myOrderList' method="post">
-		<div class='row'>
-			<div class='col-4 col-md-6'>
-				<p>Cantidad</p>
-				<input type='number' name='cantidad' placeholder='Ingrese la cantidad' />
-			</div>
-			<div class='col-4 col-md-6'>
-				<p>Tamaño</p>
-				<select name='size'>
-					<option value='0'>Chica</option>
-					<option value='1' selected='selected'>Mediana</option>
-					<option value='2'>Grande</option>
-				</select>
-			</div>
-			<div class='col-4 col-md-12'>
-				<p>Orilla</p>
-				<select name='orilla'>
-					<option value='1' selected='selected'>Normal</option>
-					<option value='2'>Rellena de queso</option>
-				</select>
-			</div>
-		</div>
+		<p>Tamaño</p>
+		<select name='size' id="size" onchange="update()">
+			<option value='0'>Chica - $<?= number_format($precio, 2) ?></option>
+			<option value='1' selected='selected'>Mediana - $<?= number_format($precio * 1.3, 2) ?></option>
+			<option value='2'>Grande - $<?= number_format($precio * 1.5, 2) ?></option>
+		</select>
+		<p>Orilla</p>
 		<select name='orilla' id="orilla" onchange="update()">
 			<?php foreach ($orillas as $orilla): ?>
 				<option value='<?= $orilla->getId() ?>'><?= $orilla->getNombre() ?> -
 					$<?= number_format($orilla->getPrecioExtra(), 2) ?></option>
 			<?php endforeach; ?>
 		</select>
-		<div class='form-group'>
-			<input type='number' name='cantidad' id="cantidad" placeholder='cantidad' value="1" min="1"
-					 onchange="update()" onkeyup="update()"/>
-		</div>
 		<p>Ingredientes</p>
 		<ul>
 		<?php foreach ($ingredientes as $ingrediente): ?>
 			<li><input type="checkbox" name="ingrediente" value="<?= $ingrediente->getId() ?>"><?= $ingrediente->getNombre() ?></li>
 		<?php endforeach; ?>
 		</ul>
+		<div class='form-group'>
+			<input type='number' name='cantidad' id="cantidad" placeholder='cantidad' value="1" min="1"
+					 onchange="update()" onkeyup="update()"/>
+		</div>
 		<p>Total <strong class='text-success'>$0</strong></p>
 		<div class='row'>
 			<div class='col-6'>
