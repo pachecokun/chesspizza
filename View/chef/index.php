@@ -1,4 +1,5 @@
 <?php
+require_once '../../Controller/OrdenController.php';
 $pos = ""; //fix para la ubicación relativa en las rutas.
 $active = "inicio";
 $userSession = 1;
@@ -59,9 +60,9 @@ if (count($ordenes) == 0 || $ordenes == null) {
         echo("<h2>Orden " . $orden->getId() . " - Fecha y hora: " . $orden->getFechaHora() . "</h2>");
         echo("<table class=\"opizza\">");
         foreach ($orden->getPizzas() as $pizza) {
-            print_r($pizza);
-            echo("<tr><th colspan=\"3\">1 Pizza personalizada (" . $pizza->getTamano() . ")</th></tr>");
-            echo("<tr><td colspan=\"3\">" . $pizza->orilla . ")</td></tr>");
+            //print_r($pizza);
+            echo("<tr><th colspan=\"3\">1 Pizza personalizada (" . OrdenController::getSizePizza($pizza->tamano) . ")</th></tr>");
+            echo("<tr><td colspan=\"3\">" . $pizza->orilla->getNombre() . "</td></tr>");
             foreach ($pizza->getIngredientes() as $ingrediente) {
                 echo("<tr><td>" . $ingrediente->getNombre() . "</td></tr>");
             }
@@ -70,7 +71,7 @@ if (count($ordenes) == 0 || $ordenes == null) {
 
         echo("<table class=\"opizza\">");
         foreach ($orden->getEspeciales() as $especial) {
-            echo("<tr><th colspan=\"3\">" . $especial->getNombre() . "</th></tr>");
+            echo("<tr><th colspan=\"3\">" . $especial->getNombre() . " (" . OrdenController::getSizePizza($especial->tamano) . ")</th></tr>");
             foreach ($especial->getPizza()->getIngredientes() as $ingrediente) {
                 echo("<tr><td colspan=\"3\">" . $ingrediente->getNombre() . "</td></tr>");
             }
@@ -79,7 +80,7 @@ if (count($ordenes) == 0 || $ordenes == null) {
         echo("<table class=\"opizza\">");
         foreach ($orden->getPaquetes() as $paquete) {
             $especial = $paquete->getEspecial();
-            echo("<tr><th colspan=\"3\">" . $especial->getNombre() . "</th></tr>");
+            echo("<tr><th colspan=\"3\">" . $especial->getNombre() . " (" . OrdenController::getSizePizza($paquete->tamano_pizza) . ")" . "</th></tr>");
             foreach ($especial->getPizza()->getIngredientes() as $ingrediente) {
                 echo("<tr><td colspan=\"3\">" . $ingrediente->getNombre() . "</td></tr>");
             }

@@ -13,12 +13,14 @@ class ChefController
     {
 
         $ordenes = OrdenDAO::getAll("Sucursal_id = ?", array($idSucursal));
-        $result = array();
+        $array = array();
         foreach ($ordenes as $orden) {
             $ultimaOperacion = $orden->getUltimaOperacion();
-            $status = $ultimaOperacion->getStatus();
-            if ($status->getId() == STATUS_CONFIRMADA || $status->getId() == STATUS_HORNO) {
-                $array[] = $orden;
+            if ($ultimaOperacion != null) {
+                $status = $ultimaOperacion->getStatus();
+                if ($status->getId() == STATUS_CONFIRMADA || $status->getId() == STATUS_HORNO) {
+                    $array[] = $orden;
+                }
             }
         }
         /* if ($ordenes == null) {
