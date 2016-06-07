@@ -292,6 +292,13 @@ class OrdenController
 			return null;
 		}
 	}
+
+	public static function confirmarRecepcion($id)
+	{
+		$orden = OrdenDAO::get($id);
+		$orden->addOperacion(new Operacion(null, $id, null, $orden->getLat(), $orden->getLon(), StatusDAO::get(STATUS_ENTREGADA)));
+		OrdenDAO::update($orden);
+	}
 }
 
 ?>

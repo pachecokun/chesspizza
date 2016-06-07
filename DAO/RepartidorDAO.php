@@ -107,7 +107,7 @@ class RepartidorDAO implements DAO
         $res = array();
         $ordenes = OrdenDAO::getAll("Repartidor_id = ?", array($rep->getEmpleado()->getId()));
         foreach ($ordenes as $orden) {
-            if ($orden->getUltimaOperacion()->getStatus()->getId() == STATUS_ESPERA_REPARTIDOR) {
+            if ($orden->getUltimaOperacion()->getStatus()->getId() == STATUS_EN_CAMINO) {
                 $res[] = $orden;
             }
         }

@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b36fc594-d570-418e-9762-8e0e22335732" name="Default" comment="rutas">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/View/Repartidor/confirmar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/RepartidorController.php" afterPath="$PROJECT_DIR$/Controller/RepartidorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/RutasController.php" afterPath="$PROJECT_DIR$/Controller/RutasController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/OrdenDAO.php" afterPath="$PROJECT_DIR$/DAO/OrdenDAO.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/OrdenController.php" afterPath="$PROJECT_DIR$/Controller/OrdenController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/RepartidorDAO.php" afterPath="$PROJECT_DIR$/DAO/RepartidorDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DAO/SucursalDAO.php" afterPath="$PROJECT_DIR$/DAO/SucursalDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Orden.php" afterPath="$PROJECT_DIR$/Model/Orden.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Repartidor.php" afterPath="$PROJECT_DIR$/Model/Repartidor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Status.php" afterPath="$PROJECT_DIR$/Model/Status.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Repartidor/index.php" afterPath="$PROJECT_DIR$/View/Repartidor/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Repartidor/xmlruta.php" afterPath="$PROJECT_DIR$/View/Repartidor/xmlruta.php" />
     </list>
     <ignored path="chesspizza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +29,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RutasController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RutasController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/RutasController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+            <state relative-caret-position="-1071">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrdenController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/OrdenController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5083">
+              <caret line="299" column="33" selection-start-line="299" selection-start-column="33" selection-end-line="299" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -46,18 +52,8 @@
       <file leaf-file-name="Status.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/Status.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RepartidorController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/RepartidorController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -66,11 +62,21 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/Repartidor/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2142">
-              <caret line="171" column="35" selection-start-line="171" selection-start-column="35" selection-end-line="171" selection-end-column="35" />
+            <state relative-caret-position="340">
+              <caret line="92" column="115" selection-start-line="92" selection-start-column="115" selection-end-line="92" selection-end-column="115" />
               <folding>
-                <marker date="1465284506103" expanded="true" signature="6953:7070" placeholder="..." />
+                <marker date="1465285997290" expanded="true" signature="7426:7545" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="confirmar.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/View/Repartidor/confirmar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,28 +84,44 @@
       <file leaf-file-name="OrdenDAO.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="241">
               <caret line="209" column="39" selection-start-line="209" selection-start-column="39" selection-end-line="209" selection-end-column="39" />
               <folding>
-                <element signature="e#3913#7901#0#PHP" expanded="false" />
-                <marker date="1465284454498" expanded="true" signature="358:384" placeholder="SELECT * FRO... Orden" />
-                <marker date="1465284454498" expanded="true" signature="1373:1517" placeholder="insert into Orden... " />
-                <marker date="1465284454498" expanded="true" signature="1833:1879" placeholder="insert into orden_pizza... " />
-                <marker date="1465284454498" expanded="true" signature="2071:2120" placeholder="insert into orden_especial... " />
-                <marker date="1465284454498" expanded="true" signature="2310:2358" placeholder="insert into orden_paquete... " />
-                <marker date="1465284454498" expanded="true" signature="2555:2600" placeholder="insert into orden_refresco... " />
-                <marker date="1465284454498" expanded="true" signature="3283:3434" placeholder="update Orden... " />
-                <marker date="1465284454498" expanded="true" signature="4258:4297" placeholder="insert into orden_pizza... " />
-                <marker date="1465284454498" expanded="true" signature="4762:4819" placeholder="delete from " />
-                <marker date="1465284454498" expanded="true" signature="4773:4819" placeholder="insert into orden_pizza... " />
-                <marker date="1465284454498" expanded="true" signature="5255:5297" placeholder="insert into orden_especial... " />
-                <marker date="1465284454498" expanded="true" signature="5762:5825" placeholder="delete from " />
-                <marker date="1465284454498" expanded="true" signature="6257:6298" placeholder="insert into orden_paquete... " />
-                <marker date="1465284454498" expanded="true" signature="6763:6824" placeholder="delete from " />
-                <marker date="1465284454498" expanded="true" signature="7258:7300" placeholder="insert into orden_refresco... " />
-                <marker date="1465284454498" expanded="true" signature="7765:7828" placeholder="delete from " />
-                <marker date="1465284454498" expanded="true" signature="8219:8247" placeholder="delete from " />
-                <marker date="1465284454498" expanded="true" signature="8583:8613" placeholder="SELECT * FRO... Orden" />
+                <element signature="e#3923#7911#0#PHP" expanded="false" />
+                <marker date="1465284640674" expanded="true" signature="358:384" placeholder="SELECT * FRO... Orden" />
+                <marker date="1465284640674" expanded="true" signature="1373:1517" placeholder="insert into Orden... " />
+                <marker date="1465284640674" expanded="true" signature="1833:1879" placeholder="insert into orden_pizza... " />
+                <marker date="1465284640674" expanded="true" signature="2071:2120" placeholder="insert into orden_especial... " />
+                <marker date="1465284640674" expanded="true" signature="2310:2358" placeholder="insert into orden_paquete... " />
+                <marker date="1465284640674" expanded="true" signature="2555:2600" placeholder="insert into orden_refresco... " />
+                <marker date="1465284640674" expanded="true" signature="3283:3434" placeholder="update Orden... " />
+                <marker date="1465284640674" expanded="true" signature="4268:4307" placeholder="insert into orden_pizza... " />
+                <marker date="1465284640674" expanded="true" signature="4772:4829" placeholder="delete from " />
+                <marker date="1465284640674" expanded="true" signature="4783:4829" placeholder="insert into orden_pizza... " />
+                <marker date="1465284640674" expanded="true" signature="5265:5307" placeholder="insert into orden_especial... " />
+                <marker date="1465284640674" expanded="true" signature="5772:5835" placeholder="delete from " />
+                <marker date="1465284640674" expanded="true" signature="6267:6308" placeholder="insert into orden_paquete... " />
+                <marker date="1465284640674" expanded="true" signature="6773:6834" placeholder="delete from " />
+                <marker date="1465284640674" expanded="true" signature="7268:7310" placeholder="insert into orden_refresco... " />
+                <marker date="1465284640674" expanded="true" signature="7775:7838" placeholder="delete from " />
+                <marker date="1465284640674" expanded="true" signature="8229:8257" placeholder="delete from " />
+                <marker date="1465284640674" expanded="true" signature="8593:8623" placeholder="SELECT * FRO... Orden" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepartidorDAO.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DAO/RepartidorDAO.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="109" column="86" selection-start-line="109" selection-start-column="86" selection-end-line="109" selection-end-column="86" />
+              <folding>
+                <marker date="1465285997279" expanded="true" signature="365:396" placeholder="SELECT * FRO... Repartidor" />
+                <marker date="1465285997279" expanded="true" signature="872:906" placeholder="insert into Repartidor... " />
+                <marker date="1465285997279" expanded="true" signature="1283:1326" placeholder="update Repar... " />
+                <marker date="1465285997279" expanded="true" signature="1702:1735" placeholder="delete from " />
+                <marker date="1465285997279" expanded="true" signature="2071:2106" placeholder="SELECT * FRO... Repartidor" />
               </folding>
             </state>
           </provider>
@@ -129,27 +151,8 @@
         <entry file="file://$PROJECT_DIR$/View/Repartidor/xmlruta.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="94" selection-start-line="22" selection-start-column="94" selection-end-line="22" selection-end-column="94" />
+              <caret line="26" column="102" selection-start-line="26" selection-start-column="102" selection-end-line="26" selection-end-column="102" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmpleadoDAO.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DAO/EmpleadoDAO.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="77" column="191" selection-start-line="77" selection-start-column="191" selection-end-line="77" selection-end-column="191" />
-              <folding>
-                <marker date="1465277840674" expanded="true" signature="276:290" placeholder="SELECT * FRO... Empleado" />
-                <marker date="1465277840674" expanded="true" signature="276:305" placeholder="SELECT * FRO... empleado" />
-                <marker date="1465277840674" expanded="true" signature="889:1013" placeholder="insert into empleado... " />
-                <marker date="1465277840674" expanded="true" signature="1509:1643" placeholder="update emple... " />
-                <marker date="1465277840674" expanded="true" signature="2152:2183" placeholder="delete from " />
-                <marker date="1465277840674" expanded="true" signature="2519:2552" placeholder="SELECT * FRO... empleado" />
-                <marker date="1465277840674" expanded="true" signature="3199:3243" placeholder="SELECT * FRO... empleado" />
-                <marker date="1465277840674" expanded="true" signature="3570:3635" placeholder="SELECT * FRO... empleado" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -162,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/View/principal/index.php" />
         <option value="$PROJECT_DIR$/View/chef/index.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/Model/Orilla.php" />
@@ -198,21 +200,22 @@
         <option value="$PROJECT_DIR$/Model/Repartidor.php" />
         <option value="$PROJECT_DIR$/DAO/EmpleadoDAO.php" />
         <option value="$PROJECT_DIR$/Controller/RepartidorController.php" />
-        <option value="$PROJECT_DIR$/Controller/OrdenController.php" />
         <option value="$PROJECT_DIR$/DAO/SucursalDAO.php" />
         <option value="$PROJECT_DIR$/DAO/EspecialDAO.php" />
         <option value="$PROJECT_DIR$/DAO/PaqueteDAO.php" />
         <option value="$PROJECT_DIR$/DAO/PizzaDAO.php" />
-        <option value="$PROJECT_DIR$/Model/Status.php" />
         <option value="$PROJECT_DIR$/Model/Orden.php" />
-        <option value="$PROJECT_DIR$/DAO/RepartidorDAO.php" />
         <option value="$PROJECT_DIR$/View/Repartidor/ruta.php" />
         <option value="$PROJECT_DIR$/View/Repartidor/getruta.php" />
         <option value="$PROJECT_DIR$/View/Repartidor/xmlruta.php" />
         <option value="$PROJECT_DIR$/View/js/rutas/rutas.js" />
-        <option value="$PROJECT_DIR$/Controller/RutasController.php" />
         <option value="$PROJECT_DIR$/DAO/OrdenDAO.php" />
+        <option value="$PROJECT_DIR$/Controller/RutasController.php" />
+        <option value="$PROJECT_DIR$/Controller/OrdenController.php" />
+        <option value="$PROJECT_DIR$/DAO/RepartidorDAO.php" />
+        <option value="$PROJECT_DIR$/Model/Status.php" />
         <option value="$PROJECT_DIR$/View/Repartidor/index.php" />
+        <option value="$PROJECT_DIR$/View/Repartidor/confirmar.php" />
       </list>
     </option>
   </component>
@@ -493,11 +496,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Controller/EmpleadoController.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Controller/UsuarioController.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/inventario/addIngrediente.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/inventario/addRefresco.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/login/index.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/carta/index.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/miOrden/index.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -505,7 +505,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/View/account/changePassword.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -667,14 +666,7 @@
       <workItem from="1465137022470" duration="38955000" />
       <workItem from="1465219652894" duration="4740000" />
       <workItem from="1465254595678" duration="5685000" />
-      <workItem from="1465268831046" duration="15129000" />
-    </task>
-    <task id="LOCAL-00030" summary="agregadas funciones de dao">
-      <created>1462764842123</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1462764842123</updated>
+      <workItem from="1465268831046" duration="16489000" />
     </task>
     <task id="LOCAL-00031" summary="agregadas funciones de dao">
       <created>1462764956237</created>
@@ -1012,11 +1004,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465277855134</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="rutas">
+      <created>1465284643121</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1465284643121</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151055000" />
+    <option name="totallyTimeSpent" value="152415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1080,13 +1079,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Esquema BD/Pizzeria2_backup.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="399" column="3" selection-start-line="399" selection-start-column="3" selection-end-line="399" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DAO/OrdenProductoDAO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1407,12 +1399,12 @@
         <state relative-caret-position="411">
           <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
           <folding>
-            <marker date="1465277949978" expanded="true" signature="316:345" placeholder="SELECT * FRO... sucursal" />
-            <marker date="1465277949978" expanded="true" signature="847:911" placeholder="insert into Sucursal... " />
-            <marker date="1465277949978" expanded="true" signature="1312:1380" placeholder="update Sucur... " />
-            <marker date="1465277949978" expanded="true" signature="1795:1826" placeholder="delete from " />
-            <marker date="1465277949978" expanded="true" signature="2162:2195" placeholder="SELECT * FRO... Sucursal" />
-            <marker date="1465277949978" expanded="true" signature="2835:3021" placeholder="..." />
+            <marker date="1465284640774" expanded="true" signature="318:347" placeholder="SELECT * FRO... sucursal" />
+            <marker date="1465284640774" expanded="true" signature="849:913" placeholder="insert into Sucursal... " />
+            <marker date="1465284640774" expanded="true" signature="1314:1382" placeholder="update Sucur... " />
+            <marker date="1465284640774" expanded="true" signature="1797:1828" placeholder="delete from " />
+            <marker date="1465284640774" expanded="true" signature="2164:2197" placeholder="SELECT * FRO... Sucursal" />
+            <marker date="1465284640774" expanded="true" signature="2843:3036" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1425,33 +1417,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/OrdenController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1751">
-          <caret line="8" column="49" selection-start-line="7" selection-start-column="45" selection-end-line="8" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/ordenar/myOrderList.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2125">
           <caret line="165" column="35" selection-start-line="165" selection-start-column="35" selection-end-line="165" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/RepartidorDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="97" column="33" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
-          <folding>
-            <marker date="1465277950134" expanded="true" signature="361:392" placeholder="SELECT * FRO... Repartidor" />
-            <marker date="1465277950134" expanded="true" signature="867:901" placeholder="insert into Repartidor... " />
-            <marker date="1465277950134" expanded="true" signature="1276:1319" placeholder="update Repar... " />
-            <marker date="1465277950134" expanded="true" signature="1693:1726" placeholder="delete from " />
-            <marker date="1465277950134" expanded="true" signature="2062:2097" placeholder="SELECT * FRO... Repartidor" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1483,7 +1453,7 @@
     <entry file="file://$PROJECT_DIR$/View/Repartidor/xmlruta.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="94" selection-start-line="22" selection-start-column="94" selection-end-line="22" selection-end-column="94" />
+          <caret line="26" column="102" selection-start-line="26" selection-start-column="102" selection-end-line="26" selection-end-column="102" />
           <folding />
         </state>
       </provider>
@@ -1504,52 +1474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Status.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="209" column="39" selection-start-line="209" selection-start-column="39" selection-end-line="209" selection-end-column="39" />
-          <folding>
-            <element signature="e#3913#7901#0#PHP" expanded="false" />
-            <marker date="1465284454498" expanded="true" signature="358:384" placeholder="SELECT * FRO... Orden" />
-            <marker date="1465284454498" expanded="true" signature="1373:1517" placeholder="insert into Orden... " />
-            <marker date="1465284454498" expanded="true" signature="1833:1879" placeholder="insert into orden_pizza... " />
-            <marker date="1465284454498" expanded="true" signature="2071:2120" placeholder="insert into orden_especial... " />
-            <marker date="1465284454498" expanded="true" signature="2310:2358" placeholder="insert into orden_paquete... " />
-            <marker date="1465284454498" expanded="true" signature="2555:2600" placeholder="insert into orden_refresco... " />
-            <marker date="1465284454498" expanded="true" signature="3283:3434" placeholder="update Orden... " />
-            <marker date="1465284454498" expanded="true" signature="4258:4297" placeholder="insert into orden_pizza... " />
-            <marker date="1465284454498" expanded="true" signature="4762:4819" placeholder="delete from " />
-            <marker date="1465284454498" expanded="true" signature="4773:4819" placeholder="insert into orden_pizza... " />
-            <marker date="1465284454498" expanded="true" signature="5255:5297" placeholder="insert into orden_especial... " />
-            <marker date="1465284454498" expanded="true" signature="5762:5825" placeholder="delete from " />
-            <marker date="1465284454498" expanded="true" signature="6257:6298" placeholder="insert into orden_paquete... " />
-            <marker date="1465284454498" expanded="true" signature="6763:6824" placeholder="delete from " />
-            <marker date="1465284454498" expanded="true" signature="7258:7300" placeholder="insert into orden_refresco... " />
-            <marker date="1465284454498" expanded="true" signature="7765:7828" placeholder="delete from " />
-            <marker date="1465284454498" expanded="true" signature="8219:8247" placeholder="delete from " />
-            <marker date="1465284454498" expanded="true" signature="8583:8613" placeholder="SELECT * FRO... Orden" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Repartidor/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="171" column="35" selection-start-line="171" selection-start-column="35" selection-end-line="171" selection-end-column="35" />
-          <folding>
-            <marker date="1465284506103" expanded="true" signature="6953:7070" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/RepartidorController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1560,8 +1484,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/RutasController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        <state relative-caret-position="-1071">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/OrdenDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="209" column="39" selection-start-line="209" selection-start-column="39" selection-end-line="209" selection-end-column="39" />
+          <folding>
+            <element signature="e#3923#7911#0#PHP" expanded="false" />
+            <marker date="1465284640674" expanded="true" signature="358:384" placeholder="SELECT * FRO... Orden" />
+            <marker date="1465284640674" expanded="true" signature="1373:1517" placeholder="insert into Orden... " />
+            <marker date="1465284640674" expanded="true" signature="1833:1879" placeholder="insert into orden_pizza... " />
+            <marker date="1465284640674" expanded="true" signature="2071:2120" placeholder="insert into orden_especial... " />
+            <marker date="1465284640674" expanded="true" signature="2310:2358" placeholder="insert into orden_paquete... " />
+            <marker date="1465284640674" expanded="true" signature="2555:2600" placeholder="insert into orden_refresco... " />
+            <marker date="1465284640674" expanded="true" signature="3283:3434" placeholder="update Orden... " />
+            <marker date="1465284640674" expanded="true" signature="4268:4307" placeholder="insert into orden_pizza... " />
+            <marker date="1465284640674" expanded="true" signature="4772:4829" placeholder="delete from " />
+            <marker date="1465284640674" expanded="true" signature="4783:4829" placeholder="insert into orden_pizza... " />
+            <marker date="1465284640674" expanded="true" signature="5265:5307" placeholder="insert into orden_especial... " />
+            <marker date="1465284640674" expanded="true" signature="5772:5835" placeholder="delete from " />
+            <marker date="1465284640674" expanded="true" signature="6267:6308" placeholder="insert into orden_paquete... " />
+            <marker date="1465284640674" expanded="true" signature="6773:6834" placeholder="delete from " />
+            <marker date="1465284640674" expanded="true" signature="7268:7310" placeholder="insert into orden_refresco... " />
+            <marker date="1465284640674" expanded="true" signature="7775:7838" placeholder="delete from " />
+            <marker date="1465284640674" expanded="true" signature="8229:8257" placeholder="delete from " />
+            <marker date="1465284640674" expanded="true" signature="8593:8623" placeholder="SELECT * FRO... Orden" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/OrdenController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5083">
+          <caret line="299" column="33" selection-start-line="299" selection-start-column="33" selection-end-line="299" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAO/RepartidorDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="109" column="86" selection-start-line="109" selection-start-column="86" selection-end-line="109" selection-end-column="86" />
+          <folding>
+            <marker date="1465285997279" expanded="true" signature="365:396" placeholder="SELECT * FRO... Repartidor" />
+            <marker date="1465285997279" expanded="true" signature="872:906" placeholder="insert into Repartidor... " />
+            <marker date="1465285997279" expanded="true" signature="1283:1326" placeholder="update Repar... " />
+            <marker date="1465285997279" expanded="true" signature="1702:1735" placeholder="delete from " />
+            <marker date="1465285997279" expanded="true" signature="2071:2106" placeholder="SELECT * FRO... Repartidor" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Repartidor/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="92" column="115" selection-start-line="92" selection-start-column="115" selection-end-line="92" selection-end-column="115" />
+          <folding>
+            <marker date="1465285997290" expanded="true" signature="7426:7545" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Repartidor/confirmar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
           <folding />
         </state>
       </provider>

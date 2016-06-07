@@ -13,16 +13,18 @@ RutasController::getRutas($suc);
 <script src="/js/rutas/rutas.js" type="text/javascript"></script>
 <script>
     var myPos;
+    var ordenes;
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
                 myPos = {lat: position.coords.latitude, lng: position.coords.longitude};
+                loadMap();
             });
         } else {
             alert("Favor de activar geolocalización");
         }
     }
-    function loadMap(ordenes) {
+    function loadMap() {
         getLocation();
         var posSuc = {lat: <?=$suc->getLat()?>, lng: <?=$suc->getLon()?>};
         var waypts = [];
@@ -41,10 +43,6 @@ RutasController::getRutas($suc);
         };
         directionsService.route(request, function (result, status) {
             if (status == google.maps.DirectionsStatus.OK) {
-                clearInterval(interval);
-                interval = setInterval(function () {
-                    getRuta();
-                }, 30000);
                 directionsDisplay.setDirections(result);
                 distanceService.getDistanceMatrix({
                     origins: [myPos],
@@ -79,7 +77,7 @@ RutasController::getRutas($suc);
             if (req.readyState == 4 && req.status == 200) {
 
                 doc = req.responseXML;
-                var ordenes = doc.getElementsByTagName("orden");
+                ordenes = doc.getElementsByTagName("orden");
                 divordenes.innerHTML = "";
 
                 for (var k = 0; k < ordenes.length; k++) {
@@ -91,6 +89,12 @@ RutasController::getRutas($suc);
                     titulo1.textContent = "Orden " + orden.getAttribute("id");
                     var titulo2 = document.createElement("h2");
                     titulo2.textContent = "Cliente: " + orden.getAttribute("cliente");
+                    var linkentregar = document.createElement("a");
+                    linkentregar.href = "/Repartidor/confirmar?id=" + orden.getAttribute("id") + "&rep=" +<?=$_GET['id']?>;
+                    var btnentregar = document.createElement("button");
+                    btnentregar.textContent = "Confirmar entrega";
+                    btnentregar.setAttribute("class", "btn-success");
+                    linkentregar.appendChild(btnentregar);
                     dorden.appendChild(titulo1);
                     dorden.appendChild(titulo2);
 
@@ -136,9 +140,10 @@ RutasController::getRutas($suc);
                         lista.appendChild(lref);
                     }
                     dorden.appendChild(lista);
+                    dorden.appendChild(linkentregar);
                     divordenes.appendChild(dorden);
                 }
-                loadMap(ordenes);
+                getLocation();
             }
         };
     }
@@ -178,7 +183,7 @@ require_once("../layout/body.php");
     getRuta();
     var interval = setInterval(function () {
         getRuta();
-    }, 1000);
+    }, 30000);
 </script>
 <?php
 include_once("../layout/footer.php");
