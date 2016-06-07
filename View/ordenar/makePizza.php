@@ -3,7 +3,7 @@
 	require_once("../../Controller/OrdenController.php");
 	require_once("../layout/navs/cliente.php");
 	require_once("../layout/header.php");
-	require_once("../../Controller/EspecialController.php");
+	require_once("../../Controller/PizzaController.php");
 
 	if (!empty($_POST)) {
 		/*OrdenController::addPizza($_POST['id'], $_POST['orilla'], $_POST['size'], $_POST['cantidad']);*/
