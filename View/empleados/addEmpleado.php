@@ -26,7 +26,7 @@
 		}
 		if($success){
 			$_SESSION['message']= array("success", "$tipo Agregado");
-			header("location:../Inventario");
+			header("location:../empleados");
 			exit();
 		}
 		else{
@@ -43,31 +43,31 @@
 		<div class='row'>
 			<div class='col-12 col-m-12'>
 				Número de Empleado:
-				<input type="number" name='id' />
+				<input type="number" name='id' required />
 			</div>
 			<div class='col-12 col-m-12'>
 				Nombre:
-				<input type="text" name='nombre' />
+				<input type="text" name='nombre' required />
 			</div>
 			<div class='col-12 col-m-12'>
 				Apellido Paterno:
-				<input type="text" name='paterno' />
+				<input type="text" name='paterno' required />
 			</div>
 			<div class='col-12 col-m-12'>
 				Apellido Materno:
-				<input type="text" name='materno' />
+				<input type="text" name='materno' required />
 			</div>
 			<div class='col-12 col-m-12'>
 				Teléfono:
-				<input type="number" name='telefono' />
+				<input type="number" name='telefono' required />
 			</div>
 			<div class='col-12 col-m-12'>
 				Usuario:
-				<input type="text" name='usuario' />
+				<input type="text" name='usuario' required />
 			</div>
 			<div class='col-12 col-m-12'>
 				Contraseña:
-				<input type="password" name='password' />
+				<input type="password" name='password' required />
 			</div>
 			<div class='col-12 col-m-12'>
 				Tipo de Empleado:
