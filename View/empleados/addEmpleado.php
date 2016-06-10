@@ -88,6 +88,7 @@
 			</div>
 		</div>
 	</form>
+	<!--hola-->
 <?php
 	include_once("../layout/footer.php");
 ?>
