@@ -44,8 +44,8 @@
 			<div class='col-6'>
 				<select name="tipo" required="required">
 					<option value="">Seleccionar...</option>
-					<option value="1">Repartidor</option>
-					<option value="2">Chef</option>
+					<option value="1">Chef</option>
+					<option value="2">Repartidor</option>
 					<option value="3">Gerente</option>
 				</select>
 			</div>

@@ -1,6 +1,7 @@
 <?php
 
 include_once(__DIR__.'/../Model/Empleado.php');
+include_once(__DIR__.'/../DAO/RepartidorDAO.php');
 include_once(__DIR__.'/DAO.php');
 
 class EmpleadoDAO implements DAO
@@ -29,6 +30,12 @@ class EmpleadoDAO implements DAO
         try {
             Conexion::execute("insert into empleado(Sucursal_id,username,password,nombre,apPaterno,apMaterno,telefono,tipoEmpleado) values(?,?,?,?,?,?,?,?)",
 					array($obj->getSucursal(),$obj->getUsername(),$obj->getPassword(),$obj->getNombre(),$obj->getApPaterno(),$obj->getApMaterno(),$obj->getTelefono(),$obj->getTipoEmpleado()));
+			
+			if($obj->getTipoEmpleado()==2){
+				$reps = self::getAll("username=? and password=?", array($obj->getUsername(), $obj->getPassword()));
+				$newRep= $reps[0];
+				RepartidorDAO::save(new Repartidor(0, $newRep));
+			}
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
