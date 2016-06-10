@@ -5,8 +5,17 @@
 }
 
 .container button{
+	box-sizing: border-box;
 	width: 100%;
+	margin: 10px auto;
 }
+
+.container small{
+	display: block;
+	width: 100%;
+	text-align: justify;
+}
+
 #message{
 	display: block;
 	margin-bottom: 5px;

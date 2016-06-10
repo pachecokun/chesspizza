@@ -3,6 +3,24 @@
 	require_once("../layout/header.php");
 	require_once("../../Controller/UsuarioController.php");
 	
+	if(isset($_SESSION['empleado'])){
+		$_SESSION['message'] = array("info", "Ya existe una sesión abierta");
+		if($_SESSION['empleado']['tipoEmpleado'] == 3){
+			header("location: ../gerente");
+		}
+		else if($_SESSION['empleado']['tipoEmpleado'] == 2){
+			header("location: ../Repartidor");
+		}
+		else if($_SESSION['empleado']['tipoEmpleado'] == 1){
+			header("location: ../chef");
+		}
+		else{
+			$_SESSION['message'] = array("danger", "Acceso denegado");
+			header("location: /");
+		}
+		exit();
+	}
+	
 	if(isset($_POST['user']) && isset($_POST['pass'])){
 		UsuarioController::login($_POST['user'], $_POST['pass']);
 		if(!isset($_SESSION['empleado'])){
@@ -36,7 +54,7 @@
 	<form action="../login" method="post" id="form">
 		<input type="text" name="user" placeholder="Nombre de usuario" id="user" autocomplete="off"/>
 		<input type="password" name="pass" placeholder="Contraseña" id="pass" />
-		<button type="Button" onClick="valida()">Acceder</button>
+		<button type="submit" onClick="return valida()">Acceder</button>
 	</form>
 	<script type="text/javascript">
 		function valida(){
@@ -55,7 +73,7 @@
 				msg.style.color = "#006699";
 				return false;
 			}
-			document.getElementById("form").submit();
+			return true;
 		}
 	</script>
 <?php

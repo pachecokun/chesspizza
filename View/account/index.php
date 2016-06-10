@@ -22,7 +22,7 @@
 	
 	$empleado= array("Desconocido", "Chef", "Repartidor", "Gerente");
 	
-	$emp = EmpleadoController::getInfo()[0];
+	$emp = EmpleadoController::getInfo();
 	echo	"<h3>{$emp->getNombre()} {$emp->getApPaterno()} {$emp->getApMaterno()}</h3>"
 		.	"<small>{$emp->getUsername()}</small>"
 		.	"<p><span class='text-info'>{$empleado[$emp->getTipoEmpleado()]}</span> "

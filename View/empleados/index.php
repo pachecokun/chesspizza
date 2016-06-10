@@ -7,108 +7,56 @@
 	}
 	require_once("../layout/navs/gerente.php");
 	require_once("../layout/header.php");
+	require_once ("../../Controller/EmpleadoController.php");
 	
-	$title = "Empleados";
+	$title = "Empleados <small class='text-info'>Sucursal {$_SESSION['empleado']['nomSucursal']}</small>";
 	require_once("../layout/body.php");
 ?>
 	
 <?php
+	$tipo = array("Desconocido", "Chef", "Repartidor", "Gerente", "Super user maybe");
+	$suc = $_SESSION['empleado']['sucursal'];
 	echo "<a href='../empleados/addEmpleado'><button class='btn-md btn-success'>Agregar Empleado</button></a>";
-	/******* REPARTIDORES *******/
-	if($activeSub=='showRepartidores'){
-		require_once ("../../Controller/EmpleadoController.php");
-		
-		echo "<h3>Repartidores</h3>";
-		$repartidoresSuc = EmpleadoController::getTipoEmpleado($_SESSION['empleado']['sucursal'], 1);
-		if(!empty($repartidoresSuc)){
-			echo "<div class='table'>"
-					."<table>"
-						."<tr>"
-							."<th>Nombre</th>"
-							."<th>Apellido Paterno</th>"
-							."<th>Apellido Materno</th>"
-							."<th>Teléfono</th>"
-							."<th></th>"
-						."</tr>";
-			foreach($repartidoresSuc as $empleado){
-				echo "<tr>"
-						."<td>{$empleado['empleado']->getNombre()}</td>"
-						."<td>{$empleado['empleado']->getApPaterno()}</td>"
-						."<td>{$empleado['empleado']->getApMaterno()}</td>"
-						."<td>{$empleado['empleado']->getTelefono()}</td>"
-						//."<td><a href='../empleados/modificarEmpleado?id={$empleado['empleado']->getId()}'><button class='btn-sm btn-warning'>Modificar existencias</button></a></td>"
-					."</tr>";
-			}
-			echo "</table>"
-				."</div>";
-		}
-		else{
-			echo "<p class='text-danger'>No hay repartidores en la sucursal</p>";
-		}
-	}
-	/******* CHEFS *******/
-	if($activeSub=='showChefs'){
-		require_once ("../../Controller/EmpleadoController.php");
-		
-		echo "<h3>Chefs</h3>";
-		$chefsSuc = EmpleadoController::getTipoEmpleado($_SESSION['empleado']['sucursal'], 2);
-		if(!empty($chefsSuc)){
-			echo "<div class='table'>"
-					."<table>"
-						."<tr>"
-							."<th>Nombre</th>"
-							."<th>Apellido Paterno</th>"
-							."<th>Apellido Materno</th>"
-							."<th>Teléfono</th>"
-							."<th></th>"
-						."</tr>";
-			foreach($chefsSuc as $empleado){
-				echo "<tr>"
-						."<td>{$empleado['empleado']->getNombre()}</td>"
-						."<td>{$empleado['empleado']->getApPaterno()}</td>"
-						."<td>{$empleado['empleado']->getApMaterno()}</td>"
-						."<td>{$empleado['empleado']->getTelefono()}</td>"
-						//."<td><a href='../empleados/modificarEmpleado?id={$empleado['empleado']->getId()}'><button class='btn-sm btn-warning'>Modificar existencias</button></a></td>"
-					."</tr>";
-			}
-			echo "</table>"
-				."</div>";
-		}
-		else{
-			echo "<p class='text-danger'>No hay chefs en la sucursal</p>";
-		}
-	}
-	/******* GERENTES *******/
 	if($activeSub=='showGerentes'){
-		require_once ("../../Controller/EmpleadoController.php");
-		
-		echo "<h3>Gerentes</h3>";
-		$gerentesSuc = EmpleadoController::getTipoEmpleado($_SESSION['empleado']['sucursal'], 3);
-		if(!empty($gerentesSuc)){
+		$type="Gerentes";
+		$empleados = EmpleadoController::getAllSucursalByUserType($suc, 3);
+	}
+	else if($activeSub=='showRepartidores'){
+		$type= "Repartidores";
+		$empleados = EmpleadoController::getAllSucursalByUserType($suc, 2);
+	}
+	else if($activeSub=='showChefs'){
+		$type="Chefs";
+		$empleados = EmpleadoController::getAllSucursalByUserType($suc, 1);
+	}
+	else{
+		$type = "Todos";
+		$empleados = EmpleadoController::getAllBySucursalId($suc);
+	}
+	echo "<h3>{$type}</h3>";
+		if(!empty($empleados)){
 			echo "<div class='table'>"
 					."<table>"
 						."<tr>"
-							."<th>Nombre</th>"
-							."<th>Apellido Paterno</th>"
-							."<th>Apellido Materno</th>"
+							."<th>Nombre Completo</th>"
+							."<th>Puesto</th>"
 							."<th>Teléfono</th>"
-							."<th></th>"
 						."</tr>";
-			foreach($gerentesSuc as $empleado){
+			foreach($empleados as $empleado){
 				echo "<tr>"
-						."<td>{$empleado['empleado']->getNombre()}</td>"
-						."<td>{$empleado['empleado']->getApPaterno()}</td>"
-						."<td>{$empleado['empleado']->getApMaterno()}</td>"
-						."<td>{$empleado['empleado']->getTelefono()}</td>"
-						//."<td><a href='../empleados/modificarEmpleado?id={$empleado['empleado']->getId()}'><button class='btn-sm btn-warning'>Modificar existencias</button></a></td>"
+						."<td>{$empleado->getNombre()} {$empleado->getApPaterno()} {$empleado->getApMaterno()}</td>"
+						."<td>{$tipo[$empleado->getTipoEmpleado()]}</td>"
+						."<td>{$empleado->getTelefono()}</td>"
 					."</tr>";
 			}
 			echo "</table>"
 				."</div>";
 		}
 		else{
-			echo "<p class='text-danger'>No hay gerentes en la sucursal</p>";
+			if($type=="Todos")
+				$type = "Empleados";
+			echo "<p class='text-danger'>No hay {$type} en la sucursal</p>";
 		}
-	}
+
 	include_once("../layout/footer.php");
 ?>

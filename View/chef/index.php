@@ -1,17 +1,12 @@
 <?php
-require_once '../../Controller/OrdenController.php';
-$pos = ""; //fix para la ubicación relativa en las rutas.
-$active = "inicio";
+$active = "ordenes";
 $userSession = 1;
-$navElements = array(
-    "inicio" => array("CONSULTAR ÓRDENES", "menu", ""),
-);
-include_once($pos . "../layout/header.php");
-require_once($pos . "../../Controller/ChefController.php");
+require_once("../layout/navs/chef.php");
+include_once("../layout/header.php");
+
+require_once '../../Controller/OrdenController.php';
+require_once("../../Controller/ChefController.php");
 ?>
-
-
-    <title><?php echo $title; ?>Órdenes</title>
     <script>
         window.setTimeout(function () {
             location.reload();
@@ -46,7 +41,7 @@ require_once($pos . "../../Controller/ChefController.php");
         }
     </style>
 <?php
-include_once($pos . "../layout/body.php");
+include_once("../layout/body.php");
 ?>
 
 
@@ -168,5 +163,5 @@ if (count($ordenes) == 0 || $ordenes == null) {
         </div>
     </div-->
 <?php
-include_once($pos . "../layout/footer.php");
+include_once("../layout/footer.php");
 ?>

@@ -4,21 +4,7 @@
 	require_once("../layout/header.php");
 ?>
     <!-- <head> content aquí -->
-	<style>
-		.container{
-			max-width: 500px;
-		}
-		.container button{
-			box-sizing: border-box;
-			width: 100%;
-			margin: 10px auto;
-		}
-		.container small{
-			display: block;
-			width: 100%;
-			text-align: justify;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../css/login.css" />
 <?php
 	$title = "Consultar orden"; //Solo si no se quiere el título del active
 	require_once("../layout/body.php");

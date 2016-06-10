@@ -28,7 +28,7 @@ class EmpleadoDAO implements DAO
     {
         try {
             Conexion::execute("insert into empleado(Sucursal_id,username,password,nombre,apPaterno,apMaterno,telefono,tipoEmpleado) values(?,?,?,?,?,?,?,?)",
-					array($obj->getSucursal(),$obj->getUsername(),$obj->getPassword(),$obj->getNombre(),$obj->getApPaterno(),$obj->getApMaterno,$obj->getTelefono(),$obj->getTipoEmpleado()));
+					array($obj->getSucursal(),$obj->getUsername(),$obj->getPassword(),$obj->getNombre(),$obj->getApPaterno(),$obj->getApMaterno(),$obj->getTelefono(),$obj->getTipoEmpleado()));
             return true;
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -93,18 +93,6 @@ class EmpleadoDAO implements DAO
     {
         $empleados = array();
         $stm2 = Conexion::execute("SELECT * FROM empleado where Sucursal_id = ?", array($id));
-        while ($pi = $stm2->fetch()) {
-            $empleados[] = array(
-                'empleado' => self::get($pi['id'])
-            );
-        }
-        return $empleados;
-    }
-
-    public static function getTipoEmpleadosSucursal($id)
-    {
-        $empleados = array();
-        $stm2 = Conexion::execute("SELECT * FROM empleado where Sucursal_id = ? and tipoEmpleado = ?", array($id->getSucursal(), $id->getTipoEmpleado()));
         while ($pi = $stm2->fetch()) {
             $empleados[] = array(
                 'empleado' => self::get($pi['id'])

@@ -15,10 +15,8 @@
 		"showGerentes"=>array("Gerentes", "../empleados/?show=Gerentes", "")
 	);
 	$navElements = array("inicio"=>array("Inicio", "../gerente", ""),
-		"ordenes"=>array("Consultar ordenes", "../ordenes", ""),
-		//"ingredientes"=>array("Ingredientes", "../ingredientes", "", $ingredientesSub),
+		//"ordenes"=>array("Consultar ordenes", "../ordenes", ""),
 		"inventario"=>array("Inventario", "../inventario", "", $inventarioSub),
-		//"carta"=>array("Carta", "../carta", ""),
 		"empleados"=>array("Empleados", "../empleados", "", $empleadosSub)
 	);
 ?>	

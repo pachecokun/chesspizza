@@ -10,12 +10,19 @@ class EmpleadoController{
 	}
 
 	public static function getAllBySucursalId($sucId){
-		return EmpleadoDAO::getEmpleadosSucursal($sucId);
+		//return EmpleadoDAO::getEmpleadosSucursal($sucId);
+		return EmpleadoDAO::getAll("Sucursal_id = ?", array($sucId));
+	}
+	
+	public static function getAllSucursalByUserType($sucId, $userType){
+		return EmpleadoDAO::getAll("Sucursal_id = ? and tipoEmpleado = ?", array($sucId, $userType));
 	}
 
-	public static function registrarEmpleadoSuc($idEmp, $idSuc, $user, $pass, $nom, $pat, $mat, $tel, $tipo){
-		$exists = EmpleadoDAO::get(array($idEmp, $idSuc));
-		return EmpleadoDAO::save(new Empleado($idEmp, $idSuc, $user, $pass, $nom, $pat, $mat, $tel, $tipo));
+	public static function registrarEmpleadoSuc($idSuc, $user, $pass, $nom, $pat, $mat, $tel, $tipo){
+		if(empty(EmpleadoDAO::getAll("username = ?", array($user))))
+			return EmpleadoDAO::save(new Empleado(null, $idSuc, $user, $pass, $nom, $pat, $mat, $tel, $tipo));
+		else
+			return false;
 	}
 
 	public static function getTipoEmpleado($sucId, $tipo){

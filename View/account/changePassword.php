@@ -34,7 +34,7 @@
 				header("location: ../gerente");
 			}
 			else if($_SESSION['empleado']['tipoEmpleado'] == 2){
-				header("location: ../repartidor");
+				header("location: ../Repartidor");
 			}
 			else if($_SESSION['empleado']['tipoEmpleado'] == 1){
 				header("location: ../chef");
@@ -64,7 +64,7 @@
 		<input type="password" name="curPass" placeholder="Contraseña actual" id="curPass" />
 		<input type="password" name="newPass" placeholder="Nueva contraseña" id="newPass" />
 		<input type="password" name="confPass" placeholder="Confirmar contraseña" id="confPass" />
-		<button type="Button" onClick="valida()">Acceder</button>
+		<button type="submit" onClick="return valida()">Acceder</button>
 	</form>
 	<script type="text/javascript">
 		function valida(){
@@ -98,7 +98,8 @@
 				msg.style.color= "#CC0000";
 				return false;
 			}
-			document.getElementById("form").submit();
+			//document.getElementById("form").submit();
+			return true;
 		}
 	</script>
 <?php

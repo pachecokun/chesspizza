@@ -37,6 +37,10 @@ body{
 h1{
 	font-size: 48px;
 }
+h1 > small{
+	font-size: 20px;
+	margin-left: 10px;
+}
 h2{
 	font-size: 36px;
 }
@@ -557,6 +561,10 @@ table tr:nth-child(odd):focus{
 }
 
 @media screen and (max-width: 768px){
+	h1 > small{
+		display: block;
+		margin-left: 0;
+	}
 	.wrapper{
 		background-size: 50%;
 	}

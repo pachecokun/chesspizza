@@ -8,29 +8,26 @@
 	require_once ("../../Controller/EmpleadoController.php");
 	
 	if(isset($_POST['add'])){
-		$success= EmpleadoController::registrarEmpleadoSuc($_POST['id'], $_SESSION['empleado']['sucursal'], $_POST['usuario'], $_POST['password'], $_POST['nombre'], $_POST['paterno'], $_POST['materno'], $_POST['telefono'], $_POST['tipo']);
+		$success= EmpleadoController::registrarEmpleadoSuc(
+				$_SESSION['empleado']['sucursal'],
+				$_POST['user'],
+				$_POST['password'],
+				$_POST['nombre'],
+				$_POST['paterno'],
+				$_POST['materno'],
+				$_POST['telefono'],
+				$_POST['tipo']);
 
-		$tipo="";
-		switch ($_POST['tipo']) {
-			case 1:
-				$tipo = "Repartidor";
-				break;
-			case 2:
-				$tipo = "Chef";
-				break;
-			case 3:
-				$tipo = "Gerente";
-				break;
-			default:
-				break;
-		}
 		if($success){
-			$_SESSION['message']= array("success", "$tipo Agregado");
-			header("location:../Inventario");
+			$_SESSION['message']= array("success", "Empleado registrado exitosamente");
+			header("location:../empleados");
 			exit();
 		}
 		else{
-			$_SESSION['message'] = array("danger", "Hubo un problema al agregar al $tipo");
+			if(!empty(EmpleadoDAO::getAll("username = ?", array($_POST['user']))))
+				$_SESSION['message'] = array("warning", "El nombre de usuario ya existe");
+			else
+				$_SESSION['message'] = array("danger", "Hubo un problema al registrar al empleado");
 		}
 	}
 ?>
@@ -41,43 +38,47 @@
 ?>
 	<form action="addEmpleado" method="post">
 		<div class='row'>
-			<div class='col-12 col-m-12'>
-				Número de Empleado:
-				<input type="number" name='id' />
+			<div class='col-6'>
+				Tipo de empleado
 			</div>
-			<div class='col-12 col-m-12'>
-				Nombre:
-				<input type="text" name='nombre' />
-			</div>
-			<div class='col-12 col-m-12'>
-				Apellido Paterno:
-				<input type="text" name='paterno' />
-			</div>
-			<div class='col-12 col-m-12'>
-				Apellido Materno:
-				<input type="text" name='materno' />
-			</div>
-			<div class='col-12 col-m-12'>
-				Teléfono:
-				<input type="number" name='telefono' />
-			</div>
-			<div class='col-12 col-m-12'>
-				Usuario:
-				<input type="text" name='usuario' />
-			</div>
-			<div class='col-12 col-m-12'>
-				Contraseña:
-				<input type="password" name='password' />
-			</div>
-			<div class='col-12 col-m-12'>
-				Tipo de Empleado:
-				<select name="tipo">
+			<div class='col-6'>
+				<select name="tipo" required="required">
+					<option value="">Seleccionar...</option>
 					<option value="1">Repartidor</option>
 					<option value="2">Chef</option>
 					<option value="3">Gerente</option>
 				</select>
 			</div>
 		</div>
+	
+		<div class='row'>
+			<div class='col-4 col-m-12'>
+				<input type="text" name='nombre' placeholder= "Nombre(s)" required="required"/>
+			</div>
+			<div class='col-4 col-m-6'>
+				<input type="text" name='paterno' placeholder= "Apellido paterno" required="required"/>
+			</div>
+			<div class='col-4 col-m-6'>
+				<input type="text" name='materno' placeholder="Apellido materno" required="required"/>
+			</div>
+		</div>
+		
+		<div class='row'>
+			<div class='col-12'>
+				<input type="number" name='telefono' placeholder="Teléfono" required="required"/>
+			</div>
+		</div>
+		
+		
+		<div class='row'>
+			<div class='col-6'>
+				<input type="text" name='user' placeholder= "Nombre de usuario" required="required"/>
+			</div>
+			<div class='col-6'>
+				<input type="password" name='password' placeholder= "Contraseña" required="required"/>
+			</div>
+		</div>
+		
 		<div class='row'>
 			<div class='col-6'>
 				<button type='submit' name='add' class='btn-success'>Agregar</button>
