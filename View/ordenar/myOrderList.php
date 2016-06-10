@@ -2,10 +2,9 @@
 require_once "../../Controller/OrdenController.php";
 
 
-$pos ="../"; //fix para la ubicación relativa en las rutas.
 $active = "ordenar";
-
-require_once($pos."headerCliente.php");
+require_once("../layout/navs/cliente.php");
+require_once("../layout/header.php");
 
 if (isset($_POST['nom'])) {
 	if (OrdenController::getOrdenSesion() != null) {
@@ -51,7 +50,7 @@ $total = 0.00;
 		}
 	</style>
 <?php
-	require_once($pos."body.php");
+	require_once("../layout/body.php");
 $total = OrdenController::getPrecioOrden($orden);
 $faltantes = OrdenController::getFaltantes($orden);
 $ingredientes = $faltantes['ingredientes'];
@@ -124,7 +123,7 @@ $refrescos = $faltantes['refrescos'];
 		</table>
 	</div>
 	<h3 class='total text-info'>Total: <span class='text-success'>$<?=number_format($total,2)?></span></h3>
-<div style="color: red">
+<div class='text-danger'>
 	<?php if (!empty($ingredientes)) { ?>
 		<p style="color:red">No se cuenta con los suficientes ingredientes en sucursal: </p>
 		<ul>
@@ -187,5 +186,5 @@ $refrescos = $faltantes['refrescos'];
 		<?php } ?>
 		</div>
 <?php
-	include_once($pos."footer.php");
+	include_once("../layout/footer.php");
 ?>

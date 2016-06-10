@@ -311,6 +311,12 @@ class OrdenController
 		$orden->addOperacion(new Operacion(null, $id, null, $orden->getLat(), $orden->getLon(), StatusDAO::get(STATUS_ENTREGADA)));
 		OrdenDAO::update($orden);
 	}
+	
+	public static function cancelarOrden($id){
+		$orden = OrdenDAO::get($id);
+		$orden->addOperacion(new Operacion(null, $id, null, $orden->getLat(), $orden->getLon(), StatusDAO::get(STATUS_CANCELADA)));		
+		return OrdenDAO::update($orden);
+	}
 }
 
 ?>

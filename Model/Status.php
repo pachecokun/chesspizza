@@ -37,6 +37,26 @@ class Status{
         $this->id = $id;
         return $this;
     }
+	
+	
+
+    /**
+     * @return mixed
+     */
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
+
+    /**
+     * @param mixed $descripcion
+     * @return Status
+     */
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
+        return $this;
+    }
 
 
 }

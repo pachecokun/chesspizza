@@ -84,7 +84,7 @@ if(!empty($_POST['dir']) AND !empty($_POST['nom']) AND !empty($_POST['tel']) AND
     de <?= RutasController::getTiempoPreparacion($orden) + 30 ?> minutos.</p>
     <p>La información del pedido ha sido enviada al correo electrónico '<?= $orden->getEmailCliente() ?>' .</p>
     <p><strong>NOTA:</strong> Recuerda que si no encuentras el correo en la bandeja de entrada, deberias revisas la carpeta de SPAM</p>
-<p>Puede rastrear su orden utilizando su clave de orden desde <a href="/ordenar/miOrden">aquí</a></p>
+<p>Puede rastrear su orden utilizando su clave de orden desde <a href="../miOrden">aquí</a></p>
     <a href="/">Regresar a inicio</a>
 <?php
 include_once("../layout/footer.php");
