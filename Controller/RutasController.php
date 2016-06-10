@@ -147,15 +147,16 @@ class RutasController
             }
         }
         $listo = 0;
+        print_r($repartidores);
         while (!empty($repartidores) && $listo < 4) {
             $listo = 0;
             for ($i = 1; $i <= 4; $i++) {
                 $ruta = array();
-                if (!empty($urgentes[$i] || self::getItemsTotal($otras[$i]) > 10)) {
+                if (!empty($urgentes[$i] || self::getItemsTotal($otras[$i]) > 0.7 * CARGA_MAXIMA)) {
                     $repartidor = array_shift($repartidores);
                     while (!empty($urgentes[$i])) {
                         $orden = array_shift($urgentes[$i]);
-                        if (self::getItemsTotal($ruta) + self::getItems($orden) > CARGA_MAXIMA) {
+                        if (self::getItemsTotal($ruta) > CARGA_MAXIMA) {
                             break;
                         }
                         $orden->setRepartidorId($repartidor->getEmpleado()->getId());
@@ -165,7 +166,7 @@ class RutasController
                     }
                     while (!empty($otras[$i])) {
                         $orden = array_shift($otras[$i]);
-                        if (self::getItemsTotal($ruta) + self::getItems($orden) > CARGA_MAXIMA) {
+                        if (self::getItemsTotal($ruta) > CARGA_MAXIMA) {
                             break;
                         }
                         $orden->setRepartidorId($repartidor->getEmpleado()->getId());
